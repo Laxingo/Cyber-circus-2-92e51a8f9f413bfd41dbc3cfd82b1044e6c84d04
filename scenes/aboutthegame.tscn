@@ -45,9 +45,6 @@ custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
 custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "About The Game"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="wild" type="Label" parent="."]
 margin_left = -720.0

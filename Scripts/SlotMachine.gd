@@ -85,9 +85,18 @@ func setPrizeMasks():
 	prizeMasks.push_back(0b000000000011111);
 	prizeMasks.push_back(0b000001111100000);
 	prizeMasks.push_back(0b111110000000000);
-	prizeMasks.push_back(0b110000000000000);
-	prizeMasks.push_back(0b000001100000000);
-	prizeMasks.push_back(0b000000000011000);
+#	prizeMasks.push_back(0b110000000000000);
+#	prizeMasks.push_back(0b000001100000000);
+#	prizeMasks.push_back(0b000000000011000);
+	prizeMasks.push_back(0b100010101000100);
+	prizeMasks.push_back(0b001000101010001);
+	prizeMasks.push_back(0b110110010000000);
+	prizeMasks.push_back(0b000000010011011);
+	prizeMasks.push_back(0b000001000101110);
+	prizeMasks.push_back(0b011101000100000);
+	prizeMasks.push_back(0b010101010100000);
+
+
 
 func _add_tile(col :int, row :int) -> void:
 	tiles.append(SlotTile.instance())
@@ -166,7 +175,7 @@ func current_runs(reel := 0) -> int:
 
 func _randomIcones() -> String:
 	random.randomize()
-	var num = random.randi_range(0, 11)
+	var num = random.randi_range(0, 1)
 	if num == 0:
 		tile_name = symbolName[0]
 	elif num == 1:
@@ -272,6 +281,6 @@ func animPrizes():
 					estaCol = 2
 					
 					
-				oTile = get_tile(estaCol, estaReel)
+				oTile = get_tile(estaReel, estaCol)
 				oTile.animate_icon(prizeID)
 				
