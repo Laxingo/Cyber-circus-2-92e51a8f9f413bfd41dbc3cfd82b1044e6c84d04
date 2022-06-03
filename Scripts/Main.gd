@@ -123,3 +123,15 @@ func _on_options2_mouse_entered():
 	optionsAudio.play()
 	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
 	optionsAudio.stop()
+
+
+func _on_info_button_down():
+	get_tree().change_scene("res://scenes/aboutthegame.tscn")
+
+
+func _on_historico_button_down():
+	get_tree().change_scene("res://scenes/playhistory.tscn")
+
+
+func _on_money_button_down():
+	get_tree().change_scene("res://scenes/symbolspayout.tscn")

@@ -10,6 +10,8 @@ outline_color = Color( 0.72549, 0.878431, 0.878431, 1 )
 font_data = ExtResource( 1 )
 
 [node name="playhistory" type="Node2D"]
+position = Vector2( 638, 361 )
+scale = Vector2( 0.659, 0.674 )
 
 [node name="Fundo" type="Sprite" parent="."]
 position = Vector2( -4, -2 )
@@ -43,11 +45,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="inicialalance" type="Label" parent="."]
-margin_left = -720.0
-margin_top = -182.0
-margin_right = 431.0
-margin_bottom = -62.0
+[node name="Seta" type="Sprite" parent="."]
+position = Vector2( -882, 0 )
+scale = Vector2( 0.137316, 0.137316 )
+texture = ExtResource( 3 )
+
+[node name="Seta2" type="Sprite" parent="."]
+position = Vector2( 886, 2 )
+rotation = -3.11577
+scale = Vector2( 0.13304, 0.13304 )
+texture = ExtResource( 3 )
+
+[node name="1Texts" type="Node" parent="."]
+
+[node name="inicialalance" type="Label" parent="1Texts"]
+margin_left = 143.368
+margin_top = 242.54
+margin_right = 1294.37
+margin_bottom = 362.54
 rect_scale = Vector2( 1.20374, 0.89854 )
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
@@ -55,15 +70,12 @@ custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
 custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Inicial Balance____________"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="finalbalance" type="Label" parent="."]
-margin_left = -720.0
-margin_top = -78.0
-margin_right = 441.0
-margin_bottom = 42.0
+[node name="finalbalance" type="Label" parent="1Texts"]
+margin_left = 143.368
+margin_top = 312.636
+margin_right = 1304.37
+margin_bottom = 432.636
 rect_scale = Vector2( 1.20374, 0.89854 )
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
@@ -75,11 +87,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bet" type="Label" parent="."]
-margin_left = -720.0
-margin_top = 20.0
-margin_right = 451.0
-margin_bottom = 140.0
+[node name="bet" type="Label" parent="1Texts"]
+margin_left = 143.368
+margin_top = 378.688
+margin_right = 1314.37
+margin_bottom = 498.688
 rect_scale = Vector2( 1.20374, 0.89854 )
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
@@ -91,11 +103,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="totalwon" type="Label" parent="."]
-margin_left = -720.0
-margin_top = 120.0
-margin_right = 430.0
-margin_bottom = 240.0
+[node name="totalwon" type="Label" parent="1Texts"]
+margin_left = 143.368
+margin_top = 446.088
+margin_right = 1293.37
+margin_bottom = 566.088
 rect_scale = Vector2( 1.20374, 0.89854 )
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
@@ -107,13 +119,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Seta" type="Sprite" parent="."]
-position = Vector2( -882, 0 )
-scale = Vector2( 0.137316, 0.137316 )
-texture = ExtResource( 3 )
-
-[node name="Seta2" type="Sprite" parent="."]
-position = Vector2( 886, 2 )
-rotation = -3.11577
-scale = Vector2( 0.13304, 0.13304 )
-texture = ExtResource( 3 )
+[node name="Tween" type="Tween" parent="."]

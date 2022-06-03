@@ -2301,6 +2301,7 @@ anims/popup2c = SubResource( 8 )
 anims/popup2o = SubResource( 9 )
 
 [node name="1" type="Node2D" parent="options"]
+visible = false
 
 [node name="fast" type="TextureButton" parent="options/1"]
 margin_left = -211.0
@@ -2564,6 +2565,9 @@ stream = ExtResource( 34 )
 
 [connection signal="button_down" from="play" to="." method="_on_Roll2_button_down"]
 [connection signal="mouse_entered" from="play" to="." method="_on_play_mouse_entered"]
+[connection signal="button_down" from="options/1/historico" to="." method="_on_historico_button_down"]
+[connection signal="button_down" from="options/1/money" to="." method="_on_money_button_down"]
+[connection signal="button_down" from="options/1/info" to="." method="_on_info_button_down"]
 [connection signal="button_down" from="options2" to="." method="_on_options_button_down"]
 [connection signal="mouse_entered" from="options2" to="." method="_on_options2_mouse_entered"]
 [connection signal="button_down" from="replay" to="." method="_on_replay_button_down"]
