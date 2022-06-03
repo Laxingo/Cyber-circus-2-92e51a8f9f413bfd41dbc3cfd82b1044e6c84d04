@@ -1,0 +1,112 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Imagens/UI/fundo.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Myriad Cn Bold.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+outline_color = Color( 0.72549, 0.878431, 0.878431, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+outline_color = Color( 0.72549, 0.878431, 0.878431, 1 )
+font_data = ExtResource( 2 )
+
+[node name="aboutthegame" type="Node2D"]
+
+[node name="Fundo" type="Sprite" parent="."]
+position = Vector2( -4, -2 )
+z_index = -2
+texture = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -976.0
+margin_top = -545.0
+margin_right = 578.997
+margin_bottom = 263.0
+rect_scale = Vector2( 1.25103, 1.34281 )
+color = Color( 0, 0, 0, 0.596078 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="aboutthegame" type="Label" parent="."]
+margin_left = -458.0
+margin_top = -393.0
+margin_right = 110.0
+margin_bottom = -273.0
+rect_scale = Vector2( 2.29741, 1.71492 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "About The Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="wild" type="Label" parent="."]
+margin_left = -720.0
+margin_top = -182.0
+margin_right = 431.0
+margin_bottom = -62.0
+rect_scale = Vector2( 1.20374, 0.89854 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Wild"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bonus" type="Label" parent="."]
+margin_left = -720.0
+margin_top = 159.0
+margin_right = 431.0
+margin_bottom = 279.0
+rect_scale = Vector2( 1.20374, 0.89854 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Bonus"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="howtoplay" type="Label" parent="."]
+margin_left = -720.0
+margin_top = 529.0
+margin_right = 431.0
+margin_bottom = 649.0
+rect_scale = Vector2( 1.20374, 0.89854 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "How to Bet and Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttons" type="Label" parent="."]
+margin_left = -720.0
+margin_top = 877.0
+margin_right = 431.0
+margin_bottom = 997.0
+rect_scale = Vector2( 1.20374, 0.89854 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Buttons"
+__meta__ = {
+"_edit_use_anchors_": false
+}
