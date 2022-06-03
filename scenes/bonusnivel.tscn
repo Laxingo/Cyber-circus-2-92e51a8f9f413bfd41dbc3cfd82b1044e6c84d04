@@ -3939,6 +3939,7 @@ z_index = 5
 texture = ExtResource( 15 )
 
 [node name="Caixarosa" type="Sprite" parent="caixas"]
+visible = false
 position = Vector2( -30.8412, 10.6248 )
 rotation = 0.00810972
 scale = Vector2( 0.00633174, 0.00470921 )
@@ -3946,20 +3947,20 @@ z_index = 5
 texture = ExtResource( 8 )
 
 [node name="Caixaamarela" type="Sprite" parent="caixas"]
-visible = false
 position = Vector2( -33.4329, 14.5039 )
 scale = Vector2( -0.00275277, -0.00275277 )
 z_index = 6
 texture = ExtResource( 16 )
 
 [node name="bonus" type="Label" parent="."]
+visible = false
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = -247.0
 margin_top = -83.0
 margin_right = 234.0
 margin_bottom = 142.001
-rect_rotation = -13.9058
-rect_scale = Vector2( -0.0157572, -0.0157572 )
+rect_rotation = 335.302
+rect_scale = Vector2( 0.16019, 0.16019 )
 rect_pivot_offset = Vector2( 232.421, 139.313 )
 custom_colors/font_color = Color( 0.956863, 0.905882, 0.752941, 1 )
 custom_fonts/font = SubResource( 1 )
@@ -3992,14 +3993,12 @@ z_index = 1
 texture = ExtResource( 2 )
 
 [node name="CyberCircusRouletteBonus" type="Sprite" parent="."]
-visible = false
 light_mask = 4
-position = Vector2( -10, 68 )
+position = Vector2( 15, -1005 )
 z_index = 2
 texture = ExtResource( 3 )
 
 [node name="luzesentreaspas" type="Node2D" parent="CyberCircusRouletteBonus"]
-visible = false
 position = Vector2( 175, -196 )
 
 [node name="Centroazulrosa" type="Sprite" parent="CyberCircusRouletteBonus/luzesentreaspas"]
@@ -4030,7 +4029,7 @@ scale = Vector2( 0.210555, 0.210555 )
 texture = ExtResource( 9 )
 
 [node name="Luzrosa" type="Sprite" parent="CyberCircusRouletteBonus/luzesentreaspas"]
-self_modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 0.0313726, 0.909804, 0 )
 position = Vector2( -187, 207 )
 scale = Vector2( 1.91159, 1.91159 )
 z_index = 2
@@ -4071,7 +4070,6 @@ z_index = -1
 texture = ExtResource( 11 )
 hframes = 6
 vframes = 4
-frame = 23
 
 [node name="CurtainRight" type="Sprite" parent="."]
 light_mask = 0
@@ -4082,7 +4080,6 @@ texture = ExtResource( 11 )
 flip_h = true
 hframes = 6
 vframes = 4
-frame = 23
 
 [node name="particulas" type="Node2D" parent="."]
 visible = false
