@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Fonts/Carnevalee Freakshow.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Imagens/luz/Light_Ball.png" type="Texture" id=2]
@@ -1128,33 +1128,6 @@ tracks/26/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
-}
-
-[sub_resource type="Animation" id=26]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("CyberCircusRouletteBonus/luzesentreaspas:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("CyberCircusRouletteBonus/luzesentreaspas/Luzmuitoamarela:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ true ]
 }
 
 [sub_resource type="Animation" id=20]
@@ -3952,6 +3925,7 @@ tracks/5/keys = {
 [node name="Node2D" type="Node2D"]
 
 [node name="caixas" type="Node2D" parent="."]
+visible = false
 position = Vector2( 0.999999, 66 )
 rotation = 0.00810973
 scale = Vector2( 0.685984, 0.564366 )
@@ -3979,14 +3953,13 @@ z_index = 6
 texture = ExtResource( 16 )
 
 [node name="bonus" type="Label" parent="."]
-visible = false
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = -247.0
 margin_top = -83.0
 margin_right = 234.0
 margin_bottom = 142.001
-rect_rotation = 335.302
-rect_scale = Vector2( 0.16019, 0.16019 )
+rect_rotation = -13.9058
+rect_scale = Vector2( -0.0157572, -0.0157572 )
 rect_pivot_offset = Vector2( 232.421, 139.313 )
 custom_colors/font_color = Color( 0.956863, 0.905882, 0.752941, 1 )
 custom_fonts/font = SubResource( 1 )
@@ -4019,6 +3992,7 @@ z_index = 1
 texture = ExtResource( 2 )
 
 [node name="CyberCircusRouletteBonus" type="Sprite" parent="."]
+visible = false
 light_mask = 4
 position = Vector2( -10, 68 )
 z_index = 2
@@ -4073,7 +4047,6 @@ anims/1bonusentrada = SubResource( 3 )
 anims/2throwtheknife = SubResource( 4 )
 anims/3rodaluzentra = SubResource( 25 )
 anims/4rodaroda = SubResource( 5 )
-anims/RESET = SubResource( 26 )
 anims/tudobaza = SubResource( 20 )
 anims/winamarelo = SubResource( 11 )
 anims/winamarelobaza = SubResource( 17 )
@@ -4092,7 +4065,8 @@ shadow_item_cull_mask = 2
 
 [node name="CurtainLeft" type="Sprite" parent="."]
 light_mask = 0
-position = Vector2( -482, 63 )
+position = Vector2( -1452, -47 )
+rotation = 0.204205
 z_index = -1
 texture = ExtResource( 11 )
 hframes = 6
@@ -4101,7 +4075,8 @@ frame = 23
 
 [node name="CurtainRight" type="Sprite" parent="."]
 light_mask = 0
-position = Vector2( 494, 60 )
+position = Vector2( 1498, -24 )
+rotation = -0.147226
 z_index = -2
 texture = ExtResource( 11 )
 flip_h = true
@@ -4110,6 +4085,7 @@ vframes = 4
 frame = 23
 
 [node name="particulas" type="Node2D" parent="."]
+visible = false
 
 [node name="particulasrosa" type="CPUParticles2D" parent="particulas"]
 position = Vector2( -597, 653 )

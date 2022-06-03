@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://Scripts/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/UI/ui.png" type="Texture" id=2]
@@ -1610,33 +1610,6 @@ tracks/25/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=10]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Light2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -92, -237 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Light2D:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
 [sub_resource type="Animation" id=11]
 resource_name = "reels"
 length = 0.6
@@ -1741,33 +1714,6 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-
-[sub_resource type="Animation" id=13]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Light2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -92, -237 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Light2D:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
 }
 
 [sub_resource type="Animation" id=14]
@@ -1876,33 +1822,6 @@ tracks/3/keys = {
 "values": [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=16]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Light2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -92, -237 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Light2D:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
 [sub_resource type="Animation" id=17]
 resource_name = "reels"
 length = 0.6
@@ -2009,33 +1928,6 @@ tracks/3/keys = {
 "values": [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=19]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Light2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -92, -237 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Light2D:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
 [sub_resource type="Animation" id=20]
 resource_name = "reels"
 length = 0.6
@@ -2140,33 +2032,6 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-
-[sub_resource type="Animation" id=22]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Light2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -92, -237 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Light2D:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
 }
 
 [sub_resource type="Animation" id=23]
@@ -2436,53 +2301,49 @@ anims/popup2c = SubResource( 8 )
 anims/popup2o = SubResource( 9 )
 
 [node name="1" type="Node2D" parent="options"]
-visible = false
 
 [node name="fast" type="TextureButton" parent="options/1"]
-self_modulate = Color( 1, 1, 1, 0 )
-margin_left = -232.816
-margin_top = -153.239
-margin_right = 283.184
-margin_bottom = 362.761
-rect_scale = Vector2( 0.0241672, 0.0241672 )
+margin_left = -211.0
+margin_top = -139.0
+margin_right = 305.0
+margin_bottom = 377.0
+rect_scale = Vector2( 0.180018, 0.180018 )
 texture_normal = ExtResource( 21 )
 texture_pressed = ExtResource( 43 )
 texture_hover = ExtResource( 18 )
 
 [node name="historico" type="TextureButton" parent="options/1"]
-self_modulate = Color( 1, 1, 1, 0 )
 margin_left = -104.0
 margin_top = -211.0
 margin_right = 412.0
 margin_bottom = 305.0
-rect_scale = Vector2( 0.0350709, 0.0350709 )
+rect_scale = Vector2( 0.177708, 0.177708 )
 texture_normal = ExtResource( 20 )
 texture_pressed = ExtResource( 40 )
 texture_hover = ExtResource( 19 )
 
 [node name="money" type="TextureButton" parent="options/1"]
-self_modulate = Color( 1, 1, 1, 0 )
 margin_left = 23.0
 margin_top = -212.0
 margin_right = 539.0
 margin_bottom = 304.0
-rect_scale = Vector2( 0.0318269, 0.0318269 )
+rect_scale = Vector2( 0.179453, 0.179453 )
 texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 41 )
 texture_hover = ExtResource( 17 )
 
 [node name="info" type="TextureButton" parent="options/1"]
-self_modulate = Color( 1, 1, 1, 0 )
 margin_left = 126.0
 margin_top = -134.0
 margin_right = 642.0
 margin_bottom = 382.0
-rect_scale = Vector2( 0.0242439, 0.0247162 )
+rect_scale = Vector2( 0.175793, 0.175793 )
 texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 45 )
 texture_hover = ExtResource( 22 )
 
 [node name="2" type="Node2D" parent="options"]
+visible = false
 light_mask = 2
 
 [node name="10" type="TextureButton" parent="options/2"]
@@ -2572,16 +2433,14 @@ position = Vector2( -70.5384, 13.5073 )
 scale = Vector2( 1.72845, 1.72845 )
 
 [node name="1" type="Sprite" parent="ReelLights"]
-self_modulate = Color( 1, 1, 1, 0.868408 )
 position = Vector2( 239.99, 306.491 )
 texture = ExtResource( 33 )
 
 [node name="2" type="Sprite" parent="ReelLights/1"]
-self_modulate = Color( 1, 1, 1, 0.423953 )
+self_modulate = Color( 1, 1, 1, 0.207843 )
 texture = ExtResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ReelLights"]
-anims/RESET = SubResource( 10 )
 anims/reels = SubResource( 11 )
 anims/reels2 = SubResource( 12 )
 
@@ -2596,16 +2455,14 @@ position = Vector2( 243.132, 13.5074 )
 scale = Vector2( 1.72845, 1.72845 )
 
 [node name="1" type="Sprite" parent="ReelLights2"]
-self_modulate = Color( 1, 1, 1, 0.868408 )
 position = Vector2( 239.99, 306.491 )
 texture = ExtResource( 33 )
 
 [node name="2" type="Sprite" parent="ReelLights2/1"]
-self_modulate = Color( 1, 1, 1, 0.423953 )
+self_modulate = Color( 1, 1, 1, 0.207843 )
 texture = ExtResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ReelLights2"]
-anims/RESET = SubResource( 13 )
 anims/reels = SubResource( 14 )
 anims/reels2 = SubResource( 15 )
 
@@ -2621,16 +2478,14 @@ position = Vector2( 561.305, 13.5073 )
 scale = Vector2( 1.72845, 1.72845 )
 
 [node name="1" type="Sprite" parent="ReelLights3"]
-self_modulate = Color( 1, 1, 1, 0.868408 )
 position = Vector2( 239.99, 306.491 )
 texture = ExtResource( 33 )
 
 [node name="2" type="Sprite" parent="ReelLights3/1"]
-self_modulate = Color( 1, 1, 1, 0.423953 )
+self_modulate = Color( 1, 1, 1, 0.207843 )
 texture = ExtResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ReelLights3"]
-anims/RESET = SubResource( 16 )
 anims/reels = SubResource( 17 )
 anims/reels2 = SubResource( 18 )
 
@@ -2646,16 +2501,14 @@ position = Vector2( 864.47, 12.0065 )
 scale = Vector2( 1.72845, 1.72845 )
 
 [node name="1" type="Sprite" parent="ReelLights4"]
-self_modulate = Color( 1, 1, 1, 0.868408 )
 position = Vector2( 239.99, 306.491 )
 texture = ExtResource( 33 )
 
 [node name="2" type="Sprite" parent="ReelLights4/1"]
-self_modulate = Color( 1, 1, 1, 0.423953 )
+self_modulate = Color( 1, 1, 1, 0.207843 )
 texture = ExtResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ReelLights4"]
-anims/RESET = SubResource( 19 )
 anims/reels = SubResource( 20 )
 anims/reels2 = SubResource( 21 )
 
@@ -2671,16 +2524,14 @@ position = Vector2( 1178.14, 10.5057 )
 scale = Vector2( 1.72845, 1.72845 )
 
 [node name="1" type="Sprite" parent="ReelLights5"]
-self_modulate = Color( 1, 1, 1, 0.868408 )
 position = Vector2( 239.99, 306.491 )
 texture = ExtResource( 33 )
 
 [node name="2" type="Sprite" parent="ReelLights5/1"]
-self_modulate = Color( 1, 1, 1, 0.423953 )
+self_modulate = Color( 1, 1, 1, 0.207843 )
 texture = ExtResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ReelLights5"]
-anims/RESET = SubResource( 22 )
 anims/reels = SubResource( 23 )
 anims/reels2 = SubResource( 24 )
 
