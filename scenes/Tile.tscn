@@ -1348,6 +1348,7 @@ viewport_path = NodePath("Sprite/Strongman/Viewport")
 [sub_resource type="Animation" id=116]
 resource_name = "New Anim"
 length = 0.5
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -2701,14 +2702,16 @@ region_rect = Rect2( -4.79358, 231.711, 399.81, 136.304 )
 
 [node name="cabeça" type="Sprite" parent="Sprite/Bunny/ViewportContainer"]
 light_mask = 128
-position = Vector2( 268.762, 430.93 )
+position = Vector2( 265.117, 324.336 )
+rotation = -0.0807887
 texture = ExtResource( 9 )
 region_enabled = true
 region_rect = Rect2( 304.535, -6.66034, 252.738, 250.542 )
 
 [node name="orelhas" type="Sprite" parent="Sprite/Bunny/ViewportContainer/cabeça"]
 light_mask = 128
-position = Vector2( -5, -192 )
+position = Vector2( -29.7548, -180.655 )
+rotation = -0.154519
 z_index = -1
 texture = ExtResource( 9 )
 region_enabled = true
@@ -2727,8 +2730,8 @@ z_index = -2
 texture = ExtResource( 26 )
 
 [node name="Light2D3" type="Light2D" parent="Sprite/Bunny"]
-position = Vector2( 484.204, 55.4274 )
-rotation = 0.0061071
+position = Vector2( 315.905, 570.375 )
+rotation = -0.81619
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 8 )
 texture_scale = 1.69
@@ -3042,7 +3045,6 @@ energy = 10.0
 shadow_color = Color( 0.215686, 1, 0.964706, 0 )
 
 [node name="Ticket" type="Sprite" parent="Sprite"]
-visible = false
 position = Vector2( 1248.5, 440.784 )
 scale = Vector2( 3.16387, 1.96384 )
 
@@ -3282,7 +3284,7 @@ margin_bottom = 40.0
 
 [node name="Light2D" type="Light2D" parent="Sprite/Q/Control"]
 light_mask = 64
-position = Vector2( -18, -342 )
+position = Vector2( -18, -337.056 )
 rotation = 1.21844
 scale = Vector2( 1.24528, 0.68673 )
 texture = ExtResource( 5 )
@@ -3321,8 +3323,9 @@ texture = ExtResource( 25 )
 "anims/juggle ma balls" = SubResource( 153 )
 
 [node name="Clown" type="Sprite" parent="Sprite"]
+visible = false
 light_mask = 1024
-position = Vector2( 1250.81, 304.625 )
+position = Vector2( 1437.74, 314.18 )
 scale = Vector2( 4.48533, 2.29118 )
 
 [node name="Sprite3" type="Sprite" parent="Sprite/Clown"]
