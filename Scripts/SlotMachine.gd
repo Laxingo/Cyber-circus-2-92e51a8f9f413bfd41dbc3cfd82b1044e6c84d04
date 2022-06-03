@@ -1,6 +1,9 @@
 extends Node2D
 
 const SlotTile := preload("res://scenes/Tile.tscn")
+
+onready var main = load("res://Scripts/Main.gd").new()
+
 const SPIN_UP_DISTANCE = 100.0
 signal stopped
 
@@ -66,16 +69,6 @@ var prizeNb = 3
 var prizeMasks = [];
 var prizesToAnim = [];
 
-onready var reelSound1 = preload("res://sound/reels spin/Cyber Circus Reel Just Spin.mp3")
-onready var reelSound2 = preload("res://sound/reels spin/Cyber Circus Reel Reel Set.mp3")
-
-onready var reel1Audio = $reel1
-onready var reel2Audio = $reel2
-onready var reel3Audio = $reel3
-onready var reel4Audio = $reel4
-onready var reel5Audio = $reel5
-
-var reelsAudio = [reel1Audio, reel2Audio, reel3Audio, reel4Audio, reel5Audio]
 
 func _ready():
 	
@@ -117,8 +110,7 @@ func start() -> void:
 		_get_result()
 	for reel in reels:
 		_spin_reel(reel)
-#		reelsAudio[reel].stream = reelSound1
-#		reelsAudio[reel].play()
+#		main._reelAudio(1)
 		if reel_delay > 0:
 			   yield(get_tree().create_timer(reel_delay), "timeout")
   
@@ -126,7 +118,6 @@ func stop():
 	state = State.STOPPED
 	runs_stopped = current_runs()
 	total_runs = runs_stopped + tiles_per_reel + 1
-#	print("STOOOOOOOOPPPPP")
 	
 
 func _stop() -> void:
@@ -135,11 +126,8 @@ func _stop() -> void:
 		state = State.OFF
 		emit_signal("stopped")
 	if state == State.OFF:
-		idk()
-	buildResultMasks();
-	animPrizes();
-
-#0.00164684
+		buildResultMasks();
+		animPrizes();
 
 func _spin_reel(reel :int) -> void:
   for row in rows:
@@ -172,19 +160,6 @@ func _on_tile_moved(tile: SlotTile, _nodePath) -> void:
 		tile.spin_down()
 		if reel == reels - 1:
 			_stop()
-
-func idk():
-	col1Mid = get_tile(0,3)
-	col2Mid = get_tile(1,3)
-	col3Mid = get_tile(2,3)
-	col4Mid = get_tile(3,3)
-	col5Mid = get_tile(4,3)
-	
-	col1Mid_name = col1Mid.tileName
-	col2Mid_name = col2Mid.tileName
-	col3Mid_name = col3Mid.tileName
-	col4Mid_name = col4Mid.tileName
-	col5Mid_name = col5Mid.tileName
 
 func current_runs(reel := 0) -> int:
   return int(ceil(float(tiles_moved_per_reel[reel]) / rows))

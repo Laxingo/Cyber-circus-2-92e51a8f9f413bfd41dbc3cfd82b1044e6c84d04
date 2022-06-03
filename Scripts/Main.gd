@@ -18,6 +18,14 @@ onready var playAudio = $playBtnAudio
 onready var optionsAudio = $optionsBtnAudio
 onready var options2Audio = $options2BtnAudio
 
+onready var reelSound1 = preload("res://sound/reels spin/Cyber Circus Reel Just Spin.mp3")
+onready var reelSound2 = preload("res://sound/reels spin/Cyber Circus Reel Reel Set.mp3")
+
+onready var reel1Audio = $reel1
+onready var reel2Audio = $reel2
+onready var reel3Audio = $reel3
+onready var reel4Audio = $reel4
+onready var reel5Audio = $reel5
 
 
 func _ready():
@@ -33,13 +41,28 @@ func _jukebox():
 	if !jukebox.is_playing():
 		jukebox.stream = carpet1
 		jukebox.play()
-		print("Carpet1 Playing")
 		yield(get_tree().create_timer(jukebox.stream.get_length()), "timeout")
 		jukebox.stream = carpet2
 		jukebox.play()
-		print("Carpet2 Playing")
 		yield(get_tree().create_timer(jukebox.stream.get_length()), "timeout")
 		jukebox.stop()
+
+func _reelAudio(_reelnumber):
+	if _reelnumber == 0:
+		reel1Audio.stream = reelSound1
+		reel1Audio.play()
+	elif _reelnumber == 1:
+		reel2Audio.stream = reelSound1
+		reel2Audio.play()
+	elif _reelnumber == 2:
+		reel3Audio.stream = reelSound1
+		reel3Audio.play()
+	elif _reelnumber == 3:
+		reel4Audio.stream = reelSound1
+		reel4Audio.play()
+	elif _reelnumber == 4:
+		reel5Audio.stream = reelSound1
+		reel5Audio.play()
 
 func _on_Roll2_button_down():
 	if rolled == false:
