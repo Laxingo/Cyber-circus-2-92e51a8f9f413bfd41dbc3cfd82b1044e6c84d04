@@ -13,7 +13,7 @@ outline_color = Color( 0.72549, 0.878431, 0.878431, 1 )
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 100
+size = 50
 outline_color = Color( 0.72549, 0.878431, 0.878431, 1 )
 font_data = ExtResource( 2 )
 
@@ -37,77 +37,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="symbolspayout" type="Label" parent="."]
-margin_left = -426.0
-margin_top = -411.0
-margin_right = 124.0
-margin_bottom = -291.0
-rect_scale = Vector2( 2.29741, 1.71492 )
-rect_pivot_offset = Vector2( 150.091, 61.528 )
-custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
-custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
-custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "Symbols Payout"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="wild" type="Label" parent="."]
-margin_left = -675.0
-margin_top = -169.0
-margin_right = 476.0
-margin_bottom = -49.0
-rect_scale = Vector2( 1.20374, 0.89854 )
-rect_pivot_offset = Vector2( 150.091, 61.528 )
-custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
-custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
-custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "Wild"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="bonus" type="Label" parent="."]
-visible = false
-margin_left = -666.0
-margin_top = -169.0
-margin_right = 485.0
-margin_bottom = -49.0
-rect_scale = Vector2( 1.20374, 0.89854 )
-rect_pivot_offset = Vector2( 150.091, 61.528 )
-custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
-custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
-custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "Bonus"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Prize Lines" type="Label" parent="."]
-visible = false
-margin_left = -666.0
-margin_top = -169.0
-margin_right = 485.0
-margin_bottom = -49.0
-rect_scale = Vector2( 1.20374, 0.89854 )
-rect_pivot_offset = Vector2( 150.091, 61.528 )
-custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
-custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
-custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "Prize Lines"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Seta" type="Sprite" parent="."]
-visible = false
 position = Vector2( -882, 0 )
 scale = Vector2( 0.137316, 0.137316 )
 texture = ExtResource( 3 )
@@ -127,6 +57,159 @@ rect_scale = Vector2( 0.105507, 0.105507 )
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="symbolspayout" type="Node2D" parent="."]
+visible = false
+
+[node name="symbolspayout" type="Label" parent="symbolspayout"]
+margin_left = -450.532
+margin_top = -418.46
+margin_right = 99.4679
+margin_bottom = -298.46
+rect_scale = Vector2( 2.29741, 1.71492 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Symbols Payout"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="wild" type="Node2D" parent="."]
+visible = false
+
+[node name="wild" type="Label" parent="wild"]
+margin_left = -447.508
+margin_top = -413.944
+margin_right = 102.492
+margin_bottom = -293.944
+rect_scale = Vector2( 2.29741, 1.71492 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Wild"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="wild"]
+margin_left = -808.841
+margin_top = 362.766
+margin_right = 599.159
+margin_bottom = 596.766
+rect_scale = Vector2( 1.20374, 0.89854 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "This symbol will replace any other symbol to form a winning line, when possible.
+Will not be apllied to scatter and bonus symbols."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="scatter" type="Node2D" parent="."]
+visible = false
+
+[node name="scatter" type="Label" parent="scatter"]
+margin_left = -447.509
+margin_top = -413.944
+margin_right = 102.491
+margin_bottom = -293.944
+rect_scale = Vector2( 2.29741, 1.71492 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Scatter"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="scatter"]
+margin_left = -808.841
+margin_top = 362.766
+margin_right = 599.159
+margin_bottom = 596.766
+rect_scale = Vector2( 1.20374, 0.89854 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Wins are awarded if 3 or more scatter symbols appear in the reels.
+The value of the scatter is multiplied by the total bet."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bonus" type="Node2D" parent="."]
+visible = false
+
+[node name="bonus" type="Label" parent="bonus"]
+margin_left = -447.509
+margin_top = -412.439
+margin_right = 102.491
+margin_bottom = -292.439
+rect_scale = Vector2( 2.29741, 1.71492 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Bonus"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="bonus"]
+margin_left = -807.33
+margin_top = 362.766
+margin_right = 600.67
+margin_bottom = 596.766
+rect_scale = Vector2( 1.20374, 0.89854 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Bonus is a refreshing and interactive game mode were
+ you can increase your winnings!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="prizelines" type="Node2D" parent="."]
+visible = false
+
+[node name="prize lines" type="Label" parent="prizelines"]
+margin_left = -450.532
+margin_top = -412.439
+margin_right = 99.4679
+margin_bottom = -292.439
+rect_scale = Vector2( 2.29741, 1.71492 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Prize Lines"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
