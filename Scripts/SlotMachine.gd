@@ -232,6 +232,7 @@ func buildResultMasks():
 	
 	print("Result Masks: ", resultMasks);
 	prizesToAnim = [];
+	
 	prizesToAnim = getPrizes(resultMasks);
 
 func getPrizes(result_masks):
@@ -240,7 +241,6 @@ func getPrizes(result_masks):
 		for p in  prizeMasks.size():
 			if (result_masks[i] & prizeMasks[p] == prizeMasks[p]):
 				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
-			
 		
 	print("Prize  Info: ", prizeInfo);
 	return prizeInfo;
@@ -263,24 +263,24 @@ func animPrizes():
 				print("ANIMAÇÃO: ",prizeID, "  CÉLULAS: ", _pcell);
 				
 				if(_pcell == 0 or _pcell == 5 or _pcell == 10):
-					estaReel = 0
+					estaCol = 0
 				elif(_pcell == 1 or _pcell == 6 or _pcell == 11):
-					estaReel = 1
+					estaCol = 1
 				elif(_pcell == 2 or _pcell == 7 or _pcell == 12):
-					estaReel = 2
+					estaCol = 2
 				elif(_pcell == 3 or _pcell == 8 or _pcell == 13):
-					estaReel = 3
+					estaCol = 3
 				elif(_pcell == 4 or _pcell == 9 or _pcell == 14):
-					estaReel = 4
+					estaCol = 4
 					
 				if (_pcell == 0 or _pcell == 1 or _pcell == 2 or _pcell == 3 or _pcell == 4):
-					estaCol = 0
+					estaReel = 0
 				if (_pcell == 5 or _pcell == 6 or _pcell == 7 or _pcell == 8 or _pcell == 9):
-					estaCol = 1
+					estaReel = 1
 				if (_pcell == 10 or _pcell == 11 or _pcell == 12 or _pcell == 13 or _pcell == 14):
-					estaCol = 2
+					estaReel = 2
 					
-					
-				oTile = get_tile(estaReel, estaCol)
+				oTile = get_tile(estaCol, estaReel)
+				
 				oTile.animate_icon(prizeID)
 				
