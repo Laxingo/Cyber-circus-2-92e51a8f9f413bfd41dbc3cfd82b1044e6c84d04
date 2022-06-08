@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Imagens/UI/fundo.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/Myriad Cn Bold.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://Imagens/UI/seta.png" type="Texture" id=3]
+[ext_resource path="res://Imagens/UI/xmini.png" type="Texture" id=4]
+[ext_resource path="res://Imagens/UI/x.png" type="Texture" id=5]
+[ext_resource path="res://Imagens/UI/xe.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -114,3 +117,16 @@ position = Vector2( 886, 2 )
 rotation = -3.11577
 scale = Vector2( 0.13304, 0.13304 )
 texture = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 873.851
+margin_top = -498.238
+margin_right = 1389.85
+margin_bottom = 17.7617
+rect_scale = Vector2( 0.105507, 0.105507 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
