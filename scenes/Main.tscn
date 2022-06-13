@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://Scripts/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/UI/ui.png" type="Texture" id=2]
@@ -46,7 +46,6 @@
 [ext_resource path="res://Imagens/UI/10hmini.png" type="Texture" id=44]
 [ext_resource path="res://Imagens/UI/infohmini.png" type="Texture" id=45]
 [ext_resource path="res://Imagens/UI/25hmini.png" type="Texture" id=46]
-[ext_resource path="res://sound/reels spin/Cyber Circus Reel Just Spin.mp3" type="AudioStream" id=47]
 
 [sub_resource type="Animation" id=2]
 resource_name = "luz"
@@ -2270,6 +2269,9 @@ texture_normal = ExtResource( 36 )
 texture_pressed = ExtResource( 6 )
 texture_hover = ExtResource( 30 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="options" type="Node2D" parent="."]
 light_mask = 2
@@ -2552,19 +2554,14 @@ stream = ExtResource( 35 )
 stream = ExtResource( 34 )
 
 [node name="reel1" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 47 )
 
 [node name="reel2" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 47 )
 
 [node name="reel3" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 47 )
 
 [node name="reel4" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 47 )
 
 [node name="reel5" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 47 )
 
 [connection signal="button_down" from="play" to="." method="_on_Roll2_button_down"]
 [connection signal="mouse_entered" from="play" to="." method="_on_play_mouse_entered"]
@@ -2576,4 +2573,3 @@ stream = ExtResource( 47 )
 [connection signal="button_down" from="replay" to="." method="_on_replay_button_down"]
 [connection signal="mouse_entered" from="replay" to="." method="_on_replay_mouse_entered"]
 [connection signal="finished" from="Jukebox" to="." method="_on_AudioStreamPlayer2D_finished"]
-[connection signal="finished" from="reel1" to="." method="_on_reel1_finished"]

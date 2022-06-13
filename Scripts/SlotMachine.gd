@@ -69,12 +69,11 @@ var prizeNb = 3
 var prizeMasks = [];
 var prizesToAnim = [];
 
-onready var totalPoints = 10
-
 
 func _ready():
 	
 	setPrizeMasks();
+	
 	for col in reels:
 		grid_pos.append([])
 		tiles_moved_per_reel.append(0)
@@ -120,8 +119,7 @@ func start() -> void:
 		_get_result()
 	for reel in reels:
 		_spin_reel(reel)
-		main._reelAudio(reel)
-		print(reel)
+#		main._reelAudio(1)
 		if reel_delay > 0:
 			   yield(get_tree().create_timer(reel_delay), "timeout")
   
@@ -265,28 +263,29 @@ func animPrizes():
 				print("ANIMAÇÃO: ",prizeID, "  CÉLULAS: ", _pcell);
 				
 				if(_pcell == 0 or _pcell == 5 or _pcell == 10):
-					estaReel = 0
+					estaCol = 0
 				elif(_pcell == 1 or _pcell == 6 or _pcell == 11):
-					estaReel = 1
+					estaCol = 1
 				elif(_pcell == 2 or _pcell == 7 or _pcell == 12):
-					estaReel = 2
+					estaCol = 2
 				elif(_pcell == 3 or _pcell == 8 or _pcell == 13):
-					estaReel = 3
+					estaCol = 3
 				elif(_pcell == 4 or _pcell == 9 or _pcell == 14):
-					estaReel = 4
+					estaCol = 4
 					
 				if (_pcell == 0 or _pcell == 1 or _pcell == 2 or _pcell == 3 or _pcell == 4):
-					estaCol = 0
+					estaReel = 0
 				if (_pcell == 5 or _pcell == 6 or _pcell == 7 or _pcell == 8 or _pcell == 9):
-					estaCol = 1
+					estaReel = 1
 				if (_pcell == 10 or _pcell == 11 or _pcell == 12 or _pcell == 13 or _pcell == 14):
-					estaCol = 2
+					estaReel = 2
 					
 				oTile = get_tile(estaCol, estaReel)
 				
 				oTile.animate_icon(prizeID)
+				
 
-
+onready var totalPoints = 0
 
 func givePoints(prizeID):
 	var pointsToGive
@@ -299,7 +298,7 @@ func givePoints(prizeID):
 	elif prizeID == "ticket":
 		pointsToGive = 1700
 	elif prizeID == "roulette":
-		yield(get_tree().create_timer(2.0), "timeout")
+		pointsToGive = 1800
 	elif prizeID == "A":
 		pointsToGive = 2200
 	elif prizeID == "K":
@@ -314,3 +313,12 @@ func givePoints(prizeID):
 		pointsToGive = 1650
 	elif prizeID == "elephant":
 		pointsToGive = 1750
+	
+	totalPoints = totalPoints  + pointsToGive
+	
+
+
+#"bunny", "lion","strongman", 
+#"ticket", "roulette","A", "J", "K", "Q", "juggle", "clown", "elephant"
+
+
