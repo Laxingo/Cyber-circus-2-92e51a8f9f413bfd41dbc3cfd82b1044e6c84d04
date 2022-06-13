@@ -232,6 +232,7 @@ tracks/15/keys = {
 [sub_resource type="Animation" id=7]
 resource_name = "bigwinentra"
 length = 0.3
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Caixa:position")
 tracks/0/interp = 1
@@ -619,6 +620,7 @@ colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
 [sub_resource type="Animation" id=8]
 resource_name = "wild"
 length = 2.0
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("wild/wild:rect_position")
 tracks/0/interp = 1
@@ -697,11 +699,9 @@ font_data = ExtResource( 1 )
 position = Vector2( -3, -1 )
 
 [node name="moedas" type="CPUParticles2D" parent="."]
-visible = false
 position = Vector2( -1338, 1077 )
 rotation = -6.4077
 scale = Vector2( 16.3409, 16.3409 )
-emitting = false
 amount = 100
 lifetime = 5.0
 speed_scale = 1.79
@@ -727,11 +727,9 @@ angle_random = 1.0
 scale_amount = 0.02
 
 [node name="moedas2" type="CPUParticles2D" parent="."]
-visible = false
 position = Vector2( 1464, 1071 )
-rotation = -6.35034
+rotation = -6.35035
 scale = Vector2( 16.3409, 16.3409 )
-emitting = false
 amount = 100
 lifetime = 5.0
 speed_scale = 1.79
@@ -761,7 +759,7 @@ margin_left = -59.9999
 margin_top = -37.0
 margin_right = 251.0
 margin_bottom = 83.0
-rect_scale = Vector2( 0.177683, 0.174044 )
+rect_scale = Vector2( 6.17195, 6.04556 )
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.980392, 0.886275, 1, 0.933333 )
 custom_colors/font_outline_modulate = Color( 0.207843, 0.968627, 0.933333, 1 )
@@ -773,11 +771,10 @@ __meta__ = {
 }
 
 [node name="Caixa" type="Sprite" parent="."]
-visible = false
-self_modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0.839216 )
 position = Vector2( 21, 571 )
 rotation = 0.000975787
-scale = Vector2( -0.0224521, -0.901119 )
+scale = Vector2( -1.53126, -0.943467 )
 z_index = -1
 texture = ExtResource( 3 )
 
@@ -787,12 +784,10 @@ anims/bigwinentra = SubResource( 7 )
 anims/bigwinsai = SubResource( 12 )
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-visible = false
 position = Vector2( -1336, 1084 )
 rotation = -0.202943
 scale = Vector2( 17.6567, 44.3275 )
 z_index = 2
-emitting = false
 amount = 100
 lifetime = 5.0
 explosiveness = 0.64
@@ -819,12 +814,10 @@ color_ramp = SubResource( 6 )
 hue_variation = 1.0
 
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
-visible = false
 position = Vector2( 1419, 1067 )
 rotation = -0.202943
 scale = Vector2( 17.6567, 44.3275 )
 z_index = 2
-emitting = false
 amount = 100
 lifetime = 5.0
 explosiveness = 0.64
@@ -851,6 +844,7 @@ color_ramp = SubResource( 6 )
 hue_variation = 1.0
 
 [node name="wild" type="Node2D" parent="."]
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wild"]
 root_node = NodePath("../..")
@@ -861,7 +855,7 @@ margin_left = -73.0
 margin_top = -61.0
 margin_right = 85.0
 margin_bottom = 41.0
-rect_scale = Vector2( -0.54404, -0.54404 )
+rect_scale = Vector2( 16.0143, 16.0143 )
 rect_pivot_offset = Vector2( 82.787, 53.3807 )
 custom_colors/font_color = Color( 0.866667, 0.862745, 0.6, 1 )
 custom_colors/font_outline_modulate = Color( 1, 0.835294, 0.266667, 1 )
@@ -877,7 +871,6 @@ position = Vector2( -1336, 1084 )
 rotation = -0.202943
 scale = Vector2( 17.6567, 44.3275 )
 z_index = 2
-emitting = false
 amount = 100
 lifetime = 5.0
 explosiveness = 0.64
@@ -908,7 +901,6 @@ position = Vector2( 1419, 1067 )
 rotation = 0.00296164
 scale = Vector2( -22.1586, 28.4104 )
 z_index = 2
-emitting = false
 amount = 100
 lifetime = 5.0
 explosiveness = 0.64

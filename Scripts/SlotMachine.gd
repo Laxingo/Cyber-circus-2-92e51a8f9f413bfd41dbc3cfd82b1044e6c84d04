@@ -284,3 +284,41 @@ func animPrizes():
 				
 				oTile.animate_icon(prizeID)
 				
+
+onready var totalPoints = 0
+
+func givePoints(prizeID):
+	var pointsToGive
+	if prizeID == "bunny":
+		pointsToGive = 1000
+	elif prizeID == "lion":
+		pointsToGive = 1500
+	elif prizeID == "strongman":
+		pointsToGive = 1600
+	elif prizeID == "ticket":
+		pointsToGive = 1700
+	elif prizeID == "roulette":
+		pointsToGive = 1800
+	elif prizeID == "A":
+		pointsToGive = 2200
+	elif prizeID == "K":
+		pointsToGive = 2100
+	elif prizeID == "Q":
+		pointsToGive = 2000
+	elif prizeID == "J":
+		pointsToGive = 1900
+	elif prizeID == "juggle":
+		pointsToGive = 1550
+	elif prizeID == "clown":
+		pointsToGive = 1650
+	elif prizeID == "elephant":
+		pointsToGive = 1750
+	
+	totalPoints = totalPoints  + pointsToGive
+	
+
+
+#"bunny", "lion","strongman", 
+#"ticket", "roulette","A", "J", "K", "Q", "juggle", "clown", "elephant"
+
+
