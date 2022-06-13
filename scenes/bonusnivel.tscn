@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Fonts/Carnevalee Freakshow.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Imagens/luz/Light_Ball.png" type="Texture" id=2]
@@ -19,14 +19,14 @@
 [ext_resource path="res://Imagens/particulas/yellow.png" type="Texture" id=17]
 [ext_resource path="res://Imagens/bonus/knife_spritesheet.png" type="Texture" id=18]
 
-[sub_resource type="DynamicFontData" id=29]
+[sub_resource type="DynamicFontData" id=28]
 font_path = "res://Fonts/Carnevalee Freakshow.ttf"
 
 [sub_resource type="DynamicFont" id=27]
 size = 122
 outline_size = 2
 outline_color = Color( 0.0431373, 0.0392157, 0.0392157, 1 )
-font_data = SubResource( 29 )
+font_data = SubResource( 28 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 200
@@ -1137,81 +1137,6 @@ tracks/26/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
-}
-
-[sub_resource type="Animation" id=28]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("winamarelo:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -39.8304, 7.37604 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("winamarelo:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("winazul:self_modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("winrosa:rect_position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -25.0785, 20.653 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("winrosa:rect_rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("winrosa:self_modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=20]
@@ -4179,10 +4104,12 @@ position = Vector2( 655, 325 )
 scale = Vector2( 0.677873, 0.677873 )
 
 [node name="winamarelo" type="Label" parent="."]
-margin_left = -39.8304
-margin_top = 7.37604
-margin_right = 350.17
-margin_bottom = 144.376
+visible = false
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -61.9584
+margin_top = 675.643
+margin_right = 328.042
+margin_bottom = 812.643
 rect_scale = Vector2( 3.71567, 3.10045 )
 rect_pivot_offset = Vector2( 257.053, 78.903 )
 custom_fonts/font = SubResource( 27 )
@@ -4193,6 +4120,7 @@ __meta__ = {
 }
 
 [node name="winrosa" type="Label" parent="."]
+visible = false
 margin_left = -25.0785
 margin_top = 20.653
 margin_right = 364.922
@@ -4207,6 +4135,7 @@ __meta__ = {
 }
 
 [node name="winazul" type="Label" parent="."]
+visible = false
 margin_left = -67.8592
 margin_top = 22.1279
 margin_right = 322.141
@@ -4221,6 +4150,7 @@ __meta__ = {
 }
 
 [node name="caixas" type="Node2D" parent="."]
+visible = false
 position = Vector2( 0.999999, 66 )
 rotation = 0.00810973
 scale = Vector2( 0.685984, 0.564366 )
@@ -4234,6 +4164,7 @@ z_index = -1
 texture = ExtResource( 15 )
 
 [node name="Caixarosa" type="Sprite" parent="caixas"]
+visible = false
 position = Vector2( -30.8412, 10.6248 )
 rotation = 0.00810972
 scale = Vector2( 0.00633174, 0.00470921 )
@@ -4241,28 +4172,22 @@ z_index = -1
 texture = ExtResource( 8 )
 
 [node name="Caixaamarela" type="Sprite" parent="caixas"]
-visible = false
-position = Vector2( -33.4329, 14.5039 )
-scale = Vector2( -0.00275277, -0.00275277 )
+position = Vector2( -28.5554, 9.48165 )
+scale = Vector2( -0.00275277, 0.487048 )
 z_index = -1
 texture = ExtResource( 16 )
 
 [node name="bonus" type="Label" parent="."]
-visible = false
-self_modulate = Color( 1, 1, 1, 0 )
 margin_left = -247.0
 margin_top = -83.0
 margin_right = 234.0
 margin_bottom = 142.001
-rect_rotation = 335.302
-rect_scale = Vector2( 0.16019, 0.16019 )
+rect_rotation = -13.9058
+rect_scale = Vector2( 1.92466, 1.92466 )
 rect_pivot_offset = Vector2( 232.421, 139.313 )
 custom_colors/font_color = Color( 0.956863, 0.905882, 0.752941, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "BONUS"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="knife" type="Label" parent="."]
 visible = false
@@ -4281,13 +4206,14 @@ __meta__ = {
 }
 
 [node name="luzdaknife" type="Light2D" parent="knife"]
-position = Vector2( 1619.25, 124.395 )
+position = Vector2( 816.41, 128.247 )
 rotation = 0.00703937
 scale = Vector2( 1.04152, 1.04152 )
 z_index = 1
 texture = ExtResource( 2 )
 
 [node name="CyberCircusRouletteBonus" type="Sprite" parent="."]
+visible = false
 light_mask = 4
 position = Vector2( -10, 68 )
 z_index = -2
@@ -4312,19 +4238,18 @@ texture = ExtResource( 5 )
 
 [node name="Luzazul" type="Sprite" parent="CyberCircusRouletteBonus/luzesentreaspas"]
 self_modulate = Color( 1, 1, 1, 0 )
-position = Vector2( -196, 210 )
+position = Vector2( -178, 200 )
 scale = Vector2( -2.08383, -2.08383 )
 texture = ExtResource( 7 )
 
 [node name="Luzmuitoamarela" type="Sprite" parent="CyberCircusRouletteBonus/luzesentreaspas"]
-visible = false
-self_modulate = Color( 1, 1, 1, 0.537255 )
+self_modulate = Color( 0.992891, 1, 0.0935769, 0.956698 )
 position = Vector2( -183, 206 )
-scale = Vector2( 0.210555, 0.210555 )
+scale = Vector2( 2.62819, 2.62819 )
 texture = ExtResource( 9 )
 
 [node name="Luzrosa" type="Sprite" parent="CyberCircusRouletteBonus/luzesentreaspas"]
-self_modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 0.0313726, 0.909804, 0 )
 position = Vector2( -187, 207 )
 scale = Vector2( 1.91159, 1.91159 )
 texture = ExtResource( 13 )
@@ -4340,7 +4265,6 @@ anims/1bonusentrada = SubResource( 3 )
 anims/2throwtheknife = SubResource( 4 )
 anims/3rodaluzentra = SubResource( 25 )
 anims/4rodaroda = SubResource( 5 )
-anims/RESET = SubResource( 28 )
 anims/tudobaza = SubResource( 20 )
 anims/winamarelo = SubResource( 11 )
 anims/winamarelobaza = SubResource( 17 )
@@ -4352,7 +4276,6 @@ anims/winrosabaza = SubResource( 19 )
 [node name="escondidinho" type="Light2D" parent="."]
 visible = false
 position = Vector2( -1144, 15 )
-scale = Vector2( 8.32, 1 )
 texture = ExtResource( 10 )
 mode = 3
 shadow_item_cull_mask = 2
@@ -4377,6 +4300,7 @@ vframes = 4
 frame = 23
 
 [node name="particulas" type="Node2D" parent="."]
+visible = false
 
 [node name="particulasrosa" type="CPUParticles2D" parent="particulas"]
 position = Vector2( -597, 653 )

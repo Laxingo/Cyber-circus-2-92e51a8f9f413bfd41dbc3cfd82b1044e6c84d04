@@ -135,3 +135,5 @@ func _on_historico_button_down():
 
 func _on_money_button_down():
 	get_tree().change_scene("res://scenes/symbolspayout.tscn")
+
+

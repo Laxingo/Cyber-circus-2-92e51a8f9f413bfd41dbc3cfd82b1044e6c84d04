@@ -74,6 +74,7 @@ func _ready():
 	
 	setPrizeMasks();
 	
+	rouletteLVL()
 	for col in reels:
 		grid_pos.append([])
 		tiles_moved_per_reel.append(0)
@@ -316,7 +317,10 @@ func givePoints(prizeID):
 	
 	totalPoints = totalPoints  + pointsToGive
 	
+onready var bonusAnim = $Node2D/AnimationPlayer
 
+func rouletteLVL():
+	$BonusLvl/AnimationPlayer.play("1bonusentrada")
 
 #"bunny", "lion","strongman", 
 #"ticket", "roulette","A", "J", "K", "Q", "juggle", "clown", "elephant"
