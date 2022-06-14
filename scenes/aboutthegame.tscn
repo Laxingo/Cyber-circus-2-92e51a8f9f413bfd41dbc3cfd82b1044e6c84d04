@@ -1,17 +1,33 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Imagens/UI/fundo.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/Myriad Cn Bold.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://Imagens/UI/xmini.png" type="Texture" id=3]
 [ext_resource path="res://Imagens/UI/x.png" type="Texture" id=4]
 [ext_resource path="res://Imagens/UI/xe.png" type="Texture" id=5]
+[ext_resource path="res://Imagens/luz/Light_Ray.png" type="Texture" id=6]
+[ext_resource path="res://Imagens/UI/info.png" type="Texture" id=7]
+[ext_resource path="res://Imagens/UI/historico.png" type="Texture" id=8]
+[ext_resource path="res://Imagens/UI/fast.png" type="Texture" id=9]
+[ext_resource path="res://Imagens/UI/options.png" type="Texture" id=10]
+[ext_resource path="res://Imagens/UI/money.png" type="Texture" id=11]
+[ext_resource path="res://Imagens/UI/replay.png" type="Texture" id=12]
+[ext_resource path="res://Imagens/UI/play2.png" type="Texture" id=13]
+[ext_resource path="res://Imagens/UI/csom.png" type="Texture" id=14]
+[ext_resource path="res://Imagens/UI/setas.png" type="Texture" id=15]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 100
 outline_color = Color( 0.72549, 0.878431, 0.878431, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
+size = 60
+outline_color = Color( 0.72549, 0.878431, 0.878431, 1 )
+extra_spacing_bottom = 27
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
 size = 100
 outline_color = Color( 0.72549, 0.878431, 0.878431, 1 )
 font_data = ExtResource( 2 )
@@ -36,83 +52,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="aboutthegame" type="Label" parent="."]
-margin_left = -458.0
-margin_top = -393.0
-margin_right = 110.0
-margin_bottom = -273.0
-rect_scale = Vector2( 2.29741, 1.71492 )
-rect_pivot_offset = Vector2( 150.091, 61.528 )
-custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
-custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
-custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "About The Game"
-
-[node name="wild" type="Label" parent="."]
-margin_left = -720.0
-margin_top = -182.0
-margin_right = 431.0
-margin_bottom = -62.0
-rect_scale = Vector2( 1.20374, 0.89854 )
-rect_pivot_offset = Vector2( 150.091, 61.528 )
-custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
-custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
-custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "Wild"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="bonus" type="Label" parent="."]
-margin_left = -720.0
-margin_top = 159.0
-margin_right = 431.0
-margin_bottom = 279.0
-rect_scale = Vector2( 1.20374, 0.89854 )
-rect_pivot_offset = Vector2( 150.091, 61.528 )
-custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
-custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
-custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "Bonus"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="howtoplay" type="Label" parent="."]
-margin_left = -720.0
-margin_top = 529.0
-margin_right = 431.0
-margin_bottom = 649.0
-rect_scale = Vector2( 1.20374, 0.89854 )
-rect_pivot_offset = Vector2( 150.091, 61.528 )
-custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
-custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
-custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "How to Bet and Play"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="buttons" type="Label" parent="."]
-margin_left = -720.0
-margin_top = 877.0
-margin_right = 431.0
-margin_bottom = 997.0
-rect_scale = Vector2( 1.20374, 0.89854 )
-rect_pivot_offset = Vector2( 150.091, 61.528 )
-custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
-custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
-custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "Buttons"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="TextureButton" type="TextureButton" parent="."]
 margin_left = 853.695
 margin_top = -491.778
@@ -125,3 +64,383 @@ texture_hover = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="tudo" type="Node2D" parent="."]
+
+[node name="wild" type="Node2D" parent="tudo"]
+position = Vector2( 0, 956.652 )
+scale = Vector2( 1, 1 )
+
+[node name="wild" type="Label" parent="tudo/wild"]
+margin_left = -846.154
+margin_top = -436.472
+margin_right = 304.846
+margin_bottom = -316.472
+rect_scale = Vector2( 1.20374, 0.89854 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Wild"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="tudo/wild"]
+anchor_right = 0.358
+margin_left = -822.0
+margin_top = -280.0
+margin_right = 709.0
+margin_bottom = -91.0
+rect_scale = Vector2( 1.234, 0.899 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "* WILD symbol will replace all symbols except SCATTER and BONUS 
+symbols."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="scatter" type="Node2D" parent="tudo"]
+position = Vector2( 0, 1379.67 )
+scale = Vector2( 1, 1 )
+
+[node name="scatter" type="Label" parent="tudo/scatter"]
+margin_left = -846.154
+margin_top = -436.472
+margin_right = 304.846
+margin_bottom = -316.472
+rect_scale = Vector2( 1.20374, 0.89854 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Scatter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="tudo/scatter"]
+anchor_right = 0.358
+margin_left = -822.0
+margin_top = -280.0
+margin_right = 709.0
+margin_bottom = -91.0
+rect_scale = Vector2( 1.234, 0.899 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "* Wins are awarded for 3 or more symbols appering on the reels.
+   * 3 SCATTERS symbols award 10 times de total credits bet;
+   * 4 SCATTERS symbols award 40 times de total credits bet;
+   * 5 SCATTERS symbols award 100 times de total credits bet."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bonus" type="Node2D" parent="tudo"]
+position = Vector2( 0, 1967.11 )
+scale = Vector2( 1, 1 )
+
+[node name="bonus" type="Label" parent="tudo/bonus"]
+margin_left = -846.154
+margin_top = -436.472
+margin_right = 304.846
+margin_bottom = -316.472
+rect_scale = Vector2( 1.20374, 0.89854 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Bonus"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="tudo/bonus"]
+anchor_right = 0.358
+margin_left = -822.0
+margin_top = -280.0
+margin_right = 709.0
+margin_bottom = -91.0
+rect_scale = Vector2( 1.234, 0.899 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "* If a sequence of 3 or more BONUS symbols occurs on any active line
+ the bonus game is triggered.
+* The bonus is a ... game type.
+* The player has to...
+* Each color has an hidden prize in credits."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="howto" type="Node2D" parent="tudo"]
+position = Vector2( 0, 2650.22 )
+scale = Vector2( 1, 1 )
+
+[node name="howto" type="Label" parent="tudo/howto"]
+margin_left = -846.154
+margin_top = -436.472
+margin_right = 304.846
+margin_bottom = -316.472
+rect_scale = Vector2( 1.20374, 0.89854 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "How to Bet and Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="tudo/howto"]
+anchor_right = 0.358
+margin_left = -822.0
+margin_top = -280.0
+margin_right = 709.0
+margin_bottom = -91.0
+rect_scale = Vector2( 1.234, 0.899 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "* The game is played with a bet of 25 credits per bet level (1-20) 
+and different coin values.
+* The bet level is set using the LEVEL selector.
+* The coin value is set using the DENOMINATION selector.
+* Winning combinations and payouts are made according to
+ Pay Table.
+* All wins on active pay line from left to right starting with the left
+ most reel with ex-ception of scatter wins.
+* Scatter wins pays on any reel.
+* Line wins from paytable are multiplied by the bet level.
+* Scatter wins from paytable are multiplied by the total bet.
+* Only the highest win per pay line is paid out.
+* A pay line win in credits is equal to the value shown in the Pay Table
+ multiplied by the bet level.
+* A pay line win in currency is equal to the win in credits multiplied by
+ the credits denomination.
+* A game round starts hitting the spin button with the selected
+ bet level.
+* No bets can be altered during a game round.
+* Wins on different lines are added.
+* Hit the spin button to start the game (Space button on the
+ computer's keyboard also starts the game).
+* Auto-Play is enabled in this game. In mobile, the options are shown
+ after a long press on the spin button.
+* Quick-Play is also available on the menu (desktop) or at the long
+ press spin button (mobile).
+* Malfunctions voids all pays and plays "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="aboutthis" type="Node2D" parent="tudo"]
+scale = Vector2( 1, 1 )
+
+[node name="aboutthegame" type="Label" parent="tudo/aboutthis"]
+margin_left = -435.897
+margin_top = -423.019
+margin_right = 132.103
+margin_bottom = -303.019
+rect_scale = Vector2( 2.29741, 1.71492 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "About The Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="tudo/aboutthis"]
+anchor_right = 0.358
+margin_left = -822.021
+margin_top = -194.32
+margin_right = 585.979
+margin_bottom = 474.68
+rect_scale = Vector2( 1.234, 0.899 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "* Cyber Circus is a 5 reels and 3 rows slot with 10 fixes pay lines.
+* The theoretical return to player is ???%.
+* Cyber Circus is played in credits.
+* The game has 3 high pay symbols and 4 low pay symbols...
+* WILD symbols substitute regular symbols.
+* BONUS symbols enable a new game mode.
+* SCATTER symbols allow other prizes."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttons" type="Node2D" parent="tudo"]
+position = Vector2( 0, 5248.13 )
+scale = Vector2( 1, 1 )
+
+[node name="bolas" type="Label" parent="tudo/buttons"]
+margin_left = -441.931
+margin_top = -420.03
+margin_right = 126.069
+margin_bottom = -300.03
+rect_scale = Vector2( 2.29741, 1.71492 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Buttons"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="tudo/buttons"]
+anchor_right = 0.358
+margin_left = -282.051
+margin_top = -118.087
+margin_right = 1125.95
+margin_bottom = 2950.91
+rect_scale = Vector2( 1.234, 0.899 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Click to start a game round.
+
+
+
+Click to open the autoplay options.
+
+
+
+Click to activate quick play mode.
+
+
+Click to view the games settings menu
+ and select game options.
+
+
+Click to mute the game sounds.
+
+
+
+Click to open the game rules.
+
+
+
+Click to view the paytable.
+
+
+
+Click to view play's history.
+
+
+
+Click to enter fullscreen."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play2" type="Sprite" parent="tudo/buttons"]
+position = Vector2( -500.754, -85.2018 )
+scale = Vector2( 0.494979, 0.494979 )
+texture = ExtResource( 13 )
+
+[node name="Replay" type="Sprite" parent="tudo/buttons/Play2"]
+position = Vector2( 9.14148, 664.37 )
+texture = ExtResource( 12 )
+
+[node name="Fast" type="Sprite" parent="tudo/buttons/Play2/Replay"]
+position = Vector2( 0, 685.509 )
+texture = ExtResource( 9 )
+
+[node name="Options" type="Sprite" parent="tudo/buttons/Play2/Replay/Fast"]
+position = Vector2( 3.04724, 619.072 )
+texture = ExtResource( 10 )
+
+[node name="Csom" type="Sprite" parent="tudo/buttons/Play2/Replay/Fast/Options"]
+position = Vector2( -9.14172, 646.25 )
+texture = ExtResource( 14 )
+
+[node name="Info" type="Sprite" parent="tudo/buttons/Play2/Replay/Fast/Options/Csom"]
+position = Vector2( 0.00012207, 658.33 )
+texture = ExtResource( 7 )
+
+[node name="Money" type="Sprite" parent="tudo/buttons/Play2/Replay/Fast/Options/Csom/Info"]
+position = Vector2( 0, 664.37 )
+texture = ExtResource( 11 )
+
+[node name="Historico" type="Sprite" parent="tudo/buttons/Play2/Replay/Fast/Options/Csom/Info/Money"]
+position = Vector2( -6.09436, 697.588 )
+texture = ExtResource( 8 )
+
+[node name="Setas" type="Sprite" parent="tudo/buttons/Play2/Replay/Fast/Options/Csom/Info/Money/Historico"]
+position = Vector2( 9.1416, 748.926 )
+texture = ExtResource( 15 )
+
+[node name="LightRay" type="Sprite" parent="tudo/buttons"]
+position = Vector2( 0.273682, 71.7489 )
+rotation = 1.5708
+scale = Vector2( 0.189718, 2.67263 )
+texture = ExtResource( 6 )
+
+[node name="LightRay2" type="Sprite" parent="tudo/buttons"]
+position = Vector2( 0.27356, 411.116 )
+rotation = 1.5708
+scale = Vector2( 0.189718, 2.67263 )
+texture = ExtResource( 6 )
+
+[node name="LightRay3" type="Sprite" parent="tudo/buttons"]
+position = Vector2( 0.273804, 736.907 )
+rotation = 1.5708
+scale = Vector2( 0.189718, 2.67263 )
+texture = ExtResource( 6 )
+
+[node name="LightRay4" type="Sprite" parent="tudo/buttons"]
+position = Vector2( 0.273926, 1058.17 )
+rotation = 1.5708
+scale = Vector2( 0.189718, 2.67263 )
+texture = ExtResource( 6 )
+
+[node name="LightRay5" type="Sprite" parent="tudo/buttons"]
+position = Vector2( 0.27356, 1364.36 )
+rotation = 1.5708
+scale = Vector2( 0.189718, 2.67263 )
+texture = ExtResource( 6 )
+
+[node name="LightRay6" type="Sprite" parent="tudo/buttons"]
+position = Vector2( 0.27356, 1693.17 )
+rotation = 1.5708
+scale = Vector2( 0.189718, 2.67263 )
+texture = ExtResource( 6 )
+
+[node name="LightRay7" type="Sprite" parent="tudo/buttons"]
+position = Vector2( 0.273682, 2031.03 )
+rotation = 1.5708
+scale = Vector2( 0.189718, 2.67263 )
+texture = ExtResource( 6 )
+
+[node name="LightRay8" type="Sprite" parent="tudo/buttons"]
+position = Vector2( 0.273682, 2370.39 )
+rotation = 1.5708
+scale = Vector2( 0.189718, 2.67263 )
+texture = ExtResource( 6 )

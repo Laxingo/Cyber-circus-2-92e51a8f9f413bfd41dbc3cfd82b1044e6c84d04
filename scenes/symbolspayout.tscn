@@ -30,11 +30,16 @@
 [ext_resource path="res://Imagens/Simbolos/CyberCircus_Elephant.png" type="Texture" id=28]
 [ext_resource path="res://Imagens/Simbolos/peso.png" type="Texture" id=29]
 [ext_resource path="res://Imagens/Simbolos/CyberCircus_Bumbaaadu.png" type="Texture" id=30]
-[ext_resource path="res://Imagens/Simbolos/CyberCircus_ticket_emission1.png" type="Texture" id=31]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
 outline_color = Color( 0.72549, 0.878431, 0.878431, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=52]
+size = 50
+outline_color = Color( 0.72549, 0.878431, 0.878431, 1 )
+extra_spacing_bottom = 9
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -2163,14 +2168,13 @@ __meta__ = {
 }
 
 [node name="Caixadevalores" type="Sprite" parent="symbolspayout"]
-position = Vector2( -668.239, 88.8098 )
+position = Vector2( -436.926, 106.873 )
 scale = Vector2( 0.490758, 0.490758 )
 z_index = 2
 texture = ExtResource( 23 )
 
 [node name="Caixadevalores2" type="Sprite" parent="symbolspayout/Caixadevalores"]
 position = Vector2( 859.361, -5.19171 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 23 )
 
 [node name="Bunny" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores2"]
@@ -2182,7 +2186,6 @@ offset = Vector2( -196.48, -149.256 )
 [node name="chapeu" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores2/Bunny"]
 light_mask = 128
 position = Vector2( 266.028, 369.889 )
-scale = Vector2( 1, 1 )
 z_index = -1
 texture = ExtResource( 27 )
 region_enabled = true
@@ -2191,7 +2194,6 @@ region_rect = Rect2( -4.79358, 231.711, 399.81, 136.304 )
 [node name="cabeça" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores2/Bunny"]
 light_mask = 128
 position = Vector2( 268.456, 326.463 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 27 )
 region_enabled = true
 region_rect = Rect2( 304.535, -6.66034, 252.738, 250.542 )
@@ -2207,14 +2209,30 @@ region_rect = Rect2( 12.4562, 3.19252, 306.572, 185.344 )
 [node name="partefrontal" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores2/Bunny"]
 light_mask = 128
 position = Vector2( 266.939, 443.684 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 27 )
 region_enabled = true
 region_rect = Rect2( 104.671, 367.531, 418.209, 152.756 )
 
+[node name="text" type="Label" parent="symbolspayout/Caixadevalores/Caixadevalores2"]
+anchor_right = 0.358
+margin_top = -120.0
+margin_right = -14.728
+margin_bottom = 78.0
+rect_scale = Vector2( 2.25028, 1.63939 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 52 )
+text = "  5     500
+  4     150
+  3      50"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Caixadevalores3" type="Sprite" parent="symbolspayout/Caixadevalores"]
 position = Vector2( 1775.33, 3.35413 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 23 )
 
 [node name="Elephant" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores3"]
@@ -2272,15 +2290,23 @@ texture = ExtResource( 28 )
 region_enabled = true
 region_rect = Rect2( 360, 370, 150, 150 )
 
-[node name="Caixadevalores4" type="Sprite" parent="symbolspayout/Caixadevalores"]
-position = Vector2( 2657.95, 16.7703 )
-scale = Vector2( 1, 1 )
-texture = ExtResource( 23 )
-
-[node name="CyberCircusTicketEmission1" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores4"]
-position = Vector2( 16.0552, -446.178 )
-scale = Vector2( 1.25444, 1.25444 )
-texture = ExtResource( 31 )
+[node name="text" type="Label" parent="symbolspayout/Caixadevalores/Caixadevalores3"]
+anchor_right = 0.358
+margin_top = -120.0
+margin_right = -14.728
+margin_bottom = 78.0
+rect_scale = Vector2( 2.25028, 1.63939 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 52 )
+text = "  5     300
+  4      75
+  3      25"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CyberCircusBumbaaadu" type="Sprite" parent="symbolspayout/Caixadevalores"]
 position = Vector2( -3.08051, -585.834 )
@@ -2292,18 +2318,36 @@ position = Vector2( 18.9232, -16.7471 )
 scale = Vector2( 1.25237, 1.25237 )
 texture = ExtResource( 29 )
 
+[node name="text" type="Label" parent="symbolspayout/Caixadevalores"]
+anchor_right = 0.358
+margin_top = -120.0
+margin_right = -14.728
+margin_bottom = 78.0
+rect_scale = Vector2( 2.25028, 1.63939 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 52 )
+text = "  5    1000
+  4     250
+  3      50"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Caixadevalores5" type="Sprite" parent="symbolspayout"]
-position = Vector2( 586.599, 427.491 )
+position = Vector2( 662.192, 400.397 )
 scale = Vector2( 0.422647, 0.422647 )
 texture = ExtResource( 23 )
 
 [node name="Caixadevalores6" type="Sprite" parent="symbolspayout/Caixadevalores5"]
-position = Vector2( -940.778, 0.000244141 )
+position = Vector2( -1051.67, -3.56177 )
 texture = ExtResource( 23 )
 
 [node name="J" type="Sprite" parent="symbolspayout/Caixadevalores5/Caixadevalores6"]
 light_mask = 16
-position = Vector2( 1227.73, 461.554 )
+position = Vector2( 1023.05, 352.588 )
 scale = Vector2( 3.08944, 1.9296 )
 
 [node name="Sprite" type="Sprite" parent="symbolspayout/Caixadevalores5/Caixadevalores6/J"]
@@ -2315,13 +2359,31 @@ hframes = 2
 vframes = 2
 frame = 1
 
+[node name="text" type="Label" parent="symbolspayout/Caixadevalores5/Caixadevalores6"]
+anchor_right = 0.358
+margin_top = -120.0
+margin_right = -14.728
+margin_bottom = 78.0
+rect_scale = Vector2( 2.25028, 1.63939 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 52 )
+text = "  5     100
+  4      25
+  3       5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Caixadevalores7" type="Sprite" parent="symbolspayout/Caixadevalores5"]
-position = Vector2( -1910.17, 10.6846 )
+position = Vector2( -2063.99, -0.000457764 )
 texture = ExtResource( 23 )
 
 [node name="K" type="Sprite" parent="symbolspayout/Caixadevalores5/Caixadevalores7"]
 light_mask = 32
-position = Vector2( 1273.89, 470.785 )
+position = Vector2( 1055.25, 366.833 )
 scale = Vector2( 3.0433, 1.91243 )
 
 [node name="Sprite" type="Sprite" parent="symbolspayout/Caixadevalores5/Caixadevalores7/K"]
@@ -2333,14 +2395,32 @@ hframes = 2
 vframes = 2
 frame = 2
 
+[node name="text" type="Label" parent="symbolspayout/Caixadevalores5/Caixadevalores7"]
+anchor_right = 0.358
+margin_top = -120.0
+margin_right = -14.728
+margin_bottom = 78.0
+rect_scale = Vector2( 2.25028, 1.63939 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 52 )
+text = "  5     150
+  4      30
+  3      10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Caixadevalores8" type="Sprite" parent="symbolspayout/Caixadevalores5"]
-position = Vector2( -2850.95, 14.2461 )
+position = Vector2( -3158.58, -0.000236511 )
 z_index = 1
 texture = ExtResource( 23 )
 
 [node name="A" type="Sprite" parent="symbolspayout/Caixadevalores5/Caixadevalores8"]
 light_mask = 8
-position = Vector2( 4485.69, -67.668 )
+position = Vector2( 4281.79, -170.951 )
 scale = Vector2( 7.34721, 4.56101 )
 z_index = 1
 
@@ -2354,9 +2434,27 @@ hframes = 2
 vframes = 2
 frame = 3
 
+[node name="text" type="Label" parent="symbolspayout/Caixadevalores5/Caixadevalores8"]
+anchor_right = 0.358
+margin_top = -120.0
+margin_right = -14.728
+margin_bottom = 78.0
+rect_scale = Vector2( 2.25028, 1.63939 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 52 )
+text = "  5     150
+  4      30
+  3      10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Q" type="Sprite" parent="symbolspayout/Caixadevalores5"]
 light_mask = 64
-position = Vector2( 1253.12, 498.478 )
+position = Vector2( 1037.36, 363.271 )
 scale = Vector2( 2.98907, 1.90727 )
 
 [node name="Sprite" type="Sprite" parent="symbolspayout/Caixadevalores5/Q"]
@@ -2366,6 +2464,24 @@ scale = Vector2( 0.413372, 0.419657 )
 texture = ExtResource( 26 )
 hframes = 2
 vframes = 2
+
+[node name="text" type="Label" parent="symbolspayout/Caixadevalores5"]
+anchor_right = 0.358
+margin_top = -120.0
+margin_right = -14.728
+margin_bottom = 78.0
+rect_scale = Vector2( 2.25028, 1.63939 )
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 52 )
+text = "  5     100
+  4      25
+  3       5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="wild" type="Node2D" parent="."]
 visible = false
@@ -2513,7 +2629,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 48 )
 animation = "burn"
-frame = 2
+frame = 5
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="wild/Lion/Head"]
@@ -2531,7 +2647,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 49 )
 animation = "kwispy"
-frame = 6
+frame = 9
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wild/Lion"]
