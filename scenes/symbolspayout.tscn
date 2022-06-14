@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=70 format=2]
 
 [ext_resource path="res://Imagens/UI/fundo.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/Myriad Cn Bold.otf" type="DynamicFontData" id=2]
@@ -25,6 +25,12 @@
 [ext_resource path="res://Imagens/info/caixadevalores.png" type="Texture" id=23]
 [ext_resource path="res://Imagens/info/1e3.png" type="Texture" id=24]
 [ext_resource path="res://Imagens/info/10.png" type="Texture" id=25]
+[ext_resource path="res://Imagens/Simbolos/CyberCircus_Cards.png" type="Texture" id=26]
+[ext_resource path="res://Imagens/Simbolos/CyberCircus_Bunny.png" type="Texture" id=27]
+[ext_resource path="res://Imagens/Simbolos/CyberCircus_Elephant.png" type="Texture" id=28]
+[ext_resource path="res://Imagens/Simbolos/peso.png" type="Texture" id=29]
+[ext_resource path="res://Imagens/Simbolos/CyberCircus_Bumbaaadu.png" type="Texture" id=30]
+[ext_resource path="res://Imagens/Simbolos/CyberCircus_ticket_emission1.png" type="Texture" id=31]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -2138,13 +2144,13 @@ __meta__ = {
 }
 
 [node name="symbolspayout" type="Node2D" parent="."]
-visible = false
+position = Vector2( 0, -1.50525 )
 
 [node name="symbolspayout" type="Label" parent="symbolspayout"]
 margin_left = -450.532
-margin_top = -418.46
-margin_right = 99.4679
-margin_bottom = -298.46
+margin_top = -448.565
+margin_right = 99.468
+margin_bottom = -328.565
 rect_scale = Vector2( 2.29741, 1.71492 )
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
@@ -2157,9 +2163,209 @@ __meta__ = {
 }
 
 [node name="Caixadevalores" type="Sprite" parent="symbolspayout"]
-position = Vector2( -604.741, 37.6313 )
-scale = Vector2( 0.579863, 0.579863 )
+position = Vector2( -668.239, 88.8098 )
+scale = Vector2( 0.490758, 0.490758 )
+z_index = 2
 texture = ExtResource( 23 )
+
+[node name="Caixadevalores2" type="Sprite" parent="symbolspayout/Caixadevalores"]
+position = Vector2( 859.361, -5.19171 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 23 )
+
+[node name="Bunny" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores2"]
+light_mask = 2
+position = Vector2( -391.103, -829.085 )
+scale = Vector2( 1.40633, 1.19232 )
+offset = Vector2( -196.48, -149.256 )
+
+[node name="chapeu" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores2/Bunny"]
+light_mask = 128
+position = Vector2( 266.028, 369.889 )
+scale = Vector2( 1, 1 )
+z_index = -1
+texture = ExtResource( 27 )
+region_enabled = true
+region_rect = Rect2( -4.79358, 231.711, 399.81, 136.304 )
+
+[node name="cabeça" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores2/Bunny"]
+light_mask = 128
+position = Vector2( 268.456, 326.463 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 27 )
+region_enabled = true
+region_rect = Rect2( 304.535, -6.66034, 252.738, 250.542 )
+
+[node name="orelhas" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores2/Bunny/cabeça"]
+light_mask = 128
+position = Vector2( -5, -192 )
+z_index = -1
+texture = ExtResource( 27 )
+region_enabled = true
+region_rect = Rect2( 12.4562, 3.19252, 306.572, 185.344 )
+
+[node name="partefrontal" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores2/Bunny"]
+light_mask = 128
+position = Vector2( 266.939, 443.684 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 27 )
+region_enabled = true
+region_rect = Rect2( 104.671, 367.531, 418.209, 152.756 )
+
+[node name="Caixadevalores3" type="Sprite" parent="symbolspayout/Caixadevalores"]
+position = Vector2( 1775.33, 3.35413 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 23 )
+
+[node name="Elephant" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores3"]
+light_mask = 256
+position = Vector2( -50.1714, -466.501 )
+rotation = -0.00965261
+scale = Vector2( 1.83467, 1.42619 )
+offset = Vector2( 2765, -1167 )
+
+[node name="tromba2" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores3/Elephant"]
+light_mask = 256
+position = Vector2( 158.983, 87.2335 )
+rotation = -0.109818
+scale = Vector2( 0.886099, 1.46833 )
+texture = ExtResource( 28 )
+region_enabled = true
+region_rect = Rect2( 230, 230, 280, 143.697 )
+
+[node name="cabeçaf" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores3/Elephant"]
+light_mask = 256
+position = Vector2( 32, 33 )
+texture = ExtResource( 28 )
+region_enabled = true
+region_rect = Rect2( 0, 310, 290, 200 )
+
+[node name="cabeçat" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores3/Elephant/cabeçaf"]
+light_mask = 256
+position = Vector2( 76, -24 )
+z_index = -1
+texture = ExtResource( 28 )
+region_enabled = true
+region_rect = Rect2( 290, 60, 230, 160 )
+
+[node name="orelhaf" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores3/Elephant/cabeçaf"]
+light_mask = 256
+position = Vector2( -177.8, 6.32732 )
+rotation = -0.00444228
+scale = Vector2( 1.00605, 1.00605 )
+texture = ExtResource( 28 )
+region_enabled = true
+region_rect = Rect2( 0, 20, 180, 230 )
+
+[node name="orelhat" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores3/Elephant/cabeçaf/orelhaf"]
+light_mask = 256
+position = Vector2( 191, -31 )
+z_index = -2
+texture = ExtResource( 28 )
+region_enabled = true
+region_rect = Rect2( 240, 20, 60, 190 )
+
+[node name="bola" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores3/Elephant"]
+light_mask = 256
+position = Vector2( 242, 34 )
+texture = ExtResource( 28 )
+region_enabled = true
+region_rect = Rect2( 360, 370, 150, 150 )
+
+[node name="Caixadevalores4" type="Sprite" parent="symbolspayout/Caixadevalores"]
+position = Vector2( 2657.95, 16.7703 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 23 )
+
+[node name="CyberCircusTicketEmission1" type="Sprite" parent="symbolspayout/Caixadevalores/Caixadevalores4"]
+position = Vector2( 16.0552, -446.178 )
+scale = Vector2( 1.25444, 1.25444 )
+texture = ExtResource( 31 )
+
+[node name="CyberCircusBumbaaadu" type="Sprite" parent="symbolspayout/Caixadevalores"]
+position = Vector2( -3.08051, -585.834 )
+scale = Vector2( 1.46517, 1.46517 )
+texture = ExtResource( 30 )
+
+[node name="Peso" type="Sprite" parent="symbolspayout/Caixadevalores/CyberCircusBumbaaadu"]
+position = Vector2( 18.9232, -16.7471 )
+scale = Vector2( 1.25237, 1.25237 )
+texture = ExtResource( 29 )
+
+[node name="Caixadevalores5" type="Sprite" parent="symbolspayout"]
+position = Vector2( 586.599, 427.491 )
+scale = Vector2( 0.422647, 0.422647 )
+texture = ExtResource( 23 )
+
+[node name="Caixadevalores6" type="Sprite" parent="symbolspayout/Caixadevalores5"]
+position = Vector2( -940.778, 0.000244141 )
+texture = ExtResource( 23 )
+
+[node name="J" type="Sprite" parent="symbolspayout/Caixadevalores5/Caixadevalores6"]
+light_mask = 16
+position = Vector2( 1227.73, 461.554 )
+scale = Vector2( 3.08944, 1.9296 )
+
+[node name="Sprite" type="Sprite" parent="symbolspayout/Caixadevalores5/Caixadevalores6/J"]
+light_mask = 16
+position = Vector2( -332.556, -397.928 )
+scale = Vector2( 0.428037, 0.434545 )
+texture = ExtResource( 26 )
+hframes = 2
+vframes = 2
+frame = 1
+
+[node name="Caixadevalores7" type="Sprite" parent="symbolspayout/Caixadevalores5"]
+position = Vector2( -1910.17, 10.6846 )
+texture = ExtResource( 23 )
+
+[node name="K" type="Sprite" parent="symbolspayout/Caixadevalores5/Caixadevalores7"]
+light_mask = 32
+position = Vector2( 1273.89, 470.785 )
+scale = Vector2( 3.0433, 1.91243 )
+
+[node name="Sprite" type="Sprite" parent="symbolspayout/Caixadevalores5/Caixadevalores7/K"]
+light_mask = 32
+position = Vector2( -344.538, -408.189 )
+scale = Vector2( 0.409863, 0.416095 )
+texture = ExtResource( 26 )
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Caixadevalores8" type="Sprite" parent="symbolspayout/Caixadevalores5"]
+position = Vector2( -2850.95, 14.2461 )
+z_index = 1
+texture = ExtResource( 23 )
+
+[node name="A" type="Sprite" parent="symbolspayout/Caixadevalores5/Caixadevalores8"]
+light_mask = 8
+position = Vector2( 4485.69, -67.668 )
+scale = Vector2( 7.34721, 4.56101 )
+z_index = 1
+
+[node name="Sprite" type="Sprite" parent="symbolspayout/Caixadevalores5/Caixadevalores8/A"]
+light_mask = 8
+position = Vector2( -580.344, -56.2214 )
+scale = Vector2( 0.17919, 0.181915 )
+z_index = 1
+texture = ExtResource( 26 )
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Q" type="Sprite" parent="symbolspayout/Caixadevalores5"]
+light_mask = 64
+position = Vector2( 1253.12, 498.478 )
+scale = Vector2( 2.98907, 1.90727 )
+
+[node name="Sprite" type="Sprite" parent="symbolspayout/Caixadevalores5/Q"]
+light_mask = 64
+position = Vector2( -341.447, -408.875 )
+scale = Vector2( 0.413372, 0.419657 )
+texture = ExtResource( 26 )
+hframes = 2
+vframes = 2
 
 [node name="wild" type="Node2D" parent="."]
 visible = false
@@ -2307,7 +2513,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 48 )
 animation = "burn"
-frame = 3
+frame = 2
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="wild/Lion/Head"]
@@ -2325,7 +2531,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 49 )
 animation = "kwispy"
-frame = 7
+frame = 6
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wild/Lion"]
@@ -2863,6 +3069,7 @@ region_enabled = true
 region_rect = Rect2( 60, 250, 80, 210 )
 
 [node name="prizelines" type="Node2D" parent="."]
+visible = false
 
 [node name="prize lines" type="Label" parent="prizelines"]
 margin_left = -450.532
@@ -2898,7 +3105,6 @@ texture = ExtResource( 24 )
 [node name="4E5" type="Sprite" parent="prizelines/1E3"]
 position = Vector2( 1497.18, -17.7157 )
 rotation = -3.14159
-scale = Vector2( 1, 1 )
 texture = ExtResource( 20 )
 
 [node name="4E6" type="Sprite" parent="prizelines/1E3"]

@@ -6523,7 +6523,6 @@ scale = Vector2( 1.72845, 1.72845 )
 
 [node name="ReelLights" type="Node2D" parent="ReelLights"]
 visible = false
-scale = Vector2( 1, 1 )
 
 [node name="1" type="Sprite" parent="ReelLights/ReelLights"]
 position = Vector2( 239.99, 306.491 )
@@ -6545,7 +6544,6 @@ texture = ExtResource( 4 )
 [node name="ReelLights2" type="Node2D" parent="ReelLights"]
 visible = false
 position = Vector2( 181.475, 5.62668e-05 )
-scale = Vector2( 1, 1 )
 
 [node name="1" type="Sprite" parent="ReelLights/ReelLights2"]
 position = Vector2( 239.99, 306.491 )
@@ -6568,7 +6566,6 @@ texture = ExtResource( 4 )
 [node name="ReelLights3" type="Node2D" parent="ReelLights"]
 visible = false
 position = Vector2( 365.555, 0 )
-scale = Vector2( 1, 1 )
 
 [node name="1" type="Sprite" parent="ReelLights/ReelLights3"]
 position = Vector2( 239.99, 306.491 )
@@ -6591,7 +6588,6 @@ texture = ExtResource( 4 )
 [node name="ReelLights4" type="Node2D" parent="ReelLights"]
 visible = false
 position = Vector2( 540.952, -0.868294 )
-scale = Vector2( 1, 1 )
 
 [node name="1" type="Sprite" parent="ReelLights/ReelLights4"]
 position = Vector2( 239.99, 306.491 )
@@ -6614,7 +6610,6 @@ texture = ExtResource( 4 )
 [node name="ReelLights5" type="Node2D" parent="ReelLights"]
 visible = false
 position = Vector2( 722.427, -1.73659 )
-scale = Vector2( 1, 1 )
 
 [node name="1" type="Sprite" parent="ReelLights/ReelLights5"]
 position = Vector2( 239.99, 306.491 )
