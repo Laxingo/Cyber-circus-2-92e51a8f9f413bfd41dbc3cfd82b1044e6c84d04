@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://Imagens/UI/fundo.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/Myriad Cn Bold.otf" type="DynamicFontData" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://Imagens/Simbolos/CyberCircus_Elephant.png" type="Texture" id=28]
 [ext_resource path="res://Imagens/Simbolos/peso.png" type="Texture" id=29]
 [ext_resource path="res://Imagens/Simbolos/CyberCircus_Bumbaaadu.png" type="Texture" id=30]
+[ext_resource path="res://Scripts/symbolspayout.gd" type="Script" id=31]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -2107,6 +2108,7 @@ tracks/6/keys = {
 [node name="symbolspayout" type="Node2D"]
 position = Vector2( 638, 360 )
 scale = Vector2( 0.66144, 0.664341 )
+script = ExtResource( 31 )
 
 [node name="Fundo" type="Sprite" parent="."]
 position = Vector2( -4, -2 )
@@ -2125,17 +2127,19 @@ __meta__ = {
 }
 
 [node name="Seta" type="Sprite" parent="."]
+visible = false
 position = Vector2( -882, 0 )
 scale = Vector2( 0.137316, 0.137316 )
 texture = ExtResource( 3 )
 
 [node name="Seta2" type="Sprite" parent="."]
+visible = false
 position = Vector2( 886, 2 )
 rotation = -3.11577
 scale = Vector2( 0.13304, 0.13304 )
 texture = ExtResource( 3 )
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="ExitBtn" type="TextureButton" parent="."]
 margin_left = 873.851
 margin_top = -498.238
 margin_right = 1389.85
@@ -2144,9 +2148,6 @@ rect_scale = Vector2( 0.105507, 0.105507 )
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="symbolspayout" type="Node2D" parent="."]
 position = Vector2( 0, -1.50525 )
@@ -2484,7 +2485,7 @@ __meta__ = {
 }
 
 [node name="wild" type="Node2D" parent="."]
-visible = false
+position = Vector2( 1870, 0 )
 
 [node name="wild" type="Label" parent="wild"]
 margin_left = -447.508
@@ -2629,7 +2630,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 48 )
 animation = "burn"
-frame = 5
+frame = 7
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="wild/Lion/Head"]
@@ -2647,7 +2648,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 49 )
 animation = "kwispy"
-frame = 9
+frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wild/Lion"]
@@ -2672,7 +2673,7 @@ energy = 0.0
 shadow_color = Color( 0.215686, 1, 0.964706, 0 )
 
 [node name="scatter" type="Node2D" parent="."]
-visible = false
+position = Vector2( 1870, 0 )
 
 [node name="scatter" type="Label" parent="scatter"]
 margin_left = -447.509
@@ -3064,7 +3065,7 @@ scale = Vector2( 0.996386, 0.907673 )
 texture = ExtResource( 8 )
 
 [node name="bonus" type="Node2D" parent="."]
-visible = false
+position = Vector2( 1870, 0 )
 
 [node name="bonus" type="Label" parent="bonus"]
 margin_left = -447.509
@@ -3185,7 +3186,7 @@ region_enabled = true
 region_rect = Rect2( 60, 250, 80, 210 )
 
 [node name="prizelines" type="Node2D" parent="."]
-visible = false
+position = Vector2( 1870, 0 )
 
 [node name="prize lines" type="Label" parent="prizelines"]
 margin_left = -450.532
@@ -3248,3 +3249,26 @@ texture = ExtResource( 22 )
 [node name="10" type="Sprite" parent="prizelines/1E3"]
 position = Vector2( 2000.48, 361.905 )
 texture = ExtResource( 25 )
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = -919.207
+margin_top = -34.6208
+margin_right = -403.207
+margin_bottom = 481.379
+rect_scale = Vector2( 0.144725, 0.144725 )
+texture_normal = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 926.763
+margin_top = 40.6387
+margin_right = 1442.76
+margin_bottom = 556.639
+rect_rotation = -179.575
+rect_scale = Vector2( 0.144725, 0.144725 )
+texture_normal = ExtResource( 3 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="button_down" from="ExitBtn" to="." method="_on_ExitBtn_button_down"]
+[connection signal="button_down" from="TextureButton2" to="." method="_on_TextureButton2_button_down"]
+[connection signal="button_down" from="TextureButton" to="." method="_on_TextureButton_button_down"]

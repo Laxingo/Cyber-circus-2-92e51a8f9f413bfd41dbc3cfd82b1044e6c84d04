@@ -32,3 +32,7 @@ func _on_TextureButton2_button_down():
 		$Tween.interpolate_property(texto2, "position", Vector2(0,0), Vector2(1870, 0), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		$Tween.start()
 		text1went = false
+
+
+func _on_ExitBtn_button_down():
+	get_tree().change_scene("res://scenes/Main.tscn")

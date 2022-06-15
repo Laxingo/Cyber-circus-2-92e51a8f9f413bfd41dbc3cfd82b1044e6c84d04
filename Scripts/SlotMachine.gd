@@ -51,7 +51,7 @@ var col4Mid_name
 var col5Mid_name
 
 export(Array, String) var symbolName := ["bunny", "lion","strongman", 
-"ticket", "roulette","A", "J", "K", "Q", "juggle", "clown", "elephant"];
+"roulette","A", "J", "K", "Q", "clown", "elephant"];
 
 var bunny = 0
 var clown= 0
@@ -74,7 +74,7 @@ func _ready():
 	
 	setPrizeMasks();
 	
-	rouletteLVL()
+#	rouletteLVL()
 	for col in reels:
 		grid_pos.append([])
 		tiles_moved_per_reel.append(0)
@@ -176,7 +176,7 @@ func current_runs(reel := 0) -> int:
 
 func _randomIcones() -> String:
 	random.randomize()
-	var num = random.randi_range(0, 1)
+	var num = random.randi_range(0, 9)
 	if num == 0:
 		tile_name = symbolName[0]
 	elif num == 1:
@@ -197,10 +197,6 @@ func _randomIcones() -> String:
 		tile_name = symbolName[8] 
 	elif num == 9:
 		tile_name = symbolName[9] 
-	elif num == 10:
-		tile_name = symbolName[10] 
-	elif num == 11:
-		tile_name = symbolName[11] 
 	return symbolName[num  %symbolName.size()]
 
 func _get_result() -> void:
@@ -321,8 +317,5 @@ onready var bonusAnim = $Node2D/AnimationPlayer
 
 func rouletteLVL():
 	$BonusLvl/AnimationPlayer.play("1bonusentrada")
-
-#"bunny", "lion","strongman", 
-#"ticket", "roulette","A", "J", "K", "Q", "juggle", "clown", "elephant"
 
 

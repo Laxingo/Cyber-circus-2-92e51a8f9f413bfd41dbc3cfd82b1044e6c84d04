@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Imagens/UI/fundo.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/Myriad Cn Bold.otf" type="DynamicFontData" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Imagens/UI/play2.png" type="Texture" id=13]
 [ext_resource path="res://Imagens/UI/csom.png" type="Texture" id=14]
 [ext_resource path="res://Imagens/UI/setas.png" type="Texture" id=15]
+[ext_resource path="res://scenes/aboutthegame.gd" type="Script" id=16]
 
 [sub_resource type="DynamicFont" id=2]
 size = 100
@@ -35,6 +36,7 @@ font_data = ExtResource( 2 )
 [node name="aboutthegame" type="Node2D"]
 position = Vector2( 641, 359 )
 scale = Vector2( 0.663, 0.669 )
+script = ExtResource( 16 )
 
 [node name="Fundo" type="Sprite" parent="."]
 position = Vector2( -4, -2 )
@@ -52,7 +54,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="ExitBtn" type="TextureButton" parent="."]
 margin_left = 853.695
 margin_top = -491.778
 margin_right = 1369.7
@@ -61,15 +63,11 @@ rect_scale = Vector2( 0.103807, 0.103807 )
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="tudo" type="Node2D" parent="."]
 
 [node name="wild" type="Node2D" parent="tudo"]
 position = Vector2( 0, 956.652 )
-scale = Vector2( 1, 1 )
 
 [node name="wild" type="Label" parent="tudo/wild"]
 margin_left = -846.154
@@ -107,7 +105,6 @@ __meta__ = {
 
 [node name="scatter" type="Node2D" parent="tudo"]
 position = Vector2( 0, 1379.67 )
-scale = Vector2( 1, 1 )
 
 [node name="scatter" type="Label" parent="tudo/scatter"]
 margin_left = -846.154
@@ -147,7 +144,6 @@ __meta__ = {
 
 [node name="bonus" type="Node2D" parent="tudo"]
 position = Vector2( 0, 1967.11 )
-scale = Vector2( 1, 1 )
 
 [node name="bonus" type="Label" parent="tudo/bonus"]
 margin_left = -846.154
@@ -188,7 +184,6 @@ __meta__ = {
 
 [node name="howto" type="Node2D" parent="tudo"]
 position = Vector2( 0, 2650.22 )
-scale = Vector2( 1, 1 )
 
 [node name="howto" type="Label" parent="tudo/howto"]
 margin_left = -846.154
@@ -250,7 +245,6 @@ __meta__ = {
 }
 
 [node name="aboutthis" type="Node2D" parent="tudo"]
-scale = Vector2( 1, 1 )
 
 [node name="aboutthegame" type="Label" parent="tudo/aboutthis"]
 margin_left = -435.897
@@ -293,7 +287,6 @@ __meta__ = {
 
 [node name="buttons" type="Node2D" parent="tudo"]
 position = Vector2( 0, 5248.13 )
-scale = Vector2( 1, 1 )
 
 [node name="bolas" type="Label" parent="tudo/buttons"]
 margin_left = -441.931
@@ -444,3 +437,5 @@ position = Vector2( 0.273682, 2370.39 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
+
+[connection signal="button_down" from="ExitBtn" to="." method="_on_ExitBtn_button_down"]
