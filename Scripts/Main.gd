@@ -116,7 +116,7 @@ func _on_replay_mouse_entered():
 	options2Audio.stream = playBtn
 	options2Audio.play()
 	yield(get_tree().create_timer(options2Audio.stream.get_length()), "timeout")
-	options2Audio.stop()
+	options2Audio.stop() 
 
 func _on_options2_mouse_entered():
 	optionsAudio.stream = playBtn
@@ -126,14 +126,23 @@ func _on_options2_mouse_entered():
 
 
 func _on_info_button_down():
+	options2Audio.stream = playBtn
+	options2Audio.play()
+	yield(get_tree().create_timer(options2Audio.stream.get_length()), "timeout")
 	get_tree().change_scene("res://scenes/aboutthegame.tscn")
 
 
 func _on_historico_button_down():
+	options2Audio.stream = playBtn
+	options2Audio.play()
+	yield(get_tree().create_timer(options2Audio.stream.get_length()), "timeout")
 	get_tree().change_scene("res://scenes/playhistory.tscn")
 
 
 func _on_money_button_down():
+	options2Audio.stream = playBtn
+	options2Audio.play()
+	yield(get_tree().create_timer(options2Audio.stream.get_length()), "timeout")
 	get_tree().change_scene("res://scenes/symbolspayout.tscn")
 
 
