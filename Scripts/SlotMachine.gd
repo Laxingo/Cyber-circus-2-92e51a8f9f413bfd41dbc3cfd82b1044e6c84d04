@@ -114,15 +114,31 @@ func get_tile(col :int, row :int) -> SlotTile:
   return tiles[(col * rows) + row]
 
 func start() -> void:
- if state == State.OFF: 
+	var counter = 0
+	if state == State.OFF: 
 		state = State.ON 
 		total_runs = expected_runs
 		_get_result()
 	for reel in reels:
 		_spin_reel(reel)
-#		main._reelAudio(1)
+		if counter == 0:
+			$reel1.play()
+			print("REEL 1 TOCA")
+		elif counter == 1:
+			$reel2.play()
+			print("REEL 2 TOCA")
+		elif counter == 2:
+			$reel3.play()
+			print("REEL 3 TOCA")
+		elif counter == 3:
+			$reel4.play()
+			print("REEL 4 TOCA")
+		elif counter == 4:
+			$reel5.play()
+			print("REEL 5 TOCA")
 		if reel_delay > 0:
 			   yield(get_tree().create_timer(reel_delay), "timeout")
+		counter = counter+1
   
 func stop():
 	state = State.STOPPED
@@ -243,12 +259,12 @@ func getPrizes(result_masks):
 	return prizeInfo;
 
 func animPrizes():
-	var firstReel
-	var scndReel
-	var thirdReel
-	var forthReel
-	var fifthReel
-	
+#	var firstReel
+#	var scndReel
+#	var thirdReel
+#	var forthReel
+#	var fifthReel
+#
 	var oTile
 	var estaReel
 	var estaCol
@@ -312,10 +328,4 @@ func givePoints(prizeID):
 		pointsToGive = 1750
 	
 	totalPoints = totalPoints  + pointsToGive
-	
-onready var bonusAnim = $Node2D/AnimationPlayer
-
-func rouletteLVL():
-	$BonusLvl/AnimationPlayer.play("1bonusentrada")
-
 

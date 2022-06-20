@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=2]
+[gd_scene load_steps=99 format=2]
 
 [ext_resource path="res://Scripts/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/UI/ui.png" type="Texture" id=2]
@@ -61,6 +61,7 @@
 [ext_resource path="res://Imagens/bonus/caixaamarela.png" type="Texture" id=59]
 [ext_resource path="res://Imagens/particulas/blue.png" type="Texture" id=60]
 [ext_resource path="res://Imagens/bonus/caixaazul.png" type="Texture" id=61]
+[ext_resource path="res://sound/reels spin/Cyber Circus Reel Just Spin.mp3" type="AudioStream" id=62]
 
 [sub_resource type="Animation" id=2]
 resource_name = "luz"
@@ -6635,20 +6636,26 @@ stream = ExtResource( 35 )
 stream = ExtResource( 35 )
 
 [node name="options2BtnAudio" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 0, 6.00327 )
 stream = ExtResource( 35 )
 
 [node name="Jukebox" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 34 )
 
 [node name="reel1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 62 )
 
 [node name="reel2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 62 )
 
 [node name="reel3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 62 )
 
 [node name="reel4" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 62 )
 
 [node name="reel5" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 62 )
 
 [node name="BonusLvl" type="Node2D" parent="."]
 position = Vector2( 965.025, 459.25 )
