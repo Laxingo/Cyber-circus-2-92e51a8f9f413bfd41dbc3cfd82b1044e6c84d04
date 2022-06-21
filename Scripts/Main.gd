@@ -19,6 +19,8 @@ onready var optionsAudio = $optionsBtnAudio
 onready var options2Audio = $options2BtnAudio
 
 
+
+
 func _ready():
 	slot.connect("stopped", self, "_on_slot_machine_stopped")
 	lightAnim.play("luz")

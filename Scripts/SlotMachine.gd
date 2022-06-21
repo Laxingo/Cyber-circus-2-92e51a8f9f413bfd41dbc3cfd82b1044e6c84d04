@@ -63,18 +63,31 @@ var malabare= 0
 var strongman= 0
 var q= 0
 
-var reel1
-
 var prizeNb = 3
 var prizeMasks = [];
 var prizesToAnim = [];
 
+onready var reelSound = preload("res://sound/reels spin/Cyber Circus Reel Just Spin.mp3")
+
+onready var reel1 = $Reel1
+onready var reel2 = $reel2
+onready var reel3 = $reel3
+onready var reel4 = $reel4
+onready var reel5 = $reel5
+
+
 
 func _ready():
-	
 	setPrizeMasks();
 	
+	reel1.stream= reelSound
+	reel2.stream= reelSound
+	reel3.stream= reelSound
+	reel4.stream= reelSound
+	reel5.stream= reelSound
+	
 #	rouletteLVL()
+
 	for col in reels:
 		grid_pos.append([])
 		tiles_moved_per_reel.append(0)
@@ -136,6 +149,7 @@ func start() -> void:
 		elif counter == 4:
 			$reel5.play()
 			print("REEL 5 TOCA")
+
 		if reel_delay > 0:
 			   yield(get_tree().create_timer(reel_delay), "timeout")
 		counter = counter+1

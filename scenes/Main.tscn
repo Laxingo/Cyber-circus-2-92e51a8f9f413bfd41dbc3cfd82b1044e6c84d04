@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=2]
+[gd_scene load_steps=98 format=2]
 
 [ext_resource path="res://Scripts/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/UI/ui.png" type="Texture" id=2]
@@ -33,7 +33,6 @@
 [ext_resource path="res://Imagens/UI/replay.png" type="Texture" id=31]
 [ext_resource path="res://Imagens/UI/replayh.png" type="Texture" id=32]
 [ext_resource path="res://Imagens/UI/reels.png" type="Texture" id=33]
-[ext_resource path="res://sound/music/Cyber Circus Carpet Asharp.mp3" type="AudioStream" id=34]
 [ext_resource path="res://sound/button/Cyber Circus Button Hover-001.mp3" type="AudioStream" id=35]
 [ext_resource path="res://Imagens/UI/play2.png" type="Texture" id=36]
 [ext_resource path="res://Imagens/UI/replayhmini.png" type="Texture" id=37]
@@ -6640,7 +6639,7 @@ position = Vector2( 0, 6.00327 )
 stream = ExtResource( 35 )
 
 [node name="Jukebox" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 34 )
+stream = ExtResource( 62 )
 
 [node name="reel1" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 62 )
