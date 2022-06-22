@@ -80,11 +80,11 @@ onready var reel5 = $reel5
 func _ready():
 	setPrizeMasks();
 	
-	reel1.stream= reelSound
-	reel2.stream= reelSound
-	reel3.stream= reelSound
-	reel4.stream= reelSound
-	reel5.stream= reelSound
+#	reel1.stream= reelSound
+#	reel2.stream= reelSound
+#	reel3.stream= reelSound
+#	reel4.stream= reelSound
+#	reel5.stream= reelSound
 	
 #	rouletteLVL()
 
@@ -134,21 +134,21 @@ func start() -> void:
 		_get_result()
 	for reel in reels:
 		_spin_reel(reel)
-		if counter == 0:
-			$reel1.play()
-			print("REEL 1 TOCA")
-		elif counter == 1:
-			$reel2.play()
-			print("REEL 2 TOCA")
-		elif counter == 2:
-			$reel3.play()
-			print("REEL 3 TOCA")
-		elif counter == 3:
-			$reel4.play()
-			print("REEL 4 TOCA")
-		elif counter == 4:
-			$reel5.play()
-			print("REEL 5 TOCA")
+#		if counter == 0:
+#			$reel1.play()
+#			print("REEL 1 TOCA")
+#		elif counter == 1:
+#			$reel2.play()
+#			print("REEL 2 TOCA")
+#		elif counter == 2:
+#			$reel3.play()
+#			print("REEL 3 TOCA")
+#		elif counter == 3:
+#			$reel4.play()
+#			print("REEL 4 TOCA")
+#		elif counter == 4:
+#			$reel5.play()
+#			print("REEL 5 TOCA")
 
 		if reel_delay > 0:
 			   yield(get_tree().create_timer(reel_delay), "timeout")
