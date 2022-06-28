@@ -11,7 +11,8 @@ var prontopraclicar = false
 
 
 func _ready():
-	_entra()
+#	_entra()
+	pass
 
 
 func _process(delta):
@@ -20,6 +21,7 @@ func _process(delta):
 	
 
 func _entra():
+	self.visible = true
 	animP.play("1bonusentrada")
 	yield(get_tree().create_timer(animP.get_animation("1bonusentrada").length + 0.2), "timeout")
 	animP.play("2throwtheknife")

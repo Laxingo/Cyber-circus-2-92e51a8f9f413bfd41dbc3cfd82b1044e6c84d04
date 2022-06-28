@@ -20,6 +20,15 @@ onready var options2Audio = $options2BtnAudio
 
 
 
+var credits = 10
+var level = 1
+var denom = 0
+var bet = denom * level
+
+onready var creditsLBL = $Credits
+onready var denomLBL = $Denom
+onready var levelLBL = $Level
+onready var betLBL = $Bet
 
 func _ready():
 	slot.connect("stopped", self, "_on_slot_machine_stopped")
@@ -28,6 +37,12 @@ func _ready():
 
 func _process(delta):
 	_jukebox()
+	bet = denom * level
+	creditsLBL.text = str(credits)
+	denomLBL.text = str(denom)
+	levelLBL.text = str(level)
+	betLBL.text = str(bet)
+	
 
 func _jukebox():
 	if !jukebox.is_playing():
@@ -40,12 +55,14 @@ func _jukebox():
 		jukebox.stop()
 
 func _on_Roll2_button_down():
-	if rolled == false:
-		slot.start()
-		rolled = true
-	else:
-		slot.stop()
-		
+	if bet <= credits && bet != 0:
+		credits = credits - bet
+		if rolled == false:
+			slot.start()
+			rolled = true
+		else:
+			slot.stop()
+	
 
 func _on_slot_machine_stopped():
 	rolled = false
@@ -119,5 +136,43 @@ func _on_money_button_down():
 	options2Audio.play()
 	yield(get_tree().create_timer(options2Audio.stream.get_length()), "timeout")
 	get_tree().change_scene("res://scenes/symbolspayout.tscn")
+	
 
 
+
+
+func _on_Level_Sub_Btn_button_down():
+		if level > 0:
+			level = level -1
+		else:
+			level = 0
+
+
+func _on_Level_Plus_Btn_button_down():
+	if bet < credits:
+		if level < 3:
+			level = level + 1
+			if bet > credits:
+				level = level - 1
+		else:
+			level = 3
+
+
+func _on_Denom_Plus_Btn_button_down():
+	if bet < credits:
+		if denom < 5:
+			denom = denom + 0.10
+			if bet > credits:
+				denom = denom - 0.10
+		else:
+			denom = 5
+
+		
+
+
+func _on_Denom_Sub_Btn_button_down():
+	if denom > 0.10:
+		denom = denom - 0.10
+
+	else:
+		denom = 0.10

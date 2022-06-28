@@ -1,7 +1,7 @@
-[gd_scene load_steps=99 format=2]
+[gd_scene load_steps=105 format=2]
 
 [ext_resource path="res://Scripts/SlotMachine.gd" type="Script" id=1]
-[ext_resource path="res://Imagens/UI/ui.png" type="Texture" id=2]
+[ext_resource path="res://Imagens/UI/UIBaixo.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=3]
 [ext_resource path="res://Imagens/luz/Light_Ball.png" type="Texture" id=4]
 [ext_resource path="res://Imagens/UI/slot.png" type="Texture" id=5]
@@ -62,6 +62,12 @@
 [ext_resource path="res://Imagens/particulas/blue.png" type="Texture" id=60]
 [ext_resource path="res://Imagens/bonus/caixaazul.png" type="Texture" id=61]
 [ext_resource path="res://sound/reels spin/Cyber Circus Reel Just Spin.mp3" type="AudioStream" id=62]
+[ext_resource path="res://Imagens/UI/-h.png" type="Texture" id=63]
+[ext_resource path="res://Imagens/UI/h.png" type="Texture" id=64]
+[ext_resource path="res://Imagens/UI/hmini.png" type="Texture" id=65]
+[ext_resource path="res://Imagens/UI/-hmini.png" type="Texture" id=66]
+[ext_resource path="res://Imagens/UI/-.png" type="Texture" id=67]
+[ext_resource path="res://Imagens/UI/8a9bb8d775ae49a8.png" type="Texture" id=68]
 
 [sub_resource type="Animation" id=2]
 resource_name = "luz"
@@ -6656,6 +6662,7 @@ stream = ExtResource( 62 )
 stream = ExtResource( 62 )
 
 [node name="BonusLvl" type="Node2D" parent="."]
+visible = false
 position = Vector2( 953.019, 439.739 )
 scale = Vector2( 0.949038, 0.949038 )
 script = ExtResource( 34 )
@@ -7077,6 +7084,82 @@ margin_right = -454.516
 margin_bottom = -391.166
 rect_scale = Vector2( 75.201, 49.0024 )
 
+[node name="Denom Plus Btn" type="TextureButton" parent="."]
+margin_left = 1643.39
+margin_top = 1007.05
+margin_right = 2159.39
+margin_bottom = 1523.05
+rect_scale = Vector2( 0.0754521, 0.0754521 )
+texture_normal = ExtResource( 65 )
+texture_pressed = ExtResource( 68 )
+texture_hover = ExtResource( 64 )
+
+[node name="Denom Sub Btn" type="TextureButton" parent="."]
+margin_left = 1505.32
+margin_top = 1010.05
+margin_right = 2021.32
+margin_bottom = 1526.05
+rect_scale = Vector2( 0.0754521, 0.0754521 )
+texture_normal = ExtResource( 66 )
+texture_pressed = ExtResource( 67 )
+texture_hover = ExtResource( 63 )
+
+[node name="Level Sub Btn" type="TextureButton" parent="."]
+margin_left = 375.204
+margin_top = 1007.05
+margin_right = 891.204
+margin_bottom = 1523.05
+rect_scale = Vector2( 0.0754521, 0.0754521 )
+texture_normal = ExtResource( 66 )
+texture_pressed = ExtResource( 67 )
+texture_hover = ExtResource( 63 )
+
+[node name="Level Plus Btn" type="TextureButton" parent="."]
+margin_left = 511.779
+margin_top = 1005.55
+margin_right = 1027.78
+margin_bottom = 1521.55
+rect_scale = Vector2( 0.0754521, 0.0754521 )
+texture_normal = ExtResource( 65 )
+texture_pressed = ExtResource( 68 )
+texture_hover = ExtResource( 64 )
+
+[node name="Credits" type="Label" parent="."]
+margin_left = 1829.49
+margin_top = 1016.05
+margin_right = 1869.49
+margin_bottom = 1030.05
+rect_scale = Vector2( 2.18693, 2.18693 )
+text = "10"
+align = 1
+
+[node name="Denom" type="Label" parent="."]
+margin_left = 1551.84
+margin_top = 1014.55
+margin_right = 1591.84
+margin_bottom = 1028.55
+rect_scale = Vector2( 2.18693, 2.18693 )
+text = "0,10"
+align = 1
+
+[node name="Level" type="Label" parent="."]
+margin_left = 412.724
+margin_top = 1013.05
+margin_right = 452.724
+margin_bottom = 1027.05
+rect_scale = Vector2( 2.18693, 2.18693 )
+text = "0"
+align = 1
+
+[node name="Bet" type="Label" parent="."]
+margin_left = 118.565
+margin_top = 1016.05
+margin_right = 158.565
+margin_bottom = 1030.05
+rect_scale = Vector2( 2.18693, 2.18693 )
+text = "0"
+align = 1
+
 [connection signal="button_down" from="play" to="." method="_on_Roll2_button_down"]
 [connection signal="mouse_entered" from="play" to="." method="_on_play_mouse_entered"]
 [connection signal="button_down" from="options/1/historico" to="." method="_on_historico_button_down"]
@@ -7088,3 +7171,7 @@ rect_scale = Vector2( 75.201, 49.0024 )
 [connection signal="mouse_entered" from="replay" to="." method="_on_replay_mouse_entered"]
 [connection signal="finished" from="Jukebox" to="." method="_on_AudioStreamPlayer2D_finished"]
 [connection signal="pressed" from="BonusLvl/RodaBtn" to="BonusLvl" method="_on_RodaBtn_pressed"]
+[connection signal="button_down" from="Denom Plus Btn" to="." method="_on_Denom_Plus_Btn_button_down"]
+[connection signal="button_down" from="Denom Sub Btn" to="." method="_on_Denom_Sub_Btn_button_down"]
+[connection signal="button_down" from="Level Sub Btn" to="." method="_on_Level_Sub_Btn_button_down"]
+[connection signal="button_down" from="Level Plus Btn" to="." method="_on_Level_Plus_Btn_button_down"]
