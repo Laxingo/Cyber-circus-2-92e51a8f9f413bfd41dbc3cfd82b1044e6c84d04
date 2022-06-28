@@ -7090,8 +7090,8 @@ margin_top = 1007.05
 margin_right = 2159.39
 margin_bottom = 1523.05
 rect_scale = Vector2( 0.0754521, 0.0754521 )
-texture_normal = ExtResource( 65 )
-texture_pressed = ExtResource( 68 )
+texture_normal = ExtResource( 68 )
+texture_pressed = ExtResource( 65 )
 texture_hover = ExtResource( 64 )
 
 [node name="Denom Sub Btn" type="TextureButton" parent="."]
@@ -7100,8 +7100,8 @@ margin_top = 1010.05
 margin_right = 2021.32
 margin_bottom = 1526.05
 rect_scale = Vector2( 0.0754521, 0.0754521 )
-texture_normal = ExtResource( 66 )
-texture_pressed = ExtResource( 67 )
+texture_normal = ExtResource( 67 )
+texture_pressed = ExtResource( 66 )
 texture_hover = ExtResource( 63 )
 
 [node name="Level Sub Btn" type="TextureButton" parent="."]
@@ -7110,8 +7110,8 @@ margin_top = 1007.05
 margin_right = 891.204
 margin_bottom = 1523.05
 rect_scale = Vector2( 0.0754521, 0.0754521 )
-texture_normal = ExtResource( 66 )
-texture_pressed = ExtResource( 67 )
+texture_normal = ExtResource( 67 )
+texture_pressed = ExtResource( 66 )
 texture_hover = ExtResource( 63 )
 
 [node name="Level Plus Btn" type="TextureButton" parent="."]
@@ -7120,9 +7120,12 @@ margin_top = 1005.55
 margin_right = 1027.78
 margin_bottom = 1521.55
 rect_scale = Vector2( 0.0754521, 0.0754521 )
-texture_normal = ExtResource( 65 )
-texture_pressed = ExtResource( 68 )
+texture_normal = ExtResource( 68 )
+texture_pressed = ExtResource( 65 )
 texture_hover = ExtResource( 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Credits" type="Label" parent="."]
 margin_left = 1829.49
