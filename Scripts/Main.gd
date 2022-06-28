@@ -20,7 +20,7 @@ onready var options2Audio = $options2BtnAudio
 
 
 
-var credits = 10
+var credits = 100
 var level = 1
 var denom = 0
 var bet = denom * level
@@ -149,23 +149,23 @@ func _on_Level_Sub_Btn_button_down():
 
 
 func _on_Level_Plus_Btn_button_down():
-	if bet < credits:
+#	if bet < credits:
 		if level < 3:
 			level = level + 1
-			if bet > credits:
-				level = level - 1
+#			if bet > credits:
+#				level = level - 1
 		else:
 			level = 3
 
 
 func _on_Denom_Plus_Btn_button_down():
-	if bet < credits:
-		if denom < 5:
+#	if bet < credits:
+		if denom <= 9.9:
 			denom = denom + 0.10
-			if bet > credits:
-				denom = denom - 0.10
+#			if bet > credits:
+#				denom = denom - 0.10
 		else:
-			denom = 5
+			denom = 10
 
 		
 
