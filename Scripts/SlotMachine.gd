@@ -3,6 +3,7 @@ extends Node2D
 const SlotTile := preload("res://scenes/Tile.tscn")
 
 onready var main = load("res://Scripts/Main.gd").new()
+onready var bonusLvl = load("res://Scripts/BonusLvl.gd").new()
 
 const SPIN_UP_DISTANCE = 100.0
 signal stopped
@@ -38,18 +39,6 @@ var tiles_moved_per_reel := []
 var runs_stopped := 0
 var total_runs : int
 
-var col1Mid
-var col2Mid 
-var col3Mid 
-var col4Mid 
-var col5Mid 
-
-var col1Mid_name
-var col2Mid_name
-var col3Mid_name
-var col4Mid_name
-var col5Mid_name
-
 export(Array, String) var symbolName := ["bunny", "lion","strongman", 
 "roulette","A", "J", "K", "Q", "clown", "elephant"];
 
@@ -76,18 +65,8 @@ onready var reel4 = $reel4
 onready var reel5 = $reel5
 
 
-
 func _ready():
 	setPrizeMasks();
-	
-#	reel1.stream= reelSound
-#	reel2.stream= reelSound
-#	reel3.stream= reelSound
-#	reel4.stream= reelSound
-#	reel5.stream= reelSound
-	
-#	rouletteLVL()
-
 	for col in reels:
 		grid_pos.append([])
 		tiles_moved_per_reel.append(0)
@@ -109,7 +88,6 @@ func setPrizeMasks():
 	prizeMasks.push_back(0b000001000101110);
 	prizeMasks.push_back(0b011101000100000);
 	prizeMasks.push_back(0b010101010100000);
-
 
 
 func _add_tile(col :int, row :int) -> void:
@@ -149,7 +127,6 @@ func start() -> void:
 #		elif counter == 4:
 #			$reel5.play()
 #			print("REEL 5 TOCA")
-
 		if reel_delay > 0:
 			   yield(get_tree().create_timer(reel_delay), "timeout")
 		counter = counter+1
@@ -259,7 +236,6 @@ func buildResultMasks():
 	
 	print("Result Masks: ", resultMasks);
 	prizesToAnim = [];
-	
 	prizesToAnim = getPrizes(resultMasks);
 
 func getPrizes(result_masks):
@@ -268,17 +244,10 @@ func getPrizes(result_masks):
 		for p in  prizeMasks.size():
 			if (result_masks[i] & prizeMasks[p] == prizeMasks[p]):
 				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
-		
 	print("Prize  Info: ", prizeInfo);
 	return prizeInfo;
 
 func animPrizes():
-#	var firstReel
-#	var scndReel
-#	var thirdReel
-#	var forthReel
-#	var fifthReel
-#
 	var oTile
 	var estaReel
 	var estaCol
@@ -289,28 +258,27 @@ func animPrizes():
 				var _pcell = reels * tiles_per_reel - 1 - i
 				print("ANIMAÇÃO: ",prizeID, "  CÉLULAS: ", _pcell);
 				
-				if(_pcell == 0 or _pcell == 5 or _pcell == 10):
-					estaCol = 0
-				elif(_pcell == 1 or _pcell == 6 or _pcell == 11):
-					estaCol = 1
-				elif(_pcell == 2 or _pcell == 7 or _pcell == 12):
-					estaCol = 2
-				elif(_pcell == 3 or _pcell == 8 or _pcell == 13):
-					estaCol = 3
-				elif(_pcell == 4 or _pcell == 9 or _pcell == 14):
-					estaCol = 4
+#				if(_pcell == 0 or _pcell == 5 or _pcell == 10):
+#					estaCol = 0
+#				elif(_pcell == 1 or _pcell == 6 or _pcell == 11):
+#					estaCol = 1
+#				elif(_pcell == 2 or _pcell == 7 or _pcell == 12):
+#					estaCol = 2
+#				elif(_pcell == 3 or _pcell == 8 or _pcell == 13):
+#					estaCol = 3
+#				elif(_pcell == 4 or _pcell == 9 or _pcell == 14):
+#					estaCol = 4
+#
+#				if (_pcell == 0 or _pcell == 1 or _pcell == 2 or _pcell == 3 or _pcell == 4):
+#					estaReel = 0
+#				if (_pcell == 5 or _pcell == 6 or _pcell == 7 or _pcell == 8 or _pcell == 9):
+#					estaReel = 1
+#				if (_pcell == 10 or _pcell == 11 or _pcell == 12 or _pcell == 13 or _pcell == 14):
+#					estaReel = 2
 					
-				if (_pcell == 0 or _pcell == 1 or _pcell == 2 or _pcell == 3 or _pcell == 4):
-					estaReel = 0
-				if (_pcell == 5 or _pcell == 6 or _pcell == 7 or _pcell == 8 or _pcell == 9):
-					estaReel = 1
-				if (_pcell == 10 or _pcell == 11 or _pcell == 12 or _pcell == 13 or _pcell == 14):
-					estaReel = 2
-					
-				oTile = get_tile(estaCol, estaReel)
+#				oTile = get_tile(estaCol, estaReel)
 				
 				oTile.animate_icon(prizeID)
-				
 
 onready var totalPoints = 0
 
@@ -326,6 +294,8 @@ func givePoints(prizeID):
 		pointsToGive = 1700
 	elif prizeID == "roulette":
 		pointsToGive = 1800
+#		Start Bonus Level
+		bonusLvl._entra()
 	elif prizeID == "A":
 		pointsToGive = 2200
 	elif prizeID == "K":

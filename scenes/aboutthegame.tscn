@@ -15,7 +15,7 @@
 [ext_resource path="res://Imagens/UI/play2.png" type="Texture" id=13]
 [ext_resource path="res://Imagens/UI/csom.png" type="Texture" id=14]
 [ext_resource path="res://Imagens/UI/setas.png" type="Texture" id=15]
-[ext_resource path="res://scenes/aboutthegame.gd" type="Script" id=16]
+[ext_resource path="res://Scripts/aboutthegame.gd" type="Script" id=16]
 
 [sub_resource type="DynamicFont" id=2]
 size = 100
