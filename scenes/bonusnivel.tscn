@@ -22,7 +22,7 @@ font_path = "res://Fonts/Carnevalee Freakshow.ttf"
 [sub_resource type="DynamicFont" id=27]
 size = 122
 outline_size = 2
-outline_color = Color( 0.909804, 0.117647, 0.929412, 1 )
+outline_color = Color( 0.996078, 0.996078, 0.996078, 1 )
 font_data = SubResource( 28 )
 
 [sub_resource type="DynamicFont" id=1]
@@ -2342,6 +2342,42 @@ tracks/29/keys = {
 "update": 0,
 "values": [ Vector2( -82.6113, 808.411 ), Vector2( -67.8592, 22.1279 ) ]
 }
+tracks/30/type = "value"
+tracks/30/path = NodePath("winazul:visible")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/31/type = "value"
+tracks/31/path = NodePath("winrosa:visible")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/32/type = "value"
+tracks/32/path = NodePath("winamarelo:visible")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=18]
 resource_name = "winazulbaza"
@@ -2977,6 +3013,42 @@ tracks/26/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/27/type = "value"
+tracks/27/path = NodePath("winamarelo:visible")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("winrosa:visible")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("winazul:visible")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=19]
 resource_name = "winrosabaza"
@@ -3525,13 +3597,14 @@ position = Vector2( 655, 325 )
 scale = Vector2( 0.677873, 0.677873 )
 
 [node name="winamarelo" type="Label" parent="."]
+visible = false
 margin_left = -44.256
 margin_top = -4.42566
 margin_right = 345.744
 margin_bottom = 132.574
 rect_scale = Vector2( 3.71567, 2.88735 )
 rect_pivot_offset = Vector2( 257.053, 78.903 )
-custom_colors/font_outline_modulate = Color( 0.890196, 0.964706, 0.0980392, 1 )
+custom_colors/font_outline_modulate = Color( 0.92549, 0.713726, 0.203922, 1 )
 custom_fonts/font = SubResource( 27 )
 text = "1000000"
 align = 1
@@ -3547,6 +3620,7 @@ margin_right = 364.922
 margin_bottom = 157.653
 rect_scale = Vector2( 3.71567, 3.10045 )
 rect_pivot_offset = Vector2( 257.053, 78.903 )
+custom_colors/font_outline_modulate = Color( 0.937255, 0.2, 0.980392, 1 )
 custom_fonts/font = SubResource( 27 )
 text = "1000000"
 align = 1
@@ -3555,11 +3629,12 @@ __meta__ = {
 }
 
 [node name="winazul" type="Label" parent="."]
-self_modulate = Color( 1, 1, 1, 0 )
-margin_left = -67.8592
-margin_top = 22.1279
-margin_right = 322.141
-margin_bottom = 159.128
+visible = false
+self_modulate = Color( 1, 1, 1, 0.166667 )
+margin_left = -80.1526
+margin_top = 677.364
+margin_right = 309.848
+margin_bottom = 814.364
 rect_scale = Vector2( 3.71567, 3.10045 )
 rect_pivot_offset = Vector2( 257.053, 78.903 )
 custom_colors/font_outline_modulate = Color( 0.0784314, 0.803922, 1, 1 )
@@ -3609,7 +3684,7 @@ texture = ExtResource( 2 )
 
 [node name="CyberCircusRouletteBonus" type="Sprite" parent="."]
 light_mask = 4
-position = Vector2( -10, 68 )
+position = Vector2( 15, -1005 )
 z_index = -2
 texture = ExtResource( 3 )
 
@@ -3632,18 +3707,19 @@ texture = ExtResource( 5 )
 
 [node name="Luzazul" type="Sprite" parent="CyberCircusRouletteBonus/luzesentreaspas"]
 self_modulate = Color( 1, 1, 1, 0 )
-position = Vector2( -178, 200 )
+position = Vector2( -196, 210 )
 scale = Vector2( -2.08383, -2.08383 )
 texture = ExtResource( 7 )
 
 [node name="Luzmuitoamarela" type="Sprite" parent="CyberCircusRouletteBonus/luzesentreaspas"]
+visible = false
 self_modulate = Color( 0.992157, 1, 0, 1 )
 position = Vector2( -183, 206 )
 scale = Vector2( 2.62819, 2.62819 )
 texture = ExtResource( 9 )
 
 [node name="Luzrosa" type="Sprite" parent="CyberCircusRouletteBonus/luzesentreaspas"]
-self_modulate = Color( 1, 0.0313726, 0.909804, 0 )
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -187, 207 )
 scale = Vector2( 1.91159, 1.91159 )
 texture = ExtResource( 13 )
@@ -3677,24 +3753,25 @@ shadow_item_cull_mask = 2
 
 [node name="CurtainLeft" type="Sprite" parent="."]
 light_mask = 0
-position = Vector2( -482, 63 )
+position = Vector2( -1452, -47 )
+rotation = 0.204205
 z_index = -3
 texture = ExtResource( 11 )
 hframes = 6
 vframes = 4
-frame = 23
 
 [node name="CurtainRight" type="Sprite" parent="."]
 light_mask = 0
-position = Vector2( 494, 60 )
+position = Vector2( 1498, -24 )
+rotation = -0.147226
 z_index = -3
 texture = ExtResource( 11 )
 flip_h = true
 hframes = 6
 vframes = 4
-frame = 23
 
 [node name="particulas" type="Node2D" parent="."]
+visible = false
 
 [node name="particulasrosa" type="CPUParticles2D" parent="particulas"]
 position = Vector2( -597, 653 )
@@ -3829,6 +3906,7 @@ position = Vector2( -610, 639 )
 rotation = -0.0331861
 scale = Vector2( 5.29521, 5.22104 )
 z_index = 2
+emitting = false
 amount = 100
 lifetime = 5.0
 speed_scale = 1.88
@@ -3860,6 +3938,7 @@ position = Vector2( 589, 644 )
 rotation = -0.0331861
 scale = Vector2( 5.29521, 5.22104 )
 z_index = 2
+emitting = false
 amount = 100
 lifetime = 5.0
 speed_scale = 1.88
