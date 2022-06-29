@@ -25,10 +25,10 @@ var level = 1
 var denom = 0
 var bet = denom * level
 
-onready var creditsLBL = $Credits
-onready var denomLBL = $Denom
-onready var levelLBL = $Level
-onready var betLBL = $Bet
+onready var creditsLBL = $UIBaixo/Credits
+onready var denomLBL = $UIBaixo/Denom
+onready var levelLBL = $UIBaixo/Level
+onready var betLBL = $UIBaixo/Bet
 
 func _ready():
 	slot.connect("stopped", self, "_on_slot_machine_stopped")

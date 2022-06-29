@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=2]
+[gd_scene load_steps=107 format=2]
 
 [ext_resource path="res://Scripts/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/UI/UIBaixo.png" type="Texture" id=2]
@@ -68,6 +68,7 @@
 [ext_resource path="res://Imagens/UI/-hmini.png" type="Texture" id=66]
 [ext_resource path="res://Imagens/UI/-.png" type="Texture" id=67]
 [ext_resource path="res://Imagens/UI/8a9bb8d775ae49a8.png" type="Texture" id=68]
+[ext_resource path="res://Imagens/Simbolos/CyberCircus_Rolette.png" type="Texture" id=69]
 
 [sub_resource type="Animation" id=2]
 resource_name = "luz"
@@ -6282,17 +6283,96 @@ margin_right = 1743.68
 margin_bottom = 945.781
 color = Color( 0.156863, 0.0784314, 0.168627, 0.709804 )
 
-[node name="UI tiras e titulo" type="Sprite" parent="."]
+[node name="UICima" type="Sprite" parent="."]
 light_mask = 2
 position = Vector2( 967.504, 530.995 )
 z_index = -7
 texture = ExtResource( 5 )
 
-[node name="UI Baixo" type="Sprite" parent="."]
+[node name="UIBaixo" type="Sprite" parent="."]
 light_mask = 2
 position = Vector2( 962, 529 )
 z_index = -3
 texture = ExtResource( 2 )
+
+[node name="Denom Plus Btn" type="TextureButton" parent="UIBaixo"]
+margin_left = 681.39
+margin_top = 478.05
+margin_right = 1197.39
+margin_bottom = 994.05
+rect_scale = Vector2( 0.0754521, 0.0754521 )
+texture_normal = ExtResource( 68 )
+texture_pressed = ExtResource( 65 )
+texture_hover = ExtResource( 64 )
+
+[node name="Denom Sub Btn" type="TextureButton" parent="UIBaixo"]
+margin_left = 543.32
+margin_top = 481.05
+margin_right = 1059.32
+margin_bottom = 997.05
+rect_scale = Vector2( 0.0754521, 0.0754521 )
+texture_normal = ExtResource( 67 )
+texture_pressed = ExtResource( 66 )
+texture_hover = ExtResource( 63 )
+
+[node name="Level Sub Btn" type="TextureButton" parent="UIBaixo"]
+margin_left = -586.796
+margin_top = 478.05
+margin_right = -70.796
+margin_bottom = 994.05
+rect_scale = Vector2( 0.0754521, 0.0754521 )
+texture_normal = ExtResource( 67 )
+texture_pressed = ExtResource( 66 )
+texture_hover = ExtResource( 63 )
+
+[node name="Level Plus Btn" type="TextureButton" parent="UIBaixo"]
+margin_left = -450.221
+margin_top = 476.55
+margin_right = 65.78
+margin_bottom = 992.55
+rect_scale = Vector2( 0.0754521, 0.0754521 )
+texture_normal = ExtResource( 68 )
+texture_pressed = ExtResource( 65 )
+texture_hover = ExtResource( 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Label" parent="UIBaixo"]
+margin_left = 867.49
+margin_top = 487.05
+margin_right = 907.49
+margin_bottom = 501.05
+rect_scale = Vector2( 2.18693, 2.18693 )
+text = "10"
+align = 1
+
+[node name="Denom" type="Label" parent="UIBaixo"]
+margin_left = 589.84
+margin_top = 485.55
+margin_right = 629.84
+margin_bottom = 499.55
+rect_scale = Vector2( 2.18693, 2.18693 )
+text = "0,10"
+align = 1
+
+[node name="Level" type="Label" parent="UIBaixo"]
+margin_left = -549.276
+margin_top = 484.05
+margin_right = -509.276
+margin_bottom = 498.05
+rect_scale = Vector2( 2.18693, 2.18693 )
+text = "0"
+align = 1
+
+[node name="Bet" type="Label" parent="UIBaixo"]
+margin_left = -843.435
+margin_top = 487.05
+margin_right = -803.435
+margin_bottom = 501.05
+rect_scale = Vector2( 2.18693, 2.18693 )
+text = "0"
+align = 1
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 light_mask = 2
@@ -6669,41 +6749,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="caixas" type="Node2D" parent="BonusLvl"]
-visible = false
-position = Vector2( 0.999999, 66 )
-rotation = 0.00810973
-scale = Vector2( 0.685984, 0.564366 )
-
-[node name="Caixaazul" type="Sprite" parent="BonusLvl/caixas"]
-position = Vector2( -31.9777, 18.0322 )
-rotation = 3.13173
-scale = Vector2( -0.00808308, -0.00982468 )
-z_index = -1
-texture = ExtResource( 61 )
-
-[node name="Caixarosa" type="Sprite" parent="BonusLvl/caixas"]
-visible = false
-position = Vector2( 0.999999, 66 )
-rotation = 0.00810972
-scale = Vector2( 0.00633174, 0.00470921 )
-z_index = -1
-texture = ExtResource( 55 )
-
-[node name="Caixaamarela" type="Sprite" parent="BonusLvl/caixas"]
-visible = false
-position = Vector2( -7.37131, -12.331 )
-scale = Vector2( -0.00275277, -0.00275277 )
-z_index = -1
-texture = ExtResource( 59 )
-
 [node name="bonus" type="Label" parent="BonusLvl"]
+self_modulate = Color( 1, 1, 1, 0 )
 margin_left = -247.0
 margin_top = -83.0
 margin_right = 234.0
 margin_bottom = 142.001
 rect_rotation = -13.9058
-rect_scale = Vector2( 1.92466, 1.92466 )
+rect_scale = Vector2( -0.0157572, -0.0157572 )
 rect_pivot_offset = Vector2( 232.421, 139.313 )
 custom_colors/font_color = Color( 0.956863, 0.905882, 0.752941, 1 )
 custom_fonts/font = SubResource( 31 )
@@ -6730,6 +6783,7 @@ z_index = 1
 texture = ExtResource( 4 )
 
 [node name="Roda" type="Sprite" parent="BonusLvl"]
+visible = false
 light_mask = 4
 position = Vector2( -10, 68 )
 z_index = -2
@@ -6740,36 +6794,35 @@ offset = Vector2( 10.5584, -6.32611 )
 position = Vector2( 175, -196 )
 
 [node name="Centroazulrosa" type="Sprite" parent="BonusLvl/Roda/luzesentreaspas"]
-self_modulate = Color( 1, 1, 1, 0.913725 )
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -181, 197 )
-scale = Vector2( 2.51035, 2.51035 )
+scale = Vector2( 2.16528, 2.16528 )
 z_index = 3
 texture = ExtResource( 49 )
 
 [node name="Luzamarela" type="Sprite" parent="BonusLvl/Roda/luzesentreaspas"]
-self_modulate = Color( 1, 0.941176, 0.0627451, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -185, 200 )
 scale = Vector2( -1.94892, -1.94892 )
 z_index = 2
 texture = ExtResource( 50 )
 
 [node name="Luzazul" type="Sprite" parent="BonusLvl/Roda/luzesentreaspas"]
-self_modulate = Color( 0.117647, 1, 0.921569, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -178, 200 )
-scale = Vector2( 2.08477, 2.08477 )
+scale = Vector2( -2.08383, -2.08383 )
 texture = ExtResource( 51 )
 
 [node name="Luzmuitoamarela" type="Sprite" parent="BonusLvl/Roda/luzesentreaspas"]
-visible = false
-self_modulate = Color( 1, 1, 1, 0.537255 )
-position = Vector2( -185, 201 )
-scale = Vector2( 0.210555, 0.210555 )
+self_modulate = Color( 0.994118, 1, 0.25, 0.884314 )
+position = Vector2( -183, 206 )
+scale = Vector2( 2.62819, 2.62819 )
 texture = ExtResource( 57 )
 
 [node name="Luzrosa" type="Sprite" parent="BonusLvl/Roda/luzesentreaspas"]
-self_modulate = Color( 1, 0.0431373, 1, 1 )
+self_modulate = Color( 1, 0.0313726, 0.909804, 0 )
 position = Vector2( -187, 207 )
-scale = Vector2( -2.25945, -2.25945 )
+scale = Vector2( 1.91159, 1.91159 )
 texture = ExtResource( 58 )
 
 [node name="Tween" type="Tween" parent="BonusLvl/Roda"]
@@ -6871,24 +6924,25 @@ shadow_item_cull_mask = 2
 
 [node name="CurtainLeft" type="Sprite" parent="BonusLvl"]
 light_mask = 0
-position = Vector2( -482, 59.9655 )
+position = Vector2( -1643.08, -49.0235 )
+rotation = 0.204205
 scale = Vector2( 1.02352, 1.14189 )
 z_index = -4
 texture = ExtResource( 54 )
 hframes = 6
 vframes = 4
-frame = 23
 
 [node name="CurtainRight" type="Sprite" parent="BonusLvl"]
 light_mask = 0
-position = Vector2( 494, 60 )
+position = Vector2( 1598.8, -50.6047 )
+rotation = -0.147226
 scale = Vector2( 1.04501, 1.14188 )
 z_index = -4
 texture = ExtResource( 54 )
 flip_h = true
 hframes = 6
 vframes = 4
-frame = 23
+frame = 1
 
 [node name="particulas" type="Node2D" parent="BonusLvl"]
 visible = false
@@ -7088,7 +7142,7 @@ hue_variation = 1.0
 [node name="faca" type="Node2D" parent="BonusLvl"]
 
 [node name="KnifeSpritesheet" type="Sprite" parent="BonusLvl/faca"]
-visible = false
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 707, 145 )
 rotation = 0.299158
 scale = Vector2( 0.74994, 0.74994 )
@@ -7103,6 +7157,34 @@ anims/1faca = SubResource( 44 )
 anims/2faca = SubResource( 45 )
 anims/3faca = SubResource( 46 )
 anims/facaentra = SubResource( 47 )
+
+[node name="caixas" type="Node2D" parent="BonusLvl"]
+visible = false
+position = Vector2( 1, 66 )
+rotation = 0.00810973
+scale = Vector2( 0.685984, 0.564366 )
+
+[node name="Caixaazul" type="Sprite" parent="BonusLvl/caixas"]
+visible = false
+position = Vector2( -31.9777, 18.0322 )
+rotation = 3.13173
+scale = Vector2( -0.00808308, -0.00982468 )
+z_index = -1
+texture = ExtResource( 61 )
+
+[node name="Caixarosa" type="Sprite" parent="BonusLvl/caixas"]
+visible = false
+position = Vector2( 0.999999, 66 )
+rotation = 0.00810972
+scale = Vector2( 0.00633174, 0.00470921 )
+z_index = -1
+texture = ExtResource( 55 )
+
+[node name="Caixaamarela" type="Sprite" parent="BonusLvl/caixas"]
+position = Vector2( -20.4021, 1.08643 )
+scale = Vector2( -0.00275277, 0.0684065 )
+z_index = -1
+texture = ExtResource( 59 )
 
 [node name="FacaHitbox" type="Area2D" parent="BonusLvl"]
 position = Vector2( 639.068, 169.159 )
@@ -7119,85 +7201,20 @@ margin_right = -454.516
 margin_bottom = -391.166
 rect_scale = Vector2( 75.201, 49.0024 )
 
-[node name="Denom Plus Btn" type="TextureButton" parent="."]
-margin_left = 1643.39
-margin_top = 1007.05
-margin_right = 2159.39
-margin_bottom = 1523.05
-rect_scale = Vector2( 0.0754521, 0.0754521 )
-texture_normal = ExtResource( 68 )
-texture_pressed = ExtResource( 65 )
-texture_hover = ExtResource( 64 )
+[node name="BonusBtn" type="TextureButton" parent="."]
+margin_left = 1.50082
+margin_top = 33.018
+margin_right = 517.501
+margin_bottom = 549.018
+rect_rotation = -15.8296
+rect_scale = Vector2( 0.280864, 0.280864 )
+texture_normal = ExtResource( 69 )
+texture_hover = ExtResource( 69 )
 
-[node name="Denom Sub Btn" type="TextureButton" parent="."]
-margin_left = 1505.32
-margin_top = 1010.05
-margin_right = 2021.32
-margin_bottom = 1526.05
-rect_scale = Vector2( 0.0754521, 0.0754521 )
-texture_normal = ExtResource( 67 )
-texture_pressed = ExtResource( 66 )
-texture_hover = ExtResource( 63 )
-
-[node name="Level Sub Btn" type="TextureButton" parent="."]
-margin_left = 375.204
-margin_top = 1007.05
-margin_right = 891.204
-margin_bottom = 1523.05
-rect_scale = Vector2( 0.0754521, 0.0754521 )
-texture_normal = ExtResource( 67 )
-texture_pressed = ExtResource( 66 )
-texture_hover = ExtResource( 63 )
-
-[node name="Level Plus Btn" type="TextureButton" parent="."]
-margin_left = 511.779
-margin_top = 1005.55
-margin_right = 1027.78
-margin_bottom = 1521.55
-rect_scale = Vector2( 0.0754521, 0.0754521 )
-texture_normal = ExtResource( 68 )
-texture_pressed = ExtResource( 65 )
-texture_hover = ExtResource( 64 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Credits" type="Label" parent="."]
-margin_left = 1829.49
-margin_top = 1016.05
-margin_right = 1869.49
-margin_bottom = 1030.05
-rect_scale = Vector2( 2.18693, 2.18693 )
-text = "10"
-align = 1
-
-[node name="Denom" type="Label" parent="."]
-margin_left = 1551.84
-margin_top = 1014.55
-margin_right = 1591.84
-margin_bottom = 1028.55
-rect_scale = Vector2( 2.18693, 2.18693 )
-text = "0,10"
-align = 1
-
-[node name="Level" type="Label" parent="."]
-margin_left = 412.724
-margin_top = 1013.05
-margin_right = 452.724
-margin_bottom = 1027.05
-rect_scale = Vector2( 2.18693, 2.18693 )
-text = "0"
-align = 1
-
-[node name="Bet" type="Label" parent="."]
-margin_left = 118.565
-margin_top = 1016.05
-margin_right = 158.565
-margin_bottom = 1030.05
-rect_scale = Vector2( 2.18693, 2.18693 )
-text = "0"
-align = 1
-
+[connection signal="button_down" from="UIBaixo/Denom Plus Btn" to="." method="_on_Denom_Plus_Btn_button_down"]
+[connection signal="button_down" from="UIBaixo/Denom Sub Btn" to="." method="_on_Denom_Sub_Btn_button_down"]
+[connection signal="button_down" from="UIBaixo/Level Sub Btn" to="." method="_on_Level_Sub_Btn_button_down"]
+[connection signal="button_down" from="UIBaixo/Level Plus Btn" to="." method="_on_Level_Plus_Btn_button_down"]
 [connection signal="button_down" from="play" to="." method="_on_Roll2_button_down"]
 [connection signal="mouse_entered" from="play" to="." method="_on_play_mouse_entered"]
 [connection signal="button_down" from="options/1/historico" to="." method="_on_historico_button_down"]
@@ -7217,7 +7234,4 @@ align = 1
 [connection signal="area_entered" from="BonusLvl/Roda/Hitboxes/Amarelo 3" to="BonusLvl" method="_on_Amarelo_3_area_entered"]
 [connection signal="area_entered" from="BonusLvl/Roda/Hitboxes/Amarelo 4" to="BonusLvl" method="_on_Amarelo_4_area_entered"]
 [connection signal="pressed" from="BonusLvl/RodaBtn" to="BonusLvl" method="_on_RodaBtn_pressed"]
-[connection signal="button_down" from="Denom Plus Btn" to="." method="_on_Denom_Plus_Btn_button_down"]
-[connection signal="button_down" from="Denom Sub Btn" to="." method="_on_Denom_Sub_Btn_button_down"]
-[connection signal="button_down" from="Level Sub Btn" to="." method="_on_Level_Sub_Btn_button_down"]
-[connection signal="button_down" from="Level Plus Btn" to="." method="_on_Level_Plus_Btn_button_down"]
+[connection signal="button_down" from="BonusBtn" to="BonusLvl" method="_on_BonusBtn_button_down"]

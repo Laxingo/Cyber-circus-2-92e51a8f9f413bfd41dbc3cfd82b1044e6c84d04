@@ -18,7 +18,7 @@ onready var random = RandomNumberGenerator.new()
 
 
 func _ready():
-	_entra()
+	pass
 
 
 func _process(delta):
@@ -30,17 +30,17 @@ func _process(delta):
 func _entra():
 	self.visible = true
 	animP.play("1bonusentrada")
-#	yield(get_tree().create_timer(animP.get_animation("1bonusentrada").length + 0.2), "timeout")
+	yield(get_tree().create_timer(animP.get_animation("1bonusentrada").length + 0.2), "timeout")
 	animP.play("2throwtheknife")
-#	yield(get_tree().create_timer(animP.get_animation("2throwtheknife").length +0.5), "timeout")
+	yield(get_tree().create_timer(animP.get_animation("2throwtheknife").length +0.5), "timeout")
 	animP.play("3rodaluzentra")
-#	yield(get_tree().create_timer(animP.get_animation("3rodaluzentra").length + 1), "timeout")
+	yield(get_tree().create_timer(animP.get_animation("3rodaluzentra").length + 1), "timeout")
 	animP.play("4rodaroda")
-#	yield(get_tree().create_timer(4), "timeout")
+	yield(get_tree().create_timer(4), "timeout")
 	prontaprarodar = true
-#	yield(get_tree().create_timer(3), "timeout")
+	yield(get_tree().create_timer(3), "timeout")
 	facaAnim.play("facaentra")
-#	yield(get_tree().create_timer(2), "timeout")
+	yield(get_tree().create_timer(2), "timeout")
 	prontopraclicar = true
 	
 
@@ -106,3 +106,7 @@ func _WinAmarelo():
 func _WinAzul():
 	print("AZUL")
 	animP.play("winazul")
+
+
+func _on_BonusBtn_button_down():
+	_entra()
