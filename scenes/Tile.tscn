@@ -2743,6 +2743,7 @@ visible = false
 light_mask = 2
 position = Vector2( 1271.58, 556.172 )
 scale = Vector2( 3.35788, 2.06552 )
+z_index = -4
 
 [node name="ManeViewport" type="Viewport" parent="Sprite/Lion"]
 size = Vector2( 516, 516 )
@@ -2914,6 +2915,7 @@ visible = false
 light_mask = 2048
 position = Vector2( 1306.2, 523.863 )
 scale = Vector2( 3.56722, 2.08896 )
+z_index = -4
 
 [node name="Viewport" type="Viewport" parent="Sprite/Strongman"]
 size = Vector2( 560, 560 )
@@ -3048,6 +3050,7 @@ shadow_color = Color( 0.215686, 1, 0.964706, 0 )
 visible = false
 position = Vector2( 1248.5, 440.784 )
 scale = Vector2( 3.16387, 1.96384 )
+z_index = -4
 
 [node name="CyberCircusTicketEmission1" type="Sprite" parent="Sprite/Ticket"]
 self_modulate = Color( 1, 1, 1, 0.713726 )
@@ -3082,6 +3085,7 @@ visible = false
 light_mask = 4
 position = Vector2( 563.096, -41.5398 )
 scale = Vector2( 2.4079, 1.94719 )
+z_index = -4
 
 [node name="Position2D" type="Position2D" parent="Sprite/Roulette"]
 position = Vector2( 270.006, 272.317 )
@@ -3159,6 +3163,7 @@ visible = false
 light_mask = 8
 position = Vector2( 1248.5, 463.862 )
 scale = Vector2( 3.10528, 1.9277 )
+z_index = -4
 
 [node name="Sprite" type="Sprite" parent="Sprite/A"]
 light_mask = 8
@@ -3197,6 +3202,7 @@ visible = false
 light_mask = 16
 position = Vector2( 1227.73, 461.554 )
 scale = Vector2( 3.08944, 1.9296 )
+z_index = -4
 
 [node name="Sprite" type="Sprite" parent="Sprite/J"]
 light_mask = 16
@@ -3236,6 +3242,7 @@ visible = false
 light_mask = 32
 position = Vector2( 1273.89, 470.785 )
 scale = Vector2( 3.0433, 1.91243 )
+z_index = -4
 
 [node name="Sprite" type="Sprite" parent="Sprite/K"]
 light_mask = 32
@@ -3271,6 +3278,7 @@ visible = false
 light_mask = 64
 position = Vector2( 1253.12, 498.478 )
 scale = Vector2( 2.98907, 1.90727 )
+z_index = -4
 
 [node name="Sprite" type="Sprite" parent="Sprite/Q"]
 light_mask = 64
@@ -3305,6 +3313,7 @@ visible = false
 light_mask = 512
 position = Vector2( 1153.88, 341.55 )
 scale = Vector2( 4.43669, 2.8357 )
+z_index = -4
 offset = Vector2( 4, 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Sprite/Juggle"]
@@ -3328,6 +3337,7 @@ visible = false
 light_mask = 1024
 position = Vector2( 1437.74, 314.18 )
 scale = Vector2( 4.48533, 2.29118 )
+z_index = -4
 
 [node name="Sprite3" type="Sprite" parent="Sprite/Clown"]
 light_mask = 1024
@@ -3437,6 +3447,7 @@ visible = false
 light_mask = 256
 position = Vector2( 1195.42, 456.938 )
 scale = Vector2( 3.47664, 2.0889 )
+z_index = -4
 offset = Vector2( 2765, -1167 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite/Elephant"]

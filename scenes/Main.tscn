@@ -6618,6 +6618,7 @@ stream = ExtResource( 62 )
 [node name="BonusLvl" type="Node2D" parent="."]
 position = Vector2( 953.019, 439.739 )
 scale = Vector2( 0.949038, 0.949038 )
+z_index = 5
 script = ExtResource( 34 )
 
 [node name="winamarelo" type="Label" parent="BonusLvl"]
@@ -6697,14 +6698,12 @@ z_index = -1
 texture = ExtResource( 59 )
 
 [node name="bonus" type="Label" parent="BonusLvl"]
-visible = false
-self_modulate = Color( 1, 1, 1, 0 )
 margin_left = -247.0
 margin_top = -83.0
 margin_right = 234.0
 margin_bottom = 142.001
-rect_rotation = 335.302
-rect_scale = Vector2( 0.16019, 0.16019 )
+rect_rotation = -13.9058
+rect_scale = Vector2( 1.92466, 1.92466 )
 rect_pivot_offset = Vector2( 232.421, 139.313 )
 custom_colors/font_color = Color( 0.956863, 0.905882, 0.752941, 1 )
 custom_fonts/font = SubResource( 31 )
@@ -6789,7 +6788,6 @@ polygon = PoolVector2Array( 2.5097, 1.73315, 2.27068, 0.288857, 2.5097, -1.58873
 [node name="Rosa 2" type="Area2D" parent="BonusLvl/Roda/Hitboxes"]
 position = Vector2( -1.07037, -199.257 )
 rotation = 1.57596
-scale = Vector2( 1, 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BonusLvl/Roda/Hitboxes/Rosa 2"]
 modulate = Color( 0.933333, 0.0196078, 0.0196078, 1 )
@@ -6826,7 +6824,6 @@ polygon = PoolVector2Array( 3.26579, 4.06396, 2.42728, 1.60009, 2.57613, -1.4413
 [node name="Amarelo 2" type="Area2D" parent="BonusLvl/Roda/Hitboxes"]
 position = Vector2( -108.606, 166.049 )
 rotation = -0.973429
-scale = Vector2( 1, 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BonusLvl/Roda/Hitboxes/Amarelo 2"]
 modulate = Color( 0.345098, 0.956863, 0.913725, 1 )
@@ -6836,7 +6833,6 @@ polygon = PoolVector2Array( 3.26579, 4.06396, 2.42728, 1.60009, 2.57613, -1.4413
 [node name="Amarelo 3" type="Area2D" parent="BonusLvl/Roda/Hitboxes"]
 position = Vector2( -170.281, -105.954 )
 rotation = 0.64688
-scale = Vector2( 1, 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BonusLvl/Roda/Hitboxes/Amarelo 3"]
 modulate = Color( 0.345098, 0.956863, 0.913725, 1 )
@@ -6875,8 +6871,9 @@ shadow_item_cull_mask = 2
 
 [node name="CurtainLeft" type="Sprite" parent="BonusLvl"]
 light_mask = 0
-position = Vector2( -482, 63 )
-z_index = -3
+position = Vector2( -482, 59.9655 )
+scale = Vector2( 1.02352, 1.14189 )
+z_index = -4
 texture = ExtResource( 54 )
 hframes = 6
 vframes = 4
@@ -6885,7 +6882,8 @@ frame = 23
 [node name="CurtainRight" type="Sprite" parent="BonusLvl"]
 light_mask = 0
 position = Vector2( 494, 60 )
-z_index = -3
+scale = Vector2( 1.04501, 1.14188 )
+z_index = -4
 texture = ExtResource( 54 )
 flip_h = true
 hframes = 6
@@ -7108,7 +7106,6 @@ anims/facaentra = SubResource( 47 )
 
 [node name="FacaHitbox" type="Area2D" parent="BonusLvl"]
 position = Vector2( 639.068, 169.159 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BonusLvl/FacaHitbox"]
 modulate = Color( 0.423529, 0.0352941, 0.988235, 1 )
