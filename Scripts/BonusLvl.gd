@@ -9,6 +9,7 @@ onready var faca = $faca
 onready var facaSprite = $faca/KnifeSpritesheet
 onready var facaHitbox = $FacaHitbox
 onready var hitboxes = $Roda/Hitboxes
+onready var winazulLBL = $winazul
 
 
 var prontaprarodar = false
@@ -88,11 +89,10 @@ func _on_Amarelo_2_area_entered(area):
 	_WinAzul()
 
 func _on_Amarelo_3_area_entered(area):
-	_WinAzul()
+	_WinAzul2()
 
 func _on_Amarelo_4_area_entered(area):
-	_WinAzul()
-
+	_WinAzul2()
 
 
 func _WinRosa():
@@ -105,6 +105,11 @@ func _WinAmarelo():
 
 func _WinAzul():
 	print("AZUL")
+	animP.play("winazul")
+
+func _WinAzul2():
+	print("AZUL2")
+	winazulLBL.text = "5000"
 	animP.play("winazul")
 
 
