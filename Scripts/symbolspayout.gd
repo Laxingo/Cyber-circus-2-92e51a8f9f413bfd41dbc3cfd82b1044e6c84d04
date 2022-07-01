@@ -7,6 +7,7 @@ onready var texto4 = get_node("prizelines")
 onready var texto5 = get_node("bonus")
 onready var lionanim = $wild/Lion/AnimationPlayer
 onready var clownanim = $scatter/AnimationPlayer
+onready var prizeLinesAnim = $prizelines/AnimationPlayer
 
 var text1went
 var text2went
@@ -17,6 +18,7 @@ var text5went
 func _ready():
 	lionanim.play("lion_win")
 	clownanim.play("New Anim")
+	prizeLinesAnim.play("luzes")
 	pass 
 
 
