@@ -74,9 +74,6 @@ func setPrizeMasks():
 	prizeMasks.push_back(0b000000000011111);
 	prizeMasks.push_back(0b000001111100000);
 	prizeMasks.push_back(0b111110000000000);
-	prizeMasks.push_back(0b110000000000000);
-	prizeMasks.push_back(0b000001100000000);
-	prizeMasks.push_back(0b000000000011000);
 	prizeMasks.push_back(0b100010101000100);
 	prizeMasks.push_back(0b001000101010001);
 	prizeMasks.push_back(0b110110010000000);

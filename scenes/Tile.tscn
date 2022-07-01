@@ -2724,6 +2724,7 @@ energy = 0.0
 shadow_color = Color( 0.215686, 1, 0.964706, 0 )
 
 [node name="Strongman" type="Sprite" parent="Sprite"]
+visible = false
 light_mask = 2048
 position = Vector2( 1306.2, 523.863 )
 scale = Vector2( 3.56722, 2.08896 )

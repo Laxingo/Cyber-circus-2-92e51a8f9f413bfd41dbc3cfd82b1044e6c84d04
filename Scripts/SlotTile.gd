@@ -158,11 +158,7 @@ func animate_icon(symbol):
 		$Sprite/K/AnimationPlayer.play("K_Sweep")
 	elif(symbol =="Lion"):
 		$Sprite/Lion/AnimationPlayer.play("lion_win")
-	elif(symbol =="Malabare"):
-		$Sprite/A.visible = true
 	elif(symbol =="Strongman"):
 		$Sprite/Strongman/Viewport/AnimationPlayer.play("b1")
-		print("AAAAA")
 	elif(symbol =="Q"):
 		$Sprite/Q/AnimationPlayer.play("Q_Sweep")
-		print("AAAAA")
