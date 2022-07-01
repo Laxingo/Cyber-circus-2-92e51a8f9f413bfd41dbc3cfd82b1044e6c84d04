@@ -6554,7 +6554,11 @@ shadow_item_cull_mask = 2
 
 [node name="CurtainLeft" type="Sprite" parent="BonusLvl"]
 light_mask = 0
+<<<<<<< HEAD
 position = Vector2( -1777.5, -36.3721 )
+=======
+position = Vector2( -1530.8, -36.3722 )
+>>>>>>> 1fe8ce41cca71ef5635e38a1a16e1486748ffc63
 rotation = 0.204205
 scale = Vector2( 1.02352, 1.14189 )
 z_index = -4
@@ -6565,7 +6569,11 @@ frame = 22
 
 [node name="CurtainRight" type="Sprite" parent="BonusLvl"]
 light_mask = 0
+<<<<<<< HEAD
 position = Vector2( 1978.34, -4.74399 )
+=======
+position = Vector2( 1565.59, -23.7208 )
+>>>>>>> 1fe8ce41cca71ef5635e38a1a16e1486748ffc63
 rotation = -0.147226
 scale = Vector2( 1.04501, 1.14188 )
 z_index = -4
