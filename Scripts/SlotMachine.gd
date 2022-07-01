@@ -58,7 +58,11 @@ var prizesToAnim = [];
 
 onready var reelSound = preload("res://sound/reels spin/Cyber Circus Reel Just Spin.mp3")
 
-
+onready var reel1 = $Reel1
+onready var reel2 = $reel2
+onready var reel3 = $reel3
+onready var reel4 = $reel4
+onready var reel5 = $reel5
 
 
 func _ready():
@@ -100,12 +104,6 @@ func _add_tile(col :int, row :int) -> void:
 func get_tile(col :int, row :int) -> SlotTile:
   return tiles[(col * rows) + row]
 
-onready var doit1 = false
-onready var doit2 = false
-onready var doit3 = false
-onready var doit4 = false
-onready var doit5 = false
-
 func start() -> void:
 	var counter = 0
 	if state == State.OFF: 
@@ -115,19 +113,19 @@ func start() -> void:
 	for reel in reels:
 		_spin_reel(reel)
 		if counter == 0:
-			doit1 = true
+			$reel1.play()
 			print("REEL 1 TOCA")
 		elif counter == 1:
-			doit2 = true
+			$reel2.play()
 			print("REEL 2 TOCA")
 		elif counter == 2:
-			doit3 = true
+			$reel3.play()
 			print("REEL 3 TOCA")
 		elif counter == 3:
-			doit4 = true
+			$reel4.play()
 			print("REEL 4 TOCA")
 		elif counter == 4:
-			doit5 = true
+			$reel5.play()
 			print("REEL 5 TOCA")
 		if reel_delay > 0:
 			   yield(get_tree().create_timer(reel_delay), "timeout")
@@ -147,7 +145,6 @@ func _stop() -> void:
 	if state == State.OFF:
 		buildResultMasks();
 		animPrizes();
-		
 
 func _spin_reel(reel :int) -> void:
   for row in rows:
@@ -261,52 +258,58 @@ func animPrizes():
 				var _pcell = reels * tiles_per_reel - 1 - i
 				print("ANIMAÇÃO: ",prizeID, "  CÉLULAS: ", _pcell);
 				
-				if(_pcell == 0 or _pcell == 5 or _pcell == 10):
-					estaCol = 0
-				elif(_pcell == 1 or _pcell == 6 or _pcell == 11):
-					estaCol = 1
-				elif(_pcell == 2 or _pcell == 7 or _pcell == 12):
-					estaCol = 2
-				elif(_pcell == 3 or _pcell == 8 or _pcell == 13):
-					estaCol = 3
-				elif(_pcell == 4 or _pcell == 9 or _pcell == 14):
-					estaCol = 4
-
-				if (_pcell == 0 or _pcell == 1 or _pcell == 2 or _pcell == 3 or _pcell == 4):
-					estaReel = 0
-				if (_pcell == 5 or _pcell == 6 or _pcell == 7 or _pcell == 8 or _pcell == 9):
-					estaReel = 1
-				if (_pcell == 10 or _pcell == 11 or _pcell == 12 or _pcell == 13 or _pcell == 14):
-					estaReel = 2
-				oTile = get_tile(estaCol, estaReel)
+#				if(_pcell == 0 or _pcell == 5 or _pcell == 10):
+#					estaCol = 0
+#				elif(_pcell == 1 or _pcell == 6 or _pcell == 11):
+#					estaCol = 1
+#				elif(_pcell == 2 or _pcell == 7 or _pcell == 12):
+#					estaCol = 2
+#				elif(_pcell == 3 or _pcell == 8 or _pcell == 13):
+#					estaCol = 3
+#				elif(_pcell == 4 or _pcell == 9 or _pcell == 14):
+#					estaCol = 4
+#
+#				if (_pcell == 0 or _pcell == 1 or _pcell == 2 or _pcell == 3 or _pcell == 4):
+#					estaReel = 0
+#				if (_pcell == 5 or _pcell == 6 or _pcell == 7 or _pcell == 8 or _pcell == 9):
+#					estaReel = 1
+#				if (_pcell == 10 or _pcell == 11 or _pcell == 12 or _pcell == 13 or _pcell == 14):
+#					estaReel = 2
+					
+#				oTile = get_tile(estaCol, estaReel)
+				
 				oTile.animate_icon(prizeID)
-				givePoints(prizeID)
 
 onready var totalPoints = 0
 
 func givePoints(prizeID):
 	var pointsToGive
 	if prizeID == "bunny":
-		pointsToGive = 250
+		pointsToGive = 1000
 	elif prizeID == "lion":
-		pass
+		pointsToGive = 1500
 	elif prizeID == "strongman":
-		pointsToGive = 200
+		pointsToGive = 1600
+	elif prizeID == "ticket":
+		pointsToGive = 1700
 	elif prizeID == "roulette":
+		pointsToGive = 1800
+#		Start Bonus Level
 		bonusLvl._entra()
 	elif prizeID == "A":
-		pointsToGive = 150
+		pointsToGive = 2200
 	elif prizeID == "K":
-		pointsToGive = 100
+		pointsToGive = 2100
 	elif prizeID == "Q":
-		pointsToGive = 50
+		pointsToGive = 2000
 	elif prizeID == "J":
-		pointsToGive = 25
+		pointsToGive = 1900
+	elif prizeID == "juggle":
+		pointsToGive = 1550
 	elif prizeID == "clown":
-		pointsToGive = 500
+		pointsToGive = 1650
 	elif prizeID == "elephant":
-		pointsToGive = 300
-#	main._pointsToGive(pointsToGive)
-#	get_node(".")._pointsToGive(pointsToGive)
+		pointsToGive = 1750
 	
+	totalPoints = totalPoints  + pointsToGive
 
