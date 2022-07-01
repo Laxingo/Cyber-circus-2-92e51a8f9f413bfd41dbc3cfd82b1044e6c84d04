@@ -6327,6 +6327,7 @@ z_index = 5
 script = ExtResource( 34 )
 
 [node name="winamarelo" type="Label" parent="BonusLvl"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = -44.256
 margin_top = -4.42566
@@ -6356,6 +6357,7 @@ __meta__ = {
 }
 
 [node name="winazul" type="Label" parent="BonusLvl"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = -30.0473
 margin_top = 3.16306
@@ -6369,13 +6371,14 @@ text = "1000000"
 align = 1
 
 [node name="bonus" type="Label" parent="BonusLvl"]
-self_modulate = Color( 1, 1, 1, 0.266665 )
+visible = false
+self_modulate = Color( 1, 1, 1, 0 )
 margin_left = -247.0
 margin_top = -83.0
 margin_right = 234.0
 margin_bottom = 142.001
-rect_rotation = -13.9058
-rect_scale = Vector2( 0.221875, 0.221875 )
+rect_rotation = 335.302
+rect_scale = Vector2( 0.16019, 0.16019 )
 rect_pivot_offset = Vector2( 232.421, 139.313 )
 custom_colors/font_color = Color( 0.956863, 0.905882, 0.752941, 1 )
 custom_fonts/font = SubResource( 31 )
@@ -6432,7 +6435,6 @@ scale = Vector2( -2.08383, -2.08383 )
 texture = ExtResource( 51 )
 
 [node name="Luzmuitoamarela" type="Sprite" parent="BonusLvl/Roda/luzesentreaspas"]
-visible = false
 self_modulate = Color( 1, 1, 1, 0.537255 )
 position = Vector2( -183, 206 )
 scale = Vector2( 0.210555, 0.210555 )
@@ -6549,7 +6551,7 @@ z_index = -4
 texture = ExtResource( 54 )
 hframes = 6
 vframes = 4
-frame = 13
+frame = 22
 
 [node name="CurtainRight" type="Sprite" parent="BonusLvl"]
 light_mask = 0
@@ -6560,7 +6562,7 @@ texture = ExtResource( 54 )
 flip_h = true
 hframes = 6
 vframes = 4
-frame = 13
+frame = 23
 
 [node name="particulas" type="Node2D" parent="BonusLvl"]
 visible = false
@@ -6760,6 +6762,7 @@ hue_variation = 1.0
 [node name="faca" type="Node2D" parent="BonusLvl"]
 
 [node name="KnifeSpritesheet" type="Sprite" parent="BonusLvl/faca"]
+visible = false
 position = Vector2( 707, 145 )
 rotation = -0.0127988
 scale = Vector2( 0.74994, 0.74994 )

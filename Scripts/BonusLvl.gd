@@ -11,6 +11,7 @@ onready var facaHitbox = $FacaHitbox
 onready var hitboxes = $Roda/Hitboxes
 onready var winazulLBL = $winazul
 
+var facaPos = Vector2(639, 169)
 
 var prontaprarodar = false
 var prontopraclicar = false
@@ -61,11 +62,15 @@ func _on_RodaBtn_pressed():
 			yield(get_tree().create_timer(0.6), "timeout")
 			prontaprarodar = false
 			facaHitbox.position = facaSprite.position
+			yield(get_tree().create_timer(0.6), "timeout")
+			facaHitbox.position = facaPos
 		elif num == 2:
 			facaAnim.play("3faca")
 			yield(get_tree().create_timer(0.6), "timeout")
 			prontaprarodar = false
-			facaHitbox.position = facaSprite.position
+			facaHitbox.position = facaSprite.position 
+			yield(get_tree().create_timer(0.6), "timeout")
+			facaHitbox.position = facaPos
 
 
 
@@ -94,23 +99,37 @@ func _on_Amarelo_3_area_entered(area):
 func _on_Amarelo_4_area_entered(area):
 	_WinAzul2()
 
+onready var creditsToGive
 
 func _WinRosa():
-	print("ROSA")
 	animP.play("winrosa")
+	yield(get_tree().create_timer(6), "timeout")
+	animP.play("winrosabaza")
+	yield(get_tree().create_timer(2), "timeout")
+	animP.play("tudobaza")
+	
 
 func _WinAmarelo():
-	print("AMARELO")
 	animP.play("winamarelo")
+	yield(get_tree().create_timer(6), "timeout")
+	animP.play("winamarelobaza")
+	yield(get_tree().create_timer(2), "timeout")
+	animP.play("tudobaza")
 
 func _WinAzul():
-	print("AZUL")
 	animP.play("winazul")
+	yield(get_tree().create_timer(6), "timeout")
+	animP.play("winazulbaza")
+	yield(get_tree().create_timer(2), "timeout")
+	animP.play("tudobaza")
 
 func _WinAzul2():
-	print("AZUL2")
 	winazulLBL.text = "5000"
 	animP.play("winazul")
+	yield(get_tree().create_timer(6), "timeout")
+	animP.play("winazulbaza")
+	yield(get_tree().create_timer(2), "timeout")
+	animP.play("tudobaza")
 
 
 func _on_BonusBtn_button_down():
