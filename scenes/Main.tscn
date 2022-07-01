@@ -6371,14 +6371,13 @@ text = "1000000"
 align = 1
 
 [node name="bonus" type="Label" parent="BonusLvl"]
-visible = false
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = -247.0
 margin_top = -83.0
 margin_right = 234.0
 margin_bottom = 142.001
-rect_rotation = 335.302
-rect_scale = Vector2( 0.16019, 0.16019 )
+rect_rotation = -13.9058
+rect_scale = Vector2( -0.0157572, -0.0157572 )
 rect_pivot_offset = Vector2( 232.421, 139.313 )
 custom_colors/font_color = Color( 0.956863, 0.905882, 0.752941, 1 )
 custom_fonts/font = SubResource( 31 )
@@ -6405,6 +6404,7 @@ z_index = 1
 texture = ExtResource( 4 )
 
 [node name="Roda" type="Sprite" parent="BonusLvl"]
+visible = false
 light_mask = 4
 position = Vector2( -10, 68 )
 z_index = -2
@@ -6545,7 +6545,8 @@ shadow_item_cull_mask = 2
 
 [node name="CurtainLeft" type="Sprite" parent="BonusLvl"]
 light_mask = 0
-position = Vector2( -482, 63 )
+position = Vector2( -1530.8, -36.3722 )
+rotation = 0.204205
 scale = Vector2( 1.02352, 1.14189 )
 z_index = -4
 texture = ExtResource( 54 )
@@ -6555,7 +6556,8 @@ frame = 22
 
 [node name="CurtainRight" type="Sprite" parent="BonusLvl"]
 light_mask = 0
-position = Vector2( 494, 60 )
+position = Vector2( 1565.59, -23.7208 )
+rotation = -0.147226
 scale = Vector2( 1.04501, 1.14188 )
 z_index = -4
 texture = ExtResource( 54 )
