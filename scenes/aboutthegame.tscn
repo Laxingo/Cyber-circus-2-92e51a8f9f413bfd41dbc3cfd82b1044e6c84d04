@@ -34,7 +34,7 @@ outline_color = Color( 0.72549, 0.878431, 0.878431, 1 )
 font_data = ExtResource( 2 )
 
 [node name="aboutthegame" type="Node2D"]
-position = Vector2( 641, 359 )
+position = Vector2( 646, 361 )
 scale = Vector2( 0.663, 0.669 )
 script = ExtResource( 16 )
 
