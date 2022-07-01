@@ -2,6 +2,7 @@ extends Node2D
 
 onready var slot = $ViewportContainer/Viewport/SlotMachine
 onready var lightAnim = $Luzes/AnimationPlayer
+onready var slotMachine = load("res://Scripts/SlotMachine.gd").new()
 var rolled = false
 
 var popedup = false
@@ -10,6 +11,7 @@ var popedup2 = false
 onready var carpet1 = preload("res://sound/music/Cyber Circus Carpet Asharp.mp3")
 onready var carpet2 = preload("res://sound/music/Cyber Circus Carpet Dsharp.mp3")
 onready var playBtn = preload("res://sound/button/Cyber Circus Button Hover-001.mp3")
+onready var reelSound = preload("res://sound/reels spin/Cyber Circus Reel Just Spin.mp3")
 
 
 var carpet1played
@@ -18,31 +20,77 @@ onready var playAudio = $playBtnAudio
 onready var optionsAudio = $optionsBtnAudio
 onready var options2Audio = $options2BtnAudio
 
+onready var reel1 = $reel1
+onready var reel2 = $reel1
+onready var reel3 = $reel1
+onready var reel4 = $reel1
+onready var reel5 = $reel1
 
-
-var credits = 100
+var credits = 1000
 var level = 1
-var denom = 0
-var bet = denom * level
-
+var denom = 0.01
+var bet = 25
+onready var betValue = bet
+var moneyBet = bet * denom
 onready var creditsLBL = $UIBaixo/Credits
 onready var denomLBL = $UIBaixo/Denom
 onready var levelLBL = $UIBaixo/Level
 onready var betLBL = $UIBaixo/Bet
+onready var moneybetLBL = $UIBaixo/MoneyBet
 
 func _ready():
 	slot.connect("stopped", self, "_on_slot_machine_stopped")
 	lightAnim.play("luz")
 	jukebox.stream = carpet1
 
+func startReelSound(numberR):
+	if numberR == 1:
+		if !reel1.is_playing():
+			reel1.stream = reelSound
+			reel1.play()
+	if numberR == 2:
+		if !reel2.is_playing():
+			reel2.stream = reelSound
+			reel2.play()
+	if numberR == 3:
+		if !reel3.is_playing():
+			reel3.stream = reelSound
+			reel3.play()
+	if numberR == 4:
+		if !reel4.is_playing():
+			reel4.stream = reelSound
+			reel4.play()
+	if numberR == 5:
+		if !reel5.is_playing():
+			reel5.stream = reelSound
+			reel5.play()
+
 func _process(delta):
 	_jukebox()
-	bet = denom * level
+	if get_node("ViewportContainer/Viewport/SlotMachine").doit1 == true:
+		startReelSound(1)
+		get_node("ViewportContainer/Viewport/SlotMachine").doit1 = false
+	if get_node("ViewportContainer/Viewport/SlotMachine").doit2 == true:
+		startReelSound(2)
+		get_node("ViewportContainer/Viewport/SlotMachine").doit2 = false
+	if get_node("ViewportContainer/Viewport/SlotMachine").doit3 == true:
+		startReelSound(3)
+		get_node("ViewportContainer/Viewport/SlotMachine").doit3 = false
+	if get_node("ViewportContainer/Viewport/SlotMachine").doit4 == true:
+		startReelSound(4)
+		get_node("ViewportContainer/Viewport/SlotMachine").doit4 = false
+	if get_node("ViewportContainer/Viewport/SlotMachine").doit5 == true:
+		startReelSound(5)
+		get_node("ViewportContainer/Viewport/SlotMachine").doit5 = false
+		
+		
+		
+	bet = betValue * level
+	moneyBet = bet * denom
+	moneybetLBL.text = "$" + str(moneyBet)
 	creditsLBL.text = str(credits)
-	denomLBL.text = str(denom)
 	levelLBL.text = str(level)
 	betLBL.text = str(bet)
-	
 
 func _jukebox():
 	if !jukebox.is_playing():
@@ -150,32 +198,50 @@ func _on_Level_Sub_Btn_button_down():
 
 func _on_Level_Plus_Btn_button_down():
 #	if bet < credits:
-		if level < 3:
+		if level < 10:
 			level = level + 1
-#			if bet > credits:
-#				level = level - 1
 		else:
-			level = 3
+			level = 10
 
 
 func _on_Denom_Plus_Btn_button_down():
-#	if bet < credits:
-		if denom <= 9.9:
-			denom = denom + 0.10
-#			if bet > credits:
-#				denom = denom - 0.10
-		else:
-			denom = 10
-
-		
+		if denom == 0.01:
+			denom = 0.02
+			denomLBL.text = "0,02"
+		elif denom == 0.02:
+			denom = 0.05
+			denomLBL.text = "0,05"
+		elif denom == 0.05:
+			denom = 0.10
+			denomLBL.text = "0,10"
+		elif denom == 0.10:
+			denom = 0.20
+			denomLBL.text = "0,20"
+		elif denom == 0.20:
+			denom = 0.50
+			denomLBL.text = "0,50"
 
 
 func _on_Denom_Sub_Btn_button_down():
-	if denom > 0.10:
-		denom = denom - 0.10
+		if denom == 0.50:
+			denom = 0.20
+			denomLBL.text = "0,20"
+		elif denom == 0.20:
+			denom = 0.10
+			denomLBL.text = "0,10"
+		elif denom == 0.10:
+			denom = 0.05
+			denomLBL.text = "0,05"
+		elif denom == 0.05:
+			denom = 0.02
+			denomLBL.text = "0,02"
+		elif denom == 0.02:
+			denom = 0.01
+			denomLBL.text = "0,01"
 
-	else:
-		denom = 0.10
+func _pointsToGive(points):
+	credits = credits + points
+	pass
 
 
 func _on_reel1_finished():
