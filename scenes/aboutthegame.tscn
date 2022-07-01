@@ -98,7 +98,7 @@ custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
 custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "* WILD symbol will replace all symbols except SCATTER and BONUS 
-symbols to complete prize lines."
+symbols."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -175,11 +175,9 @@ custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "* If a sequence of 3 or more BONUS symbols occurs on any active line
  the bonus game is triggered.
-* The bonus is a spinning wheel type game where the player
-may win a free prize.
-* The player has to click the spinning wheel to throw a knife.
-Where the knife lands will determine the prize won by the player.
-* Each color of the wheel has a hidden prize in credits."
+* The bonus is a ... game type.
+* The player has to...
+* Each color has an hidden prize in credits."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -189,9 +187,9 @@ position = Vector2( 0, 2650.22 )
 
 [node name="howto" type="Label" parent="tudo/howto"]
 margin_left = -846.154
-margin_top = -318.645
+margin_top = -436.472
 margin_right = 304.846
-margin_bottom = -198.645
+margin_bottom = -316.472
 rect_scale = Vector2( 1.20374, 0.89854 )
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
@@ -206,9 +204,9 @@ __meta__ = {
 [node name="text" type="Label" parent="tudo/howto"]
 anchor_right = 0.358
 margin_left = -822.0
-margin_top = -162.173
+margin_top = -280.0
 margin_right = 709.0
-margin_bottom = 2426.83
+margin_bottom = -91.0
 rect_scale = Vector2( 1.234, 0.899 )
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
@@ -220,10 +218,10 @@ and different coin values.
 * The bet level is set using the LEVEL selector.
 * The coin value is set using the DENOMINATION selector.
 * Winning combinations and payouts are made according to
-each symbol's Pay Table.
-* All wins happen on active pay line from left to right starting with the
-left most reel with the exception of scatter wins.
-* Scatter wins pay on any reel.
+ Pay Table.
+* All wins on active pay line from left to right starting with the left
+ most reel with ex-ception of scatter wins.
+* Scatter wins pays on any reel.
 * Line wins from paytable are multiplied by the bet level.
 * Scatter wins from paytable are multiplied by the total bet.
 * Only the highest win per pay line is paid out.
@@ -231,15 +229,20 @@ left most reel with the exception of scatter wins.
  multiplied by the bet level.
 * A pay line win in currency is equal to the win in credits multiplied by
  the credits denomination.
-* A game round starts by hitting the spin button with the selected
+* A game round starts hitting the spin button with the selected
  bet level.
 * No bets can be altered during a game round.
 * Wins on different lines are added.
 * Hit the spin button to start the game (Space button on the
  computer's keyboard also starts the game).
-* Auto-Play is enabled in this game.
-* Quick-Play is also available on the menu.
-* Malfunctions voids all pays and plays."
+* Auto-Play is enabled in this game. In mobile, the options are shown
+ after a long press on the spin button.
+* Quick-Play is also available on the menu (desktop) or at the long
+ press spin button (mobile).
+* Malfunctions voids all pays and plays "
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="aboutthis" type="Node2D" parent="tudo"]
 
@@ -271,22 +274,25 @@ custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
 custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
 custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "* Cyber Circus is a 5 reels and 3 rows slot with 10 fixed pay lines.
+text = "* Cyber Circus is a 5 reels and 3 rows slot with 10 fixes pay lines.
 * The theoretical return to player is ???%.
 * Cyber Circus is played in credits.
 * The game has 3 high pay symbols and 4 low pay symbols...
 * WILD symbols substitute regular symbols.
 * BONUS symbols enable a new game mode.
 * SCATTER symbols allow other prizes."
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="buttons" type="Node2D" parent="tudo"]
 position = Vector2( 0, 5248.13 )
 
 [node name="bolas" type="Label" parent="tudo/buttons"]
 margin_left = -441.931
-margin_top = -302.203
+margin_top = -420.03
 margin_right = 126.069
-margin_bottom = -182.203
+margin_bottom = -300.03
 rect_scale = Vector2( 2.29741, 1.71492 )
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
@@ -302,9 +308,9 @@ __meta__ = {
 [node name="text" type="Label" parent="tudo/buttons"]
 anchor_right = 0.358
 margin_left = -282.051
-margin_top = -0.259766
+margin_top = -118.087
 margin_right = 1125.95
-margin_bottom = 3068.74
+margin_bottom = 2950.91
 rect_scale = Vector2( 1.234, 0.899 )
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
@@ -348,7 +354,7 @@ __meta__ = {
 }
 
 [node name="Play2" type="Sprite" parent="tudo/buttons"]
-position = Vector2( -500.754, 32.625 )
+position = Vector2( -500.754, -85.2018 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 13 )
 
@@ -391,43 +397,43 @@ scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay2" type="Sprite" parent="tudo/buttons"]
-position = Vector2( 0.273438, 530.009 )
+position = Vector2( 0.27356, 411.116 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay3" type="Sprite" parent="tudo/buttons"]
-position = Vector2( 0.273438, 855.8 )
+position = Vector2( 0.273804, 736.907 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay4" type="Sprite" parent="tudo/buttons"]
-position = Vector2( 0.273438, 1177.06 )
+position = Vector2( 0.273926, 1058.17 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay5" type="Sprite" parent="tudo/buttons"]
-position = Vector2( 0.273438, 1483.25 )
+position = Vector2( 0.27356, 1364.36 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay6" type="Sprite" parent="tudo/buttons"]
-position = Vector2( 0.273438, 1812.06 )
+position = Vector2( 0.27356, 1693.17 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay7" type="Sprite" parent="tudo/buttons"]
-position = Vector2( 0.273438, 2149.92 )
+position = Vector2( 0.273682, 2031.03 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay8" type="Sprite" parent="tudo/buttons"]
-position = Vector2( 0.273438, 2489.28 )
+position = Vector2( 0.273682, 2370.39 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
