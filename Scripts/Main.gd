@@ -176,3 +176,7 @@ func _on_Denom_Sub_Btn_button_down():
 
 	else:
 		denom = 0.10
+
+
+func _on_reel1_finished():
+	 pass # Replace with function body.

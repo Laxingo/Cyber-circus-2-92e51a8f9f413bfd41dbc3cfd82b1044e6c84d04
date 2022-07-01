@@ -78,9 +78,9 @@ func setPrizeMasks():
 	prizeMasks.push_back(0b000000000011111);
 	prizeMasks.push_back(0b000001111100000);
 	prizeMasks.push_back(0b111110000000000);
-#	prizeMasks.push_back(0b110000000000000);
-#	prizeMasks.push_back(0b000001100000000);
-#	prizeMasks.push_back(0b000000000011000);
+	prizeMasks.push_back(0b110000000000000);
+	prizeMasks.push_back(0b000001100000000);
+	prizeMasks.push_back(0b000000000011000);
 	prizeMasks.push_back(0b100010101000100);
 	prizeMasks.push_back(0b001000101010001);
 	prizeMasks.push_back(0b110110010000000);
@@ -112,21 +112,21 @@ func start() -> void:
 		_get_result()
 	for reel in reels:
 		_spin_reel(reel)
-#		if counter == 0:
-#			$reel1.play()
-#			print("REEL 1 TOCA")
-#		elif counter == 1:
-#			$reel2.play()
-#			print("REEL 2 TOCA")
-#		elif counter == 2:
-#			$reel3.play()
-#			print("REEL 3 TOCA")
-#		elif counter == 3:
-#			$reel4.play()
-#			print("REEL 4 TOCA")
-#		elif counter == 4:
-#			$reel5.play()
-#			print("REEL 5 TOCA")
+		if counter == 0:
+			$reel1.play()
+			print("REEL 1 TOCA")
+		elif counter == 1:
+			$reel2.play()
+			print("REEL 2 TOCA")
+		elif counter == 2:
+			$reel3.play()
+			print("REEL 3 TOCA")
+		elif counter == 3:
+			$reel4.play()
+			print("REEL 4 TOCA")
+		elif counter == 4:
+			$reel5.play()
+			print("REEL 5 TOCA")
 		if reel_delay > 0:
 			   yield(get_tree().create_timer(reel_delay), "timeout")
 		counter = counter+1
