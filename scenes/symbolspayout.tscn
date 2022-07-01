@@ -3089,7 +3089,6 @@ __meta__ = {
 }
 
 [node name="wild" type="Node2D" parent="."]
-visible = false
 position = Vector2( 1870, 0 )
 
 [node name="wild" type="Label" parent="wild"]
@@ -3239,7 +3238,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 48 )
 animation = "burn"
-frame = 9
+frame = 2
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="wild/Lion/Head"]
@@ -3257,7 +3256,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 49 )
 animation = "kwispy"
-frame = 3
+frame = 6
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wild/Lion"]
@@ -3282,7 +3281,6 @@ energy = 0.307033
 shadow_color = Color( 0.215686, 1, 0.964706, 0 )
 
 [node name="scatter" type="Node2D" parent="."]
-visible = false
 position = Vector2( 1870, 0 )
 
 [node name="scatter" type="Label" parent="scatter"]
@@ -3710,31 +3708,29 @@ position = Vector2( 2.81445, 80.9857 )
 position = Vector2( -144.617, -75.9246 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.560917
+energy = 1.19
 
 [node name="Light2D4" type="Light2D" parent="prizelines/1E3/2/luz2"]
 position = Vector2( 137.535, -73.3936 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.560917
+energy = 1.19
 
 [node name="Light2D5" type="Light2D" parent="prizelines/1E3/2/luz2"]
 position = Vector2( 61.2771, -75.9238 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.560917
+energy = 1.19
 
 [node name="Light2D6" type="Light2D" parent="prizelines/1E3/2/luz2"]
 position = Vector2( -4.81055, -75.9243 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D7" type="Light2D" parent="prizelines/1E3/2/luz2"]
 position = Vector2( -73.4434, -80.9858 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="1E3" type="Sprite" parent="prizelines/1E3"]
 position = Vector2( 983.716, -22.7773 )
@@ -3749,31 +3745,26 @@ rotation = -3.14159
 position = Vector2( -144.617, -75.9246 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D4" type="Light2D" parent="prizelines/1E3/1E3/luz3"]
 position = Vector2( 137.535, -73.3936 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D5" type="Light2D" parent="prizelines/1E3/1E3/luz3"]
 position = Vector2( 61.2771, -75.9238 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D6" type="Light2D" parent="prizelines/1E3/1E3/luz3"]
 position = Vector2( -4.81055, -75.9243 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D7" type="Light2D" parent="prizelines/1E3/1E3/luz3"]
 position = Vector2( -73.4434, -80.9858 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="4E5" type="Sprite" parent="prizelines/1E3"]
 position = Vector2( 1497.18, -17.7157 )
@@ -3788,31 +3779,26 @@ rotation = 3.14159
 position = Vector2( -144.617, -75.9246 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D4" type="Light2D" parent="prizelines/1E3/4E5/luz4"]
 position = Vector2( 124.553, -73.3936 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D5" type="Light2D" parent="prizelines/1E3/4E5/luz4"]
 position = Vector2( 53.3809, -136.664 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D6" type="Light2D" parent="prizelines/1E3/4E5/luz4"]
 position = Vector2( -12.7109, -207.526 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D7" type="Light2D" parent="prizelines/1E3/4E5/luz4"]
 position = Vector2( -78.8008, -146.787 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="4E6" type="Sprite" parent="prizelines/1E3"]
 position = Vector2( 1997.94, -17.7156 )
@@ -3825,31 +3811,26 @@ position = Vector2( -7.35693, 124.009 )
 position = Vector2( -127.094, -192.341 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D4" type="Light2D" parent="prizelines/1E3/4E6/luz5"]
 position = Vector2( 149.973, -192.341 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D5" type="Light2D" parent="prizelines/1E3/4E6/luz5"]
 position = Vector2( 73.7148, -118.948 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D6" type="Light2D" parent="prizelines/1E3/4E6/luz5"]
 position = Vector2( 10.168, -53.147 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D7" type="Light2D" parent="prizelines/1E3/4E6/luz5"]
 position = Vector2( -61.0039, -126.54 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="6E7" type="Sprite" parent="prizelines/1E3"]
 position = Vector2( -12.7096, 369.497 )
@@ -3862,31 +3843,26 @@ position = Vector2( -14.9788, 124.01 )
 position = Vector2( -127.094, -192.341 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D4" type="Light2D" parent="prizelines/1E3/6E7/luz6"]
 position = Vector2( 149.973, -192.341 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D5" type="Light2D" parent="prizelines/1E3/6E7/luz6"]
 position = Vector2( 81.3398, -192.341 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D6" type="Light2D" parent="prizelines/1E3/6E7/luz6"]
 position = Vector2( 15.25, -116.417 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D7" type="Light2D" parent="prizelines/1E3/6E7/luz6"]
 position = Vector2( -50.8398, -187.28 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="6E8" type="Sprite" parent="prizelines/1E3"]
 position = Vector2( 500.755, 377.089 )
@@ -3901,31 +3877,26 @@ rotation = -3.14159
 position = Vector2( -144.887, -53.1465 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D4" type="Light2D" parent="prizelines/1E3/6E8/luz7"]
 position = Vector2( 132.178, -50.6162 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D5" type="Light2D" parent="prizelines/1E3/6E8/luz7"]
 position = Vector2( 63.5488, -53.1465 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D6" type="Light2D" parent="prizelines/1E3/6E8/luz7"]
 position = Vector2( -5.08398, -124.009 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D7" type="Light2D" parent="prizelines/1E3/6E8/luz7"]
 position = Vector2( -73.7148, -50.6162 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="8E9" type="Sprite" parent="prizelines/1E3"]
 position = Vector2( 993.884, 364.436 )
@@ -3938,31 +3909,26 @@ position = Vector2( 2.81494, 124.009 )
 position = Vector2( -139.805, -124.009 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D4" type="Light2D" parent="prizelines/1E3/8E9/luz8"]
 position = Vector2( 132.178, -121.478 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D5" type="Light2D" parent="prizelines/1E3/8E9/luz8"]
 position = Vector2( 63.5488, -53.1465 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D6" type="Light2D" parent="prizelines/1E3/8E9/luz8"]
 position = Vector2( -5.08398, -60.7393 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D7" type="Light2D" parent="prizelines/1E3/8E9/luz8"]
 position = Vector2( -73.7148, -50.6162 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="8E10" type="Sprite" parent="prizelines/1E3"]
 position = Vector2( 1497.18, 361.905 )
@@ -3977,31 +3943,26 @@ rotation = -3.14159
 position = Vector2( -142.344, -126.54 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D4" type="Light2D" parent="prizelines/1E3/8E10/luz9"]
 position = Vector2( 132.178, -121.478 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D5" type="Light2D" parent="prizelines/1E3/8E10/luz9"]
 position = Vector2( 61.0059, -189.811 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D6" type="Light2D" parent="prizelines/1E3/8E10/luz9"]
 position = Vector2( -5.08203, -184.749 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D7" type="Light2D" parent="prizelines/1E3/8E10/luz9"]
 position = Vector2( -71.1719, -184.749 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="10" type="Sprite" parent="prizelines/1E3"]
 position = Vector2( 2000.48, 361.905 )
@@ -4014,31 +3975,26 @@ position = Vector2( 12.98, 121.479 )
 position = Vector2( -142.344, -126.54 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D4" type="Light2D" parent="prizelines/1E3/10/luz10"]
 position = Vector2( 132.178, -121.478 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D5" type="Light2D" parent="prizelines/1E3/10/luz10"]
 position = Vector2( 61.0059, -189.811 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D6" type="Light2D" parent="prizelines/1E3/10/luz10"]
 position = Vector2( -15.2539, -121.479 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="Light2D7" type="Light2D" parent="prizelines/1E3/10/luz10"]
 position = Vector2( -78.8008, -184.748 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.471359
 
 [node name="luz1" type="Node2D" parent="prizelines/1E3"]
 
@@ -4046,37 +4002,36 @@ energy = 0.471359
 position = Vector2( -144.617, -75.9246 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.560917
+energy = 1.19
 
 [node name="Light2D4" type="Light2D" parent="prizelines/1E3/luz1"]
 position = Vector2( 137.535, -73.3936 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.560917
+energy = 1.19
 
 [node name="Light2D5" type="Light2D" parent="prizelines/1E3/luz1"]
 position = Vector2( 61.2771, -75.9238 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.560917
+energy = 1.19
 
 [node name="Light2D6" type="Light2D" parent="prizelines/1E3/luz1"]
 position = Vector2( -4.81055, -75.9243 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.560917
+energy = 1.19
 
 [node name="Light2D7" type="Light2D" parent="prizelines/1E3/luz1"]
 position = Vector2( -73.4434, -80.9858 )
 scale = Vector2( 0.137933, 0.154982 )
 texture = ExtResource( 7 )
-energy = 0.560917
+energy = 1.19
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="prizelines"]
 anims/luzes = SubResource( 54 )
 
 [node name="bonus" type="Node2D" parent="."]
-visible = false
 position = Vector2( 1870, 0 )
 
 [node name="bonus" type="Label" parent="bonus"]
