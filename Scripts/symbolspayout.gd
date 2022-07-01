@@ -22,13 +22,11 @@ func _ready():
 
 func _on_TextureButton_button_down():
 	if!text1went:
-		$TextureButton2.visible = false
 		$Tween.interpolate_property(texto1, "position", Vector2(0,0), Vector2(-2015.3, 0), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		$Tween.start()
 		$Tween.interpolate_property(texto2, "position", Vector2(1870,0), Vector2(0, 0), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		$Tween.start()
 		text1went = true
-		$TextureButton2.visible = true
 	elif text1went:
 		if !text2went:
 			$Tween.interpolate_property(texto2, "position", Vector2(0,0), Vector2(-2015.3, 0), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
@@ -50,7 +48,6 @@ func _on_TextureButton_button_down():
 					$Tween.interpolate_property(texto5, "position", Vector2(1870,0), Vector2(0, 0), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 					$Tween.start()
 					text4went = true
-					$TextureButton.visible = false
 
 
 func _on_TextureButton2_button_down():
@@ -61,8 +58,6 @@ func _on_TextureButton2_button_down():
 			$Tween.interpolate_property(texto2, "position", Vector2(0,0), Vector2(1870, 0), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 			$Tween.start()
 			text1went = false
-			$TextureButton2.visible = false
-			
 		elif text2went:
 			if!text3went:
 				$Tween.interpolate_property(texto2, "position", Vector2(-2015.3,0), Vector2(0, 0), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
@@ -84,7 +79,6 @@ func _on_TextureButton2_button_down():
 						$Tween.interpolate_property(texto5, "position", Vector2(0,0), Vector2(1870, 0), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 						$Tween.start()
 						text4went = false
-						$TextureButton.visible = true
 
 
 func _on_ExitBtn_button_down():
