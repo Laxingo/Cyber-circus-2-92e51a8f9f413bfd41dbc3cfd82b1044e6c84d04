@@ -6327,7 +6327,6 @@ z_index = 5
 script = ExtResource( 34 )
 
 [node name="winamarelo" type="Label" parent="BonusLvl"]
-visible = false
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = -44.256
 margin_top = -4.42566
@@ -6339,9 +6338,6 @@ custom_colors/font_outline_modulate = Color( 0.960784, 0.498039, 0.0862745, 1 )
 custom_fonts/font = SubResource( 30 )
 text = "1000000"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="winrosa" type="Label" parent="BonusLvl"]
 self_modulate = Color( 1, 1, 1, 0 )
@@ -6360,7 +6356,6 @@ __meta__ = {
 }
 
 [node name="winazul" type="Label" parent="BonusLvl"]
-visible = false
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = -30.0473
 margin_top = 3.16306
@@ -6374,13 +6369,13 @@ text = "1000000"
 align = 1
 
 [node name="bonus" type="Label" parent="BonusLvl"]
-self_modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0.266665 )
 margin_left = -247.0
 margin_top = -83.0
 margin_right = 234.0
 margin_bottom = 142.001
 rect_rotation = -13.9058
-rect_scale = Vector2( -0.0157572, -0.0157572 )
+rect_scale = Vector2( 0.221875, 0.221875 )
 rect_pivot_offset = Vector2( 232.421, 139.313 )
 custom_colors/font_color = Color( 0.956863, 0.905882, 0.752941, 1 )
 custom_fonts/font = SubResource( 31 )
@@ -6407,7 +6402,6 @@ z_index = 1
 texture = ExtResource( 4 )
 
 [node name="Roda" type="Sprite" parent="BonusLvl"]
-visible = false
 light_mask = 4
 position = Vector2( -10, 68 )
 z_index = -2
@@ -6549,26 +6543,24 @@ shadow_item_cull_mask = 2
 
 [node name="CurtainLeft" type="Sprite" parent="BonusLvl"]
 light_mask = 0
-position = Vector2( -1530.8, -36.3722 )
-rotation = 0.204205
+position = Vector2( -482, 63 )
 scale = Vector2( 1.02352, 1.14189 )
 z_index = -4
 texture = ExtResource( 54 )
 hframes = 6
 vframes = 4
-frame = 4
+frame = 13
 
 [node name="CurtainRight" type="Sprite" parent="BonusLvl"]
 light_mask = 0
-position = Vector2( 1565.59, -23.7208 )
-rotation = -0.147226
+position = Vector2( 494, 60 )
 scale = Vector2( 1.04501, 1.14188 )
 z_index = -4
 texture = ExtResource( 54 )
 flip_h = true
 hframes = 6
 vframes = 4
-frame = 4
+frame = 13
 
 [node name="particulas" type="Node2D" parent="BonusLvl"]
 visible = false
@@ -6768,12 +6760,10 @@ hue_variation = 1.0
 [node name="faca" type="Node2D" parent="BonusLvl"]
 
 [node name="KnifeSpritesheet" type="Sprite" parent="BonusLvl/faca"]
-visible = false
-self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 707, 145 )
-rotation = 0.299158
+rotation = -0.0127988
 scale = Vector2( 0.74994, 0.74994 )
-z_index = 6
+z_index = -1
 texture = ExtResource( 53 )
 hframes = 5
 vframes = 2
@@ -6799,9 +6789,6 @@ margin_top = -403.259
 margin_right = -405.492
 margin_bottom = -383.259
 rect_scale = Vector2( 75.201, 49.0024 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="BonusBtn" type="TextureButton" parent="."]
 margin_left = 1.50082
