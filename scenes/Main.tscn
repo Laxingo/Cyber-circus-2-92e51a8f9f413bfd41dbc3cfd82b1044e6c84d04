@@ -6037,6 +6037,7 @@ texture_normal = ExtResource( 36 )
 texture_pressed = ExtResource( 6 )
 texture_hover = ExtResource( 30 )
 expand = true
+stretch_mode = 5
 
 [node name="options" type="Node2D" parent="."]
 light_mask = 2
@@ -6077,6 +6078,7 @@ rect_scale = Vector2( 0.180018, 0.180018 )
 texture_normal = ExtResource( 21 )
 texture_pressed = ExtResource( 43 )
 texture_hover = ExtResource( 18 )
+stretch_mode = 5
 
 [node name="historico" type="TextureButton" parent="options/1"]
 margin_left = -104.0
@@ -6087,16 +6089,18 @@ rect_scale = Vector2( 0.177708, 0.177708 )
 texture_normal = ExtResource( 20 )
 texture_pressed = ExtResource( 40 )
 texture_hover = ExtResource( 19 )
+stretch_mode = 5
 
 [node name="money" type="TextureButton" parent="options/1"]
-margin_left = 23.0
-margin_top = -212.0
-margin_right = 539.0
-margin_bottom = 304.0
+margin_left = 24.9072
+margin_top = -244.923
+margin_right = 540.907
+margin_bottom = 271.077
 rect_scale = Vector2( 0.179453, 0.179453 )
 texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 41 )
 texture_hover = ExtResource( 17 )
+stretch_mode = 5
 
 [node name="info" type="TextureButton" parent="options/1"]
 margin_left = 126.0
@@ -6107,6 +6111,7 @@ rect_scale = Vector2( 0.175793, 0.175793 )
 texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 45 )
 texture_hover = ExtResource( 22 )
+stretch_mode = 5
 
 [node name="2" type="Node2D" parent="options"]
 visible = false
@@ -6122,9 +6127,6 @@ rect_scale = Vector2( 0.0324726, 0.0324726 )
 texture_normal = ExtResource( 24 )
 texture_pressed = ExtResource( 44 )
 texture_hover = ExtResource( 28 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="25" type="TextureButton" parent="options/2"]
 self_modulate = Color( 1, 1, 1, 0 )
@@ -6802,7 +6804,7 @@ margin_left = -417.492
 margin_top = -403.259
 margin_right = -405.492
 margin_bottom = -383.259
-rect_scale = Vector2( 75.201, 49.0024 )
+rect_scale = Vector2( 75.201, 37.1102 )
 
 [node name="BonusBtn" type="TextureButton" parent="."]
 margin_left = 1.50082
