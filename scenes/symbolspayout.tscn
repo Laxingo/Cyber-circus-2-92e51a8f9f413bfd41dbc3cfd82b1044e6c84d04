@@ -2634,7 +2634,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 48 )
 animation = "burn"
-frame = 6
+frame = 7
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="wild/Lion/Head"]
@@ -2652,6 +2652,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 49 )
 animation = "kwispy"
+frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wild/Lion"]
@@ -3134,7 +3135,6 @@ texture = ExtResource( 25 )
 
 [node name="bonus" type="Node2D" parent="."]
 position = Vector2( 1870, 0 )
-scale = Vector2( 1, 1 )
 
 [node name="bonus" type="Label" parent="bonus"]
 margin_left = -447.509
@@ -3255,6 +3255,7 @@ region_enabled = true
 region_rect = Rect2( 60, 250, 80, 210 )
 
 [node name="TextureButton2" type="TextureButton" parent="."]
+visible = false
 margin_left = -919.207
 margin_top = -34.6208
 margin_right = -403.207
