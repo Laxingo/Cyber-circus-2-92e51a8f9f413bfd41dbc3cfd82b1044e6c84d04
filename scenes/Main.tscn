@@ -5902,7 +5902,6 @@ scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 margin_left = 189.103
 margin_top = 94.5514
 margin_right = 1744.1

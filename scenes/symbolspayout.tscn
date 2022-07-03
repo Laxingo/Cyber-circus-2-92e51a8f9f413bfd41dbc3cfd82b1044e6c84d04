@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://Imagens/UI/fundo.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/Myriad Cn Bold.otf" type="DynamicFontData" id=2]
@@ -31,6 +31,8 @@
 [ext_resource path="res://Imagens/Simbolos/peso.png" type="Texture" id=29]
 [ext_resource path="res://Imagens/Simbolos/CyberCircus_Bumbaaadu.png" type="Texture" id=30]
 [ext_resource path="res://Scripts/symbolspayout.gd" type="Script" id=31]
+[ext_resource path="res://Imagens/UI/setahmini.png" type="Texture" id=32]
+[ext_resource path="res://Imagens/UI/setah.png" type="Texture" id=33]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -2769,7 +2771,8 @@ custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
 custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
 custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Symbols Payout"
+text = "Paytable"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -3240,7 +3243,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 48 )
 animation = "burn"
-frame = 2
+frame = 1
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="wild/Lion/Head"]
@@ -3258,7 +3261,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 49 )
 animation = "kwispy"
-frame = 6
+frame = 5
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wild/Lion"]
@@ -4201,6 +4204,8 @@ margin_right = -403.207
 margin_bottom = 481.379
 rect_scale = Vector2( 0.144725, 0.144725 )
 texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 32 )
+texture_hover = ExtResource( 33 )
 
 [node name="TextureButton" type="TextureButton" parent="."]
 margin_left = 926.763
@@ -4210,6 +4215,8 @@ margin_bottom = 556.639
 rect_rotation = -179.575
 rect_scale = Vector2( 0.144725, 0.144725 )
 texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 32 )
+texture_hover = ExtResource( 33 )
 
 [node name="Tween" type="Tween" parent="."]
 
