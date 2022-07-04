@@ -5935,7 +5935,7 @@ texture = ExtResource( 55 )
 
 [node name="UIBaixo" type="Sprite" parent="."]
 light_mask = 2
-position = Vector2( 962, 515.492 )
+position = Vector2( 965.002, 515.492 )
 z_index = -3
 texture = ExtResource( 2 )
 

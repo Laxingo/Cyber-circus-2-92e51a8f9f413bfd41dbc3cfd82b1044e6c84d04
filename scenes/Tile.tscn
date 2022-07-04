@@ -21,21 +21,6 @@
 [ext_resource path="res://Imagens/Simbolos/molduras/quadrado.png" type="Texture" id=25]
 [ext_resource path="res://Imagens/Simbolos/molduras/moldura.png" type="Texture" id=26]
 
-[sub_resource type="Animation" id=155]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Light2D3:energy")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 10.0 ]
-}
-
 [sub_resource type="Animation" id=106]
 resource_name = "bunny"
 length = 1.5
@@ -416,21 +401,6 @@ animations = [ {
 "name": "kwispy",
 "speed": 12.0
 } ]
-
-[sub_resource type="Animation" id=156]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Light2D3:energy")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
 
 [sub_resource type="Animation" id=111]
 resource_name = "lion_idle"
@@ -1506,6 +1476,52 @@ tracks/6/keys = {
 "values": [ -13.9058, 9.98706, 33.7015, 33.5244, 9.80931, -13.9058 ]
 }
 
+[sub_resource type="Animation" id=147]
+resource_name = "b1"
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Light2D3:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.8, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.479647, -90.9429, 0.21473, 0.21473 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2D3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.8, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 211.263, -274.399 ), Vector2( 267.114, 196.693 ), Vector2( -201.55, 264.686 ), Vector2( -218.547, -237.974 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Light2D3:energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 10.0, 10.0 ]
+}
+
+[sub_resource type="Animation" id=148]
+resource_name = "bomba_idle"
+length = 1.5
+loop = true
+
 [sub_resource type="Animation" id=121]
 resource_name = "A_Sweep"
 loop = true
@@ -2481,7 +2497,6 @@ scale = Vector2( 3.5, 2.11393 )
 offset = Vector2( -196.48, -149.256 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite/Bunny"]
-anims/RESET = SubResource( 155 )
 anims/bunny = SubResource( 106 )
 anims/bunny_idle = SubResource( 107 )
 
@@ -2533,7 +2548,7 @@ rotation = 0.0061071
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 8 )
 texture_scale = 1.69
-energy = 10.0
+energy = 0.0
 shadow_color = Color( 0.215686, 1, 0.964706, 0 )
 
 [node name="Lion" type="Sprite" parent="Sprite"]
@@ -2574,43 +2589,43 @@ internal_vertex_count = 21
 visible = false
 
 [node name="CenterOfCombustion" type="Bone2D" parent="Sprite/Lion/ManeSkeleton"]
-position = Vector2( -13.0344, 13.8133 )
-rotation = 0.0534664
+position = Vector2( -15.7632, 17.8601 )
+rotation = 0.0645823
 rest = Transform2D( 1, 0, 0, 1, -5, -27 )
 
 [node name="Bone2D" type="Bone2D" parent="Sprite/Lion/ManeSkeleton/CenterOfCombustion"]
-position = Vector2( 26.3181, -199.764 )
-rotation = 0.0078639
+position = Vector2( 25.5556, -199.94 )
+rotation = -0.00105342
 rest = Transform2D( 1, 0, 0, 1, 11.4539, -178 )
 
 [node name="Bone2D2" type="Bone2D" parent="Sprite/Lion/ManeSkeleton/CenterOfCombustion"]
-position = Vector2( 154.089, -120.246 )
-rotation = 0.0078639
+position = Vector2( 154.235, -120.097 )
+rotation = -0.00105342
 rest = Transform2D( 1, 0, 0, 1, 118.454, -109 )
 
 [node name="Bone2D3" type="Bone2D" parent="Sprite/Lion/ManeSkeleton/CenterOfCombustion"]
-position = Vector2( 187.213, 0.125379 )
-rotation = 0.0078639
+position = Vector2( 186.176, 0.0740653 )
+rotation = -0.00105342
 rest = Transform2D( 1, 0, 0, 1, 191.454, 17 )
 
 [node name="Bone2D4" type="Bone2D" parent="Sprite/Lion/ManeSkeleton/CenterOfCombustion"]
-position = Vector2( 114.558, 114.065 )
-rotation = 0.0078639
+position = Vector2( 113.329, 113.907 )
+rotation = -0.00105342
 rest = Transform2D( 1, 0, 0, 1, 120.454, 137 )
 
 [node name="Bone2D5" type="Bone2D" parent="Sprite/Lion/ManeSkeleton/CenterOfCombustion"]
-position = Vector2( -74.367, 145.791 )
-rotation = 0.0078639
+position = Vector2( -75.0747, 145.294 )
+rotation = -0.00105342
 rest = Transform2D( 1, 0, 0, 1, -83.5461, 177 )
 
 [node name="Bone2D6" type="Bone2D" parent="Sprite/Lion/ManeSkeleton/CenterOfCombustion"]
-position = Vector2( -154.438, -6.68783 )
-rotation = 0.0078639
+position = Vector2( -154.095, -6.91455 )
+rotation = -0.00105342
 rest = Transform2D( 1, 0, 0, 1, -196.546, 16 )
 
 [node name="Bone2D7" type="Bone2D" parent="Sprite/Lion/ManeSkeleton/CenterOfCombustion"]
-position = Vector2( -113.065, -132.169 )
-rotation = 0.0078639
+position = Vector2( -113.148, -132.853 )
+rotation = -0.00105342
 rest = Transform2D( 1, 0, 0, 1, -141.546, -96 )
 
 [node name="Light2D" type="Light2D" parent="Sprite/Lion/ManeSkeleton/CenterOfCombustion"]
@@ -2625,8 +2640,8 @@ __meta__ = {
 
 [node name="Head" type="Sprite" parent="Sprite/Lion"]
 light_mask = 2
-position = Vector2( -11.8696, 26.2827 )
-rotation = 0.0857107
+position = Vector2( -12.363, 27.3753 )
+rotation = 0.0892737
 scale = Vector2( 0.73758, 0.73758 )
 z_index = 1
 texture = ExtResource( 12 )
@@ -2636,8 +2651,8 @@ frame = 3
 region_rect = Rect2( 278, 39, 168, 159 )
 
 [node name="Mouth" type="Sprite" parent="Sprite/Lion/Head"]
-position = Vector2( 12.5421, 111.748 )
-rotation = -0.0250298
+position = Vector2( 12.7253, 111.941 )
+rotation = -0.0264572
 scale = Vector2( 1.56266, 1.59988 )
 z_index = 2
 texture = ExtResource( 10 )
@@ -2645,17 +2660,17 @@ region_enabled = true
 region_rect = Rect2( 315, 211, 109, 44 )
 
 [node name="Ears" type="Sprite" parent="Sprite/Lion/Head"]
-position = Vector2( 0.182398, -85.2073 )
-rotation = 0.0302819
-scale = Vector2( 1.23516, 1.23516 )
+position = Vector2( -0.723245, -84.6639 )
+rotation = 0.023335
+scale = Vector2( 1.22489, 1.22489 )
 texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 41, 32, 204, 92 )
 
 [node name="LeftPaw" type="Sprite" parent="Sprite/Lion/Head"]
-position = Vector2( 99.62, 140.507 )
-rotation = 0.074596
-scale = Vector2( 0.996913, 0.996913 )
+position = Vector2( 99.7316, 139.646 )
+rotation = 0.0767814
+scale = Vector2( 0.986669, 0.986669 )
 z_index = 3
 texture = ExtResource( 10 )
 region_enabled = true
@@ -2667,13 +2682,13 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 109 )
 animation = "burn"
-frame = 5
+frame = 3
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="Sprite/Lion/Head"]
-position = Vector2( -68.9389, 213.151 )
-rotation = 0.239212
-scale = Vector2( 1.42814, 1.42814 )
+position = Vector2( -68.6474, 213.523 )
+rotation = 0.235227
+scale = Vector2( 1.43659, 1.43659 )
 z_index = 3
 texture = ExtResource( 10 )
 region_enabled = true
@@ -2685,17 +2700,16 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 110 )
 animation = "kwispy"
-frame = 9
+frame = 7
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite/Lion"]
-anims/RESET = SubResource( 156 )
 anims/lion_idle = SubResource( 111 )
 anims/lion_win = SubResource( 112 )
 
 [node name="Espirais" type="Sprite" parent="Sprite/Lion"]
 position = Vector2( 5.39392, -24.8103 )
-rotation = -1.45787
+rotation = -1.51848
 z_index = -1
 texture = ExtResource( 22 )
 
@@ -2705,7 +2719,7 @@ rotation = 0.0061071
 scale = Vector2( 0.876667, 1.35129 )
 texture = ExtResource( 8 )
 texture_scale = 1.69
-energy = 0.0
+energy = 0.323864
 shadow_color = Color( 0.215686, 1, 0.964706, 0 )
 
 [node name="Strongman" type="Sprite" parent="Sprite"]
@@ -2748,6 +2762,7 @@ internal_vertex_count = 205
 
 [node name="Skeleton2D" type="Skeleton2D" parent="Sprite/Strongman"]
 visible = false
+position = Vector2( -295.651, -257.251 )
 
 [node name="Bone2D" type="Bone2D" parent="Sprite/Strongman/Skeleton2D"]
 position = Vector2( 279, 378 )
@@ -2760,13 +2775,13 @@ position = Vector2( 10.6176, 0.0397799 )
 rest = Transform2D( 1, 0, 0, 1, 10.6176, 0.0397799 )
 
 [node name="Bone2D" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D"]
-position = Vector2( 17.1453, -0.938079 )
+position = Vector2( 11.6357, -0.364746 )
 rotation = 1.11076
 scale = Vector2( 0.376366, 1.1672 )
 rest = Transform2D( 0.167099, 0.337238, -1.04585, 0.518214, 14.8507, -0.715849 )
 
 [node name="Bone2D" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D/Bone2D"]
-position = Vector2( 19.3577, -2.70083 )
+position = Vector2( 20.1576, -1.63532 )
 rotation = -0.146884
 rest = Transform2D( 0.995724, -0.0923742, 0.0923742, 0.995724, 22.5532, -0.858718 )
 
@@ -2781,13 +2796,13 @@ rotation = -0.242251
 rest = Transform2D( 0.970801, -0.239888, 0.239888, 0.970801, 29.5826, -5.8189 )
 
 [node name="Bone2D2" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D"]
-position = Vector2( 16.961, -1.24866 )
+position = Vector2( 12.9588, -1.28689 )
 rotation = -1.79729
 scale = Vector2( 0.334009, 0.918862 )
 rest = Transform2D( -0.075005, -0.325478, 0.895395, -0.20634, 15.2909, -1.28738 )
 
 [node name="Bone2D" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D/Bone2D2"]
-position = Vector2( 17.047, 3.1252 )
+position = Vector2( 18.5973, 1.27119 )
 rotation = 0.452611
 scale = Vector2( 0.724301, 3.79612 )
 rest = Transform2D( 0.65137, 0.316748, -1.6601, 3.41388, 18.0335, 0.162031 )
@@ -2805,7 +2820,7 @@ scale = Vector2( 0.347438, -0.749009 )
 rest = Transform2D( 0.345444, -0.0371734, -0.0801387, -0.74471, 11.8768, -0.244051 )
 
 [node name="Bone2D3" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D"]
-position = Vector2( 24.7433, -1.33745 )
+position = Vector2( 25.3038, -1.35282 )
 rotation = -0.0426496
 scale = Vector2( 1.02646, 1 )
 rest = Transform2D( 1.02553, -0.0437648, 0.0426366, 0.999091, 25.1568, -1.34117 )
@@ -2816,12 +2831,12 @@ z_index = -1
 texture = ExtResource( 26 )
 
 [node name="Light2D3" type="Light2D" parent="Sprite/Strongman"]
-position = Vector2( -218.341, -237.991 )
-rotation = 0.00374996
+position = Vector2( 211.263, -274.399 )
+rotation = 0.00837142
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 8 )
 texture_scale = 1.69
-energy = 10.0
+energy = 0.0
 shadow_color = Color( 0.215686, 1, 0.964706, 0 )
 
 [node name="Roulette" type="Sprite" parent="Sprite"]
@@ -2901,6 +2916,95 @@ rotation = -1.00094
 scale = Vector2( 1.2225, 5.37288 )
 texture = ExtResource( 5 )
 range_item_cull_mask = 65536
+
+[node name="Strongman2" type="Sprite" parent="Sprite"]
+light_mask = 2048
+position = Vector2( 1382.35, 572.65 )
+scale = Vector2( 4.52223, 3.59591 )
+z_index = -4
+
+[node name="Viewport" type="Viewport" parent="Sprite/Strongman2"]
+size = Vector2( 560, 560 )
+own_world = true
+transparent_bg = true
+render_target_v_flip = true
+
+[node name="Sprite" type="Sprite" parent="Sprite/Strongman2/Viewport"]
+light_mask = 2048
+texture = ExtResource( 13 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 1.56812, 121.038, 517.562, 359.85 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite/Strongman2/Viewport"]
+root_node = NodePath("../../../Strongman2")
+anims/b1 = SubResource( 147 )
+anims/bomba_idle = SubResource( 148 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Sprite/Strongman2"]
+light_mask = 2048
+position = Vector2( 30.4052, 38.8211 )
+scale = Vector2( 1.34601, 1.44732 )
+offset = Vector2( -273.808, -250 )
+texture = SubResource( 115 )
+skeleton = NodePath("../Skeleton2D")
+polygon = PoolVector2Array( -4.41312, 21.2082, 527.554, 3.99508, 526.734, 348.257, -10.1508, 347.438, 187.929, 354.526, 187.929, 330.98, 187.929, 307.434, 187.929, 283.887, 187.929, 260.341, 183.292, 247.438, 163.62, 237.602, 138.21, 221.208, 110.341, 190.061, 101.592, 158.306, 78.046, 166.155, 54.4995, 166.155, 30.9531, 166.155, 18.5377, 158.093, 8.70163, 138.421, 2.14426, 113.011, 0.504913, 89.241, 0.504913, 61.3721, 7.88196, 26.1262, 30.9531, 17.0275, 54.4995, 17.0275, 78.046, 17.0275, 101.592, 24.8763, 109.441, 40.574, 132.988, 40.574, 148.685, 48.4228, 172.232, 48.4228, 195.778, 40.574, 219.325, 40.574, 242.871, 40.574, 266.417, 40.574, 289.964, 40.574, 313.51, 40.574, 337.057, 40.574, 360.603, 40.574, 376.301, 40.574, 399.847, 40.574, 415.545, 24.8763, 423.394, 9.1787, 446.94, 9.1787, 472.441, 17.0046, 498.046, 9.73278, 515.259, 62.1918, 512.8, 100.716, 505.423, 123.667, 492.308, 144.979, 480.833, 158.913, 454.789, 158.306, 431.243, 158.306, 415.545, 150.457, 402.964, 147.438, 399.847, 166.155, 399.847, 189.701, 386.217, 205.268, 380.013, 217.93, 357.882, 229.405, 339.03, 233.503, 321.359, 236.794, 305.662, 236.794, 297.813, 260.341, 289.964, 236.794, 297.813, 354.526, 297.813, 330.98, 297.813, 307.434, 297.813, 283.887, 211.476, 354.526, 235.022, 354.526, 258.569, 354.526, 282.115, 354.526, 282.115, 330.98, 258.569, 330.98, 235.022, 330.98, 211.476, 330.98, 211.476, 307.434, 235.022, 307.434, 211.476, 283.887, 235.022, 283.887, 211.476, 260.341, 235.022, 260.341, 258.569, 260.341, 258.569, 283.887, 258.569, 307.434, 282.115, 283.887, 282.115, 307.434, 282.115, 260.341, 305.662, 213.248, 329.208, 213.248, 344.906, 205.399, 360.603, 197.55, 376.301, 181.853, 384.15, 174.004, 235.022, 236.794, 258.569, 236.794, 235.022, 213.248, 261.407, 215.602, 203.627, 197.55, 235.022, 197.55, 384.15, 150.457, 405.423, 135.143, 384.15, 126.911, 211.476, 236.794, 187.929, 213.248, 164.383, 197.55, 140.836, 181.853, 125.139, 150.457, 180.081, 181.853, 297.813, 197.55, 156.534, 174.004, 140.836, 150.457, 187.929, 166.155, 164.383, 158.306, 164.383, 158.306, 156.534, 142.609, 211.476, 166.155, 258.569, 197.55, 235.022, 166.155, 258.569, 166.155, 321.359, 197.55, 337.057, 189.701, 352.754, 181.853, 360.603, 174.004, 368.452, 158.306, 125.139, 134.76, 132.988, 126.911, 148.685, 119.062, 204.603, 140.88, 211.476, 119.062, 274.266, 166.155, 276.734, 142.52, 274.266, 119.062, 274.266, 119.062, 274.266, 95.5156, 258.569, 95.5156, 235.022, 95.5156, 211.476, 95.5156, 235.022, 142.609, 258.569, 142.609, 235.022, 119.062, 258.569, 119.062, 329.208, 174.004, 340.669, 174.487, 368.452, 142.609, 376.301, 119.062, 297.813, 174.004, 313.51, 174.004, 125.139, 103.364, 148.685, 103.364, 132.988, 79.818, 156.534, 79.818, 172.232, 71.9692, 195.778, 71.9692, 219.325, 71.9692, 242.871, 71.9692, 266.417, 71.9692, 289.964, 71.9692, 313.51, 71.9692, 337.057, 71.9692, 360.603, 71.9692, 376.301, 95.5156, 289.964, 166.155, 350.082, 167.966, 352.754, 142.609, 360.603, 119.062, 368.452, 103.364, 109.441, 103.364, 109.441, 134.76, 109.441, 79.818, 384.15, 103.364, 422.636, 99.0771, 391.998, 87.6668, 399.847, 64.1204, 431.652, 82.6836, 101.592, 119.062, 93.7436, 87.6668, 368.452, 71.9692, 376.301, 79.818, 376.301, 95.5156, 376.301, 79.818, 85.8948, 134.76, 70.1972, 142.609, 54.4995, 150.457, 38.8019, 134.76, 78.046, 103.364, 93.7436, 56.2716, 78.046, 32.7251, 78.046, 64.1204, 62.3483, 40.574, 30.0131, 107.274, 70.1972, 87.6668, 41.4885, 119.569, 62.3483, 126.911, 415.545, 40.574, 431.243, 24.8763, 469.357, 35.1426, 442.308, 54.8148, 467.718, 126.946, 475.095, 58.9131, 459.521, 77.7656, 446.407, 112.192, 423.394, 126.911, 461.161, 139.241, 54.4995, 64.1204, 20.9967, 88.4213, 24.2754, 58.9131, 38.8019, 32.7251 )
+uv = PoolVector2Array( -4.41312, 21.2082, 527.554, 3.99508, 526.734, 348.257, -10.1508, 347.438, 187.929, 354.526, 187.929, 330.98, 187.929, 307.434, 187.929, 283.887, 187.929, 260.341, 183.292, 247.438, 163.62, 237.602, 138.21, 221.208, 110.341, 190.061, 101.592, 158.306, 78.046, 166.155, 54.4995, 166.155, 30.9531, 166.155, 18.5377, 158.093, 8.70163, 138.421, 2.14426, 113.011, 0.504913, 89.241, 0.504913, 61.3721, 7.88196, 26.1262, 30.9531, 17.0275, 54.4995, 17.0275, 78.046, 17.0275, 101.592, 24.8763, 109.441, 40.574, 132.988, 40.574, 148.685, 48.4228, 172.232, 48.4228, 195.778, 40.574, 219.325, 40.574, 242.871, 40.574, 266.417, 40.574, 289.964, 40.574, 313.51, 40.574, 337.057, 40.574, 360.603, 40.574, 376.301, 40.574, 399.847, 40.574, 415.545, 24.8763, 423.394, 9.1787, 446.94, 9.1787, 472.441, 17.0046, 498.046, 9.73278, 515.259, 62.1918, 512.8, 100.716, 505.423, 123.667, 492.308, 144.979, 480.833, 158.913, 454.789, 158.306, 431.243, 158.306, 415.545, 150.457, 402.964, 147.438, 399.847, 166.155, 399.847, 189.701, 386.217, 205.268, 380.013, 217.93, 357.882, 229.405, 339.03, 233.503, 321.359, 236.794, 305.662, 236.794, 297.813, 260.341, 289.964, 236.794, 297.813, 354.526, 297.813, 330.98, 297.813, 307.434, 297.813, 283.887, 211.476, 354.526, 235.022, 354.526, 258.569, 354.526, 282.115, 354.526, 282.115, 330.98, 258.569, 330.98, 235.022, 330.98, 211.476, 330.98, 211.476, 307.434, 235.022, 307.434, 211.476, 283.887, 235.022, 283.887, 211.476, 260.341, 235.022, 260.341, 258.569, 260.341, 258.569, 283.887, 258.569, 307.434, 282.115, 283.887, 282.115, 307.434, 282.115, 260.341, 305.662, 213.248, 329.208, 213.248, 344.906, 205.399, 360.603, 197.55, 376.301, 181.853, 384.15, 174.004, 235.022, 236.794, 258.569, 236.794, 235.022, 213.248, 261.407, 215.602, 203.627, 197.55, 235.022, 197.55, 384.15, 150.457, 405.423, 135.143, 384.15, 126.911, 211.476, 236.794, 187.929, 213.248, 164.383, 197.55, 140.836, 181.853, 125.139, 150.457, 180.081, 181.853, 297.813, 197.55, 156.534, 174.004, 140.836, 150.457, 187.929, 166.155, 164.383, 158.306, 164.383, 158.306, 156.534, 142.609, 211.476, 166.155, 258.569, 197.55, 235.022, 166.155, 258.569, 166.155, 321.359, 197.55, 337.057, 189.701, 352.754, 181.853, 360.603, 174.004, 368.452, 158.306, 125.139, 134.76, 132.988, 126.911, 148.685, 119.062, 204.603, 140.88, 211.476, 119.062, 274.266, 166.155, 276.734, 142.52, 274.266, 119.062, 274.266, 119.062, 274.266, 95.5156, 258.569, 95.5156, 235.022, 95.5156, 211.476, 95.5156, 235.022, 142.609, 258.569, 142.609, 235.022, 119.062, 258.569, 119.062, 329.208, 174.004, 340.669, 174.487, 368.452, 142.609, 376.301, 119.062, 297.813, 174.004, 313.51, 174.004, 125.139, 103.364, 148.685, 103.364, 132.988, 79.818, 156.534, 79.818, 172.232, 71.9692, 195.778, 71.9692, 219.325, 71.9692, 242.871, 71.9692, 266.417, 71.9692, 289.964, 71.9692, 313.51, 71.9692, 337.057, 71.9692, 360.603, 71.9692, 376.301, 95.5156, 289.964, 166.155, 350.082, 167.966, 352.754, 142.609, 360.603, 119.062, 368.452, 103.364, 109.441, 103.364, 109.441, 134.76, 109.441, 79.818, 384.15, 103.364, 422.636, 99.0771, 391.998, 87.6668, 399.847, 64.1204, 431.652, 82.6836, 101.592, 119.062, 93.7436, 87.6668, 368.452, 71.9692, 376.301, 79.818, 376.301, 95.5156, 376.301, 79.818, 85.8948, 134.76, 70.1972, 142.609, 54.4995, 150.457, 38.8019, 134.76, 78.046, 103.364, 93.7436, 56.2716, 78.046, 32.7251, 78.046, 64.1204, 62.3483, 40.574, 30.0131, 107.274, 70.1972, 87.6668, 41.4885, 119.569, 62.3483, 126.911, 415.545, 40.574, 431.243, 24.8763, 469.357, 35.1426, 442.308, 54.8148, 467.718, 126.946, 475.095, 58.9131, 459.521, 77.7656, 446.407, 112.192, 423.394, 126.911, 461.161, 139.241, 54.4995, 64.1204, 20.9967, 88.4213, 24.2754, 58.9131, 38.8019, 32.7251 )
+polygons = [ PoolIntArray( 4, 69, 76, 5 ), PoolIntArray( 5, 6, 77, 76 ), PoolIntArray( 6, 7, 79, 77 ), PoolIntArray( 69, 70, 75, 76 ), PoolIntArray( 75, 78, 77, 76 ), PoolIntArray( 70, 71, 74, 75 ), PoolIntArray( 74, 73, 72, 71 ), PoolIntArray( 66, 73, 72, 65 ), PoolIntArray( 66, 67, 87, 73 ), PoolIntArray( 67, 68, 86, 87 ), PoolIntArray( 68, 63, 88, 86 ), PoolIntArray( 63, 62, 64, 88 ), PoolIntArray( 62, 61, 89, 64 ), PoolIntArray( 61, 60, 90, 89 ), PoolIntArray( 60, 59, 91, 90 ), PoolIntArray( 59, 58, 92, 91 ), PoolIntArray( 93, 57, 58, 92 ), PoolIntArray( 74, 85, 87, 73 ), PoolIntArray( 85, 78, 75, 74 ), PoolIntArray( 84, 86, 87, 85 ), PoolIntArray( 83, 84, 86, 88 ), PoolIntArray( 83, 96, 64, 88 ), PoolIntArray( 57, 56, 94, 93 ), PoolIntArray( 56, 55, 101, 94 ), PoolIntArray( 55, 54, 103, 101 ), PoolIntArray( 80, 84, 85, 78 ), PoolIntArray( 79, 80, 78, 77 ), PoolIntArray( 7, 8, 81, 79 ), PoolIntArray( 80, 82, 81, 79 ), PoolIntArray( 84, 83, 82, 80 ), PoolIntArray( 9, 8, 81, 104 ), PoolIntArray( 9, 10, 105, 104 ), PoolIntArray( 10, 11, 106, 105 ), PoolIntArray( 11, 12, 107, 106 ), PoolIntArray( 12, 13, 108, 107 ), PoolIntArray( 95, 82, 83, 96 ), PoolIntArray( 104, 95, 82, 81 ), PoolIntArray( 97, 95, 96, 98 ), PoolIntArray( 105, 97, 95, 104 ), PoolIntArray( 105, 99, 109, 106 ), PoolIntArray( 99, 100, 97, 105 ), PoolIntArray( 107, 111, 109, 106 ), PoolIntArray( 107, 108, 112, 111 ), PoolIntArray( 111, 114, 116, 112 ), PoolIntArray( 114, 113, 109, 111 ), PoolIntArray( 113, 117, 99, 109 ), PoolIntArray( 98, 118, 100, 97 ), PoolIntArray( 98, 89, 64, 96 ), PoolIntArray( 108, 126, 127, 112 ), PoolIntArray( 112, 116, 128, 127 ), PoolIntArray( 100, 119, 117, 99 ), PoolIntArray( 118, 120, 119, 100 ), PoolIntArray( 89, 110, 118, 98 ), PoolIntArray( 110, 121, 90, 89 ), PoolIntArray( 121, 122, 91, 90 ), PoolIntArray( 122, 123, 92, 91 ), PoolIntArray( 123, 124, 93, 92 ), PoolIntArray( 124, 125, 94, 93 ), PoolIntArray( 120, 131, 110, 118 ), PoolIntArray( 120, 140, 132, 131 ), PoolIntArray( 120, 119, 139, 140 ), PoolIntArray( 119, 117, 129, 139 ), PoolIntArray( 129, 130, 141, 139 ), PoolIntArray( 130, 138, 137, 141 ), PoolIntArray( 137, 136, 142, 141 ), PoolIntArray( 142, 140, 139, 141 ), PoolIntArray( 142, 133, 135, 136 ), PoolIntArray( 140, 132, 133, 142 ), PoolIntArray( 122, 143, 144, 123 ), PoolIntArray( 125, 145, 101, 94 ), PoolIntArray( 145, 146, 103, 101 ), PoolIntArray( 121, 148, 143, 122 ), PoolIntArray( 110, 147, 148, 121 ), PoolIntArray( 163, 147, 110, 131 ), PoolIntArray( 126, 169, 13, 108 ), PoolIntArray( 144, 164, 124, 123 ), PoolIntArray( 164, 165, 125, 124 ), PoolIntArray( 165, 166, 145, 125 ), PoolIntArray( 166, 167, 146, 145 ), PoolIntArray( 103, 171, 102, 54 ), PoolIntArray( 167, 162, 171, 103, 146 ), PoolIntArray( 171, 173, 172, 102 ), PoolIntArray( 180, 179, 173, 171 ), PoolIntArray( 169, 176, 168, 126 ), PoolIntArray( 126, 127, 149, 168 ), PoolIntArray( 127, 128, 150, 149 ), PoolIntArray( 170, 151, 149, 168 ), PoolIntArray( 151, 152, 150, 149 ), PoolIntArray( 152, 153, 30, 29 ), PoolIntArray( 153, 154, 31, 30 ), PoolIntArray( 154, 155, 32, 31 ), PoolIntArray( 32, 33, 156, 155 ), PoolIntArray( 28, 151, 152, 29 ), PoolIntArray( 28, 27, 170, 151 ), PoolIntArray( 187, 27, 170, 177 ), PoolIntArray( 170, 168, 176, 177 ), PoolIntArray( 176, 182, 13, 169 ), PoolIntArray( 182, 186, 177, 176 ), PoolIntArray( 27, 26, 188, 187 ), PoolIntArray( 13, 14, 183, 182 ), PoolIntArray( 183, 184, 15, 14 ), PoolIntArray( 15, 16, 17, 184 ), PoolIntArray( 184, 185, 194, 183 ), PoolIntArray( 183, 194, 186, 182 ), PoolIntArray( 185, 18, 17, 184 ), PoolIntArray( 18, 193, 194, 185 ), PoolIntArray( 193, 191, 186, 194 ), PoolIntArray( 191, 192, 177, 186 ), PoolIntArray( 192, 189, 187, 177 ), PoolIntArray( 189, 190, 188, 187 ), PoolIntArray( 26, 25, 24, 188 ), PoolIntArray( 190, 208, 24, 188 ), PoolIntArray( 189, 205, 206, 192 ), PoolIntArray( 18, 19, 191, 193 ), PoolIntArray( 206, 19, 191, 192 ), PoolIntArray( 205, 207, 190, 189 ), PoolIntArray( 207, 21, 208, 190 ), PoolIntArray( 23, 22, 208, 24 ), PoolIntArray( 22, 21, 208 ), PoolIntArray( 21, 20, 206, 207 ), PoolIntArray( 20, 19, 206 ), PoolIntArray( 206, 207, 205 ), PoolIntArray( 33, 34, 157, 156 ), PoolIntArray( 34, 35, 158, 157 ), PoolIntArray( 35, 36, 159, 158 ), PoolIntArray( 37, 160, 159, 36 ), PoolIntArray( 37, 38, 161, 160 ), PoolIntArray( 161, 178, 39, 38 ), PoolIntArray( 178, 179, 40, 39 ), PoolIntArray( 178, 179, 40, 39 ), PoolIntArray( 174, 173, 172, 175 ), PoolIntArray( 174, 40, 195, 175 ), PoolIntArray( 173, 179, 40, 174 ), PoolIntArray( 41, 42, 43, 196 ), PoolIntArray( 41, 195, 198, 196 ), PoolIntArray( 45, 197, 196, 43 ), PoolIntArray( 197, 200, 198, 196 ), PoolIntArray( 45, 46, 200, 197 ), PoolIntArray( 46, 47, 201, 200 ), PoolIntArray( 198, 195, 175 ), PoolIntArray( 175, 201, 200, 198 ), PoolIntArray( 175, 172, 202, 201 ), PoolIntArray( 201, 47, 48, 202 ), PoolIntArray( 172, 102, 203, 202 ), PoolIntArray( 102, 53, 52, 203 ), PoolIntArray( 49, 50, 204, 199 ), PoolIntArray( 49, 48, 202, 199 ), PoolIntArray( 50, 51, 52, 204 ), PoolIntArray( 203, 202, 199, 204, 52 ) ]
+bones = [ "1", PoolRealArray( 0, 0, 0, 0, 0.5, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.5, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "1/2", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "1/2/d1", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0.5, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "1/2/d1/d2", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0.5, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0 ), "1/2/e1", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "1/2/e1/e2", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 ) ]
+internal_vertex_count = 205
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Sprite/Strongman2"]
+position = Vector2( -295.651, -257.251 )
+
+[node name="1" type="Bone2D" parent="Sprite/Strongman2/Skeleton2D"]
+position = Vector2( 290.438, 449.849 )
+rotation = -1.5729
+scale = Vector2( 5.56326, 16.4398 )
+rest = Transform2D( -0.0116903, -5.56324, 16.4397, -0.0345456, 290.438, 449.849 )
+
+[node name="2" type="Bone2D" parent="Sprite/Strongman2/Skeleton2D/1"]
+position = Vector2( 21.5408, 0.16916 )
+rotation = -0.0545318
+rest = Transform2D( 0.998514, -0.0545048, 0.0545048, 0.998514, 21.5408, 0.16916 )
+
+[node name="d1" type="Bone2D" parent="Sprite/Strongman2/Skeleton2D/1/2"]
+position = Vector2( 11.7113, 0.613774 )
+rotation = 1.18453
+scale = Vector2( 0.675559, 10.1102 )
+rest = Transform2D( 0.254506, 0.625785, -9.36532, 3.80887, 16.0522, 0.895727 )
+
+[node name="d2" type="Bone2D" parent="Sprite/Strongman2/Skeleton2D/1/2/d1"]
+position = Vector2( 17.1842, 0.00634146 )
+rotation = -0.114886
+scale = Vector2( 1.19612, -0.969238 )
+rest = Transform2D( 1.18824, -0.137116, -0.111107, -0.962848, 17.1842, 0.00634146 )
+
+[node name="e1" type="Bone2D" parent="Sprite/Strongman2/Skeleton2D/1/2"]
+position = Vector2( 10.1237, 0.116738 )
+rotation = -1.10938
+scale = Vector2( 0.48962, 2.90757 )
+rest = Transform2D( 0.217989, -0.438416, 2.6035, 1.29451, 15.5724, 0.505783 )
+
+[node name="e2" type="Bone2D" parent="Sprite/Strongman2/Skeleton2D/1/2/e1"]
+position = Vector2( 24.1268, 1.32679 )
+rotation = 0.311352
+scale = Vector2( 1.4839, 7.83567 )
+rest = Transform2D( 1.41255, 0.454586, -2.40043, 7.45893, 24.1268, 1.32679 )
+
+[node name="Moldura" type="Sprite" parent="Sprite/Strongman2"]
+position = Vector2( -7.28448, -9.71342 )
+z_index = -1
+texture = ExtResource( 26 )
+
+[node name="Light2D3" type="Light2D" parent="Sprite/Strongman2"]
+position = Vector2( 211.263, -274.399 )
+rotation = 0.00837142
+scale = Vector2( 0.0820399, 0.32204 )
+texture = ExtResource( 8 )
+texture_scale = 1.69
+energy = 0.0
+shadow_color = Color( 0.215686, 1, 0.964706, 0 )
 
 [node name="A" type="Sprite" parent="Sprite"]
 visible = false
@@ -3061,16 +3165,16 @@ z_index = -4
 
 [node name="Sprite3" type="Sprite" parent="Sprite/Clown"]
 light_mask = 1024
-position = Vector2( -2, -5 )
-rotation = -0.00312951
+position = Vector2( -11, -11 )
+rotation = -0.1309
 texture = ExtResource( 6 )
 region_enabled = true
 region_rect = Rect2( -6, 227, 193, 202 )
 
 [node name="Sprite2" type="Sprite" parent="Sprite/Clown"]
 light_mask = 1024
-position = Vector2( 0.977373, 136.986 )
-scale = Vector2( 1.06807, 1.06807 )
+position = Vector2( 1, 136.8 )
+scale = Vector2( 0.975856, 0.975856 )
 z_index = 1
 texture = ExtResource( 6 )
 region_enabled = true
@@ -3092,7 +3196,6 @@ transparent_bg = true
 render_target_v_flip = true
 
 [node name="Sprite" type="Sprite" parent="Sprite/Clown/Viewport"]
-self_modulate = Color( 1, 1, 1, 0 )
 light_mask = 1024
 position = Vector2( 1, 1 )
 texture = ExtResource( 6 )
@@ -3120,7 +3223,7 @@ position = Vector2( 0, 1 )
 
 [node name="B1d" type="Bone2D" parent="Sprite/Clown/Skeleton2D"]
 position = Vector2( 49, 73.5 )
-rotation = 1.17513
+rotation = 1.1781
 scale = Vector2( 3.67989, 0.99997 )
 rest = Transform2D( 3.63625, 0.565755, -0.153738, 0.988112, 57, 79 )
 
@@ -3130,7 +3233,7 @@ rest = Transform2D( 0.996217, 0.086895, -0.086895, 0.996217, 19.6555, -0.568893 
 
 [node name="B1e" type="Bone2D" parent="Sprite/Clown/Skeleton2D"]
 position = Vector2( -68.5, 69.5 )
-rotation = 1.83852
+rotation = 1.8326
 scale = Vector2( 3.70696, 0.999976 )
 rest = Transform2D( -3.60337, 0.870703, -0.234876, -0.972025, -77, 75 )
 
@@ -3139,9 +3242,10 @@ position = Vector2( 15.7695, 0.751621 )
 rest = Transform2D( 1, 0, 0, 1, 15.7695, 0.751621 )
 
 [node name="Sprite4" type="Sprite" parent="Sprite/Clown"]
+self_modulate = Color( 1, 1, 1, 0 )
 light_mask = 1024
-position = Vector2( -8, 78.8864 )
-scale = Vector2( 0.927252, 0.98583 )
+position = Vector2( -8, 81.991 )
+scale = Vector2( 0.896119, 0.946982 )
 z_index = 1
 texture = ExtResource( 6 )
 region_enabled = true
@@ -3149,7 +3253,7 @@ region_rect = Rect2( 194, 1, 283, 132 )
 
 [node name="Estrelas" type="Sprite" parent="Sprite/Clown"]
 position = Vector2( 2.30505, 81.4218 )
-rotation = -2.94141
+rotation = -0.411391
 z_index = -1
 texture = ExtResource( 24 )
 
@@ -3159,7 +3263,7 @@ rotation = 0.0061071
 scale = Vector2( 0.515237, 0.7519 )
 texture = ExtResource( 8 )
 texture_scale = 1.69
-energy = 1.33
+energy = 0.0
 shadow_color = Color( 0.215686, 1, 0.964706, 0 )
 
 [node name="Elephant" type="Sprite" parent="Sprite"]
