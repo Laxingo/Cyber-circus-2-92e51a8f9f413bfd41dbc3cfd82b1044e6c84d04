@@ -146,19 +146,53 @@ func spin_down():
 func animate_icon(symbol):
 	if (symbol =="A"):
 		$Sprite/A/AnimationPlayer.play("A_Sweep")
+		print("AAAAAAAAAAAA", symbol)
 	elif(symbol =="bunny"):
 		$Sprite/Bunny/AnimationPlayer.play("bunny")
+		print("AAAAAAAAAAAA", symbol)
 	elif(symbol =="clown"):
 		$Sprite/Clown/AnimationPlayer.play("palhaço")
+		print("AAAAAAAAAAAA", symbol)
 	elif(symbol =="elephant"):
 		$Sprite/Elephant/AnimationPlayer.play("ele_bola")
+		print("AAAAAAAAAAAA", symbol)
 	elif(symbol =="J"):
 		$Sprite/J/AnimationPlayer.play("J_Sweep")
+		print("AAAAAAAAAAAA", symbol)
 	elif(symbol =="K"):
 		$Sprite/K/AnimationPlayer.play("K_Sweep")
-	elif(symbol =="Lion"):
+		print("AAAAAAAAAAAA", symbol)
+	elif(symbol =="lion"):
 		$Sprite/Lion/AnimationPlayer.play("lion_win")
-	elif(symbol =="Strongman"):
+		print("AAAAAAAAAAAA", symbol)
+	elif(symbol =="strongman"):
 		$Sprite/Strongman/Viewport/AnimationPlayer.play("b1")
+		print("AAAAAAAAAAAA", symbol)
 	elif(symbol =="Q"):
 		$Sprite/Q/AnimationPlayer.play("Q_Sweep")
+		print("AAAAAAAAAAAA", symbol)
+	elif(symbol =="roulette"):
+		$Sprite/Roulette/AnimationPlayer.play("Bonus")
+		print("AAAAAAAAAAAA", symbol)
+
+func animate_icon_idle(symbol):
+	if (symbol =="A"):
+		pass
+	elif(symbol =="bunny"):
+		$Sprite/Bunny/AnimationPlayer.play("bunny_idle")
+	elif(symbol =="clown"):
+		$Sprite/Clown/AnimationPlayer.play("pidle")
+	elif(symbol =="elephant"):
+		$Sprite/Elephant/AnimationPlayer.play("ele_bola_idle")
+	elif(symbol =="J"):
+		pass
+	elif(symbol =="K"):
+		pass
+	elif(symbol =="lion"):
+		$Sprite/Lion/AnimationPlayer.play("lion_idle")
+	elif(symbol =="strongman"):
+		$Sprite/Strongman/Viewport/AnimationPlayer.play("bomba_idle")
+	elif(symbol =="Q"):
+		pass
+	elif(symbol =="roulette"):
+		pass

@@ -88,12 +88,14 @@ func setPrizeMasks():
 func _add_tile(col :int, row :int) -> void:
 	tiles.append(SlotTile.instance())
 	var tile := get_tile(col, row) 
+	var randomSymbol  = _randomIcones()
 	tile.get_node('Tween').connect("tween_completed", self, "_on_tile_moved", [], CONNECT_DEFERRED)
-	tile.set_icon(_randomIcones())
+	tile.set_icon(randomSymbol)
 	tile.set_size(tile_size)
 	tile.set_name(tile_name)
 	tile.position = grid_pos[col][row]
 	tile.set_speed(speed_norm)
+	tile.animate_icon_idle(randomSymbol)
 	add_child(tile)
 
 func get_tile(col :int, row :int) -> SlotTile:
@@ -169,6 +171,7 @@ func _on_tile_moved(tile: SlotTile, _nodePath) -> void:
 		var randomicon = _randomIcones()
 		tile.set_icon(randomicon)
 		tile.set_name(tile_name)
+		tile.animate_icon_idle(randomicon)
 	else:
 		var randomicon = _randomIcones()
 		tile.set_icon(randomicon)
@@ -263,8 +266,7 @@ func animPrizes():
 				coluna = _pcell % 5;
 				linha = int(floor(_pcell / 5));
 				
-				winTile = get_tile(coluna, linha)
-				print("COLUNA: ", coluna, "   LINHA: ", linha)
+				winTile = get_tile(linha, coluna)
 				winTile.animate_icon(prizeID)
 				givePoints(prizeID)
 

@@ -2636,7 +2636,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 109 )
 animation = "burn"
-frame = 7
+frame = 1
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="Sprite/Lion/Head"]
@@ -2654,7 +2654,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 110 )
 animation = "kwispy"
-frame = 1
+frame = 5
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite/Lion"]
@@ -2748,13 +2748,14 @@ region_rect = Rect2( 60, 250, 80, 210 )
 
 [node name="Sweeper" type="Light2D" parent="Sprite/Roulette/ViewportContainer/Lights"]
 light_mask = 65536
-position = Vector2( -207, 216 )
+position = Vector2( 307.479, -103.067 )
 rotation = -1.00094
 scale = Vector2( 1.2225, 5.37288 )
 texture = ExtResource( 5 )
 range_item_cull_mask = 65536
 
 [node name="Strongman" type="Sprite" parent="Sprite"]
+visible = false
 light_mask = 2048
 position = Vector2( 1310.81, 533.418 )
 scale = Vector2( 3.798, 2.11894 )
