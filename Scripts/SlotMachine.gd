@@ -188,7 +188,7 @@ func current_runs(reel := 0) -> int:
 
 func _randomIcones() -> String:
 	random.randomize()
-	var num = random.randi_range(0, 9)
+	var num = random.randi_range(0, symbolName.size()-1)
 	if num == 0:
 		tile_name = symbolName[0]
 	elif num == 1:
@@ -295,3 +295,27 @@ func givePoints(prizeID):
 	elif prizeID == "elephant":
 		pointsToGive = 300
 
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.scancode == KEY_R:
+			symbolName = ["roulette"];
+		elif event.scancode == KEY_B:
+			symbolName = ["bunny"];
+		elif event.scancode == KEY_C:
+			symbolName = ["clown"];
+		elif event.scancode == KEY_S:
+			symbolName = ["strongman"];
+		elif event.scancode == KEY_L:
+			symbolName = ["lion"];
+		elif event.scancode == KEY_E:
+			symbolName = ["elephant"];
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
