@@ -20,6 +20,8 @@ func _ready():
 	lionanim.play("lion_win")
 	clownanim.play("New Anim")
 	prizeLinesAnim.play("luzes")
+	$symbolspayout/Caixadevalores/Caixadevalores3/Elephant2/AnimationPlayer.play("ele_bola_idle") #Animação do elefante
+	$symbolspayout/Caixadevalores/Caixadevalores2/Bunny2/AnimationPlayer.play("bunny_idle") #Animação do coelho
 	pass 
 
 

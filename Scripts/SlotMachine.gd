@@ -31,7 +31,7 @@ var state = State.OFF
 var result := {}
 var tile_name
 
-const tiles := []
+var tiles := []
 const grid_pos := []
 
 onready var expected_runs :int = int(runtime * speed_norm)
@@ -73,6 +73,8 @@ func _ready():
 func setPrizeMasks():
 	prizeMasks.push_back(0b000000000011111);
 	prizeMasks.push_back(0b000001111100000);
+	prizeMasks.push_back(0b110000000000000);
+	prizeMasks.push_back(0b001100000000000);
 	prizeMasks.push_back(0b111110000000000);
 	prizeMasks.push_back(0b100010101000100);
 	prizeMasks.push_back(0b001000101010001);
@@ -248,35 +250,22 @@ func getPrizes(result_masks):
 	return prizeInfo;
 
 func animPrizes():
-	var oTile
-	var estaReel
-	var estaCol
+	var winTile
+	var linha
+	var coluna
 	for p in prizesToAnim.size():
 		for i in cells:
 			var prizeID = symbolName[prizesToAnim[p][0]];
 			if(prizeMasks[prizesToAnim[p][1]] & 1<<i):
 				var _pcell = reels * tiles_per_reel - 1 - i
 				print("ANIMAÇÃO: ",prizeID, "  CÉLULAS: ", _pcell);
+					
+				coluna = _pcell % 5;
+				linha = int(floor(_pcell / 5));
 				
-				if(_pcell == 0 or _pcell == 5 or _pcell == 10):
-					estaCol = 0
-				elif(_pcell == 1 or _pcell == 6 or _pcell == 11):
-					estaCol = 1
-				elif(_pcell == 2 or _pcell == 7 or _pcell == 12):
-					estaCol = 2
-				elif(_pcell == 3 or _pcell == 8 or _pcell == 13):
-					estaCol = 3
-				elif(_pcell == 4 or _pcell == 9 or _pcell == 14):
-					estaCol = 4
-
-				if (_pcell == 0 or _pcell == 1 or _pcell == 2 or _pcell == 3 or _pcell == 4):
-					estaReel = 0
-				if (_pcell == 5 or _pcell == 6 or _pcell == 7 or _pcell == 8 or _pcell == 9):
-					estaReel = 1
-				if (_pcell == 10 or _pcell == 11 or _pcell == 12 or _pcell == 13 or _pcell == 14):
-					estaReel = 2
-				oTile = get_tile(estaCol, estaReel)
-				oTile.animate_icon(prizeID)
+				winTile = get_tile(coluna, linha)
+				print("COLUNA: ", coluna, "   LINHA: ", linha)
+				winTile.animate_icon(prizeID)
 				givePoints(prizeID)
 
 onready var totalPoints = 0
@@ -303,7 +292,4 @@ func givePoints(prizeID):
 		pointsToGive = 500
 	elif prizeID == "elephant":
 		pointsToGive = 300
-#	main._pointsToGive(pointsToGive)
-#	get_node(".")._pointsToGive(pointsToGive)
-	
 
