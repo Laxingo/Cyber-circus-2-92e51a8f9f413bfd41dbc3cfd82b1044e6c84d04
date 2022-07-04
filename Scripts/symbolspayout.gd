@@ -8,6 +8,7 @@ onready var texto5 = get_node("bonus")
 onready var lionanim = $wild/Lion/AnimationPlayer
 onready var clownanim = $scatter/AnimationPlayer
 onready var prizeLinesAnim = $prizelines/AnimationPlayer
+onready var bonusAnim = $bonus/Roulette/AnimationPlayer
 
 var text1went
 var text2went
@@ -53,6 +54,8 @@ func _on_TextureButton_button_down():
 					$Tween.start()
 					text4went = true
 					$TextureButton.visible = false
+					yield(get_tree().create_timer(0,95), "timeout")
+					bonusAnim.play("Bonus")
 
 
 func _on_TextureButton2_button_down():

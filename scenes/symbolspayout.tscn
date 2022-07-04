@@ -2743,7 +2743,7 @@ texture = ExtResource( 3 )
 [node name="Seta2" type="Sprite" parent="."]
 visible = false
 position = Vector2( 886, 2 )
-rotation = -3.11577
+rotation = -0.105196
 scale = Vector2( 0.13304, 0.13304 )
 texture = ExtResource( 3 )
 
@@ -3243,7 +3243,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 48 )
 animation = "burn"
-frame = 1
+frame = 4
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="wild/Lion/Head"]
@@ -3261,7 +3261,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 49 )
 animation = "kwispy"
-frame = 5
+frame = 8
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wild/Lion"]
@@ -3792,8 +3792,8 @@ region_rect = Rect2( 190, 10, 290, 500 )
 
 [node name="Knife" type="Sprite" parent="bonus/Roulette"]
 light_mask = 4
-position = Vector2( 159.233, 152.313 )
-rotation = 8.04537
+position = Vector2( -124.623, 265.393 )
+rotation = -3.71102
 texture = ExtResource( 11 )
 region_enabled = true
 region_rect = Rect2( 60, 250, 80, 210 )
@@ -4198,21 +4198,22 @@ anims/luzes = SubResource( 54 )
 
 [node name="TextureButton2" type="TextureButton" parent="."]
 visible = false
-margin_left = -919.207
-margin_top = -34.6208
-margin_right = -403.207
-margin_bottom = 481.379
+margin_left = -867.805
+margin_top = 127.946
+margin_right = -351.805
+margin_bottom = 643.946
+rect_rotation = -179.318
 rect_scale = Vector2( 0.144725, 0.144725 )
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 32 )
 texture_hover = ExtResource( 33 )
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 926.763
-margin_top = 40.6387
-margin_right = 1442.76
-margin_bottom = 556.639
-rect_rotation = -179.575
+margin_left = 855.714
+margin_top = 42.1472
+margin_right = 1371.71
+margin_bottom = 558.148
+rect_rotation = -360.741
 rect_scale = Vector2( 0.144725, 0.144725 )
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 32 )
