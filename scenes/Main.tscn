@@ -5928,11 +5928,6 @@ texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 760.208, 0.710886, 403.166, 128.742 )
 
-[node name="Betwinbalance" type="Sprite" parent="."]
-position = Vector2( 956.02, 532.79 )
-scale = Vector2( 1.01027, 1.01027 )
-texture = ExtResource( 55 )
-
 [node name="UIBaixo" type="Sprite" parent="."]
 light_mask = 2
 position = Vector2( 965.002, 515.492 )
@@ -6018,14 +6013,29 @@ rect_scale = Vector2( 2.18693, 2.18693 )
 text = "0"
 align = 1
 
+[node name="Betwinbalance" type="Sprite" parent="UIBaixo"]
+position = Vector2( -8.98212, 17.298 )
+scale = Vector2( 1.01027, 1.01027 )
+texture = ExtResource( 55 )
+
 [node name="MoneyBet" type="Label" parent="UIBaixo"]
-margin_left = -909.471
-margin_top = 387.999
-margin_right = -869.471
-margin_bottom = 401.999
+margin_left = -316.649
+margin_top = 523.073
+margin_right = -276.649
+margin_bottom = 537.073
 rect_scale = Vector2( 2.18693, 2.18693 )
 text = "0"
 align = 1
+
+[node name="BonusBtn" type="TextureButton" parent="UIBaixo"]
+margin_left = -963.501
+margin_top = -482.474
+margin_right = -447.501
+margin_bottom = 33.526
+rect_rotation = -15.8296
+rect_scale = Vector2( 0.280864, 0.280864 )
+texture_normal = ExtResource( 69 )
+texture_hover = ExtResource( 69 )
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 light_mask = 2
@@ -6837,20 +6847,11 @@ margin_right = -405.492
 margin_bottom = -383.259
 rect_scale = Vector2( 75.201, 37.1102 )
 
-[node name="BonusBtn" type="TextureButton" parent="."]
-margin_left = 1.50082
-margin_top = 33.018
-margin_right = 517.501
-margin_bottom = 549.018
-rect_rotation = -15.8296
-rect_scale = Vector2( 0.280864, 0.280864 )
-texture_normal = ExtResource( 69 )
-texture_hover = ExtResource( 69 )
-
 [connection signal="button_down" from="UIBaixo/Denom Plus Btn" to="." method="_on_Denom_Plus_Btn_button_down"]
 [connection signal="button_down" from="UIBaixo/Denom Sub Btn" to="." method="_on_Denom_Sub_Btn_button_down"]
 [connection signal="button_down" from="UIBaixo/Level Sub Btn" to="." method="_on_Level_Sub_Btn_button_down"]
 [connection signal="button_down" from="UIBaixo/Level Plus Btn" to="." method="_on_Level_Plus_Btn_button_down"]
+[connection signal="button_down" from="UIBaixo/BonusBtn" to="BonusLvl" method="_on_BonusBtn_button_down"]
 [connection signal="button_down" from="play" to="." method="_on_Roll2_button_down"]
 [connection signal="mouse_entered" from="play" to="." method="_on_play_mouse_entered"]
 [connection signal="button_down" from="options/1/historico" to="." method="_on_historico_button_down"]
@@ -6871,4 +6872,3 @@ texture_hover = ExtResource( 69 )
 [connection signal="area_entered" from="BonusLvl/Roda/Hitboxes/Amarelo 3" to="BonusLvl" method="_on_Amarelo_3_area_entered"]
 [connection signal="area_entered" from="BonusLvl/Roda/Hitboxes/Amarelo 4" to="BonusLvl" method="_on_Amarelo_4_area_entered"]
 [connection signal="pressed" from="BonusLvl/RodaBtn" to="BonusLvl" method="_on_RodaBtn_pressed"]
-[connection signal="button_down" from="BonusBtn" to="BonusLvl" method="_on_BonusBtn_button_down"]

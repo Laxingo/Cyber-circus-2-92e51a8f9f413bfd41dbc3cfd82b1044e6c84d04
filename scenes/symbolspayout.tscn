@@ -3560,19 +3560,6 @@ margin_bottom = 280.0
 rect_scale = Vector2( 1.25103, 1.34281 )
 color = Color( 0, 0, 0, 0.596078 )
 
-[node name="Seta" type="Sprite" parent="."]
-visible = false
-position = Vector2( -882, 0 )
-scale = Vector2( 0.137316, 0.137316 )
-texture = ExtResource( 3 )
-
-[node name="Seta2" type="Sprite" parent="."]
-visible = false
-position = Vector2( 886, 2 )
-rotation = -0.105196
-scale = Vector2( 0.13304, 0.13304 )
-texture = ExtResource( 3 )
-
 [node name="ExitBtn" type="TextureButton" parent="."]
 margin_left = 873.851
 margin_top = -498.238
@@ -4289,7 +4276,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 48 )
 animation = "burn"
-frame = 9
+frame = 4
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="wild/Lion/Head"]
@@ -4307,7 +4294,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 49 )
 animation = "kwispy"
-frame = 3
+frame = 8
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wild/Lion"]
@@ -4855,7 +4842,6 @@ region_enabled = true
 region_rect = Rect2( 60, 250, 80, 210 )
 
 [node name="prizelines" type="Node2D" parent="."]
-visible = false
 position = Vector2( 1870, 0 )
 
 [node name="prize lines" type="Label" parent="prizelines"]
