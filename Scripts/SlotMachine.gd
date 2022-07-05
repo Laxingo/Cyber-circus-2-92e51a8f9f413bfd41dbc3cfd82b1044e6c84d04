@@ -56,9 +56,12 @@ var prizeNb = 3
 var prizeMasks = [];
 var prizesToAnim = [];
 
-onready var reelSound = preload("res://sound/reels spin/Cyber Circus Reel Just Spin.mp3")
-
-
+onready var reelMelo1 = preload("res://sound/reels spin/Melody_1.mp3")
+onready var reelMelo2 = preload("res://sound/reels spin/Melody_2.mp3")
+onready var reelMelo3 = preload("res://sound/reels spin/Melody_3.mp3")
+onready var reelMelo4 = preload("res://sound/reels spin/Melody_4.mp3")
+onready var melnumber = 1
+onready var reelMelo = get_node("ReelMelody")
 
 
 func _ready():
@@ -114,25 +117,13 @@ func start() -> void:
 		total_runs = expected_runs
 		_get_result()
 	for reel in reels:
+		reelMelodyPlay()
+		reelMelo.play()
 		_spin_reel(reel)
-		if counter == 0:
-			doit1 = true
-			print("REEL 1 TOCA")
-		elif counter == 1:
-			doit2 = true
-			print("REEL 2 TOCA")
-		elif counter == 2:
-			doit3 = true
-			print("REEL 3 TOCA")
-		elif counter == 3:
-			doit4 = true
-			print("REEL 4 TOCA")
-		elif counter == 4:
-			doit5 = true
-			print("REEL 5 TOCA")
 		if reel_delay > 0:
 			   yield(get_tree().create_timer(reel_delay), "timeout")
 		counter = counter+1
+	melnumber= melnumber +1
   
 func stop():
 	state = State.STOPPED
@@ -158,6 +149,18 @@ func _move_tile(tile :SlotTile) -> void:
   tile.spin_up()
   yield(tile.get_node("Animations"), "animation_finished")
   tile.move_by(Vector2(0, tile_size.y))
+
+
+func reelMelodyPlay():
+	if melnumber == 1:
+		reelMelo.stream = reelMelo1
+	elif melnumber == 2:
+		reelMelo.stream = reelMelo2
+		print("ola")
+	elif melnumber == 3:
+		reelMelo.stream = reelMelo3
+	elif melnumber == 4:
+		reelMelo.stream = reelMelo4
   
 func _on_tile_moved(tile: SlotTile, _nodePath) -> void:
 	var reel := int(tile.position.x / tile_size.x)
