@@ -32,13 +32,10 @@ var bet = 25
 onready var betValue = bet
 var moneyBet = bet * denom
 
-
-
 func _ready():
 	slot.connect("stopped", self, "_on_slot_machine_stopped")
 	lightAnim.play("luz")
 	jukebox.stream = musicAudio
-
 
 func _process(delta):
 #	_jukebox()
@@ -248,3 +245,7 @@ func _on_money_button_down():
 	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
 	get_tree().change_scene("res://scenes/symbolspayout.tscn")
 	
+
+
+func _on_ReelMelody_finished():
+	pass # Replace with function body.

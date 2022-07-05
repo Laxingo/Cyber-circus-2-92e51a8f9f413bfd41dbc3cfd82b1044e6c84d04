@@ -61,6 +61,7 @@ onready var reelMelo2 = preload("res://sound/reels spin/Melody_2.mp3")
 onready var reelMelo3 = preload("res://sound/reels spin/Melody_3.mp3")
 onready var reelMelo4 = preload("res://sound/reels spin/Melody_4.mp3")
 onready var melnumber = 1
+var meloplayed = false
 onready var reelMelo = get_node("ReelMelody")
 
 
@@ -104,26 +105,22 @@ func _add_tile(col :int, row :int) -> void:
 func get_tile(col :int, row :int) -> SlotTile:
   return tiles[(col * rows) + row]
 
-onready var doit1 = false
-onready var doit2 = false
-onready var doit3 = false
-onready var doit4 = false
-onready var doit5 = false
-
 func start() -> void:
-	var counter = 0
 	if state == State.OFF: 
 		state = State.ON 
 		total_runs = expected_runs
 		_get_result()
 	for reel in reels:
-		reelMelodyPlay()
-		reelMelo.play()
+		if reel == 0:
+			if !reelMelo.is_playing():
+				reelMelodyPlay()
+				reelMelo.play()
+			meloplayed = true
 		_spin_reel(reel)
 		if reel_delay > 0:
 			   yield(get_tree().create_timer(reel_delay), "timeout")
-		counter = counter+1
 	melnumber= melnumber +1
+	meloplayed= false
   
 func stop():
 	state = State.STOPPED
@@ -154,13 +151,20 @@ func _move_tile(tile :SlotTile) -> void:
 func reelMelodyPlay():
 	if melnumber == 1:
 		reelMelo.stream = reelMelo1
+		yield(get_tree().create_timer(reelMelo.stream.get_length()), "timeout")
+		reelMelo.stop()
 	elif melnumber == 2:
 		reelMelo.stream = reelMelo2
-		print("ola")
+		yield(get_tree().create_timer(reelMelo.stream.get_length()), "timeout")
+		reelMelo.stop()
 	elif melnumber == 3:
 		reelMelo.stream = reelMelo3
+		yield(get_tree().create_timer(reelMelo.stream.get_length()), "timeout")
+		reelMelo.stop()
 	elif melnumber == 4:
 		reelMelo.stream = reelMelo4
+		yield(get_tree().create_timer(reelMelo.stream.get_length()), "timeout")
+		reelMelo.stop()
   
 func _on_tile_moved(tile: SlotTile, _nodePath) -> void:
 	var reel := int(tile.position.x / tile_size.x)

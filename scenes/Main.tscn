@@ -6055,14 +6055,14 @@ size = Vector2( 1662, 810 )
 transparent_bg = true
 handle_input_locally = false
 render_target_update_mode = 3
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
 
 [node name="SlotMachine" type="Node2D" parent="ViewportContainer/Viewport"]
 position = Vector2( -50, -47 )
 script = ExtResource( 1 )
 
 [node name="ReelMelody" type="AudioStreamPlayer2D" parent="ViewportContainer/Viewport/SlotMachine"]
-position = Vector2( 47, 55 )
-scale = Vector2( 0.666304, 0.666304 )
 stream = ExtResource( 59 )
 
 [node name="play" type="TextureButton" parent="."]
@@ -6850,6 +6850,7 @@ stream = ExtResource( 62 )
 [connection signal="button_down" from="UIBaixo/Level Sub Btn" to="." method="_on_Level_Sub_Btn_button_down"]
 [connection signal="button_down" from="UIBaixo/Level Plus Btn" to="." method="_on_Level_Plus_Btn_button_down"]
 [connection signal="button_down" from="UIBaixo/BonusBtn" to="BonusLvl" method="_on_BonusBtn_button_down"]
+[connection signal="finished" from="ViewportContainer/Viewport/SlotMachine/ReelMelody" to="." method="_on_ReelMelody_finished"]
 [connection signal="button_down" from="play" to="." method="_on_Roll2_button_down"]
 [connection signal="mouse_entered" from="play" to="." method="_on_play_mouse_entered"]
 [connection signal="mouse_entered" from="options/1/fast" to="." method="_on_fast_mouse_entered"]
