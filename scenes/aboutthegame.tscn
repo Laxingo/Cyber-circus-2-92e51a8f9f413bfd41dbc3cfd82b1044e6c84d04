@@ -22,15 +22,15 @@ size = 100
 outline_color = Color( 0.72549, 0.878431, 0.878431, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
-size = 100
-outline_color = Color( 0.72549, 0.878431, 0.878431, 1 )
-font_data = ExtResource( 2 )
-
 [sub_resource type="DynamicFont" id=3]
 size = 60
 outline_color = Color( 0.72549, 0.878431, 0.878431, 1 )
 extra_spacing_bottom = 27
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+outline_color = Color( 0.72549, 0.878431, 0.878431, 1 )
 font_data = ExtResource( 2 )
 
 [node name="aboutthegame" type="Node2D"]
@@ -75,23 +75,49 @@ custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
 custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "About The Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_left = -910.0
 margin_top = -306.0
 margin_right = 906.0
-margin_bottom = 6206.0
+margin_bottom = 492.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-margin_right = 1642.0
-margin_bottom = 7575.0
+margin_right = 1804.0
+margin_bottom = 8535.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="text5" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_right = 1804.0
+margin_bottom = 957.0
+rect_pivot_offset = Vector2( 150.091, 61.528 )
+custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
+custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "   
+   * Cyber Circus is a 5 reels and 3 rows slot with 10 fixes pay lines.
+   * The theoretical return to player is ???%.
+   * Cyber Circus is played in credits.
+   * The game has 3 high pay symbols and 4 low pay symbols...
+   * WILD symbols substitute regular symbols.
+   * BONUS symbols enable a new game mode.
+   * SCATTER symbols allow other prizes.
+
+"
+align = 3
 
 [node name="wild" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_right = 1642.0
-margin_bottom = 109.0
+margin_top = 961.0
+margin_right = 1804.0
+margin_bottom = 1070.0
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
 custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
@@ -100,21 +126,23 @@ custom_fonts/font = SubResource( 2 )
 text = "Wild"
 
 [node name="text" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 113.0
-margin_right = 1642.0
-margin_bottom = 302.0
+margin_top = 1074.0
+margin_right = 1804.0
+margin_bottom = 1263.0
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
 custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
 custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "* WILD symbol will replace all symbols except SCATTER and BONUS 
-symbols."
+text = "   * WILD symbol will replace all symbols except SCATTER and BONUS symbols.
+"
+align = 3
+valign = 3
 
 [node name="scatter" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 306.0
-margin_right = 1642.0
-margin_bottom = 415.0
+margin_top = 1267.0
+margin_right = 1804.0
+margin_bottom = 1376.0
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
 custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
@@ -123,23 +151,25 @@ custom_fonts/font = SubResource( 2 )
 text = "Scatter"
 
 [node name="text2" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 419.0
-margin_right = 1642.0
-margin_bottom = 800.0
+margin_top = 1380.0
+margin_right = 1804.0
+margin_bottom = 1857.0
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
 custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
 custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "* Wins are awarded for 3 or more symbols appering on the reels.
+text = "   * Wins are awarded for 3 or more symbols appering on the reels.
    * 3 SCATTERS symbols award 10 times de total credits bet;
    * 4 SCATTERS symbols award 40 times de total credits bet;
-   * 5 SCATTERS symbols award 100 times de total credits bet."
+   * 5 SCATTERS symbols award 100 times de total credits bet.
+"
+align = 3
 
 [node name="bonus" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 804.0
-margin_right = 1642.0
-margin_bottom = 913.0
+margin_top = 1861.0
+margin_right = 1804.0
+margin_bottom = 1970.0
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
 custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
@@ -148,24 +178,26 @@ custom_fonts/font = SubResource( 2 )
 text = "Bonus"
 
 [node name="text3" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 917.0
-margin_right = 1642.0
-margin_bottom = 1394.0
+margin_top = 1974.0
+margin_right = 1804.0
+margin_bottom = 2547.0
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
 custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
 custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "* If a sequence of 3 or more BONUS symbols occurs on any active line
- the bonus game is triggered.
-* The bonus is a ... game type.
-* The player has to...
-* Each color has an hidden prize in credits."
+text = "   * If a sequence of 3 or more BONUS symbols occurs on any active line the bonus
+game is triggered.
+   * The bonus is a ... game type.
+   * The player has to...
+   * Each color has an hidden prize in credits.
+"
+align = 3
 
 [node name="howto" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 1398.0
-margin_right = 1642.0
-margin_bottom = 1507.0
+margin_top = 2551.0
+margin_right = 1804.0
+margin_bottom = 2660.0
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
 custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
@@ -174,63 +206,46 @@ custom_fonts/font = SubResource( 2 )
 text = "How to Bet and Play"
 
 [node name="text4" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 1511.0
-margin_right = 1642.0
-margin_bottom = 4100.0
+margin_top = 2664.0
+margin_right = 1804.0
+margin_bottom = 5157.0
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
 custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
 custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "* The game is played with a bet of 25 credits per bet level (1-20) 
-and different coin values.
-* The bet level is set using the LEVEL selector.
-* The coin value is set using the DENOMINATION selector.
-* Winning combinations and payouts are made according to
+text = "   * The game is played with a bet of 25 credits per bet level (1-20) and different
+coin values.
+   * The bet level is set using the LEVEL selector.
+   * The coin value is set using the DENOMINATION selector.
+   * Winning combinations and payouts are made according to
  Pay Table.
-* All wins on active pay line from left to right starting with the left
+   * All wins on active pay line from left to right starting with the left
  most reel with ex-ception of scatter wins.
-* Scatter wins pays on any reel.
-* Line wins from paytable are multiplied by the bet level.
-* Scatter wins from paytable are multiplied by the total bet.
-* Only the highest win per pay line is paid out.
-* A pay line win in credits is equal to the value shown in the Pay Table
+   * Scatter wins pays on any reel.
+   * Line wins from paytable are multiplied by the bet level.
+   * Scatter wins from paytable are multiplied by the total bet.
+   * Only the highest win per pay line is paid out.
+   * A pay line win in credits is equal to the value shown in the Pay Table
  multiplied by the bet level.
-* A pay line win in currency is equal to the win in credits multiplied by
+   * A pay line win in currency is equal to the win in credits multiplied by
  the credits denomination.
-* A game round starts hitting the spin button with the selected
+   * A game round starts hitting the spin button with the selected
  bet level.
-* No bets can be altered during a game round.
-* Wins on different lines are added.
-* Hit the spin button to start the game (Space button on the
+   * No bets can be altered during a game round.
+   * Wins on different lines are added.
+   * Hit the spin button to start the game (Space button on the
  computer's keyboard also starts the game).
-* Auto-Play is enabled in this game. In mobile, the options are shown
- after a long press on the spin button.
-* Quick-Play is also available on the menu (desktop) or at the long
- press spin button (mobile).
-* Malfunctions voids all pays and plays "
-
-[node name="text5" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 4104.0
-margin_right = 1642.0
-margin_bottom = 4773.0
-rect_pivot_offset = Vector2( 150.091, 61.528 )
-custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
-custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
-custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
-custom_fonts/font = SubResource( 3 )
-text = "* Cyber Circus is a 5 reels and 3 rows slot with 10 fixes pay lines.
-* The theoretical return to player is ???%.
-* Cyber Circus is played in credits.
-* The game has 3 high pay symbols and 4 low pay symbols...
-* WILD symbols substitute regular symbols.
-* BONUS symbols enable a new game mode.
-* SCATTER symbols allow other prizes."
+   * Auto-Play is enabled in this game. 
+   * Quick-Play is also available on the menu.
+   * Malfunctions voids all pays and plays.
+"
+align = 3
 
 [node name="bolas" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 4777.0
-margin_right = 1642.0
-margin_bottom = 4886.0
+margin_top = 5161.0
+margin_right = 1804.0
+margin_bottom = 5270.0
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
 custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
@@ -240,28 +255,33 @@ text = "Buttons"
 align = 1
 
 [node name="text6" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 4890.0
-margin_right = 1642.0
-margin_bottom = 7575.0
+margin_top = 5274.0
+margin_right = 1804.0
+margin_bottom = 8535.0
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
 custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
 custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "
-                               Click to start a game round.
+							                                   Click to start a game round.
+															
 
 
                                  Click to open the autoplay options.
 
 
+
                                  Click to activate quick play mode.
 
 
-                                Click to view the games settings menu and select game options.
+
+                                Click to view the games settings menu and select 
+								                                game options.
 
 
                                 Click to mute the game sounds.
+								
 
 
                                Click to open the game rules.
@@ -271,103 +291,110 @@ text = "
                                 Click to view the paytable.
 
 
+
                                 Click to view play's history.
 
 
 
-                               Click to enter fullscreen."
+                                Click to enter fullscreen."
 
 [node name="Setas" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 163.365, 7515.7 )
+position = Vector2( 164.902, 8464.44 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 15 )
 
 [node name="Historico" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 158.84, 7142.01 )
+position = Vector2( 158.84, 8064.29 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 8 )
 
 [node name="Money" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 161.857, 6840.06 )
+position = Vector2( 161.857, 7698.05 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 11 )
 
 [node name="Info" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 161.857, 6458.9 )
+position = Vector2( 161.857, 7322.88 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 7 )
 
 [node name="Csom" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 161.857, 6173.4 )
+position = Vector2( 161.857, 6943.2 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 14 )
 
 [node name="Options" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 166.382, 5890.89 )
+position = Vector2( 166.382, 6544.11 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 10 )
 
 [node name="Fast" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 164.873, 5602.4 )
+position = Vector2( 164.873, 6158.46 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 9 )
 
 [node name="Replay" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 150.291, 5313.91 )
+position = Vector2( 161.885, 5779.84 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 12 )
 
 [node name="Play2" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 131.719, 5022.43 )
+position = Vector2( 158.869, 5400.17 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 13 )
 
 [node name="LightRay" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 731.659, 5169.12 )
+position = Vector2( 731.659, 5602 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay2" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 728.574, 5464.8 )
+position = Vector2( 728.574, 5956.5 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay3" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 740.728, 5746.89 )
-rotation = 1.5708
-scale = Vector2( 0.189718, 2.67263 )
+scale = Vector2( 0, 0 )
 texture = ExtResource( 6 )
 
 [node name="LightRay4" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 746.496, 6040.55 )
+position = Vector2( 746.495, 6358.8 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay5" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 736.034, 6313.8 )
+position = Vector2( 736.035, 6781.37 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay6" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 727.311, 6646.79 )
+position = Vector2( 727.311, 7114.36 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay7" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 727.311, 6984.65 )
+position = Vector2( 727.313, 7498.98 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay8" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 727.311, 7324.01 )
+position = Vector2( 536.84, 8378.78 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
+offset = Vector2( -2562.44, -71.2672 )
+
+[node name="LightRay9" type="Sprite" parent="ScrollContainer/VBoxContainer"]
+position = Vector2( 536.84, 8736.24 )
+rotation = 1.5708
+scale = Vector2( 0.189718, 2.67263 )
+texture = ExtResource( 6 )
+offset = Vector2( -2562.44, -71.2672 )
 
 [connection signal="button_down" from="ExitBtn" to="." method="_on_ExitBtn_button_down"]
