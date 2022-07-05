@@ -10,7 +10,7 @@ signal stopped
 
 export(int,1,20) var reels := 5
 export(int,1,20) var tiles_per_reel :=3 
-export(float,0,10) var runtime := 1.7
+export(float,0,10) var runtime := 2
 export(float,0.1,10) var speed := 5.0
 export(float,0,2) var reel_delay := 0.2
 
@@ -62,8 +62,18 @@ onready var reelMelo3 = preload("res://sound/reels spin/Melody_3.mp3")
 onready var reelMelo4 = preload("res://sound/reels spin/Melody_4.mp3")
 onready var melnumber = 1
 var meloplayed = false
-onready var reelMelo = get_node("ReelMelody")
+onready var reelMelo = $ReelMelody
 
+
+onready var reelAudioPlayer1 = $ReelsAudio
+onready var reelAudioPlayer2 = $ReelsAudio2
+onready var reelAudioPlayer3 = $ReelsAudio3
+onready var reelAudioPlayer4 = $ReelsAudio4
+onready var reelAudioPlayer5 = $ReelsAudio5
+onready var reelSpinning = preload("res://sound/reels spin/Reel_Spinning.mp3")
+onready var reelStopping = preload("res://sound/reels spin/Reel_Stopping.mp3")
+
+var reelsPlayers = [reelAudioPlayer1, reelAudioPlayer2, reelAudioPlayer3, reelAudioPlayer4, reelAudioPlayer5]
 
 func _ready():
 	setPrizeMasks();
@@ -117,9 +127,22 @@ func start() -> void:
 				reelMelo.play()
 			meloplayed = true
 		_spin_reel(reel)
+		if reel == 0:
+			reelSpinPlay(reel)
+		elif reel == 1:
+			reelSpinPlay(reel)
+		elif reel == 2:
+			reelSpinPlay(reel)
+		elif reel == 3:
+			reelSpinPlay(reel)
+		elif reel == 4:
+			reelSpinPlay(reel)
 		if reel_delay > 0:
 			   yield(get_tree().create_timer(reel_delay), "timeout")
-	melnumber= melnumber +1
+	if melnumber <4:
+		melnumber= melnumber +1
+	else:
+		melnumber = 1
 	meloplayed= false
   
 func stop():
@@ -165,6 +188,59 @@ func reelMelodyPlay():
 		reelMelo.stream = reelMelo4
 		yield(get_tree().create_timer(reelMelo.stream.get_length()), "timeout")
 		reelMelo.stop()
+
+func reelSpinPlay(reelnmbr):
+	if reelnmbr == 0:
+		if !reelAudioPlayer1.is_playing():
+			reelAudioPlayer1.stream = reelSpinning
+			reelAudioPlayer1.play()
+			yield(get_tree().create_timer(runtime +0.6), "timeout")
+			reelAudioPlayer1.stream = reelStopping
+			reelAudioPlayer1.play()
+			yield(get_tree().create_timer(reelAudioPlayer1.stream.get_length()), "timeout")
+			reelAudioPlayer1.stop()
+	elif reelnmbr == 1:
+		if !reelAudioPlayer2.is_playing():
+			reelAudioPlayer2.stream = reelSpinning
+			reelAudioPlayer2.play()
+			yield(get_tree().create_timer(runtime+0.6), "timeout")
+			reelAudioPlayer2.stream = reelStopping
+			reelAudioPlayer2.play()
+			yield(get_tree().create_timer(reelAudioPlayer2.stream.get_length()), "timeout")
+			reelAudioPlayer2.stop()
+	elif reelnmbr == 2:
+		if !reelAudioPlayer3.is_playing():
+			reelAudioPlayer3.stream = reelSpinning
+			reelAudioPlayer3.play()
+			yield(get_tree().create_timer(runtime+0.6), "timeout")
+			reelAudioPlayer3.stream = reelStopping
+			reelAudioPlayer3.play()
+			yield(get_tree().create_timer(reelAudioPlayer3.stream.get_length()), "timeout")
+			reelAudioPlayer3.stop()
+	elif reelnmbr == 3:
+		if !reelAudioPlayer4.is_playing():
+			reelAudioPlayer4.stream = reelSpinning
+			reelAudioPlayer4.play()
+			print("4")
+			yield(get_tree().create_timer(runtime+0.6), "timeout")
+			reelAudioPlayer4.stream = reelStopping
+			reelAudioPlayer4.play()
+			yield(get_tree().create_timer(reelAudioPlayer4.stream.get_length()), "timeout")
+			reelAudioPlayer4.stop()
+			print("4 over")
+	elif reelnmbr == 4:
+		if !reelAudioPlayer5.is_playing():
+			reelAudioPlayer5.stream = reelSpinning
+			reelAudioPlayer5.play()
+			print("5")
+			yield(get_tree().create_timer(runtime+0.6), "timeout")
+			reelAudioPlayer5.stream = reelStopping
+			reelAudioPlayer5.play()
+			yield(get_tree().create_timer(reelAudioPlayer5.stream.get_length()), "timeout")
+			reelAudioPlayer5.stop()
+			print("5 over")
+		reelnmbr = 1
+	
   
 func _on_tile_moved(tile: SlotTile, _nodePath) -> void:
 	var reel := int(tile.position.x / tile_size.x)
@@ -273,7 +349,7 @@ func animPrizes():
 				coluna = _pcell % 5;
 				linha = int(floor(_pcell / 5));
 				
-				winTile = get_tile(linha, coluna)
+				winTile = get_tile(coluna, linha)
 				winTile.animate_icon(prizeID)
 				givePoints(prizeID)
 

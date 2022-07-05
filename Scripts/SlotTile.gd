@@ -141,7 +141,7 @@ func spin_up():
   $Animations.play('SPIN_UP')
   
 func spin_down():
-  $Animations.play('SPIN_DOWN')
+	$Animations.play('SPIN_DOWN')
 
 func animate_icon(symbol):
 	if (symbol =="A"):

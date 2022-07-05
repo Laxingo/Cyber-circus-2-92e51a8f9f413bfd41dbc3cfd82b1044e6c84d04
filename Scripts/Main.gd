@@ -38,7 +38,7 @@ func _ready():
 	jukebox.stream = musicAudio
 
 func _process(delta):
-#	_jukebox()
+	_jukebox()
 	bet = betValue * level
 	moneyBet = bet * denom
 	moneybetLBL.text = "$" + str(moneyBet)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=2]
+[gd_scene load_steps=108 format=2]
 
 [ext_resource path="res://Scripts/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/UI/UIBaixo.png" type="Texture" id=2]
@@ -60,6 +60,7 @@
 [ext_resource path="res://Imagens/bonus/luzrosa.png" type="Texture" id=58]
 [ext_resource path="res://sound/reels spin/Melody_1.mp3" type="AudioStream" id=59]
 [ext_resource path="res://Imagens/particulas/blue.png" type="Texture" id=60]
+[ext_resource path="res://sound/reels spin/Reel_Spinning.mp3" type="AudioStream" id=61]
 [ext_resource path="res://sound/reels spin/Cyber Circus Reel Just Spin.mp3" type="AudioStream" id=62]
 [ext_resource path="res://Imagens/UI/-h.png" type="Texture" id=63]
 [ext_resource path="res://Imagens/UI/h.png" type="Texture" id=64]
@@ -68,6 +69,7 @@
 [ext_resource path="res://Imagens/UI/-.png" type="Texture" id=67]
 [ext_resource path="res://Imagens/UI/8a9bb8d775ae49a8.png" type="Texture" id=68]
 [ext_resource path="res://Imagens/Simbolos/CyberCircus_Rolette.png" type="Texture" id=69]
+[ext_resource path="res://sound/reels spin/Reel_Stopping.mp3" type="AudioStream" id=70]
 
 [sub_resource type="Animation" id=2]
 resource_name = "luz"
@@ -6064,6 +6066,36 @@ script = ExtResource( 1 )
 
 [node name="ReelMelody" type="AudioStreamPlayer2D" parent="ViewportContainer/Viewport/SlotMachine"]
 stream = ExtResource( 59 )
+
+[node name="ReelsAudio" type="AudioStreamPlayer2D" parent="ViewportContainer/Viewport/SlotMachine"]
+stream = ExtResource( 61 )
+
+[node name="ReelsAudio2" type="AudioStreamPlayer2D" parent="ViewportContainer/Viewport/SlotMachine"]
+stream = ExtResource( 61 )
+
+[node name="ReelsAudio3" type="AudioStreamPlayer2D" parent="ViewportContainer/Viewport/SlotMachine"]
+stream = ExtResource( 61 )
+
+[node name="ReelsAudio4" type="AudioStreamPlayer2D" parent="ViewportContainer/Viewport/SlotMachine"]
+stream = ExtResource( 61 )
+
+[node name="ReelsAudio5" type="AudioStreamPlayer2D" parent="ViewportContainer/Viewport/SlotMachine"]
+stream = ExtResource( 61 )
+
+[node name="StopSpin1" type="AudioStreamPlayer2D" parent="ViewportContainer/Viewport/SlotMachine"]
+stream = ExtResource( 70 )
+
+[node name="StopSpin2" type="AudioStreamPlayer2D" parent="ViewportContainer/Viewport/SlotMachine"]
+stream = ExtResource( 70 )
+
+[node name="reelSpin3" type="AudioStreamPlayer2D" parent="ViewportContainer/Viewport/SlotMachine"]
+stream = ExtResource( 70 )
+
+[node name="reelSpin4" type="AudioStreamPlayer2D" parent="ViewportContainer/Viewport/SlotMachine"]
+stream = ExtResource( 70 )
+
+[node name="reelSpin5" type="AudioStreamPlayer2D" parent="ViewportContainer/Viewport/SlotMachine"]
+stream = ExtResource( 70 )
 
 [node name="play" type="TextureButton" parent="."]
 light_mask = 2
