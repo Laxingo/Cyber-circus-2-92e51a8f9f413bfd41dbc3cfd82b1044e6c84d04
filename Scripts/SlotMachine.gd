@@ -309,13 +309,3 @@ func _input(event):
 			symbolName = ["lion"];
 		elif event.scancode == KEY_E:
 			symbolName = ["elephant"];
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			

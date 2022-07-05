@@ -186,9 +186,6 @@ func _on_money_button_down():
 	get_tree().change_scene("res://scenes/symbolspayout.tscn")
 	
 
-
-
-
 func _on_Level_Sub_Btn_button_down():
 		if level > 0:
 			level = level -1
