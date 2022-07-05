@@ -158,10 +158,10 @@ outline_size = 2
 outline_color = Color( 0.972549, 0.14902, 0.933333, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="Animation" id=32]
+[sub_resource type="Animation" id=34]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("bw/Light2D:position")
+tracks/0/path = NodePath("bw/big win:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -170,10 +170,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 1713.07, 259.556 ) ]
+"values": [ Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("bw/Light2D:rotation_degrees")
+tracks/1/path = NodePath("bw/numeros bw:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -182,10 +182,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ -46.7962 ]
+"values": [ Color( 1, 1, 1, 1 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("bw/big win:self_modulate")
+tracks/2/path = NodePath("bw/moedas:emitting")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -194,10 +194,10 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ) ]
+"values": [ true ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("bw/numeros bw:self_modulate")
+tracks/3/path = NodePath("bw/moedas2:emitting")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -206,7 +206,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=11]
@@ -424,10 +424,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 10.4 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 10.4, 23.8, 24 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("bw/big win:rect_position")
@@ -492,6 +492,42 @@ tracks/8/enabled = true
 tracks/8/keys = {
 "points": PoolRealArray( 5.53116, -0.25, 0, 0.25, 0, 5.53116, -0.25, 0, 0.25, 0, 6.71531, -0.25, 0, 0.25, 0, 5.53116, -0.25, 0, 0.25, 0, 6.71531, -0.25, 0, 0.25, 0, 5.53116, -0.25, 0, 0.25, 0, 6.71531, -0.25, 0, 0.25, 0, 5.53116, -0.25, 0, 0.25, 0, 6.71531, -0.25, 0, 0.25, 0, 5.53116, -0.25, 0, 0.25, 0, 6.71531, -0.25, 0, 0.25, 0, 5.53116, -0.25, 0, 0.25, 0, 6.71531, -0.25, 0, 0.25, 0, -0.240619, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.3, 17.2, 17.7, 18.2, 18.7, 19.2, 19.7, 20.2, 20.7, 21.3, 21.8, 22.3, 22.8, 24 )
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("bw/big win:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 12.3, 12.6, 23.8, 24 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("bw/moedas2:emitting")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 12.7, 13, 22.8, 23.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true, true, false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("bw/moedas:emitting")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 12.7, 13, 22.8, 23.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true, true, false ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -967,8 +1003,7 @@ color = Color( 0.988235, 0.992157, 0.376471, 1 )
 energy = 0.69
 
 [node name="moedas" type="CPUParticles2D" parent="bw"]
-visible = false
-position = Vector2( -1338, 1077 )
+position = Vector2( -1709.61, 1827.27 )
 rotation = -6.4077
 scale = Vector2( 16.3409, 16.3409 )
 amount = 100
@@ -996,8 +1031,7 @@ angle_random = 1.0
 scale_amount = 0.02
 
 [node name="moedas2" type="CPUParticles2D" parent="bw"]
-visible = false
-position = Vector2( 1464, 1071 )
+position = Vector2( 1643.85, 1861.88 )
 rotation = -6.35035
 scale = Vector2( 16.3409, 16.3409 )
 amount = 100
@@ -1024,7 +1058,6 @@ angle_random = 1.0
 scale_amount = 0.02
 
 [node name="big win" type="Label" parent="bw"]
-self_modulate = Color( 1, 1, 1, 0 )
 margin_left = -131.508
 margin_top = 24.2253
 margin_right = 179.491
@@ -1043,7 +1076,7 @@ __meta__ = {
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="bw"]
 root_node = NodePath("../..")
-anims/RESET = SubResource( 32 )
+anims/RESET = SubResource( 34 )
 anims/bigwin = SubResource( 11 )
 anims/bigwin24 = SubResource( 33 )
 anims/bigwinentra = SubResource( 7 )
