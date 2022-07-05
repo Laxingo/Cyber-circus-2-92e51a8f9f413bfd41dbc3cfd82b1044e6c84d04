@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Fonts/Carnevalee Freakshow.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Imagens/particulas/4.png" type="Texture" id=2]
@@ -665,21 +665,6 @@ outline_size = 2
 outline_color = Color( 0.27451, 0.156863, 0.945098, 1 )
 font_data = SubResource( 26 )
 
-[sub_resource type="Animation" id=28]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("numeros so:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-
 [sub_resource type="Animation" id=29]
 resource_name = "numeros"
 length = 2.0
@@ -745,10 +730,10 @@ position = Vector2( 617, 163 )
 scale = Vector2( 0.288955, 0.288955 )
 
 [node name="moedas" type="CPUParticles2D" parent="."]
-visible = false
 position = Vector2( -1338, 1077 )
 rotation = -6.4077
 scale = Vector2( 16.3409, 16.3409 )
+emitting = false
 amount = 100
 lifetime = 5.0
 speed_scale = 1.79
@@ -774,10 +759,10 @@ angle_random = 1.0
 scale_amount = 0.02
 
 [node name="moedas2" type="CPUParticles2D" parent="."]
-visible = false
 position = Vector2( 1464, 1071 )
 rotation = -6.35035
 scale = Vector2( 16.3409, 16.3409 )
+emitting = false
 amount = 100
 lifetime = 5.0
 speed_scale = 1.79
@@ -802,12 +787,11 @@ angle_random = 1.0
 scale_amount = 0.02
 
 [node name="big win" type="Label" parent="."]
-visible = false
 margin_left = -59.9999
 margin_top = -37.0
 margin_right = 251.0
 margin_bottom = 83.0
-rect_scale = Vector2( 5.17772, 5.07169 )
+rect_scale = Vector2( 0.177683, 0.174044 )
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.980392, 0.886275, 1, 0.933333 )
 custom_colors/font_outline_modulate = Color( 0.207843, 0.968627, 0.933333, 1 )
@@ -829,6 +813,7 @@ position = Vector2( -1336, 1084 )
 rotation = -0.202943
 scale = Vector2( 17.6567, 44.3275 )
 z_index = 2
+emitting = false
 amount = 100
 lifetime = 5.0
 explosiveness = 0.64
@@ -860,6 +845,7 @@ position = Vector2( 1419, 1067 )
 rotation = -0.202943
 scale = Vector2( 17.6567, 44.3275 )
 z_index = 2
+emitting = false
 amount = 100
 lifetime = 5.0
 explosiveness = 0.64
@@ -911,6 +897,7 @@ __meta__ = {
 }
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="wild"]
+visible = false
 position = Vector2( -2921.6, 2101.91 )
 rotation = -0.202943
 scale = Vector2( 17.6567, 44.3275 )
@@ -942,6 +929,7 @@ color_ramp = SubResource( 6 )
 hue_variation = 1.0
 
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="wild"]
+visible = false
 position = Vector2( 2956.73, 2137.04 )
 rotation = 0.00296164
 scale = Vector2( -22.1586, 28.4104 )
@@ -973,12 +961,12 @@ color_ramp = SubResource( 6 )
 hue_variation = 1.0
 
 [node name="numeros bw" type="Label" parent="."]
-visible = false
+self_modulate = Color( 1, 1, 1, 0 )
 margin_left = 173.038
 margin_top = 529.495
 margin_right = 563.038
 margin_bottom = 666.495
-rect_scale = Vector2( 6.20162, 5.53116 )
+rect_scale = Vector2( 7.0484, 6.28639 )
 rect_pivot_offset = Vector2( 257.053, 78.903 )
 custom_fonts/font = SubResource( 27 )
 text = "1000000"
@@ -988,6 +976,8 @@ __meta__ = {
 }
 
 [node name="numeros so" type="Label" parent="."]
+visible = false
+self_modulate = Color( 1, 1, 1, 0 )
 margin_left = 166.116
 margin_top = 529.494
 margin_right = 556.116
@@ -1004,5 +994,4 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/RESET = SubResource( 28 )
 anims/numeros = SubResource( 29 )
