@@ -66,7 +66,7 @@ func startReelSound(numberR):
 			reel5.play()
 
 func _process(delta):
-	_jukebox()
+#	_jukebox()
 	if get_node("ViewportContainer/Viewport/SlotMachine").doit1 == true:
 		startReelSound(1)
 		get_node("ViewportContainer/Viewport/SlotMachine").doit1 = false
@@ -146,25 +146,6 @@ func _on_replay_button_down():
 		popedup2 = false
 		popedup = false
 
-func _on_play_mouse_entered():
-	playAudio.stream = playBtn
-	playAudio.play()
-	yield(get_tree().create_timer(playAudio.stream.get_length()), "timeout")
-	playAudio.stop()
-
-func _on_replay_mouse_entered():
-	options2Audio.stream = playBtn
-	options2Audio.play()
-	yield(get_tree().create_timer(options2Audio.stream.get_length()), "timeout")
-	options2Audio.stop() 
-
-func _on_options2_mouse_entered():
-	optionsAudio.stream = playBtn
-	optionsAudio.play()
-	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
-	optionsAudio.stop()
-
-
 func _on_info_button_down():
 	options2Audio.stream = playBtn
 	options2Audio.play()
@@ -194,7 +175,6 @@ func _on_Level_Sub_Btn_button_down():
 
 
 func _on_Level_Plus_Btn_button_down():
-#	if bet < credits:
 		if level < 10:
 			level = level + 1
 		else:
@@ -243,3 +223,76 @@ func _pointsToGive(points):
 
 func _on_reel1_finished():
 	 pass # Replace with function body.
+
+func _on_play_mouse_entered():
+	playAudio.stream = playBtn
+	playAudio.play()
+	yield(get_tree().create_timer(playAudio.stream.get_length()), "timeout")
+	playAudio.stop()
+
+func _on_replay_mouse_entered():
+	options2Audio.stream = playBtn
+	options2Audio.play()
+	yield(get_tree().create_timer(options2Audio.stream.get_length()), "timeout")
+	options2Audio.stop() 
+
+func _on_options2_mouse_entered():
+	optionsAudio.stream = playBtn
+	optionsAudio.play()
+	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
+	optionsAudio.stop()
+
+func _on_fast_mouse_entered():
+	optionsAudio.stream = playBtn
+	optionsAudio.play()
+	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
+	optionsAudio.stop()
+
+
+func _on_historico_mouse_entered():
+	optionsAudio.stream = playBtn
+	optionsAudio.play()
+	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
+	optionsAudio.stop()
+
+
+func _on_money_mouse_entered():
+	optionsAudio.stream = playBtn
+	optionsAudio.play()
+	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
+	optionsAudio.stop()
+
+
+func _on_info_mouse_entered():
+	optionsAudio.stream = playBtn
+	optionsAudio.play()
+	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
+	optionsAudio.stop()
+
+
+func _on_10_mouse_entered():
+	optionsAudio.stream = playBtn
+	optionsAudio.play()
+	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
+	optionsAudio.stop()
+
+
+func _on_25_mouse_entered():
+	optionsAudio.stream = playBtn
+	optionsAudio.play()
+	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
+	optionsAudio.stop()
+
+
+func _on_50_mouse_entered():
+	optionsAudio.stream = playBtn
+	optionsAudio.play()
+	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
+	optionsAudio.stop()
+
+
+func _on_100_mouse_entered():
+	optionsAudio.stream = playBtn
+	optionsAudio.play()
+	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
+	optionsAudio.stop()
