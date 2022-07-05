@@ -22,6 +22,7 @@ func _ready():
 	prizeLinesAnim.play("luzes")
 	$symbolspayout/Caixadevalores/Caixadevalores3/Elephant2/AnimationPlayer.play("ele_bola_idle") #Animação do elefante
 	$symbolspayout/Caixadevalores/Caixadevalores2/Bunny2/AnimationPlayer.play("bunny_idle") #Animação do coelho
+	$symbolspayout/Caixadevalores/Strongman2/Viewport/AnimationPlayer.play("bomba_idle")
 	pass 
 
 

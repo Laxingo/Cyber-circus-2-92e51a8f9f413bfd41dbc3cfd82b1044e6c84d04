@@ -3926,13 +3926,12 @@ position = Vector2( -295.651, -257.251 )
 [node name="1" type="Bone2D" parent="symbolspayout/Caixadevalores/Strongman2/Skeleton2D"]
 position = Vector2( 290.438, 449.849 )
 rotation = -1.5729
-scale = Vector2( 5.6507, 16.8792 )
+scale = Vector2( 5.56326, 16.5087 )
 rest = Transform2D( -0.0117036, -5.56325, 16.4615, -0.0346306, 290.438, 449.849 )
 
 [node name="2" type="Bone2D" parent="symbolspayout/Caixadevalores/Strongman2/Skeleton2D/1"]
 position = Vector2( 21.5408, 0.16916 )
 rotation = -0.0545318
-scale = Vector2( 1.05372, 1.05372 )
 rest = Transform2D( 0.998514, -0.0545048, 0.0545048, 0.998514, 21.5408, 0.16916 )
 
 [node name="d1" type="Bone2D" parent="symbolspayout/Caixadevalores/Strongman2/Skeleton2D/1/2"]
@@ -4261,7 +4260,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 48 )
 animation = "burn"
-frame = 8
+frame = 7
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="wild/Lion/Head"]
@@ -4279,7 +4278,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 49 )
 animation = "kwispy"
-frame = 2
+frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wild/Lion"]

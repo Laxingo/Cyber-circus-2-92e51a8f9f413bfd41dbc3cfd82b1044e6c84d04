@@ -10,6 +10,7 @@ onready var facaSprite = $faca/KnifeSpritesheet
 onready var facaHitbox = $FacaHitbox
 onready var hitboxes = $Roda/Hitboxes
 onready var winazulLBL = $winazul
+onready var glow = $faca/KnifeGlow
 
 var facaPos = Vector2(639, 169)
 
@@ -35,19 +36,25 @@ func _entra():
 	yield(get_tree().create_timer(animP.get_animation("1bonusentrada").length + 0.2), "timeout")
 	animP.play("2throwtheknife")
 	yield(get_tree().create_timer(animP.get_animation("2throwtheknife").length +0.5), "timeout")
+	animP.play("tudobaza")
+	yield(get_tree().create_timer(animP.get_animation("tudobaza").length + 1), "timeout")
 	animP.play("3rodaluzentra")
-	yield(get_tree().create_timer(animP.get_animation("3rodaluzentra").length + 1), "timeout")
+	yield(get_tree().create_timer(animP.get_animation("tudobaza").length + 1), "timeout")
 	animP.play("4rodaroda")
 	yield(get_tree().create_timer(4), "timeout")
 	prontaprarodar = true
 	yield(get_tree().create_timer(3), "timeout")
 	facaAnim.play("facaentra")
-	yield(get_tree().create_timer(2), "timeout")
+	yield(get_tree().create_timer(1), "timeout")
+	facaAnim.play("click")
 	prontopraclicar = true
-	
+	yield(get_tree().create_timer(facaAnim.get_animation("click").length), "timeout")
+	if prontopraclicar:
+		facaAnim.play("facaglow")
 
 
 func _on_RodaBtn_pressed():
+	glow.visible = false
 	random.randomize()
 	var num = random.randi_range(0, 2)
 	if prontopraclicar:
@@ -106,7 +113,9 @@ func _WinRosa():
 	yield(get_tree().create_timer(6), "timeout")
 	animP.play("winrosabaza")
 	yield(get_tree().create_timer(2), "timeout")
-	animP.play("tudobaza")
+	animP.play("cortinasentrada")
+	yield(get_tree().create_timer(1), "timeout")
+	animP.play("tudobaza2")
 	
 
 func _WinAmarelo():
@@ -114,14 +123,18 @@ func _WinAmarelo():
 	yield(get_tree().create_timer(6), "timeout")
 	animP.play("winamarelobaza")
 	yield(get_tree().create_timer(2), "timeout")
-	animP.play("tudobaza")
+	animP.play("cortinasentrada")
+	yield(get_tree().create_timer(2), "timeout")
+	animP.play("tudobaza2")
 
 func _WinAzul():
 	animP.play("winazul")
 	yield(get_tree().create_timer(6), "timeout")
 	animP.play("winazulbaza")
 	yield(get_tree().create_timer(2), "timeout")
-	animP.play("tudobaza")
+	animP.play("cortinasentrada")
+	yield(get_tree().create_timer(1), "timeout")
+	animP.play("tudobaza2")
 
 func _WinAzul2():
 	winazulLBL.text = "5000"
@@ -129,8 +142,11 @@ func _WinAzul2():
 	yield(get_tree().create_timer(6), "timeout")
 	animP.play("winazulbaza")
 	yield(get_tree().create_timer(2), "timeout")
-	animP.play("tudobaza")
+	animP.play("cortinasentrada")
+	yield(get_tree().create_timer(1), "timeout")
+	animP.play("tudobaza2")
 
 
 func _on_BonusBtn_button_down():
+	print("H")
 	_entra()
