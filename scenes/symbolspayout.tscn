@@ -3877,9 +3877,6 @@ custom_fonts/font = SubResource( 52 )
 text = "  5    1000
   4     250
   3      50"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Strongman2" type="Sprite" parent="symbolspayout/Caixadevalores"]
 light_mask = 2048
@@ -4260,7 +4257,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 48 )
 animation = "burn"
-frame = 7
+frame = 3
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="wild/Lion/Head"]
@@ -4278,7 +4275,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 49 )
 animation = "kwispy"
-frame = 1
+frame = 7
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wild/Lion"]

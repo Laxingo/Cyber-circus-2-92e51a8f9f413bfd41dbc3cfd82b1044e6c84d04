@@ -55,6 +55,7 @@ var q= 0
 var prizeNb = 3
 var prizeMasks = [];
 var prizeMasks2 = [];
+var prizeMasks3 = [];
 var prizesToAnim = [];
 
 onready var reelMelo1 = preload("res://sound/reels spin/Melody_1.mp3")
@@ -76,6 +77,13 @@ onready var reelStopping = preload("res://sound/reels spin/Reel_Stopping.mp3")
 
 var reelsPlayers = [reelAudioPlayer1, reelAudioPlayer2, reelAudioPlayer3, reelAudioPlayer4, reelAudioPlayer5]
 
+
+var smallWinToca = false
+var mediumWinToca = false
+var goodWinToca = false
+var bigWinToca = false
+var ola = false
+
 func _ready():
 	setPrizeMasks();
 	setPrizeMasks2()
@@ -89,8 +97,6 @@ func _ready():
 func setPrizeMasks():
 	prizeMasks.push_back(0b000000000011111);
 	prizeMasks.push_back(0b000001111100000);
-	prizeMasks.push_back(0b110000000000000);
-	prizeMasks.push_back(0b001100000000000);
 	prizeMasks.push_back(0b111110000000000);
 	prizeMasks.push_back(0b100010101000100);
 	prizeMasks.push_back(0b001000101010001);
@@ -100,8 +106,59 @@ func setPrizeMasks():
 	prizeMasks.push_back(0b011101000100000);
 	prizeMasks.push_back(0b010101010100000);
 func setPrizeMasks2():
-	prizeMasks2.push_back(0b111111111111111);
-
+	prizeMasks.push_back(0b000000000011110);
+	prizeMasks.push_back(0b000001111000000);
+	prizeMasks.push_back(0b111100000000000);
+	prizeMasks.push_back(0b100010101000000);
+	prizeMasks.push_back(0b001000101010000);
+	prizeMasks.push_back(0b110110000000000);
+	prizeMasks.push_back(0b000000010011010);
+	prizeMasks.push_back(0b000001000101100);
+	prizeMasks.push_back(0b011101000000000);
+	prizeMasks.push_back(0b010101010000000);
+	prizeMasks.push_back(0b000000000001111);
+	prizeMasks.push_back(0b000000111100000);
+	prizeMasks.push_back(0b011110000000000);
+	prizeMasks.push_back(0b000010101000100);
+	prizeMasks.push_back(0b000000101010001);
+	prizeMasks.push_back(0b010110010000000);
+	prizeMasks.push_back(0b000000000011011);
+	prizeMasks.push_back(0b000000000101110);
+	prizeMasks.push_back(0b001101000100000);
+	prizeMasks.push_back(0b000101010100000);
+func setPrizeMasks3():
+	prizeMasks.push_back(0b000000000011100);
+	prizeMasks.push_back(0b000001110000000);
+	prizeMasks.push_back(0b111000000000000);
+	prizeMasks.push_back(0b100010100000000);
+	prizeMasks.push_back(0b001000101000000);
+	prizeMasks.push_back(0b110100000000000);
+	prizeMasks.push_back(0b000000010011000);
+	prizeMasks.push_back(0b000001000101000);
+	prizeMasks.push_back(0b011100000000000);
+	prizeMasks.push_back(0b010101000000000);
+	prizeMasks.push_back(0b000000000001110);
+	prizeMasks.push_back(0b000000111000000);
+	prizeMasks.push_back(0b011100000000000);
+	prizeMasks.push_back(0b000010101000000);
+	prizeMasks.push_back(0b000000101010000);
+	prizeMasks.push_back(0b010110000000000);
+	prizeMasks.push_back(0b000000000011010);
+	prizeMasks.push_back(0b000000000101100);
+	prizeMasks.push_back(0b001101000000000);
+	prizeMasks.push_back(0b000101010000000);
+	prizeMasks.push_back(0b000000000000111);
+	prizeMasks.push_back(0b000000011100000);
+	prizeMasks.push_back(0b001110000000000);
+	prizeMasks.push_back(0b000000101000100);
+	prizeMasks.push_back(0b000000001010001);
+	prizeMasks.push_back(0b000110010000000);
+	prizeMasks.push_back(0b000000000001011);
+	prizeMasks.push_back(0b000000000001110);
+	prizeMasks.push_back(0b000101000100000);
+	prizeMasks.push_back(0b000001010100000);
+	
+	
 func _add_tile(col :int, row :int) -> void:
 	tiles.append(SlotTile.instance())
 	var tile := get_tile(col, row) 
@@ -224,24 +281,20 @@ func reelSpinPlay(reelnmbr):
 		if !reelAudioPlayer4.is_playing():
 			reelAudioPlayer4.stream = reelSpinning
 			reelAudioPlayer4.play()
-			print("4")
 			yield(get_tree().create_timer(runtime+0.6), "timeout")
 			reelAudioPlayer4.stream = reelStopping
 			reelAudioPlayer4.play()
 			yield(get_tree().create_timer(reelAudioPlayer4.stream.get_length()), "timeout")
 			reelAudioPlayer4.stop()
-			print("4 over")
 	elif reelnmbr == 4:
 		if !reelAudioPlayer5.is_playing():
 			reelAudioPlayer5.stream = reelSpinning
 			reelAudioPlayer5.play()
-			print("5")
 			yield(get_tree().create_timer(runtime+0.6), "timeout")
 			reelAudioPlayer5.stream = reelStopping
 			reelAudioPlayer5.play()
 			yield(get_tree().create_timer(reelAudioPlayer5.stream.get_length()), "timeout")
 			reelAudioPlayer5.stop()
-			print("5 over")
 		reelnmbr = 1
 	
   
@@ -329,16 +382,24 @@ func buildResultMasks():
 	prizesToAnim = [];
 	prizesToAnim = getPrizes(resultMasks);
 
+var prizeType
+
 func getPrizes(result_masks):
 	var prizeInfo = [];
 	for i in result_masks.size():
-		for p in  prizeMasks.size():
-			if (result_masks[i] & prizeMasks[p] == prizeMasks[p]):
+		for p in  prizeMasks3.size():
+			if (result_masks[i] & prizeMasks3[p] == prizeMasks3[p]):
 				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
+				prizeType="Small"
 		for p in  prizeMasks2.size():
 			if (result_masks[i] & prizeMasks2[p] == prizeMasks2[p]):
 				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
-				print("BLA BLA BLA BLA")
+				prizeType = "Medium"
+		for p in  prizeMasks.size():
+			if (result_masks[i] & prizeMasks[p] == prizeMasks[p]):
+				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
+				prizeType = "Good"
+
 
 	print("Prize  Info: ", prizeInfo);
 	return prizeInfo;
@@ -352,7 +413,7 @@ func animPrizes():
 			var prizeID = symbolName[prizesToAnim[p][0]];
 			if(prizeMasks[prizesToAnim[p][1]] & 1<<i):
 				var _pcell = reels * tiles_per_reel - 1 - i
-				print("ANIMAÇÃO: ",prizeID, "  CÉLULAS: ", _pcell);
+#				print("ANIMAÇÃO: ",prizeID, "  CÉLULAS: ", _pcell);
 					
 				coluna = _pcell % 5;
 				linha = int(floor(_pcell / 5));
@@ -363,38 +424,82 @@ func animPrizes():
 
 onready var totalPoints = 0
 
-var smallWinToca = false
-var mediumWinToca = false
-var goodWinToca = false
-
+var pointsToGive
 func givePoints(prizeID):
-	var pointsToGive
+
 	if prizeID == "bunny":
-		pointsToGive = 500
-		goodWinToca = true
+		if prizeType == "Good":
+			pointsToGive = 500
+		elif prizeType == "Medium":
+			pointsToGive = 150
+		elif prizeType == "Small":
+			pointsToGive = 50
+			
 	elif prizeID == "lion":
 		pass
+		
 	elif prizeID == "strongman":
-		pointsToGive = 1000
-		goodWinToca = true
+		if prizeType == "Good":
+			pointsToGive = 1000
+		elif prizeType == "Medium":
+			pointsToGive = 250
+		elif prizeType == "Small":
+			pointsToGive = 50
+			
 	elif prizeID == "roulette":
 		bonusLvl._entra()
+		
 	elif prizeID == "A":
-		pointsToGive = 30
-		smallWinToca = true
+		if prizeType == "Good":
+			pointsToGive = 150
+		elif prizeType == "Medium":
+			pointsToGive = 30
+		elif prizeType == "Small":
+			pointsToGive = 10
+			
 	elif prizeID == "K":
-		pointsToGive =20
-		smallWinToca = true
+		if prizeType == "Good":
+			pointsToGive = 150
+		elif prizeType == "Medium":
+			pointsToGive = 30
+		elif prizeType == "Small":
+			pointsToGive = 10
+			
 	elif prizeID == "Q":
-		pointsToGive = 10
-		smallWinToca = true
+		if prizeType == "Good":
+			pointsToGive = 5
+		elif prizeType == "Medium":
+			pointsToGive = 25
+		elif prizeType == "Small":
+			pointsToGive = 5
+			
 	elif prizeID == "J":
-		pointsToGive = 5
-		smallWinToca = true
+		if prizeType == "Good":
+			pointsToGive = 100
+		elif prizeType == "Medium":
+			pointsToGive = 25
+		elif prizeType == "Small":
+			pointsToGive = 5
+			
 	elif prizeID == "clown":
 		pointsToGive = 5 * main.bet
+		
 	elif prizeID == "elephant":
-		pointsToGive = 300
+		if prizeType == "Good":
+			pointsToGive = 300
+		elif prizeType == "Medium":
+			pointsToGive = 75
+		elif prizeType == "Small":
+			pointsToGive = 25
+	
+	if pointsToGive > 250:
+		bigWinToca=true
+	elif pointsToGive >100:
+		goodWinToca = true
+	elif pointsToGive>30:
+		mediumWinToca = true
+	else:
+		smallWinToca = true
 
 func _input(event):
 	if event is InputEventKey and event.pressed:
@@ -410,3 +515,9 @@ func _input(event):
 			symbolName = ["lion"];
 		elif event.scancode == KEY_E:
 			symbolName = ["elephant"];
+		elif event.scancode == KEY_A:
+			symbolName = ["A"];
+		elif event.scancode == KEY_J:
+			symbolName = ["J"];
+		elif event.scancode == KEY_Q:
+			symbolName = ["Q"];

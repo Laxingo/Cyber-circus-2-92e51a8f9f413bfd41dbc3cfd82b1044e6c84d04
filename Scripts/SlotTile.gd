@@ -146,34 +146,24 @@ func spin_down():
 func animate_icon(symbol):
 	if (symbol =="A"):
 		$Sprite/A/AnimationPlayer.play("A_Sweep")
-		print("AAAAAAAAAAAA", symbol)
 	elif(symbol =="bunny"):
 		$Sprite/Bunny/AnimationPlayer.play("bunny")
-		print("AAAAAAAAAAAA", symbol)
 	elif(symbol =="clown"):
 		$Sprite/Clown/AnimationPlayer.play("palhaço")
-		print("AAAAAAAAAAAA", symbol)
 	elif(symbol =="elephant"):
 		$Sprite/Elephant/AnimationPlayer.play("ele_bola")
-		print("AAAAAAAAAAAA", symbol)
 	elif(symbol =="J"):
 		$Sprite/J/AnimationPlayer.play("J_Sweep")
-		print("AAAAAAAAAAAA", symbol)
 	elif(symbol =="K"):
 		$Sprite/K/AnimationPlayer.play("K_Sweep")
-		print("AAAAAAAAAAAA", symbol)
 	elif(symbol =="lion"):
 		$Sprite/Lion/AnimationPlayer.play("lion_win")
-		print("AAAAAAAAAAAA", symbol)
 	elif(symbol =="strongman"):
 		$Sprite/Strongman/Viewport/AnimationPlayer.play("b1")
-		print("AAAAAAAAAAAA", symbol)
 	elif(symbol =="Q"):
 		$Sprite/Q/AnimationPlayer.play("Q_Sweep")
-		print("AAAAAAAAAAAA", symbol)
 	elif(symbol =="roulette"):
 		$Sprite/Roulette/AnimationPlayer.play("Bonus")
-		print("AAAAAAAAAAAA", symbol)
 
 func animate_icon_idle(symbol):
 	if (symbol =="A"):

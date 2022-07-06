@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var slotMachine = preload("res://Scripts/SlotMachine.gd").new()
+onready var slotMachine = load("res://Scripts/SlotMachine.gd").new()
 var rolled = false
 
 var popedup = false
@@ -25,6 +25,13 @@ onready var levelLBL = $UIBaixo/Level
 onready var betLBL = $UIBaixo/Bet
 onready var moneybetLBL = $UIBaixo/MoneyBet
 
+onready var winsMP3 = $Audios/Wins
+
+onready var bigWinSound = preload("res://sound/wins sfx/Big_Win.mp3")
+onready var goodWinSound = preload("res://sound/wins sfx/Good_Win.mp3")
+onready var mediumWinSound = preload("res://sound/wins sfx/Medium_Win.mp3")
+onready var smallWinSound = preload("res://sound/wins sfx/Small_Win.mp3")
+
 var credits = 1000
 var level = 1
 var denom = 0.01
@@ -34,25 +41,135 @@ var moneyBet = bet * denom
 
 
 onready var winAnim = get_node("Win/AnimationPlayer")
+onready var bigWinAnim = get_node("Win/bw/bigWinAnim")
+onready var numerosBW = get_node("Win/bw/numeros bw")
+onready var numeros = get_node("Win/numeros so")
+
+var startPointsBW = false
+var startPoints = false
+var currentPoints = 0
+var lastCred
 
 func _ready():
 	slot.connect("stopped", self, "_on_slot_machine_stopped")
 	lightAnim.play("luz")
+	
+
 
 func _process(delta):
-	if slotMachine.goodWinToca == true:
-		winAnim.play("goodwin")
-	if slotMachine.mediumWinToca == true:
-		winAnim.play("mediumwin")
-	if slotMachine.smallWinToca == true:
-		winAnim.play("smallwin")
+	var gudwin = get_node("ViewportContainer/Viewport/SlotMachine").goodWinToca
+	var smolwin = get_node("ViewportContainer/Viewport/SlotMachine").smallWinToca
+	var midiumwin = get_node("ViewportContainer/Viewport/SlotMachine").mediumWinToca
+	var bigwin = get_node("ViewportContainer/Viewport/SlotMachine").bigWinToca
+	var pointstGive = get_node("ViewportContainer/Viewport/SlotMachine").pointsToGive
+	var actualPoints
+	
+	if gudwin == true:
+		goodWin()
+		get_node("ViewportContainer/Viewport/SlotMachine").goodWinToca = false
+		
+	if midiumwin == true:
+		mediumWin()
+		get_node("ViewportContainer/Viewport/SlotMachine").mediumWinToca = false
+		
+	if smolwin == true:
+		smallWin()
+		get_node("ViewportContainer/Viewport/SlotMachine").smallWinToca = false
+		
+	if bigwin == true:
+		bigWin()
+		get_node("ViewportContainer/Viewport/SlotMachine").bigWinToca = false
+		print("Big win anim")
+	
+	if startPointsBW == true:
+		actualPoints = pointstGive * bet
+		if actualPoints > 50000:
+			if actualPoints > currentPoints:
+				currentPoints = currentPoints +111
+				credits = credits + 111
+			else:
+				currentPoints = actualPoints
+				credits = lastCred+ actualPoints
+		else:
+			if actualPoints > currentPoints:
+				currentPoints = currentPoints +11
+				credits = credits + 11
+			else:
+				currentPoints = actualPoints
+				credits = lastCred+ actualPoints
+	
+	if startPoints == true:
+		actualPoints = pointstGive * bet
+		if actualPoints > 15000:
+			if actualPoints > currentPoints:
+				currentPoints = currentPoints +11
+				credits = credits + 11
+			else:
+				currentPoints = actualPoints
+				credits = lastCred+ actualPoints
+		else:
+			if actualPoints > currentPoints:
+				currentPoints = currentPoints +6
+				credits = credits + 6
+			else:
+				currentPoints = actualPoints
+				credits = lastCred+ actualPoints
+	
+	
 	bet = betValue * level
 	moneyBet = bet * denom
 	moneybetLBL.text = "$" + str(moneyBet)
 	creditsLBL.text = str(credits)
 	levelLBL.text = str(level)
 	betLBL.text = str(bet)
+	numerosBW.text = str(currentPoints)
+	numeros.text = str(currentPoints)
 
+
+func bigWin():
+	lastCred = credits
+	currentPoints = 0
+	bigWinAnim.play("bigwin24")
+	winsMP3.stream = bigWinSound
+	startPointsBW = true
+	if !winsMP3.is_playing():
+		winsMP3.play()
+		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
+		winsMP3.stop()
+
+func goodWin():
+	lastCred = credits
+	currentPoints = 0
+	winAnim.play("goodwin")
+	winsMP3.stream = goodWinSound
+	startPoints = true
+	if !winsMP3.is_playing():
+		winsMP3.play()
+		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
+		winsMP3.stop()
+
+func mediumWin():
+	lastCred = credits
+	currentPoints = 0
+	winAnim.play("mediumwin")
+	winsMP3.stream = mediumWinSound
+	startPoints = true
+	if !winsMP3.is_playing():
+		winsMP3.play()
+		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
+		winsMP3.stop()
+
+func smallWin():
+	lastCred = credits
+	currentPoints = 0
+	winAnim.play("smallwin")
+	winsMP3.stream = smallWinSound
+	startPoints = true
+	if !winsMP3.is_playing():
+		winsMP3.play()
+		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
+		winsMP3.stop()
+	
 
 func _on_Roll2_button_down():
 	if bet <= credits && bet != 0:
