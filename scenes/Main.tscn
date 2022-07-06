@@ -1,4 +1,4 @@
-[gd_scene load_steps=141 format=2]
+[gd_scene load_steps=144 format=2]
 
 [ext_resource path="res://Scripts/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/UI/UIBaixo.png" type="Texture" id=2]
@@ -81,6 +81,11 @@
 [ext_resource path="res://Imagens/particulas/6.png" type="Texture" id=79]
 [ext_resource path="res://Imagens/particulas/5.png" type="Texture" id=80]
 [ext_resource path="res://Imagens/particulas/1.png" type="Texture" id=81]
+[ext_resource path="res://sound/bonus/Bonus_KnifeThrow.mp3" type="AudioStream" id=82]
+[ext_resource path="res://sound/bonus/Bonus_Music.mp3" type="AudioStream" id=83]
+[ext_resource path="res://sound/bonus/Bonus_Win.mp3" type="AudioStream" id=84]
+[ext_resource path="res://sound/bonus/Bonus_Transition.mp3" type="AudioStream" id=85]
+[ext_resource path="res://sound/music/Ambience.mp3" type="AudioStream" id=86]
 
 [sub_resource type="Animation" id=2]
 resource_name = "luz"
@@ -6018,10 +6023,10 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 706.622, 146.045 ) ]
+"values": [ Vector2( 706.622, 146.045 ), Vector2( 706.622, 146.045 ) ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("KnifeGlow:rotation_degrees")
@@ -6030,10 +6035,10 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.506523 ]
+"values": [ 17.2116, 17.2116 ]
 }
 
 [sub_resource type="Animation" id=72]
@@ -6158,7 +6163,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.506523 ]
+"values": [ 17.1523 ]
 }
 
 [sub_resource type="CircleShape2D" id=48]
@@ -6455,9 +6460,9 @@ outline_size = 2
 outline_color = Color( 0.27451, 0.156863, 0.945098, 1 )
 font_data = SubResource( 26 )
 
-[sub_resource type="Animation" id=80]
-resource_name = "numeros"
-length = 2.0
+[sub_resource type="Animation" id=90]
+resource_name = "goodwin"
+length = 6.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("numeros so:rect_position")
 tracks/0/interp = 1
@@ -6465,10 +6470,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 2.8 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 193.802, 2311.78 ), Vector2( 166.116, 529.494 ) ]
+"values": [ Vector2( 470.974, 1881.17 ), Vector2( 411.081, 424.693 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("numeros so:rect_rotation")
@@ -6489,7 +6494,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.1, 0.3, 1.7, 1.9 ),
+"times": PoolRealArray( 0.1, 2.8, 6.1, 6.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -6502,7 +6507,7 @@ tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
 "points": PoolRealArray( 6.27759, -0.25, 0, 0.25, 0, 7.19202, -0.25, 0, 0.25, 0, 6.27759, -0.25, 0, 0.25, 0, 7.19202, -0.25, 0, 0.25, 0, 6.27759, -0.25, 0, 0.25, 0, 7.19202, -0.25, 0, 0.25, 0, 4.43851, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.3, 0.6, 0.9, 1.2, 1.5, 1.7, 1.9 )
+"times": PoolRealArray( 3, 3.5, 4, 4.4, 5, 5.4, 6.5 )
 }
 tracks/4/type = "bezier"
 tracks/4/path = NodePath("numeros so:rect_scale:y")
@@ -6512,7 +6517,175 @@ tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
 "points": PoolRealArray( 5.59891, -0.25, 0, 0.25, 0, 6.41448, -0.25, 0, 0.25, 0, 5.59891, -0.25, 0, 0.25, 0, 6.41448, -0.25, 0, 0.25, 0, 5.59891, -0.25, 0, 0.25, 0, 6.41448, -0.25, 0, 0.25, 0, 3.95866, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.3, 0.6, 0.9, 1.2, 1.5, 1.7, 1.9 )
+"times": PoolRealArray( 3, 3.5, 4, 4.4, 5, 5.4, 6.5 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("moedas:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 3.2, 3.3, 5.2, 5.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true, true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("moedas2:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 3.2, 3.3, 5.2, 5.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true, true, false ]
+}
+
+[sub_resource type="Animation" id=91]
+resource_name = "mediumwin"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("numeros so:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 470.974, 1881.17 ), Vector2( 411.081, 424.693 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("numeros so:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("numeros so:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 1, 3.2, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("numeros so:rect_scale:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 6.27759, -0.25, 0, 0.25, 0, 7.19202, -0.25, 0, 0.25, 0, 6.27759, -0.25, 0, 0.25, 0, 7.19202, -0.25, 0, 0.25, 0, 6.27759, -0.25, 0, 0.25, 0, 7.19202, -0.25, 0, 0.25, 0, 4.43851, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3.5 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("numeros so:rect_scale:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 5.59891, -0.25, 0, 0.25, 0, 6.41448, -0.25, 0, 0.25, 0, 5.59891, -0.25, 0, 0.25, 0, 6.41448, -0.25, 0, 0.25, 0, 5.59891, -0.25, 0, 0.25, 0, 6.41448, -0.25, 0, 0.25, 0, 3.95866, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3.5 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("moedas:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.4, 1.5, 2.2, 2.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true, true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("moedas2:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1.4, 1.5, 2.2, 2.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true, true, false ]
+}
+
+[sub_resource type="Animation" id=80]
+resource_name = "smallwin"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("numeros so:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 193.802, 2311.78 ), Vector2( 411.081, 424.693 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("numeros so:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("numeros so:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 0.3, 2, 2.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("numeros so:rect_scale:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 6.27759, -0.25, 0, 0.25, 0, 7.19202, -0.25, 0, 0.25, 0, 6.27759, -0.25, 0, 0.25, 0, 7.19202, -0.25, 0, 0.25, 0, 4.43851, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.3, 0.6, 0.9, 1.8, 2.4 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("numeros so:rect_scale:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 5.59891, -0.25, 0, 0.25, 0, 6.41448, -0.25, 0, 0.25, 0, 5.59891, -0.25, 0, 0.25, 0, 6.41448, -0.25, 0, 0.25, 0, 3.95866, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.3, 0.6, 0.9, 1.8, 2.4 )
 }
 
 [sub_resource type="AnimatedTexture" id=81]
@@ -6538,6 +6711,57 @@ size = 100
 outline_size = 2
 outline_color = Color( 0.972549, 0.14902, 0.933333, 1 )
 font_data = ExtResource( 47 )
+
+[sub_resource type="Animation" id=92]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("bw/luzbg:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2022.74, 130.675 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bw/luzbg:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -46.7962 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("bw/luzbg:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("bw/luzbg:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.7 ]
+}
 
 [sub_resource type="Animation" id=83]
 resource_name = "bigwin"
@@ -6858,6 +7082,42 @@ tracks/11/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ false, false, true, true, false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("bw/luzbg:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 16.7, 17.4, 17.8, 18.4, 18.8, 19.5, 19.9, 20.6, 21, 21.7, 22.1, 22.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -647.928, 1660.66 ), Vector2( 2022.74, 130.675 ), Vector2( -647.928, 1660.66 ), Vector2( 2022.74, 130.675 ), Vector2( -647.928, 1660.66 ), Vector2( 2022.74, 130.675 ), Vector2( -647.928, 1660.66 ), Vector2( 2022.74, 130.675 ), Vector2( -647.928, 1660.66 ), Vector2( 2022.74, 130.675 ), Vector2( -647.928, 1660.66 ), Vector2( 2022.74, 130.675 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("bw/luzbg:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 16.7, 17.4, 17.8, 18.4, 18.8, 19.5, 19.9, 20.6, 21, 21.7, 22.1, 22.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -46.7962, -46.7962, -46.7962, -46.7962, -46.7962, -46.7962, -46.7962, -46.7962, -46.7962, -46.7962, -46.7962, -46.7962 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("bw/luzbg:energy")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 16.7, 17.4, 17.5, 17.7, 17.8, 18.4, 18.5, 18.7, 18.8, 19.5, 19.6, 19.8, 19.9, 20.6, 20.7, 20.9, 21, 21.7, 21.8, 22, 22.1, 22.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.7, 0.7, 0.0, 0.0, 0.7, 0.7, 0.0, 0.0, 0.7, 0.7, 0.0, 0.0, 0.7, 0.7, 0.0, 0.0, 0.7, 0.7, 0.0, 0.0, 0.7, 0.7 ]
 }
 
 [sub_resource type="Animation" id=85]
@@ -7231,7 +7491,7 @@ tracks/8/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("bw/Light2D:position")
+tracks/9/path = NodePath("bw/luzbg:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -7243,7 +7503,7 @@ tracks/9/keys = {
 "values": [ Vector2( -1252.79, 1138.59 ), Vector2( 1713.07, 259.556 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("bw/Light2D:rotation_degrees")
+tracks/10/path = NodePath("bw/luzbg:rotation_degrees")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -7292,22 +7552,22 @@ scale = Vector2( 1.01027, 1.01027 )
 
 [node name="Light2D" type="Light2D" parent="Luzes"]
 light_mask = 524289
-position = Vector2( 416, 167 )
-rotation = 0.875907
+position = Vector2( 501.759, 311.761 )
+rotation = 0.714769
 scale = Vector2( 2.21001, 4.92555 )
 texture = ExtResource( 9 )
 color = Color( 0.964706, 0.952941, 0.231373, 1 )
-energy = 0.750103
+energy = 0.879071
 range_height = -809.1
 
 [node name="Light2D2" type="Light2D" parent="Luzes"]
 light_mask = 524288
-position = Vector2( -364, 77.9999 )
-rotation = -0.801047
+position = Vector2( -408.149, 154.874 )
+rotation = -0.72458
 scale = Vector2( 2.21001, 4.92555 )
 texture = ExtResource( 9 )
 color = Color( 0.964706, 0.952941, 0.231373, 1 )
-energy = 0.750103
+energy = 0.879071
 range_height = -809.1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Luzes"]
@@ -7322,32 +7582,32 @@ position = Vector2( 64, 57 )
 texture = ExtResource( 5 )
 
 [node name="Light2D3" type="Light2D" parent="Luzes"]
-position = Vector2( -710, -319 )
+position = Vector2( -717.597, 272.492 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="Light2D4" type="Light2D" parent="Luzes"]
-position = Vector2( 849, -300 )
+position = Vector2( 845, -129.88 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="Light2D5" type="Light2D" parent="Luzes"]
-position = Vector2( 532, 413 )
+position = Vector2( 531.237, 278.913 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="Light2D6" type="Light2D" parent="Luzes"]
-position = Vector2( 222, -275 )
+position = Vector2( 222.033, -142.47 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="Light2D7" type="Light2D" parent="Luzes"]
-position = Vector2( -82, 398 )
+position = Vector2( -82.7628, 263.913 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="Light2D8" type="Light2D" parent="Luzes"]
-position = Vector2( -402, -265 )
+position = Vector2( -401.967, -132.47 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
@@ -7829,8 +8089,6 @@ volume_db = 3.4
 [node name="optionsBtnAudio" type="AudioStreamPlayer2D" parent="Audios"]
 stream = ExtResource( 35 )
 
-[node name="Jukebox" type="AudioStreamPlayer2D" parent="Audios"]
-
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 959.022, 492.268 )
 z_index = 4
@@ -8293,20 +8551,19 @@ hue_variation = 1.0
 modulate = Color( 0.968627, 0.713726, 0.898039, 1 )
 self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 706.622, 146.045 )
-rotation = 0.00884049
-scale = Vector2( 0.858668, 0.858668 )
+rotation = 0.300399
+scale = Vector2( 0.692866, 0.692866 )
 texture = ExtResource( 73 )
 
 [node name="KnifeSpritesheet" type="Sprite" parent="Node2D/faca"]
-visible = false
-position = Vector2( 42.0228, 52.5284 )
-rotation = -0.0127988
-scale = Vector2( 0.523511, 0.523511 )
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 707, 145 )
+rotation = 0.299158
+scale = Vector2( 0.74994, 0.74994 )
 z_index = 6
 texture = ExtResource( 53 )
 hframes = 5
 vframes = 2
-frame = 9
 region_rect = Rect2( 2135.22, 87.611, 411.403, 395.878 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/faca"]
@@ -8446,6 +8703,22 @@ shadow_filter_smooth = 64.0
 
 [node name="Tween" type="Tween" parent="Node2D"]
 
+[node name="KnifeSoundMP3" type="AudioStreamPlayer2D" parent="Node2D"]
+stream = ExtResource( 82 )
+
+[node name="MusicMP3" type="AudioStreamPlayer2D" parent="Node2D"]
+stream = ExtResource( 83 )
+
+[node name="TransMP3" type="AudioStreamPlayer2D" parent="Node2D"]
+stream = ExtResource( 85 )
+
+[node name="WinMP3" type="AudioStreamPlayer2D" parent="Node2D"]
+stream = ExtResource( 84 )
+
+[node name="Jukebox" type="AudioStreamPlayer2D" parent="Node2D"]
+position = Vector2( -959.022, -492.268 )
+stream = ExtResource( 86 )
+
 [node name="BonusBtn" type="TextureButton" parent="."]
 margin_left = 1.501
 margin_top = 33.018
@@ -8461,8 +8734,7 @@ position = Vector2( 834.454, 205.612 )
 scale = Vector2( 0.551286, 0.551286 )
 
 [node name="wild" type="Node2D" parent="Win"]
-visible = false
-position = Vector2( 83.0581, 571.024 )
+position = Vector2( 264.072, 555.368 )
 scale = Vector2( 0.591085, 0.591085 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Win/wild"]
@@ -8474,7 +8746,7 @@ margin_left = -73.0
 margin_top = -61.0
 margin_right = 85.0
 margin_bottom = 41.0
-rect_scale = Vector2( 16.5814, 16.5814 )
+rect_scale = Vector2( -0.54404, -0.54404 )
 rect_pivot_offset = Vector2( 82.787, 53.3807 )
 custom_colors/font_color = Color( 0.866667, 0.862745, 0.6, 1 )
 custom_colors/font_outline_modulate = Color( 1, 0.835294, 0.266667, 1 )
@@ -8486,16 +8758,16 @@ __meta__ = {
 }
 
 [node name="numeros so" type="Label" parent="Win"]
-visible = false
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 193.802
-margin_top = 2311.78
-margin_right = 583.802
-margin_bottom = 2448.78
-rect_scale = Vector2( 6.27759, 5.59891 )
+margin_left = 411.081
+margin_top = 424.693
+margin_right = 801.081
+margin_bottom = 561.693
+rect_scale = Vector2( 4.43851, 3.95866 )
 rect_pivot_offset = Vector2( 257.053, 78.903 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.92549, 0.890196, 0.654902, 1 )
+custom_colors/font_outline_modulate = Color( 0.917647, 0.85098, 0.286275, 1 )
+custom_colors/font_color_shadow = Color( 0.94902, 0.886275, 0.180392, 1 )
 custom_fonts/font = SubResource( 79 )
 text = "1000000"
 align = 1
@@ -8504,18 +8776,22 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Win"]
-anims/numeros = SubResource( 80 )
+anims/goodwin = SubResource( 90 )
+anims/mediumwin = SubResource( 91 )
+anims/smallwin = SubResource( 80 )
 
 [node name="bw" type="Node2D" parent="Win"]
 position = Vector2( 152.453, 138.842 )
 
-[node name="Light2D" type="Light2D" parent="Win/bw"]
-position = Vector2( 1713.07, 259.556 )
+[node name="luzbg" type="Light2D" parent="Win/bw"]
+light_mask = 0
+position = Vector2( 2022.74, 130.675 )
 rotation = -0.816748
 scale = Vector2( -3.41047, 7.19454 )
 texture = ExtResource( 62 )
 color = Color( 0.988235, 0.992157, 0.376471, 1 )
-energy = 0.69
+energy = 0.7
+range_item_cull_mask = 131072
 
 [node name="moedas" type="CPUParticles2D" parent="Win/bw"]
 position = Vector2( -1338, 1077 )
@@ -8576,11 +8852,12 @@ scale_amount = 0.02
 
 [node name="big win" type="Label" parent="Win/bw"]
 self_modulate = Color( 1, 1, 1, 0 )
+light_mask = 131072
 margin_left = -131.508
 margin_top = 24.2253
 margin_right = 179.491
-margin_bottom = 144.228
-rect_scale = Vector2( 0.177683, 0.174044 )
+margin_bottom = 144.227
+rect_scale = Vector2( 0.425415, 0.416702 )
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.921569, 0.917647, 0.576471, 0.933333 )
 custom_colors/font_outline_modulate = Color( 0.341176, 0.223529, 0.00784314, 1 )
@@ -8588,9 +8865,13 @@ custom_colors/font_color_shadow = Color( 1, 0.854902, 0.0431373, 1 )
 custom_fonts/font = SubResource( 82 )
 text = "Big Win"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="bigWinAnim" type="AnimationPlayer" parent="Win/bw"]
 root_node = NodePath("../..")
+anims/RESET = SubResource( 92 )
 anims/bigwin = SubResource( 83 )
 anims/bigwin24 = SubResource( 84 )
 anims/bigwinentra = SubResource( 85 )
@@ -8661,11 +8942,12 @@ hue_variation = 1.0
 
 [node name="numeros bw" type="Label" parent="Win/bw"]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = -123.109
-margin_top = 1382.23
-margin_right = 266.896
-margin_bottom = 1519.24
-rect_scale = Vector2( 6.20162, 5.53116 )
+light_mask = 131072
+margin_left = -141.891
+margin_top = 678.307
+margin_right = 248.114
+margin_bottom = 815.318
+rect_scale = Vector2( -0.269786, -0.240619 )
 rect_pivot_offset = Vector2( 198.012, 75.7375 )
 custom_colors/font_color = Color( 0.964706, 0.909804, 0.552941, 1 )
 custom_colors/font_outline_modulate = Color( 0.854902, 0.690196, 0.0352941, 1 )
@@ -8673,6 +8955,9 @@ custom_colors/font_color_shadow = Color( 0.831373, 0.34902, 0.0588235, 1 )
 custom_fonts/font = SubResource( 79 )
 text = "1000000"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="particulasamarelas" type="CPUParticles2D" parent="Win/bw"]
 visible = false
@@ -8738,6 +9023,64 @@ scale_amount = 0.1
 color_ramp = SubResource( 89 )
 hue_variation = 1.0
 
+[node name="moedas" type="CPUParticles2D" parent="Win"]
+position = Vector2( -1159.74, 1271.36 )
+rotation = -0.261527
+scale = Vector2( 16.2299, 14.5268 )
+emitting = false
+amount = 100
+lifetime = 5.0
+speed_scale = 1.79
+explosiveness = 0.24
+randomness = 0.25
+fixed_fps = 60
+texture = SubResource( 81 )
+direction = Vector2( 0, -500 )
+spread = 12.6
+gravity = Vector2( 0, 40 )
+initial_velocity = 172.84
+initial_velocity_random = 1.0
+angular_velocity = -17.78
+orbit_velocity_random = 1.0
+linear_accel = -11.11
+radial_accel = -4.94
+tangential_accel = 19.75
+tangential_accel_random = 1.0
+damping = 5.25
+damping_random = 0.89
+angle = 720.0
+angle_random = 1.0
+scale_amount = 0.02
+
+[node name="moedas2" type="CPUParticles2D" parent="Win"]
+position = Vector2( 1655.21, 1241.41 )
+rotation = -0.261527
+scale = Vector2( 16.2299, 14.5268 )
+emitting = false
+amount = 100
+lifetime = 5.0
+speed_scale = 1.79
+explosiveness = 0.24
+randomness = 0.25
+fixed_fps = 60
+texture = SubResource( 81 )
+direction = Vector2( 0, -500 )
+spread = 12.6
+gravity = Vector2( 0, 40 )
+initial_velocity = 172.84
+initial_velocity_random = 1.0
+angular_velocity = -17.78
+orbit_velocity_random = 1.0
+linear_accel = -11.11
+radial_accel = -4.94
+tangential_accel = 19.75
+tangential_accel_random = 1.0
+damping = 5.25
+damping_random = 0.89
+angle = 720.0
+angle_random = 1.0
+scale_amount = 0.02
+
 [connection signal="button_down" from="UIBaixo/Denom Plus Btn" to="." method="_on_Denom_Plus_Btn_button_down"]
 [connection signal="button_down" from="UIBaixo/Denom Sub Btn" to="." method="_on_Denom_Sub_Btn_button_down"]
 [connection signal="button_down" from="UIBaixo/Level Sub Btn" to="." method="_on_Level_Sub_Btn_button_down"]
@@ -8760,7 +9103,6 @@ hue_variation = 1.0
 [connection signal="mouse_entered" from="options2" to="." method="_on_options2_mouse_entered"]
 [connection signal="button_down" from="replay" to="." method="_on_replay_button_down"]
 [connection signal="mouse_entered" from="replay" to="." method="_on_replay_mouse_entered"]
-[connection signal="finished" from="Audios/Jukebox" to="." method="_on_AudioStreamPlayer2D_finished"]
 [connection signal="area_entered" from="Node2D/Roda/Hitboxes/Rosa1" to="Node2D" method="_on_Rosa1_area_entered"]
 [connection signal="area_entered" from="Node2D/Roda/Hitboxes/Rosa 2" to="Node2D" method="_on_Rosa_2_area_entered"]
 [connection signal="area_entered" from="Node2D/Roda/Hitboxes/Rosa 3" to="Node2D" method="_on_Rosa_3_area_entered"]
@@ -8770,4 +9112,7 @@ hue_variation = 1.0
 [connection signal="area_entered" from="Node2D/Roda/Hitboxes/Amarelo 3" to="Node2D" method="_on_Amarelo_3_area_entered"]
 [connection signal="area_entered" from="Node2D/Roda/Hitboxes/Amarelo 4" to="Node2D" method="_on_Amarelo_4_area_entered"]
 [connection signal="pressed" from="Node2D/RodaBtn" to="Node2D" method="_on_RodaBtn_pressed"]
+[connection signal="finished" from="Node2D/KnifeSoundMP3" to="Node2D" method="_on_KnifeSoundMP3_finished"]
+[connection signal="finished" from="Node2D/WinMP3" to="Node2D" method="_on_WinMP3_finished"]
+[connection signal="finished" from="Node2D/Jukebox" to="." method="_on_AudioStreamPlayer2D_finished"]
 [connection signal="button_down" from="BonusBtn" to="Node2D" method="_on_BonusBtn_button_down"]
