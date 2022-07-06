@@ -47,10 +47,10 @@ custom_fonts/font = SubResource( 1 )
 text = "Play History #1"
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 857.36
-margin_top = 11.2498
-margin_right = 1373.36
-margin_bottom = 527.25
+margin_left = 802.721
+margin_top = -56.3198
+margin_right = 1318.72
+margin_bottom = 459.68
 rect_rotation = 0.93743
 rect_scale = Vector2( 0.209839, 0.209839 )
 texture_normal = ExtResource( 3 )
