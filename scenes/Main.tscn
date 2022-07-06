@@ -84,7 +84,7 @@
 [ext_resource path="res://sound/bonus/Bonus_KnifeThrow.mp3" type="AudioStream" id=82]
 [ext_resource path="res://sound/bonus/Bonus_Music.mp3" type="AudioStream" id=83]
 [ext_resource path="res://sound/bonus/Bonus_Win.mp3" type="AudioStream" id=84]
-[ext_resource path="res://sound/bonus/Bonus_Transition.mp3" type="AudioStream" id=85]
+[ext_resource path="res://sound/bonus/Bonus_Transition_In.mp3" type="AudioStream" id=85]
 [ext_resource path="res://sound/music/Ambience.mp3" type="AudioStream" id=86]
 
 [sub_resource type="Animation" id=2]
@@ -6712,238 +6712,6 @@ outline_size = 2
 outline_color = Color( 0.972549, 0.14902, 0.933333, 1 )
 font_data = ExtResource( 47 )
 
-[sub_resource type="Animation" id=92]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("bw/luzbg:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 2022.74, 130.675 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("bw/luzbg:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ -46.7962 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("bw/luzbg:self_modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("bw/luzbg:energy")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.7 ]
-}
-
-[sub_resource type="Animation" id=83]
-resource_name = "bigwin"
-length = 1.5
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("bw/big win:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 2.5 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -59.9999, -37 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("bw/big win:rect_rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 2.5 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("bw/big win:rect_scale:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 5.17772, -0.25, 0, 0.25, 0, 6.32464, -0.25, 0, 0.25, 0, 5.17772, -0.25, 0, 0.25, 0, 6.32464, -0.25, 0, 0.25, 0, 5.17772, -0.25, 0, 0.25, 0, 6.32464, -0.25, 0, 0.25, 0, 5.17772, -0.25, 0, 0.25, 0, 5.17772, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 1.1, 1.3, 1.6, 1.9, 2.2, 2.5, 2.6, 2.8 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("bw/big win:rect_scale:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 5.07169, -0.25, 0, 0.25, 0, 6.19512, -0.25, 0, 0.25, 0, 5.07169, -0.25, 0, 0.25, 0, 6.19512, -0.25, 0, 0.25, 0, 5.07169, -0.25, 0, 0.25, 0, 6.19512, -0.25, 0, 0.25, 0, 5.07169, -0.25, 0, 0.25, 0, 5.07169, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 1.1, 1.3, 1.6, 1.9, 2.2, 2.5, 2.6, 2.8 )
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("bw/moedas:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 1.1 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -1338, 1077 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("bw/moedas:rotation_degrees")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 1.1 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ -367.134 ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("bw/moedas2:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 1.1 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1464, 1071 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("bw/moedas2:rotation_degrees")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 1.1 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ -363.848 ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("bw/moedas2:emitting")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 1.1 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("bw/moedas:emitting")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 1.1 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("bw/CPUParticles2D2:emitting")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray( 1.1 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("bw/CPUParticles2D:emitting")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 1.1 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("bw/numeros bw:rect_position")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
-"times": PoolRealArray( 1.1 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 173.038, 529.495 ) ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("bw/numeros bw:rect_rotation")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray( 1.1 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("bw/numeros bw:rect_scale")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 1.1, 1.3, 1.6, 1.9, 2.2, 2.5, 2.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 6.20162, 5.53116 ), Vector2( 7.2205, 6.43988 ), Vector2( 6.20162, 5.53116 ), Vector2( 7.2205, 6.43988 ), Vector2( 6.20162, 5.53116 ), Vector2( 7.2205, 6.43988 ), Vector2( 6.20162, 5.53116 ) ]
-}
-
 [sub_resource type="Animation" id=84]
 resource_name = "bigwin24"
 length = 24.0
@@ -7118,413 +6886,6 @@ tracks/14/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.7, 0.7, 0.0, 0.0, 0.7, 0.7, 0.0, 0.0, 0.7, 0.7, 0.0, 0.0, 0.7, 0.7, 0.0, 0.0, 0.7, 0.7, 0.0, 0.0, 0.7, 0.7 ]
-}
-
-[sub_resource type="Animation" id=85]
-resource_name = "bigwinentra"
-tracks/0/type = "value"
-tracks/0/path = NodePath("bw/big win:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("bw/big win:rect_rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("bw/big win:rect_scale:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 0.177683, -0.25, 0, 0.25, 0, 5.17772, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.6 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("bw/big win:rect_scale:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 0.174044, -0.25, 0, 0.25, 0, 5.07169, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.6 )
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("bw/numeros bw:rect_position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 0.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 200.724, 2377.53 ), Vector2( 173.038, 529.495 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("bw/numeros bw:rect_rotation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0 ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("bw/numeros bw:self_modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=86]
-resource_name = "bigwinsai"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("bw/big win:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("bw/big win:rect_rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("bw/big win:rect_scale:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 5.17772, -0.25, 0, 0.25, 0, 0.177683, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("bw/big win:rect_scale:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 5.07169, -0.25, 0, 0.25, 0, 0.174044, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3 )
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("bw/moedas:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0.5 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -1338, 1077 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("bw/moedas:rotation_degrees")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0.5 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ -367.134 ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("bw/moedas2:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0.5, 0.501 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1464, 1071 ), Vector2( 1464, 1071 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("bw/moedas2:rotation_degrees")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0.5 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ -363.848 ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("bw/moedas2:emitting")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("bw/moedas:emitting")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("bw/CPUParticles2D2:emitting")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("bw/CPUParticles2D:emitting")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("bw/numeros bw:rect_position")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 173.038, 529.495 ) ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("bw/numeros bw:rect_rotation")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("bw/numeros bw:self_modulate")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-
-[sub_resource type="Animation" id=87]
-resource_name = "newbigwin"
-length = 24.0
-tracks/0/type = "value"
-tracks/0/path = NodePath("bw/big win:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.4, 1.1, 1.4, 2, 2.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -124.587, 678.306 ), Vector2( -109.086, 506.633 ), Vector2( -109.086, 506.633 ), Vector2( -109.086, 506.633 ), Vector2( -59.9999, -37 ), Vector2( -59.9999, -37 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("bw/big win:rect_rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.4, 1.1, 1.4, 2, 2.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("bw/numeros bw:rect_rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 1.9 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("bw/numeros bw:rect_scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 1.9, 2.7, 3, 3.4, 3.7, 4, 4.3, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 6.20162, 5.53116 ), Vector2( 6.20162, 5.53116 ), Vector2( 6.20162, 5.53116 ), Vector2( 9.25211, 8.25186 ), Vector2( 6.20162, 5.53116 ), Vector2( 9.25211, 8.25186 ), Vector2( 6.20162, 5.53116 ), Vector2( 9.25211, 8.25186 ), Vector2( 0.173915, 0.155113 ) ]
-}
-tracks/4/type = "bezier"
-tracks/4/path = NodePath("bw/big win:rect_scale:x")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"points": PoolRealArray( 0.177683, -0.25, 0, 0.25, 0, 8.93169, -0.25, 0, 0.25, 0, 8.93169, -0.25, 0, 0.25, 0, 9.69541, -0.25, 0, 0.25, 0, 5.20186, -0.25, 0, 0.25, 0, 5.20186, -0.25, 0, 0.25, 0, 5.96757, -0.25, 0, 0.25, 0, 5.20186, -0.25, 0, 0.25, 0, 5.96757, -0.25, 0, 0.25, 0, 5.20186, -0.25, 0, 0.25, 0, 7.10916, -0.25, 0, 0.25, 0, 0.146386, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.4, 1.1, 1.4, 2, 2.7, 3, 3.4, 3.7, 4, 4.3, 5 )
-}
-tracks/5/type = "bezier"
-tracks/5/path = NodePath("bw/big win:rect_scale:y")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"points": PoolRealArray( 0.174044, -0.25, 0, 0.25, 0, 8.74879, -0.25, 0, 0.25, 0, 8.74879, -0.25, 0, 0.25, 0, 9.49687, -0.25, 0, 0.25, 0, 5.09534, -0.25, 0, 0.25, 0, 5.09534, -0.25, 0, 0.25, 0, 5.84536, -0.25, 0, 0.25, 0, 5.09534, -0.25, 0, 0.25, 0, 5.84536, -0.25, 0, 0.25, 0, 5.09534, -0.25, 0, 0.25, 0, 6.96358, -0.25, 0, 0.25, 0, 0.143388, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.4, 1.1, 1.4, 2, 2.7, 3, 3.4, 3.7, 4, 4.3, 5 )
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("bw/numeros bw:rect_position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0, 2.3, 2.7, 3, 3.4, 3.7, 4, 4.3, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -131.508, 2377.53 ), Vector2( -96.901, 436.054 ), Vector2( -96.901, 436.054 ), Vector2( -86.5188, 591.788 ), Vector2( -96.901, 436.054 ), Vector2( -86.5188, 591.788 ), Vector2( -96.901, 436.054 ), Vector2( -86.5188, 591.788 ), Vector2( -86.5188, 591.788 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("bw/numeros bw:rect_rotation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0 ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("bw/numeros bw:self_modulate")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0, 0.6, 1.9, 4.9, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("bw/luzbg:position")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0.4, 1.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -1252.79, 1138.59 ), Vector2( 1713.07, 259.556 ) ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("bw/luzbg:rotation_degrees")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray( 0.4, 1.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ -46.7962, -46.7962 ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("bw/big win:self_modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 0, 4.9, 5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="Gradient" id=88]
@@ -8176,10 +7537,11 @@ texture = ExtResource( 4 )
 [node name="Roda" type="Sprite" parent="Node2D"]
 visible = false
 light_mask = 4
-position = Vector2( 2.95044, 10.3264 )
+position = Vector2( -6.00354, 16.5088 )
 scale = Vector2( 0.843503, 0.841322 )
 z_index = -3
 texture = ExtResource( 48 )
+offset = Vector2( 10.6152, -7.34839 )
 
 [node name="luzesentreaspas" type="Node2D" parent="Node2D/Roda"]
 position = Vector2( 175, -196 )
@@ -8734,6 +8096,7 @@ position = Vector2( 834.454, 205.612 )
 scale = Vector2( 0.551286, 0.551286 )
 
 [node name="wild" type="Node2D" parent="Win"]
+visible = false
 position = Vector2( 264.072, 555.368 )
 scale = Vector2( 0.591085, 0.591085 )
 
@@ -8761,7 +8124,7 @@ __meta__ = {
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = 411.081
 margin_top = 424.693
-margin_right = 801.081
+margin_right = 801.077
 margin_bottom = 561.693
 rect_scale = Vector2( 4.43851, 3.95866 )
 rect_pivot_offset = Vector2( 257.053, 78.903 )
@@ -8771,9 +8134,6 @@ custom_colors/font_color_shadow = Color( 0.94902, 0.886275, 0.180392, 1 )
 custom_fonts/font = SubResource( 79 )
 text = "1000000"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Win"]
 anims/goodwin = SubResource( 90 )
@@ -8853,11 +8213,11 @@ scale_amount = 0.02
 [node name="big win" type="Label" parent="Win/bw"]
 self_modulate = Color( 1, 1, 1, 0 )
 light_mask = 131072
-margin_left = -131.508
-margin_top = 24.2253
-margin_right = 179.491
-margin_bottom = 144.227
-rect_scale = Vector2( 0.425415, 0.416702 )
+margin_left = -159.194
+margin_top = 522.572
+margin_right = 151.805
+margin_bottom = 642.574
+rect_scale = Vector2( 0.177683, 0.174044 )
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.921569, 0.917647, 0.576471, 0.933333 )
 custom_colors/font_outline_modulate = Color( 0.341176, 0.223529, 0.00784314, 1 )
@@ -8865,18 +8225,10 @@ custom_colors/font_color_shadow = Color( 1, 0.854902, 0.0431373, 1 )
 custom_fonts/font = SubResource( 82 )
 text = "Big Win"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="bigWinAnim" type="AnimationPlayer" parent="Win/bw"]
 root_node = NodePath("../..")
-anims/RESET = SubResource( 92 )
-anims/bigwin = SubResource( 83 )
 anims/bigwin24 = SubResource( 84 )
-anims/bigwinentra = SubResource( 85 )
-anims/bigwinsai = SubResource( 86 )
-anims/newbigwin = SubResource( 87 )
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Win/bw"]
 visible = false
@@ -8943,11 +8295,11 @@ hue_variation = 1.0
 [node name="numeros bw" type="Label" parent="Win/bw"]
 self_modulate = Color( 1, 1, 1, 0 )
 light_mask = 131072
-margin_left = -141.891
-margin_top = 678.307
-margin_right = 248.114
-margin_bottom = 815.318
-rect_scale = Vector2( -0.269786, -0.240619 )
+margin_left = -122.508
+margin_top = 1404.75
+margin_right = 267.497
+margin_bottom = 1541.76
+rect_scale = Vector2( 6.20162, 5.53116 )
 rect_pivot_offset = Vector2( 198.012, 75.7375 )
 custom_colors/font_color = Color( 0.964706, 0.909804, 0.552941, 1 )
 custom_colors/font_outline_modulate = Color( 0.854902, 0.690196, 0.0352941, 1 )

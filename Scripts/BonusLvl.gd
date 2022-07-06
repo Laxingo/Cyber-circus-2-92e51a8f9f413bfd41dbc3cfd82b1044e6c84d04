@@ -22,7 +22,8 @@ onready var random = RandomNumberGenerator.new()
 
 onready var knifeSound = preload("res://sound/bonus/Bonus_KnifeThrow.mp3")
 onready var music = preload("res://sound/bonus/Bonus_Music.mp3")
-onready var transition = preload("res://sound/bonus/Bonus_Transition.mp3")
+onready var transition1 = preload("res://sound/bonus/Bonus_Transition_In.mp3")
+onready var transition2 = preload("res://sound/bonus/Bonus_Transition_Out.mp3")
 onready var winSound = preload("res://sound/bonus/Bonus_Win.mp3")
 
 onready var jukebox = $Jukebox
@@ -59,6 +60,8 @@ func _entra():
 	animP.play("2throwtheknife")
 	yield(get_tree().create_timer(animP.get_animation("2throwtheknife").length +0.5), "timeout")
 	animP.play("tudobaza")
+	transitionMP3.stream = transition2
+	cortinaSound()
 	yield(get_tree().create_timer(animP.get_animation("tudobaza").length), "timeout")
 	animP.play("3rodaluzentra")
 	yield(get_tree().create_timer(animP.get_animation("tudobaza").length), "timeout")
@@ -115,6 +118,7 @@ func cortinaSound():
 	yield(get_tree().create_timer(transitionMP3.stream.get_length()), "timeout")
 	transitionMP3.stop()
 	playsound = true
+	transitionMP3.stream = transition1
 	
 
 func _on_Rosa1_area_entered(area):
