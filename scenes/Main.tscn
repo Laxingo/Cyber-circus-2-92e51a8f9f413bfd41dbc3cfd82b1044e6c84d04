@@ -8195,11 +8195,11 @@ __meta__ = {
 
 [node name="numeros so" type="Label" parent="Win"]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 411.081
-margin_top = 424.693
-margin_right = 801.077
-margin_bottom = 561.693
-rect_scale = Vector2( 4.43851, 3.95866 )
+margin_left = 470.974
+margin_top = 1881.17
+margin_right = 860.968
+margin_bottom = 2018.17
+rect_scale = Vector2( 6.27759, 5.59891 )
 rect_pivot_offset = Vector2( 257.053, 78.903 )
 custom_colors/font_color = Color( 0.92549, 0.890196, 0.654902, 1 )
 custom_colors/font_outline_modulate = Color( 0.917647, 0.85098, 0.286275, 1 )
@@ -8218,12 +8218,12 @@ position = Vector2( 152.453, 138.842 )
 
 [node name="luzbg" type="Light2D" parent="Win/bw"]
 light_mask = 0
-position = Vector2( 2022.74, 130.675 )
+position = Vector2( 687.4, 895.671 )
 rotation = -0.816748
 scale = Vector2( -3.41047, 7.19454 )
 texture = ExtResource( 62 )
 color = Color( 0.988235, 0.992157, 0.376471, 1 )
-energy = 0.7
+energy = 0.0
 range_item_cull_mask = 131072
 
 [node name="moedas" type="CPUParticles2D" parent="Win/bw"]
@@ -8284,12 +8284,11 @@ angle_random = 1.0
 scale_amount = 0.02
 
 [node name="big win" type="Label" parent="Win/bw"]
-self_modulate = Color( 1, 1, 1, 0 )
 light_mask = 131072
-margin_left = -159.194
-margin_top = 522.572
-margin_right = 151.805
-margin_bottom = 642.574
+margin_left = -131.508
+margin_top = 24.2253
+margin_right = 179.491
+margin_bottom = 144.227
 rect_scale = Vector2( 0.177683, 0.174044 )
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.921569, 0.917647, 0.576471, 0.933333 )
@@ -8368,10 +8367,10 @@ hue_variation = 1.0
 [node name="numeros bw" type="Label" parent="Win/bw"]
 self_modulate = Color( 1, 1, 1, 0 )
 light_mask = 131072
-margin_left = -122.508
-margin_top = 1404.75
-margin_right = 267.497
-margin_bottom = 1541.76
+margin_left = -122.658
+margin_top = 1399.12
+margin_right = 267.347
+margin_bottom = 1536.13
 rect_scale = Vector2( 6.20162, 5.53116 )
 rect_pivot_offset = Vector2( 198.012, 75.7375 )
 custom_colors/font_color = Color( 0.964706, 0.909804, 0.552941, 1 )

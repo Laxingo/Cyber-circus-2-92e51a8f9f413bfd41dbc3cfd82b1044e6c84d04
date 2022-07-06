@@ -1,7 +1,7 @@
 extends Node2D
 
 
-onready var slotMachine = load("res://Scripts/SlotMachine.gd").new()
+var slotMachine = preload("res://Scripts/SlotMachine.gd").new()
 var rolled = false
 
 var popedup = false
@@ -32,18 +32,26 @@ var bet = 25
 onready var betValue = bet
 var moneyBet = bet * denom
 
+
+onready var winAnim = get_node("Win/AnimationPlayer")
+
 func _ready():
 	slot.connect("stopped", self, "_on_slot_machine_stopped")
 	lightAnim.play("luz")
 
 func _process(delta):
+	if slotMachine.goodWinToca == true:
+		winAnim.play("goodwin")
+	if slotMachine.mediumWinToca == true:
+		winAnim.play("mediumwin")
+	if slotMachine.smallWinToca == true:
+		winAnim.play("smallwin")
 	bet = betValue * level
 	moneyBet = bet * denom
 	moneybetLBL.text = "$" + str(moneyBet)
 	creditsLBL.text = str(credits)
 	levelLBL.text = str(level)
 	betLBL.text = str(bet)
-
 
 
 func _on_Roll2_button_down():

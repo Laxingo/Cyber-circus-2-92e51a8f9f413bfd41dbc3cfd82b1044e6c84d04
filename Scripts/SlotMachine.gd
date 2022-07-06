@@ -54,6 +54,7 @@ var q= 0
 
 var prizeNb = 3
 var prizeMasks = [];
+var prizeMasks2 = [];
 var prizesToAnim = [];
 
 onready var reelMelo1 = preload("res://sound/reels spin/Melody_1.mp3")
@@ -77,6 +78,7 @@ var reelsPlayers = [reelAudioPlayer1, reelAudioPlayer2, reelAudioPlayer3, reelAu
 
 func _ready():
 	setPrizeMasks();
+	setPrizeMasks2()
 	for col in reels:
 		grid_pos.append([])
 		tiles_moved_per_reel.append(0)
@@ -97,6 +99,8 @@ func setPrizeMasks():
 	prizeMasks.push_back(0b000001000101110);
 	prizeMasks.push_back(0b011101000100000);
 	prizeMasks.push_back(0b010101010100000);
+func setPrizeMasks2():
+	prizeMasks2.push_back(0b111111111111111);
 
 func _add_tile(col :int, row :int) -> void:
 	tiles.append(SlotTile.instance())
@@ -331,6 +335,11 @@ func getPrizes(result_masks):
 		for p in  prizeMasks.size():
 			if (result_masks[i] & prizeMasks[p] == prizeMasks[p]):
 				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
+		for p in  prizeMasks2.size():
+			if (result_masks[i] & prizeMasks2[p] == prizeMasks2[p]):
+				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
+				print("BLA BLA BLA BLA")
+
 	print("Prize  Info: ", prizeInfo);
 	return prizeInfo;
 
@@ -354,28 +363,34 @@ func animPrizes():
 
 onready var totalPoints = 0
 
-onready var bigWinAnim = $Win/bw/bigWinAnim
+var smallWinToca = false
+var mediumWinToca = false
+var goodWinToca = false
 
 func givePoints(prizeID):
 	var pointsToGive
 	if prizeID == "bunny":
-		pointsToGive = 250
-		
+		pointsToGive = 500
+		goodWinToca = true
 	elif prizeID == "lion":
 		pass
 	elif prizeID == "strongman":
-		pointsToGive = 200
-		
+		pointsToGive = 1000
+		goodWinToca = true
 	elif prizeID == "roulette":
 		bonusLvl._entra()
 	elif prizeID == "A":
-		pointsToGive = 150
+		pointsToGive = 30
+		smallWinToca = true
 	elif prizeID == "K":
-		pointsToGive = 100
+		pointsToGive =20
+		smallWinToca = true
 	elif prizeID == "Q":
-		pointsToGive = 50
+		pointsToGive = 10
+		smallWinToca = true
 	elif prizeID == "J":
-		pointsToGive = 25
+		pointsToGive = 5
+		smallWinToca = true
 	elif prizeID == "clown":
 		pointsToGive = 5 * main.bet
 	elif prizeID == "elephant":
