@@ -6977,9 +6977,6 @@ margin_top = 94.5514
 margin_right = 1744.1
 margin_bottom = 902.551
 color = Color( 0.156863, 0.0784314, 0.168627, 0.45098 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="UICima" type="Sprite" parent="."]
 light_mask = 2

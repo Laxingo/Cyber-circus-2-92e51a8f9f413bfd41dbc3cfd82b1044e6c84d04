@@ -98,7 +98,6 @@ func setPrizeMasks():
 	prizeMasks.push_back(0b011101000100000);
 	prizeMasks.push_back(0b010101010100000);
 
-
 func _add_tile(col :int, row :int) -> void:
 	tiles.append(SlotTile.instance())
 	var tile := get_tile(col, row) 

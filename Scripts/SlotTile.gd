@@ -123,13 +123,9 @@ func set_icon(tex):
 func set_name(nam):
 	tileName = nam
 
-onready var colorpreto = $Sprite/ColorRect
-
 func set_size(new_size: Vector2):
 	size = new_size
 	$Sprite.scale = size / $Sprite.texture.get_size()
-#	colorpreto.set_position($Sprite.position)
-#	colorpreto.
   
 func set_speed(speed):
   $Tween.playback_speed = speed

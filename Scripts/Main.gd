@@ -11,7 +11,7 @@ onready var slot = $ViewportContainer/Viewport/SlotMachine
 onready var lightAnim = $Luzes/AnimationPlayer
 
 
-onready var buttonHoverSound = preload("res://sound/button/Cyber Circus Button Hover-001.mp3")
+onready var buttonHoverSound = preload("res://sound/button/Button_Hover.mp3")
 
 
 
