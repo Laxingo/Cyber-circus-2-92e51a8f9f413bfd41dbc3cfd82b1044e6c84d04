@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Fonts/Myriad Cn Bold.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Imagens/UI/fundo.png" type="Texture" id=2]
 [ext_resource path="res://Imagens/UI/seta.png" type="Texture" id=3]
 [ext_resource path="res://Scripts/playhistory.gd" type="Script" id=4]
-[ext_resource path="res://Imagens/UI/playh2.png" type="Texture" id=5]
+[ext_resource path="res://Imagens/UI/setah.png" type="Texture" id=5]
 [ext_resource path="res://Imagens/UI/xmini.png" type="Texture" id=6]
 [ext_resource path="res://Imagens/UI/x.png" type="Texture" id=7]
 [ext_resource path="res://Imagens/UI/xe.png" type="Texture" id=8]
+[ext_resource path="res://Imagens/UI/setahmini.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -46,24 +47,26 @@ custom_fonts/font = SubResource( 1 )
 text = "Play History #1"
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 969.651
-margin_top = 80.1189
-margin_right = 1485.65
-margin_bottom = 596.119
-rect_rotation = 179.981
+margin_left = 802.721
+margin_top = -56.3198
+margin_right = 1318.72
+margin_bottom = 459.68
+rect_rotation = 0.93743
 rect_scale = Vector2( 0.209839, 0.209839 )
 texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 5 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 5 )
 
 [node name="TextureButton2" type="TextureButton" parent="."]
-margin_left = -955.997
-margin_top = -62.3206
-margin_right = -439.997
-margin_bottom = 453.679
-rect_rotation = 358.881
+margin_left = -869.55
+margin_top = 59.3132
+margin_right = -353.55
+margin_bottom = 575.313
+rect_rotation = 180.366
 rect_scale = Vector2( 0.209839, 0.209839 )
 texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 5 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 5 )
 
 [node name="Tween" type="Tween" parent="."]
 

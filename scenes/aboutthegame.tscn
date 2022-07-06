@@ -83,11 +83,11 @@ __meta__ = {
 margin_left = -910.0
 margin_top = -306.0
 margin_right = 906.0
-margin_bottom = 460.0
+margin_bottom = 405.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 margin_right = 1804.0
-margin_bottom = 8631.0
+margin_bottom = 8839.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -243,26 +243,26 @@ align = 3
 [node name="bolas" type="Label" parent="ScrollContainer/VBoxContainer"]
 margin_top = 5257.0
 margin_right = 1804.0
-margin_bottom = 5366.0
+margin_bottom = 5478.0
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
 custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
 custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Buttons"
+text = "Buttons
+"
 align = 1
 
 [node name="text6" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 5370.0
+margin_top = 5482.0
 margin_right = 1804.0
-margin_bottom = 8631.0
+margin_bottom = 8839.0
 rect_pivot_offset = Vector2( 150.091, 61.528 )
 custom_colors/font_color = Color( 0.807843, 0.964706, 0.960784, 1 )
 custom_colors/font_outline_modulate = Color( 0.823529, 0.956863, 0.952941, 1 )
 custom_colors/font_color_shadow = Color( 0.698039, 0.933333, 0.92549, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "
-							                                   Click to start a game round.
+text = "							                                   Click to start a game round.
 															
 
 
@@ -294,102 +294,105 @@ text = "
 
 
 
-                                Click to enter fullscreen."
+                                Click to enter fullscreen.
+								
+								"
 
 [node name="Setas" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 164.902, 8464.44 )
+position = Vector2( 164.902, 8581.04 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 15 )
 
 [node name="Historico" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 158.84, 8064.29 )
+position = Vector2( 158.84, 8180.88 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 8 )
 
 [node name="Money" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 161.857, 7698.05 )
+position = Vector2( 161.857, 7814.64 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 11 )
 
 [node name="Info" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 161.857, 7322.88 )
+position = Vector2( 161.857, 7439.47 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 7 )
 
 [node name="Csom" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 161.857, 6943.2 )
+position = Vector2( 161.857, 7059.79 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 14 )
 
 [node name="Options" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 166.382, 6544.11 )
+position = Vector2( 166.382, 6660.7 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 10 )
 
 [node name="Fast" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 164.873, 6158.46 )
+position = Vector2( 164.873, 6275.05 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 9 )
 
 [node name="Replay" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 161.885, 5779.84 )
+position = Vector2( 161.885, 5896.43 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 12 )
 
 [node name="Play2" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 158.869, 5400.17 )
+position = Vector2( 158.869, 5516.76 )
 scale = Vector2( 0.494979, 0.494979 )
 texture = ExtResource( 13 )
 
 [node name="LightRay" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 731.659, 5602 )
+position = Vector2( 731.659, 5719.65 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay2" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 728.574, 5956.5 )
+position = Vector2( 728.574, 6074.15 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay3" type="Sprite" parent="ScrollContainer/VBoxContainer"]
+position = Vector2( 0, 120 )
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 6 )
 
 [node name="LightRay4" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 746.495, 6358.8 )
+position = Vector2( 746.494, 6476.45 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay5" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 736.035, 6781.37 )
+position = Vector2( 736.035, 6899.02 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay6" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 727.311, 7114.36 )
+position = Vector2( 727.311, 7232.01 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay7" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 727.313, 7498.98 )
+position = Vector2( 727.313, 7616.63 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 
 [node name="LightRay8" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 536.84, 8378.78 )
+position = Vector2( 536.84, 8496.43 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
 offset = Vector2( -2562.44, -71.2672 )
 
 [node name="LightRay9" type="Sprite" parent="ScrollContainer/VBoxContainer"]
-position = Vector2( 536.84, 8736.24 )
+position = Vector2( 536.84, 8853.89 )
 rotation = 1.5708
 scale = Vector2( 0.189718, 2.67263 )
 texture = ExtResource( 6 )
