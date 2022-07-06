@@ -355,14 +355,18 @@ func animPrizes():
 
 onready var totalPoints = 0
 
+onready var bigWinAnim = $Win/bw/bigWinAnim
+
 func givePoints(prizeID):
 	var pointsToGive
 	if prizeID == "bunny":
 		pointsToGive = 250
+		
 	elif prizeID == "lion":
 		pass
 	elif prizeID == "strongman":
 		pointsToGive = 200
+		
 	elif prizeID == "roulette":
 		bonusLvl._entra()
 	elif prizeID == "A":
@@ -374,7 +378,7 @@ func givePoints(prizeID):
 	elif prizeID == "J":
 		pointsToGive = 25
 	elif prizeID == "clown":
-		pointsToGive = 500
+		pointsToGive = 5 * main.bet
 	elif prizeID == "elephant":
 		pointsToGive = 300
 
