@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=144 format=2]
-=======
-[gd_scene load_steps=146 format=2]
->>>>>>> Stashed changes
 
 [ext_resource path="res://Scripts/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/UI/UIBaixo.png" type="Texture" id=2]
