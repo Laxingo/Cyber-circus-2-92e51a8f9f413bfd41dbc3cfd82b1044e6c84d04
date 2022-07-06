@@ -2957,6 +2957,18 @@ tracks/29/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/30/type = "value"
+tracks/30/path = NodePath("Roda/luzesentreaspas/Luzrosa:visible")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=55]
 resource_name = "4rodaroda"
@@ -3660,7 +3672,7 @@ tracks/11/keys = {
 
 [sub_resource type="Animation" id=59]
 resource_name = "winamarelo"
-length = 3.0
+length = 10.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Roda/luzesentreaspas/Luzrosa:self_modulate")
 tracks/0/interp = 1
@@ -3912,7 +3924,7 @@ tracks/22/loop_wrap = true
 tracks/22/imported = false
 tracks/22/enabled = true
 tracks/22/keys = {
-"times": PoolRealArray( 0, 2.2, 2.5 ),
+"times": PoolRealArray( 0, 5.2, 5.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, false, true ]
@@ -3924,7 +3936,7 @@ tracks/23/loop_wrap = true
 tracks/23/imported = false
 tracks/23/enabled = true
 tracks/23/keys = {
-"times": PoolRealArray( 0, 2.2, 2.5 ),
+"times": PoolRealArray( 0, 5.2, 5.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, false, true ]
@@ -3984,10 +3996,10 @@ tracks/28/loop_wrap = true
 tracks/28/imported = false
 tracks/28/enabled = true
 tracks/28/keys = {
-"times": PoolRealArray( 0.1, 2.4, 3 ),
+"times": PoolRealArray( 0.1, 2.4, 6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -61.9584, 675.643 ), Vector2( -61.9584, 675.643 ), Vector2( -44.256, -4.42566 ) ]
+"values": [ Vector2( -61.9584, 675.643 ), Vector2( -219.119, 655.857 ), Vector2( -201.11, -111.061 ) ]
 }
 tracks/29/type = "value"
 tracks/29/path = NodePath("winamarelo:rect_rotation")
@@ -4024,6 +4036,26 @@ tracks/31/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
+}
+tracks/32/type = "bezier"
+tracks/32/path = NodePath("winamarelo:rect_scale:x")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/keys = {
+"points": PoolRealArray( 3.71567, -0.25, 0, 0.25, 0, 5.09398, -0.25, 0, 0.25, 0, 3.71567, -0.25, 0, 0.25, 0, 5.09398, -0.25, 0, 0.25, 0, 3.71567, -0.25, 0, 0.25, 0, 5.09398, -0.25, 0, 0.25, 0, 3.71567, -0.25, 0, 0.25, 0, 5.09398, -0.25, 0, 0.25, 0, 3.71567, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 6.3, 6.7, 7.1, 7.5, 7.9, 8.3, 8.8, 9.2, 10 )
+}
+tracks/33/type = "bezier"
+tracks/33/path = NodePath("winamarelo:rect_scale:y")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/keys = {
+"points": PoolRealArray( 2.88735, -0.25, 0, 0.25, 0, 3.9584, -0.25, 0, 0.25, 0, 2.88735, -0.25, 0, 0.25, 0, 3.9584, -0.25, 0, 0.25, 0, 2.88735, -0.25, 0, 0.25, 0, 3.9584, -0.25, 0, 0.25, 0, 2.88735, -0.25, 0, 0.25, 0, 3.9584, -0.25, 0, 0.25, 0, 2.88735, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 6.3, 6.7, 7.1, 7.5, 7.9, 8.3, 8.8, 9.2, 10 )
 }
 
 [sub_resource type="Animation" id=60]
@@ -4383,7 +4415,7 @@ tracks/30/keys = {
 
 [sub_resource type="Animation" id=61]
 resource_name = "winazul"
-length = 3.0
+length = 10.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Roda/luzesentreaspas/Luzrosa:self_modulate")
 tracks/0/interp = 1
@@ -4603,7 +4635,7 @@ tracks/19/loop_wrap = true
 tracks/19/imported = false
 tracks/19/enabled = true
 tracks/19/keys = {
-"times": PoolRealArray( 0, 2.2, 2.5 ),
+"times": PoolRealArray( 0, 5.2, 5.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, false, true ]
@@ -4615,7 +4647,7 @@ tracks/20/loop_wrap = true
 tracks/20/imported = false
 tracks/20/enabled = true
 tracks/20/keys = {
-"times": PoolRealArray( 0, 2.2, 2.5 ),
+"times": PoolRealArray( 0, 5.2, 5.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, false, true ]
@@ -4675,7 +4707,7 @@ tracks/25/loop_wrap = true
 tracks/25/imported = false
 tracks/25/enabled = true
 tracks/25/keys = {
-"times": PoolRealArray( 0, 2.4, 3 ),
+"times": PoolRealArray( 0, 2.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
@@ -4699,10 +4731,10 @@ tracks/27/loop_wrap = true
 tracks/27/imported = false
 tracks/27/enabled = true
 tracks/27/keys = {
-"times": PoolRealArray( 2.4, 3 ),
+"times": PoolRealArray( 2.4, 5.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -82.6113, 808.411 ), Vector2( -26.5536, -36.8801 ) ]
+"values": [ Vector2( -204.111, 639.348 ), Vector2( -216.118, -97.5532 ) ]
 }
 tracks/28/type = "value"
 tracks/28/path = NodePath("winazul:visible")
@@ -4787,6 +4819,26 @@ tracks/34/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
+}
+tracks/35/type = "bezier"
+tracks/35/path = NodePath("winazul:rect_scale:x")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/keys = {
+"points": PoolRealArray( 3.71567, -0.25, 0, 0.25, 0, 3.71567, -0.25, 0, 0.25, 0, 5.48699, -0.25, 0, 0.25, 0, 3.71567, -0.25, 0, 0.25, 0, 5.48699, -0.25, 0, 0.25, 0, 3.71567, -0.25, 0, 0.25, 0, 5.48699, -0.25, 0, 0.25, 0, 3.71567, -0.25, 0, 0.25, 0, 5.48699, -0.25, 0, 0.25, 0, 3.71567, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 6.2, 6.7, 7.2, 7.7, 8.2, 8.7, 9.2, 9.7, 10 )
+}
+tracks/36/type = "bezier"
+tracks/36/path = NodePath("winazul:rect_scale:y")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/keys = {
+"points": PoolRealArray( 3.10045, -0.25, 0, 0.25, 0, 3.10045, -0.25, 0, 0.25, 0, 4.57848, -0.25, 0, 0.25, 0, 3.10045, -0.25, 0, 0.25, 0, 4.57848, -0.25, 0, 0.25, 0, 3.10045, -0.25, 0, 0.25, 0, 4.57848, -0.25, 0, 0.25, 0, 3.10045, -0.25, 0, 0.25, 0, 4.57848, -0.25, 0, 0.25, 0, 3.10045, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 6.2, 6.7, 7.2, 7.7, 8.2, 8.7, 9.2, 9.7, 10 )
 }
 
 [sub_resource type="Animation" id=62]
@@ -5090,7 +5142,7 @@ tracks/25/keys = {
 
 [sub_resource type="Animation" id=63]
 resource_name = "winrosa"
-length = 3.0
+length = 10.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Roda/luzesentreaspas/Luzrosa:self_modulate")
 tracks/0/interp = 1
@@ -5146,7 +5198,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 2.2, 2.5 ),
+"times": PoolRealArray( 0, 5.2, 5.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, false, true ]
@@ -5158,7 +5210,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 2.2, 2.5 ),
+"times": PoolRealArray( 0, 5.2, 5.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, false, true ]
@@ -5346,10 +5398,10 @@ tracks/22/loop_wrap = true
 tracks/22/imported = false
 tracks/22/enabled = true
 tracks/22/keys = {
-"times": PoolRealArray( 2.4, 3 ),
+"times": PoolRealArray( 2.3, 5.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -50.1567, 783.333 ), Vector2( -25.0785, 20.653 ) ]
+"values": [ Vector2( -189.103, 612.333 ), Vector2( -199.609, -93.0508 ) ]
 }
 tracks/23/type = "value"
 tracks/23/path = NodePath("winrosa:rect_rotation")
@@ -5370,7 +5422,7 @@ tracks/24/loop_wrap = true
 tracks/24/imported = false
 tracks/24/enabled = true
 tracks/24/keys = {
-"times": PoolRealArray( 2.6, 3 ),
+"times": PoolRealArray( 2.5, 3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
@@ -5410,6 +5462,26 @@ tracks/27/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
+}
+tracks/28/type = "bezier"
+tracks/28/path = NodePath("winrosa:rect_scale:x")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"points": PoolRealArray( 3.71567, -0.25, 0, 0.25, 0, 5.34483, -0.25, 0, 0.25, 0, 3.71567, -0.25, 0, 0.25, 0, 5.34483, -0.25, 0, 0.25, 0, 3.71567, -0.25, 0, 0.25, 0, 5.34483, -0.25, 0, 0.25, 0, 3.71567, -0.25, 0, 0.25, 0, 5.34483, -0.25, 0, 0.25, 0, 3.71567, -0.25, 0, 0.25, 0, 5.34483, -0.25, 0, 0.25, 0, 3.71567, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 6.2, 6.6, 7, 7.4, 7.8, 8.2, 8.6, 9, 9.4, 9.8, 10 )
+}
+tracks/29/type = "bezier"
+tracks/29/path = NodePath("winrosa:rect_scale:y")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"points": PoolRealArray( 3.10045, -0.25, 0, 0.25, 0, 4.45986, -0.25, 0, 0.25, 0, 3.10045, -0.25, 0, 0.25, 0, 4.45986, -0.25, 0, 0.25, 0, 3.10045, -0.25, 0, 0.25, 0, 4.45986, -0.25, 0, 0.25, 0, 3.10045, -0.25, 0, 0.25, 0, 4.45986, -0.25, 0, 0.25, 0, 3.10045, -0.25, 0, 0.25, 0, 4.45986, -0.25, 0, 0.25, 0, 3.10045, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 6.2, 6.6, 7, 7.4, 7.8, 8.2, 8.6, 9, 9.4, 9.8, 10 )
 }
 
 [sub_resource type="Animation" id=64]
@@ -5672,7 +5744,7 @@ tracks/22/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -25.0785, 20.653 ) ]
+"values": [ Vector2( -186.102, -97.5533 ) ]
 }
 tracks/23/type = "value"
 tracks/23/path = NodePath("winrosa:rect_rotation")
@@ -5882,7 +5954,6 @@ tracks/3/keys = {
 [sub_resource type="Animation" id=70]
 resource_name = "click"
 length = 3.0
-loop = true
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("click:rect_scale:x")
 tracks/0/interp = 1
@@ -7456,13 +7527,14 @@ script = ExtResource( 34 )
 z_index = 2
 
 [node name="bonus" type="Label" parent="Node2D/Node2D"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = -247.0
 margin_top = -83.0
 margin_right = 234.0
 margin_bottom = 142.001
-rect_rotation = -13.9058
-rect_scale = Vector2( -0.0157572, -0.0157572 )
+rect_rotation = 335.302
+rect_scale = Vector2( 0.16019, 0.16019 )
 rect_pivot_offset = Vector2( 232.421, 139.313 )
 custom_colors/font_color = Color( 0.956863, 0.905882, 0.752941, 1 )
 custom_fonts/font = SubResource( 51 )
@@ -7492,39 +7564,43 @@ z_index = 1
 texture = ExtResource( 4 )
 
 [node name="winamarelo" type="Label" parent="Node2D"]
-visible = false
-margin_left = -44.256
-margin_top = -4.42566
-margin_right = 345.744
-margin_bottom = 132.574
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -201.11
+margin_top = -111.061
+margin_right = 188.89
+margin_bottom = 25.9398
 rect_scale = Vector2( 3.71567, 2.88735 )
-rect_pivot_offset = Vector2( 257.053, 78.903 )
+rect_pivot_offset = Vector2( 190.985, 73.9483 )
 custom_colors/font_outline_modulate = Color( 0.92549, 0.713726, 0.203922, 1 )
 custom_fonts/font = SubResource( 50 )
 text = "1000000"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="winrosa" type="Label" parent="Node2D"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = -25.0785
-margin_top = 20.653
-margin_right = 364.922
-margin_bottom = 157.653
+margin_left = -186.102
+margin_top = -97.5533
+margin_right = 203.899
+margin_bottom = 39.4467
 rect_scale = Vector2( 3.71567, 3.10045 )
-rect_pivot_offset = Vector2( 257.053, 78.903 )
+rect_pivot_offset = Vector2( 201.628, 73.7279 )
 custom_colors/font_outline_modulate = Color( 0.937255, 0.2, 0.980392, 1 )
 custom_fonts/font = SubResource( 50 )
 text = "1000000"
 align = 1
 
 [node name="winazul" type="Label" parent="Node2D"]
-visible = false
-margin_left = -26.5536
-margin_top = -36.8801
-margin_right = 363.447
-margin_bottom = 100.12
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -216.118
+margin_top = -97.5532
+margin_right = 173.883
+margin_bottom = 39.4469
 rect_scale = Vector2( 3.71567, 3.10045 )
-rect_pivot_offset = Vector2( 257.053, 78.903 )
+rect_pivot_offset = Vector2( 194.615, 71.1579 )
 custom_colors/font_outline_modulate = Color( 0.0784314, 0.803922, 1, 1 )
 custom_fonts/font = SubResource( 50 )
 text = "1000000"
@@ -7536,14 +7612,13 @@ __meta__ = {
 [node name="Roda" type="Sprite" parent="Node2D"]
 visible = false
 light_mask = 4
-position = Vector2( -6.00354, 16.5088 )
+position = Vector2( -10, 31.1199 )
 scale = Vector2( 0.843503, 0.841322 )
 z_index = -3
 texture = ExtResource( 48 )
 offset = Vector2( 10.6152, -7.34839 )
 
 [node name="luzesentreaspas" type="Node2D" parent="Node2D/Roda"]
-visible = false
 position = Vector2( 175, -196 )
 
 [node name="Centroazulrosa" type="Sprite" parent="Node2D/Roda/luzesentreaspas"]
@@ -7571,15 +7646,15 @@ z_index = 1
 texture = ExtResource( 51 )
 
 [node name="Luzmuitoamarela" type="Sprite" parent="Node2D/Roda/luzesentreaspas"]
-visible = false
-self_modulate = Color( 0.992157, 1, 0, 1 )
+self_modulate = Color( 1, 1, 1, 0.537255 )
 position = Vector2( -183, 206 )
-scale = Vector2( 2.62819, 2.62819 )
+scale = Vector2( 0.210555, 0.210555 )
 texture = ExtResource( 57 )
 
 [node name="Luzrosa" type="Sprite" parent="Node2D/Roda/luzesentreaspas"]
+visible = false
 modulate = Color( 1, 0, 0.933333, 1 )
-self_modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 0.0313726, 0.909804, 0 )
 position = Vector2( -187, 207 )
 scale = Vector2( 1.91159, 1.91159 )
 texture = ExtResource( 58 )
@@ -7587,7 +7662,7 @@ texture = ExtResource( 58 )
 [node name="Luzrosa" type="Sprite" parent="Node2D/Roda/luzesentreaspas/Luzrosa"]
 visible = false
 modulate = Color( 1, 0, 0.933333, 1 )
-self_modulate = Color( 1, 0, 0.960784, 1 )
+self_modulate = Color( 1, 0.54148, 0.982019, 0.743062 )
 position = Vector2( 0.576416, -2.41053 )
 scale = Vector2( -0.89981, -0.89981 )
 texture = ExtResource( 58 )
@@ -7918,6 +7993,7 @@ z_index = -3
 texture = ExtResource( 73 )
 
 [node name="KnifeSpritesheet" type="Sprite" parent="Node2D/faca"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 707, 145 )
 rotation = 0.299158
