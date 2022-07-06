@@ -7585,17 +7585,10 @@ __meta__ = {
 [node name="winrosa" type="Label" parent="Node2D"]
 visible = false
 self_modulate = Color( 1, 1, 1, 0 )
-<<<<<<< Updated upstream
-margin_left = -186.102
-margin_top = -97.5533
-margin_right = 203.899
-margin_bottom = 39.4467
-=======
 margin_left = -22.5126
 margin_top = 21.0113
 margin_right = 367.488
 margin_bottom = 158.011
->>>>>>> Stashed changes
 rect_scale = Vector2( 3.71567, 3.10045 )
 rect_pivot_offset = Vector2( 201.628, 73.7279 )
 custom_colors/font_outline_modulate = Color( 0.937255, 0.2, 0.980392, 1 )
