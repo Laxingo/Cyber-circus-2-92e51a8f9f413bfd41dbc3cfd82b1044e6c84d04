@@ -1,4 +1,4 @@
-[gd_scene load_steps=147 format=2]
+[gd_scene load_steps=143 format=2]
 
 [ext_resource path="res://Scripts/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/UI/UIBaixo.png" type="Texture" id=2]
@@ -5992,7 +5992,7 @@ tracks/5/keys = {
 "values": [ true ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("d:self_modulate")
+tracks/6/path = NodePath("KnifeGlow:self_modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -6004,7 +6004,7 @@ tracks/6/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("d:scale")
+tracks/7/path = NodePath("KnifeGlow:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -6016,7 +6016,7 @@ tracks/7/keys = {
 "values": [ Vector2( 0.692866, 0.692866 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("d:position")
+tracks/8/path = NodePath("KnifeGlow:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -6028,7 +6028,7 @@ tracks/8/keys = {
 "values": [ Vector2( 706.622, 146.045 ), Vector2( 706.622, 146.045 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("d:rotation_degrees")
+tracks/9/path = NodePath("KnifeGlow:rotation_degrees")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -6117,7 +6117,7 @@ tracks/5/keys = {
 "values": [ true ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("d:self_modulate")
+tracks/6/path = NodePath("KnifeGlow:self_modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -6129,7 +6129,7 @@ tracks/6/keys = {
 "values": [ Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("d:scale")
+tracks/7/path = NodePath("KnifeGlow:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -6141,7 +6141,7 @@ tracks/7/keys = {
 "values": [ Vector2( 0.692866, 0.692866 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("d:position")
+tracks/8/path = NodePath("KnifeGlow:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -6153,7 +6153,7 @@ tracks/8/keys = {
 "values": [ Vector2( 706.622, 146.045 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("d:rotation_degrees")
+tracks/9/path = NodePath("KnifeGlow:rotation_degrees")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -7461,8 +7461,8 @@ margin_left = -247.0
 margin_top = -83.0
 margin_right = 234.0
 margin_bottom = 142.001
-rect_rotation = 335.302
-rect_scale = Vector2( 0.16019, 0.16019 )
+rect_rotation = -13.9058
+rect_scale = Vector2( -0.0157572, -0.0157572 )
 rect_pivot_offset = Vector2( 232.421, 139.313 )
 custom_colors/font_color = Color( 0.956863, 0.905882, 0.752941, 1 )
 custom_fonts/font = SubResource( 51 )
@@ -7505,6 +7505,7 @@ text = "1000000"
 align = 1
 
 [node name="winrosa" type="Label" parent="Node2D"]
+self_modulate = Color( 1, 1, 1, 0 )
 margin_left = -25.0785
 margin_top = 20.653
 margin_right = 364.922
@@ -7547,22 +7548,23 @@ position = Vector2( 175, -196 )
 
 [node name="Centroazulrosa" type="Sprite" parent="Node2D/Roda/luzesentreaspas"]
 visible = false
-self_modulate = Color( 1, 1, 1, 0.913725 )
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -181, 197 )
 scale = Vector2( 2.16528, 2.16528 )
 z_index = 3
 texture = ExtResource( 49 )
 
 [node name="Luzamarela" type="Sprite" parent="Node2D/Roda/luzesentreaspas"]
-self_modulate = Color( 1, 1, 1, 0.439216 )
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -185, 200 )
 scale = Vector2( -1.94892, -1.94892 )
 z_index = 2
 texture = ExtResource( 50 )
 
 [node name="Luzazul" type="Sprite" parent="Node2D/Roda/luzesentreaspas"]
+visible = false
 modulate = Color( 0.0156863, 1, 0.984314, 1 )
-self_modulate = Color( 1, 1, 1, 0.596078 )
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -196, 210 )
 scale = Vector2( -2.08383, -2.08383 )
 z_index = 1
@@ -7577,7 +7579,7 @@ texture = ExtResource( 57 )
 
 [node name="Luzrosa" type="Sprite" parent="Node2D/Roda/luzesentreaspas"]
 modulate = Color( 1, 0, 0.933333, 1 )
-self_modulate = Color( 1, 1, 1, 0.654902 )
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -187, 207 )
 scale = Vector2( 1.91159, 1.91159 )
 texture = ExtResource( 58 )
@@ -7691,23 +7693,23 @@ shadow_item_cull_mask = 2
 
 [node name="CurtainLeft" type="Sprite" parent="Node2D"]
 light_mask = 0
-position = Vector2( -482, 63 )
+position = Vector2( -1452, -47 )
+rotation = 0.204205
 scale = Vector2( 1, 1.08382 )
 z_index = 1
 texture = ExtResource( 54 )
 hframes = 6
 vframes = 4
-frame = 23
 
 [node name="CurtainRight" type="Sprite" parent="Node2D"]
 light_mask = 0
-position = Vector2( 494, 60 )
+position = Vector2( 1498, -24 )
+rotation = -0.147226
 scale = Vector2( 1, 1.07309 )
 texture = ExtResource( 54 )
 flip_h = true
 hframes = 6
 vframes = 4
-frame = 23
 
 [node name="particulas" type="Node2D" parent="Node2D"]
 visible = false
@@ -7906,19 +7908,19 @@ hue_variation = 1.0
 
 [node name="faca" type="Node2D" parent="Node2D"]
 
-[node name="d" type="Sprite" parent="Node2D/faca"]
+[node name="KnifeGlow" type="Sprite" parent="Node2D/faca"]
 modulate = Color( 0.968627, 0.713726, 0.898039, 1 )
-self_modulate = Color( 1, 1, 1, 0.827659 )
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 706.622, 146.045 )
 rotation = 0.300399
-scale = Vector2( 0.735384, 0.735384 )
+scale = Vector2( 0.692866, 0.692866 )
 z_index = -3
 texture = ExtResource( 73 )
 
 [node name="KnifeSpritesheet" type="Sprite" parent="Node2D/faca"]
-visible = false
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 707, 145 )
-rotation = -0.0127988
+rotation = 0.299158
 scale = Vector2( 0.74994, 0.74994 )
 z_index = -2
 texture = ExtResource( 53 )
@@ -8070,6 +8072,7 @@ stream = ExtResource( 82 )
 stream = ExtResource( 83 )
 
 [node name="TransMP3" type="AudioStreamPlayer2D" parent="Node2D"]
+stream = ExtResource( 85 )
 
 [node name="WinMP3" type="AudioStreamPlayer2D" parent="Node2D"]
 stream = ExtResource( 84 )
