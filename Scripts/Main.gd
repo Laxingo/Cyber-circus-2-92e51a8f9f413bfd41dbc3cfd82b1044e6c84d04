@@ -10,11 +10,11 @@ var popedup2 = false
 onready var slot = $ViewportContainer/Viewport/SlotMachine
 onready var lightAnim = $Luzes/AnimationPlayer
 
-onready var musicAudio = preload("res://sound/music/Ambience.mp3")
+
 onready var buttonHoverSound = preload("res://sound/button/Cyber Circus Button Hover-001.mp3")
 
 
-onready var jukebox = $Audios/Jukebox
+
 onready var buttonsAudio = $Audios/playBtnAudio
 onready var optionsAudio = $Audios/optionsBtnAudio
 
@@ -35,10 +35,8 @@ var moneyBet = bet * denom
 func _ready():
 	slot.connect("stopped", self, "_on_slot_machine_stopped")
 	lightAnim.play("luz")
-	jukebox.stream = musicAudio
 
 func _process(delta):
-	_jukebox()
 	bet = betValue * level
 	moneyBet = bet * denom
 	moneybetLBL.text = "$" + str(moneyBet)
@@ -46,12 +44,7 @@ func _process(delta):
 	levelLBL.text = str(level)
 	betLBL.text = str(bet)
 
-func _jukebox():
-	if !jukebox.is_playing():
-		jukebox.stream = musicAudio
-		jukebox.play()
-		yield(get_tree().create_timer(jukebox.stream.get_length()), "timeout")
-		jukebox.stop()
+
 
 func _on_Roll2_button_down():
 	if bet <= credits && bet != 0:

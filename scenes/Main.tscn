@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=144 format=2]
+=======
+[gd_scene load_steps=146 format=2]
+>>>>>>> Stashed changes
 
 [ext_resource path="res://Scripts/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/UI/UIBaixo.png" type="Texture" id=2]
@@ -81,6 +85,11 @@
 [ext_resource path="res://Imagens/particulas/6.png" type="Texture" id=79]
 [ext_resource path="res://Imagens/particulas/5.png" type="Texture" id=80]
 [ext_resource path="res://Imagens/particulas/1.png" type="Texture" id=81]
+[ext_resource path="res://sound/bonus/Bonus_KnifeThrow.mp3" type="AudioStream" id=82]
+[ext_resource path="res://sound/bonus/Bonus_Music.mp3" type="AudioStream" id=83]
+[ext_resource path="res://sound/bonus/Bonus_Win.mp3" type="AudioStream" id=84]
+[ext_resource path="res://sound/bonus/Bonus_Transition.mp3" type="AudioStream" id=85]
+[ext_resource path="res://sound/music/Ambience.mp3" type="AudioStream" id=86]
 
 [sub_resource type="Animation" id=2]
 resource_name = "luz"
@@ -6018,10 +6027,10 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 706.622, 146.045 ) ]
+"values": [ Vector2( 706.622, 146.045 ), Vector2( 706.622, 146.045 ) ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("KnifeGlow:rotation_degrees")
@@ -6030,10 +6039,10 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.506523 ]
+"values": [ 17.2116, 17.2116 ]
 }
 
 [sub_resource type="Animation" id=72]
@@ -6158,7 +6167,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.506523 ]
+"values": [ 17.1523 ]
 }
 
 [sub_resource type="CircleShape2D" id=48]
@@ -8084,8 +8093,6 @@ volume_db = 3.4
 [node name="optionsBtnAudio" type="AudioStreamPlayer2D" parent="Audios"]
 stream = ExtResource( 35 )
 
-[node name="Jukebox" type="AudioStreamPlayer2D" parent="Audios"]
-
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 959.022, 492.268 )
 z_index = 4
@@ -8548,20 +8555,19 @@ hue_variation = 1.0
 modulate = Color( 0.968627, 0.713726, 0.898039, 1 )
 self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 706.622, 146.045 )
-rotation = 0.00884049
-scale = Vector2( 0.858668, 0.858668 )
+rotation = 0.300399
+scale = Vector2( 0.692866, 0.692866 )
 texture = ExtResource( 73 )
 
 [node name="KnifeSpritesheet" type="Sprite" parent="Node2D/faca"]
-visible = false
-position = Vector2( 42.0228, 52.5284 )
-rotation = -0.0127988
-scale = Vector2( 0.523511, 0.523511 )
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 707, 145 )
+rotation = 0.299158
+scale = Vector2( 0.74994, 0.74994 )
 z_index = 6
 texture = ExtResource( 53 )
 hframes = 5
 vframes = 2
-frame = 9
 region_rect = Rect2( 2135.22, 87.611, 411.403, 395.878 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/faca"]
@@ -8700,6 +8706,22 @@ range_item_cull_mask = 16384
 shadow_filter_smooth = 64.0
 
 [node name="Tween" type="Tween" parent="Node2D"]
+
+[node name="KnifeSoundMP3" type="AudioStreamPlayer2D" parent="Node2D"]
+stream = ExtResource( 82 )
+
+[node name="MusicMP3" type="AudioStreamPlayer2D" parent="Node2D"]
+stream = ExtResource( 83 )
+
+[node name="TransMP3" type="AudioStreamPlayer2D" parent="Node2D"]
+stream = ExtResource( 85 )
+
+[node name="WinMP3" type="AudioStreamPlayer2D" parent="Node2D"]
+stream = ExtResource( 84 )
+
+[node name="Jukebox" type="AudioStreamPlayer2D" parent="Node2D"]
+position = Vector2( -959.022, -492.268 )
+stream = ExtResource( 86 )
 
 [node name="BonusBtn" type="TextureButton" parent="."]
 margin_left = 1.501
@@ -9085,7 +9107,6 @@ scale_amount = 0.02
 [connection signal="mouse_entered" from="options2" to="." method="_on_options2_mouse_entered"]
 [connection signal="button_down" from="replay" to="." method="_on_replay_button_down"]
 [connection signal="mouse_entered" from="replay" to="." method="_on_replay_mouse_entered"]
-[connection signal="finished" from="Audios/Jukebox" to="." method="_on_AudioStreamPlayer2D_finished"]
 [connection signal="area_entered" from="Node2D/Roda/Hitboxes/Rosa1" to="Node2D" method="_on_Rosa1_area_entered"]
 [connection signal="area_entered" from="Node2D/Roda/Hitboxes/Rosa 2" to="Node2D" method="_on_Rosa_2_area_entered"]
 [connection signal="area_entered" from="Node2D/Roda/Hitboxes/Rosa 3" to="Node2D" method="_on_Rosa_3_area_entered"]
@@ -9095,4 +9116,7 @@ scale_amount = 0.02
 [connection signal="area_entered" from="Node2D/Roda/Hitboxes/Amarelo 3" to="Node2D" method="_on_Amarelo_3_area_entered"]
 [connection signal="area_entered" from="Node2D/Roda/Hitboxes/Amarelo 4" to="Node2D" method="_on_Amarelo_4_area_entered"]
 [connection signal="pressed" from="Node2D/RodaBtn" to="Node2D" method="_on_RodaBtn_pressed"]
+[connection signal="finished" from="Node2D/KnifeSoundMP3" to="Node2D" method="_on_KnifeSoundMP3_finished"]
+[connection signal="finished" from="Node2D/WinMP3" to="Node2D" method="_on_WinMP3_finished"]
+[connection signal="finished" from="Node2D/Jukebox" to="." method="_on_AudioStreamPlayer2D_finished"]
 [connection signal="button_down" from="BonusBtn" to="Node2D" method="_on_BonusBtn_button_down"]
