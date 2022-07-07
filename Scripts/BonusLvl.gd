@@ -237,14 +237,13 @@ func winSoundFunc():
 	winMP3.play()
 	yield(get_tree().create_timer(winMP3.stream.get_length()), "timeout")
 	winMP3.stop()
-	
 
-
-func _on_BonusBtn_button_down():
-	print("Bonus LVL")
-	_entra()
-
-
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.scancode == KEY_B:
+			_entra()
+			
+			
 func _on_KnifeSoundMP3_finished():
 	knifeMP3.stop()
 	pass # Replace with function body.

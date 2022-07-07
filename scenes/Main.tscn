@@ -1,4 +1,4 @@
-[gd_scene load_steps=143 format=2]
+[gd_scene load_steps=142 format=2]
 
 [ext_resource path="res://Scripts/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/UI/UIBaixo.png" type="Texture" id=2]
@@ -67,7 +67,6 @@
 [ext_resource path="res://Imagens/UI/-hmini.png" type="Texture" id=66]
 [ext_resource path="res://Imagens/UI/-.png" type="Texture" id=67]
 [ext_resource path="res://Imagens/UI/8a9bb8d775ae49a8.png" type="Texture" id=68]
-[ext_resource path="res://Imagens/Simbolos/CyberCircus_Rolette.png" type="Texture" id=69]
 [ext_resource path="res://sound/reels spin/Reel_Stopping.mp3" type="AudioStream" id=70]
 [ext_resource path="res://Imagens/Simbolos/CyberCircus_Bunny.png" type="Texture" id=71]
 [ext_resource path="res://Imagens/Simbolos/CyberCircus_GeorgeCloony.png" type="Texture" id=72]
@@ -8170,16 +8169,6 @@ stream = ExtResource( 84 )
 position = Vector2( -959.022, -492.268 )
 stream = ExtResource( 86 )
 
-[node name="BonusBtn" type="TextureButton" parent="."]
-margin_left = 1.501
-margin_top = 33.018
-margin_right = 517.501
-margin_bottom = 549.018
-rect_rotation = -15.8296
-rect_scale = Vector2( 0.280864, 0.280864 )
-texture_normal = ExtResource( 69 )
-texture_hover = ExtResource( 69 )
-
 [node name="Win" type="Node2D" parent="."]
 position = Vector2( 834.454, 205.612 )
 scale = Vector2( 0.551286, 0.551286 )
@@ -8555,4 +8544,3 @@ scale_amount = 0.02
 [connection signal="finished" from="Node2D/KnifeSoundMP3" to="Node2D" method="_on_KnifeSoundMP3_finished"]
 [connection signal="finished" from="Node2D/WinMP3" to="Node2D" method="_on_WinMP3_finished"]
 [connection signal="finished" from="Node2D/Jukebox" to="." method="_on_AudioStreamPlayer2D_finished"]
-[connection signal="button_down" from="BonusBtn" to="Node2D" method="_on_BonusBtn_button_down"]
