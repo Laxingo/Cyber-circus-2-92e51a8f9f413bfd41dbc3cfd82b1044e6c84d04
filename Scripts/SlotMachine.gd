@@ -39,8 +39,7 @@ var tiles_moved_per_reel := []
 var runs_stopped := 0
 var total_runs : int
 
-export(Array, String) var symbolName := ["bunny", "lion","strongman", 
-"roulette","A", "J", "K", "Q", "clown", "elephant"];
+export(Array, String) var symbolName := ["bunny", "strongman", "elephant"];
 
 var bunny = 0
 var clown= 0
@@ -163,7 +162,8 @@ func _add_tile(col :int, row :int) -> void:
 	tiles.append(SlotTile.instance())
 	var tile := get_tile(col, row) 
 	var randomSymbol  = _randomIcones()
-	tile.get_node('Tween').connect("tween_completed", self, "_on_tile_moved", [], CONNECT_DEFERRED)
+	
+	tile.get_node('Tween').connect("tween_completed", self, "_on_tile_moved", [col], CONNECT_DEFERRED)
 	tile.set_icon(randomSymbol)
 	tile.set_size(tile_size)
 	tile.set_name(tile_name)
@@ -181,12 +181,16 @@ func start() -> void:
 		total_runs = expected_runs
 		_get_result()
 	for reel in reels:
+		_spin_reel(reel)
+		
+		
+		
+		
 		if reel == 0:
 			if !reelMelo.is_playing():
 				reelMelodyPlay()
 				reelMelo.play()
 			meloplayed = true
-		_spin_reel(reel)
 		if reel == 0:
 			reelSpinPlay(reel)
 		elif reel == 1:
@@ -212,6 +216,7 @@ func stop():
 	
 
 func _stop() -> void:
+	print("SDFGHJKLOJHGF")
 	for reel in reels:
 		tiles_moved_per_reel[reel] = 0
 		state = State.OFF
@@ -298,15 +303,14 @@ func reelSpinPlay(reelnmbr):
 		reelnmbr = 1
 	
   
-func _on_tile_moved(tile: SlotTile, _nodePath) -> void:
-	var reel := int(tile.position.x / tile_size.x)
-	tiles_moved_per_reel[reel] += 1
-	var reel_runs := current_runs(reel)
-	if (tile.position.y > grid_pos[0][-1].y):
+func _on_tile_moved(tile: SlotTile, _nodePath, column) -> void:
+	tiles_moved_per_reel[column] += 1
+	var reel_runs := current_runs(column)
+	if (tile.position.y > grid_pos[0][grid_pos.size() - 1].y):
 		tile.position.y = grid_pos[0][0].y
 	var current_idx = total_runs - reel_runs
 	if (current_idx < tiles_per_reel):
-		var result_icon = symbolName[result.tiles[reel][0]] 
+		var result_icon = symbolName[result.tiles[column][0]] 
 		var randomicon = _randomIcones()
 		tile.set_icon(randomicon)
 		tile.set_name(tile_name)
@@ -319,7 +323,7 @@ func _on_tile_moved(tile: SlotTile, _nodePath) -> void:
 		tile.move_by(Vector2(0, tile_size.y))
 	else: 
 		tile.spin_down()
-		if reel == reels - 1:
+		if column == reels - 1:
 			_stop()
 
 func current_runs(reel := 0) -> int:
@@ -387,21 +391,21 @@ var prizeType
 func getPrizes(result_masks):
 	var prizeInfo = [];
 	for i in result_masks.size():
+		modulate.a = 0.5
 		for p in  prizeMasks3.size():
 			if (result_masks[i] & prizeMasks3[p] == prizeMasks3[p]):
 				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
 				prizeType="Small"
-				modulate.a = 0.5
+
 		for p in  prizeMasks2.size():
 			if (result_masks[i] & prizeMasks2[p] == prizeMasks2[p]):
 				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
 				prizeType = "Medium"
-				modulate.a = 0.5
 		for p in  prizeMasks.size():
 			if (result_masks[i] & prizeMasks[p] == prizeMasks[p]):
 				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
 				prizeType = "Good"
-				modulate.a = 0.5
+
 
 
 	print("Prize  Info: ", prizeInfo);
@@ -421,7 +425,7 @@ func animPrizes():
 				coluna = _pcell % 5;
 				linha = int(floor(_pcell / 5));
 				
-				winTile = get_tile(coluna, linha)
+				winTile = get_tile(linha, coluna)
 				modulate.a = 1
 				winTile.animate_icon(prizeID)
 				givePoints(prizeID)

@@ -7538,8 +7538,8 @@ margin_left = -247.0
 margin_top = -83.0
 margin_right = 234.0
 margin_bottom = 142.001
-rect_rotation = 335.302
-rect_scale = Vector2( 0.16019, 0.16019 )
+rect_rotation = -13.9058
+rect_scale = Vector2( -0.0157572, -0.0157572 )
 rect_pivot_offset = Vector2( 232.421, 139.313 )
 custom_colors/font_color = Color( 0.956863, 0.905882, 0.752941, 1 )
 custom_fonts/font = SubResource( 51 )
@@ -7620,6 +7620,7 @@ text = "1000000"
 align = 1
 
 [node name="Roda" type="Sprite" parent="Node2D"]
+visible = false
 light_mask = 4
 position = Vector2( 2.95044, 10.3264 )
 scale = Vector2( 0.843503, 0.841322 )
@@ -8066,6 +8067,7 @@ modulate = Color( 0.423529, 0.0352941, 0.988235, 1 )
 shape = SubResource( 48 )
 
 [node name="CyberCircusArenaBonus" type="Sprite" parent="Node2D"]
+visible = false
 light_mask = 64
 position = Vector2( -14.752, 32.4548 )
 scale = Vector2( 1.03711, 1.03711 )
