@@ -2444,6 +2444,7 @@ scale = Vector2( 0.433319, 0.433319 )
 texture = ExtResource( 2 )
 
 [node name="Bunny" type="Sprite" parent="Sprite"]
+visible = false
 light_mask = 2
 position = Vector2( 346.165, -177.698 )
 scale = Vector2( 3.5, 2.11393 )
@@ -2629,7 +2630,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 109 )
 animation = "burn"
-frame = 2
+frame = 1
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="Sprite/Lion/Head"]
@@ -2647,7 +2648,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 110 )
 animation = "kwispy"
-frame = 6
+frame = 5
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite/Lion"]

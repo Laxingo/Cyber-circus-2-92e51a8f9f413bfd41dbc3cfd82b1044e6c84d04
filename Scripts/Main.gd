@@ -52,9 +52,7 @@ var lastCred
 
 func _ready():
 	slot.connect("stopped", self, "_on_slot_machine_stopped")
-	lightAnim.play("luz")
-	
-
+	lightAnim.play("luz")	
 
 func _process(delta):
 	var gudwin = get_node("ViewportContainer/Viewport/SlotMachine").goodWinToca
@@ -125,7 +123,6 @@ func _process(delta):
 	numerosBW.text = str(currentPoints)
 	numeros.text = str(currentPoints)
 
-
 func bigWin():
 	lastCred = credits
 	currentPoints = 0
@@ -177,7 +174,6 @@ func smallWin():
 		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
 		winsMP3.stop()
 		lightAnim.play("luz")
-	
 
 func _on_Roll2_button_down():
 	if bet <= credits && bet != 0:
@@ -222,21 +218,17 @@ func _on_replay_button_down():
 		popedup2 = false
 		popedup = false
 
-
-
 func _on_Level_Sub_Btn_button_down():
 		if level > 0:
 			level = level -1
 		else:
 			level = 0
 
-
 func _on_Level_Plus_Btn_button_down():
 		if level < 10:
 			level = level + 1
 		else:
 			level = 10
-
 
 func _on_Denom_Plus_Btn_button_down():
 		if denom == 0.01:
@@ -254,7 +246,6 @@ func _on_Denom_Plus_Btn_button_down():
 		elif denom == 0.20:
 			denom = 0.50
 			denomLBL.text = "0,50"
-
 
 func _on_Denom_Sub_Btn_button_down():
 		if denom == 0.50:
@@ -275,8 +266,6 @@ func _on_Denom_Sub_Btn_button_down():
 
 func _pointsToGive(points):
 	credits = credits + points
-	pass
-
 
 func _on_play_mouse_entered():
 	buttonsAudio.stream = buttonHoverSound
@@ -302,13 +291,11 @@ func _on_fast_mouse_entered():
 	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
 	optionsAudio.stop()
 
-
 func _on_historico_mouse_entered():
 	optionsAudio.stream = buttonHoverSound
 	optionsAudio.play()
 	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
 	optionsAudio.stop()
-
 
 func _on_money_mouse_entered():
 	optionsAudio.stream = buttonHoverSound
@@ -316,13 +303,11 @@ func _on_money_mouse_entered():
 	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
 	optionsAudio.stop()
 
-
 func _on_info_mouse_entered():
 	optionsAudio.stream = buttonHoverSound
 	optionsAudio.play()
 	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
 	optionsAudio.stop()
-
 
 func _on_10_mouse_entered():
 	optionsAudio.stream = buttonHoverSound
@@ -330,13 +315,11 @@ func _on_10_mouse_entered():
 	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
 	optionsAudio.stop()
 
-
 func _on_25_mouse_entered():
 	optionsAudio.stream = buttonHoverSound
 	optionsAudio.play()
 	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
 	optionsAudio.stop()
-
 
 func _on_50_mouse_entered():
 	optionsAudio.stream = buttonHoverSound
@@ -344,19 +327,17 @@ func _on_50_mouse_entered():
 	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
 	optionsAudio.stop()
 
-
 func _on_100_mouse_entered():
 	optionsAudio.stream = buttonHoverSound
 	optionsAudio.play()
 	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
 	optionsAudio.stop()
-	
+
 func _on_info_button_down():
 	optionsAudio.stream = buttonHoverSound
 	optionsAudio.play()
 	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
 	get_tree().change_scene("res://scenes/aboutthegame.tscn")
-
 
 func _on_historico_button_down():
 	optionsAudio.stream = buttonHoverSound
@@ -364,14 +345,8 @@ func _on_historico_button_down():
 	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
 	get_tree().change_scene("res://scenes/playhistory.tscn")
 
-
 func _on_money_button_down():
 	optionsAudio.stream = buttonHoverSound
 	optionsAudio.play()
 	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
 	get_tree().change_scene("res://scenes/symbolspayout.tscn")
-	
-
-
-func _on_ReelMelody_finished():
-	pass # Replace with function body.

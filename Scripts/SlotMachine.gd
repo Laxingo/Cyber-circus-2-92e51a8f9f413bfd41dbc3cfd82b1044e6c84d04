@@ -391,21 +391,25 @@ func getPrizes(result_masks):
 			if (result_masks[i] & prizeMasks3[p] == prizeMasks3[p]):
 				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
 				prizeType="Small"
+				modulate.a = 0.5
 		for p in  prizeMasks2.size():
 			if (result_masks[i] & prizeMasks2[p] == prizeMasks2[p]):
 				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
 				prizeType = "Medium"
+				modulate.a = 0.5
 		for p in  prizeMasks.size():
 			if (result_masks[i] & prizeMasks[p] == prizeMasks[p]):
 				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
 				prizeType = "Good"
+				modulate.a = 0.5
 
 
 	print("Prize  Info: ", prizeInfo);
 	return prizeInfo;
 
 func animPrizes():
-	var winTile
+	var winTile = Sprite
+	
 	var linha
 	var coluna
 	for p in prizesToAnim.size():
@@ -413,12 +417,12 @@ func animPrizes():
 			var prizeID = symbolName[prizesToAnim[p][0]];
 			if(prizeMasks[prizesToAnim[p][1]] & 1<<i):
 				var _pcell = reels * tiles_per_reel - 1 - i
-#				print("ANIMAÇÃO: ",prizeID, "  CÉLULAS: ", _pcell);
-					
+				print("ANIMAÇÃO: ",prizeID, "  CÉLULAS: ", _pcell);
 				coluna = _pcell % 5;
 				linha = int(floor(_pcell / 5));
 				
 				winTile = get_tile(coluna, linha)
+				modulate.a = 1
 				winTile.animate_icon(prizeID)
 				givePoints(prizeID)
 
@@ -505,7 +509,7 @@ func _input(event):
 	if event is InputEventKey and event.pressed:
 		if event.scancode == KEY_R:
 			symbolName = ["roulette"];
-		elif event.scancode == KEY_B:
+		elif event.scancode == KEY_T:
 			symbolName = ["bunny"];
 		elif event.scancode == KEY_C:
 			symbolName = ["clown"];
