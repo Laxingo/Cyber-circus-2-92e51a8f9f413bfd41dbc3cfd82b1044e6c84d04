@@ -11,6 +11,8 @@ onready var facaHitbox = $FacaHitbox
 onready var hitboxes = $Roda/Hitboxes
 onready var winazulLBL = $winazul
 onready var glow = $faca/KnifeGlow
+onready var palhacoAnim = $amiguinhos/Clown/AnimationPlayer
+onready var coelhoAnim = $amiguinhos/Bunny/AnimationPlayer
 
 var facaPos = Vector2(639, 169)
 
@@ -35,6 +37,7 @@ onready var transitionMP3 = $TransMP3
 onready var winMP3 = $WinMP3
 
 var playsound = false
+var amiguinhos = false
 
 func _ready():
 	_jukebox()
@@ -44,6 +47,8 @@ func bonusSound():
 	if !musicMp3.is_playing():
 		musicMp3.play()
 
+var comecou = false
+
 func _process(delta):
 	if playsound:
 		bonusSound()
@@ -51,6 +56,13 @@ func _process(delta):
 		roda.rotation_degrees = roda.rotation_degrees +2
 	else:
 		roda.rotation_degrees = roda.rotation_degrees
+	
+	if amiguinhos == true:
+		if !comecou:
+			comecou = true
+			amiguinhPalhaco()
+			amiguinhoCoelho()
+
 
 func _entra():
 	cortinaSound()
@@ -62,6 +74,7 @@ func _entra():
 	animP.play("tudobaza")
 	transitionMP3.stream = transition2
 	cortinaSound()
+	amiguinhos = true
 	yield(get_tree().create_timer(animP.get_animation("tudobaza").length), "timeout")
 	animP.play("3rodaluzentra")
 	yield(get_tree().create_timer(animP.get_animation("tudobaza").length), "timeout")
@@ -76,6 +89,26 @@ func _entra():
 	yield(get_tree().create_timer(facaAnim.get_animation("click").length), "timeout")
 	if prontopraclicar:
 		facaAnim.play("facaglow")
+
+onready var random2 = RandomNumberGenerator.new()
+
+func amiguinhoCoelho():
+	random2.randomize()
+	var num = random2.randi_range(5, 15)
+	yield(get_tree().create_timer(num), "timeout")
+	coelhoAnim.play("bunnymaroto")
+	yield(get_tree().create_timer(coelhoAnim.get_animation("bunnymaroto").length), "timeout")
+	comecou = false
+
+
+
+func amiguinhPalhaco():
+	random2.randomize()
+	var num2 = random2.randi_range(5, 15)
+	yield(get_tree().create_timer(num2), "timeout")
+	palhacoAnim.play("palhacocurioso")
+	yield(get_tree().create_timer(palhacoAnim.get_animation("palhacocurioso").length), "timeout")
+	comecou = false
 
 
 func _on_RodaBtn_pressed():
