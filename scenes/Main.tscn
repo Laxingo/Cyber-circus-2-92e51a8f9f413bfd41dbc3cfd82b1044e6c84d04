@@ -6983,22 +6983,22 @@ scale = Vector2( 1.01027, 1.01027 )
 
 [node name="Light2D" type="Light2D" parent="Luzes"]
 light_mask = 524289
-position = Vector2( 501.759, 311.761 )
-rotation = 0.714769
+position = Vector2( 510.333, 326.234 )
+rotation = 0.698658
 scale = Vector2( 2.21001, 4.92555 )
 texture = ExtResource( 9 )
 color = Color( 0.964706, 0.952941, 0.231373, 1 )
-energy = 0.879071
+energy = 0.84255
 range_height = -809.1
 
 [node name="Light2D2" type="Light2D" parent="Luzes"]
 light_mask = 524288
-position = Vector2( -408.149, 154.874 )
-rotation = -0.72458
+position = Vector2( -465.187, 254.193 )
+rotation = -0.625788
 scale = Vector2( 2.21001, 4.92555 )
 texture = ExtResource( 9 )
 color = Color( 0.964706, 0.952941, 0.231373, 1 )
-energy = 0.879071
+energy = 0.84255
 range_height = -809.1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Luzes"]
@@ -7006,39 +7006,33 @@ anims/luz = SubResource( 2 )
 anims/luzbigwin = SubResource( 3 )
 anims/luzwin = SubResource( 4 )
 
-[node name="Slot" type="Sprite" parent="Luzes"]
-visible = false
-light_mask = 2
-position = Vector2( 64, 57 )
-texture = ExtResource( 5 )
-
 [node name="Light2D3" type="Light2D" parent="Luzes"]
-position = Vector2( -717.597, 272.492 )
+position = Vector2( -717.855, 214.698 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="Light2D4" type="Light2D" parent="Luzes"]
-position = Vector2( 845, -129.88 )
+position = Vector2( 845, -73.1194 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="Light2D5" type="Light2D" parent="Luzes"]
-position = Vector2( 531.237, 278.913 )
+position = Vector2( 530.907, 220.868 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="Light2D6" type="Light2D" parent="Luzes"]
-position = Vector2( 222.033, -142.47 )
+position = Vector2( 222.047, -85.0992 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="Light2D7" type="Light2D" parent="Luzes"]
-position = Vector2( -82.7628, 263.913 )
+position = Vector2( -83.093, 205.867 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="Light2D8" type="Light2D" parent="Luzes"]
-position = Vector2( -401.967, -132.47 )
+position = Vector2( -401.953, -75.0992 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 

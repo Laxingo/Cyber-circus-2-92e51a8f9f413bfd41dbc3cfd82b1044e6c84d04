@@ -130,45 +130,53 @@ func bigWin():
 	lastCred = credits
 	currentPoints = 0
 	bigWinAnim.play("bigwin24")
+	lightAnim.play("luzbigwin")
 	winsMP3.stream = bigWinSound
 	startPointsBW = true
 	if !winsMP3.is_playing():
 		winsMP3.play()
 		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
 		winsMP3.stop()
+		lightAnim.play("luz")
 
 func goodWin():
 	lastCred = credits
 	currentPoints = 0
 	winAnim.play("goodwin")
+	lightAnim.play("luzwin")
 	winsMP3.stream = goodWinSound
 	startPoints = true
 	if !winsMP3.is_playing():
 		winsMP3.play()
 		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
 		winsMP3.stop()
+		lightAnim.play("luz")
 
 func mediumWin():
 	lastCred = credits
 	currentPoints = 0
 	winAnim.play("mediumwin")
+	lightAnim.play("luzwin")
 	winsMP3.stream = mediumWinSound
 	startPoints = true
 	if !winsMP3.is_playing():
 		winsMP3.play()
 		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
 		winsMP3.stop()
+		lightAnim.play("luz")
 
 func smallWin():
 	lastCred = credits
 	currentPoints = 0
 	winAnim.play("smallwin")
+	lightAnim.play("luzwin")
 	winsMP3.stream = smallWinSound
 	startPoints = true
 	if !winsMP3.is_playing():
 		winsMP3.play()
 		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
 		winsMP3.stop()
+		lightAnim.play("luz")
 	
 
 func _on_Roll2_button_down():

@@ -100,8 +100,6 @@ func amiguinhoCoelho():
 	yield(get_tree().create_timer(coelhoAnim.get_animation("bunnymaroto").length), "timeout")
 	comecou = false
 
-
-
 func amiguinhPalhaco():
 	random2.randomize()
 	var num2 = random2.randi_range(5, 15)
