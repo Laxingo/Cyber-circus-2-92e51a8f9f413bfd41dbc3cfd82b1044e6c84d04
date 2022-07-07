@@ -53,7 +53,7 @@ func _process(delta):
 	if playsound:
 		bonusSound()
 	if prontaprarodar:
-		roda.rotation_degrees = roda.rotation_degrees +2
+		roda.rotation_degrees = roda.rotation_degrees + 250 * delta
 	else:
 		roda.rotation_degrees = roda.rotation_degrees
 	
