@@ -184,6 +184,7 @@ func _WinRosa():
 	musicMp3.stop()
 	winSoundFunc()
 	animP.play("winrosa")
+	amiguinhos = false
 	yield(get_tree().create_timer(animP.get_animation("winrosa").length), "timeout")
 	animP.play("winrosabaza")
 	yield(get_tree().create_timer(2), "timeout")
@@ -198,6 +199,7 @@ func _WinAmarelo():
 	musicMp3.stop()
 	winSoundFunc()
 	animP.play("winamarelo")
+	amiguinhos = false
 	yield(get_tree().create_timer(animP.get_animation("winamarelo").length), "timeout")
 	animP.play("winamarelobaza")
 	yield(get_tree().create_timer(2), "timeout")
@@ -211,6 +213,7 @@ func _WinAzul():
 	musicMp3.stop()
 	winSoundFunc()
 	animP.play("winazul")
+	amiguinhos = false
 	yield(get_tree().create_timer(animP.get_animation("winazul").length), "timeout")
 	animP.play("winazulbaza")
 	yield(get_tree().create_timer(2), "timeout")
@@ -225,6 +228,7 @@ func _WinAzul2():
 	winSoundFunc()
 	winazulLBL.text = "5000"
 	animP.play("winazul")
+	amiguinhos = false
 	yield(get_tree().create_timer(animP.get_animation("winazul").length), "timeout")
 	animP.play("winazulbaza")
 	yield(get_tree().create_timer(2), "timeout")

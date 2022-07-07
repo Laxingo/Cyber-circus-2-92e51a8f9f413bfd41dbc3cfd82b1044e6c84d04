@@ -85,15 +85,15 @@ func _process(delta):
 		actualPoints = pointstGive * bet
 		if actualPoints > 50000:
 			if actualPoints > currentPoints:
-				currentPoints = currentPoints +111
-				credits = credits + 111
+				currentPoints = int(currentPoints +15111 * delta)
+				credits = int(credits +15111 * delta)
 			else:
 				currentPoints = actualPoints
 				credits = lastCred+ actualPoints
 		else:
 			if actualPoints > currentPoints:
-				currentPoints = currentPoints +11
-				credits = credits + 11
+				currentPoints = int(currentPoints +2111 * delta)
+				credits = int(credits +2111 * delta)
 			else:
 				currentPoints = actualPoints
 				credits = lastCred+ actualPoints
@@ -102,15 +102,15 @@ func _process(delta):
 		actualPoints = pointstGive * bet
 		if actualPoints > 15000:
 			if actualPoints > currentPoints:
-				currentPoints = currentPoints +11
-				credits = credits + 11
+				currentPoints = int(currentPoints +15111 * delta)
+				credits = int(credits +15111 * delta)
 			else:
 				currentPoints = actualPoints
 				credits = lastCred+ actualPoints
 		else:
 			if actualPoints > currentPoints:
-				currentPoints = currentPoints +6
-				credits = credits + 6
+				currentPoints = int(currentPoints +2500 * delta)
+				credits = int(credits +2500 * delta)
 			else:
 				currentPoints = actualPoints
 				credits = lastCred+ actualPoints
