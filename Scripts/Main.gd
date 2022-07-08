@@ -57,6 +57,7 @@ onready var options2Btn = $options2
 onready var replayBtn = $replay
 onready var optionsBtns = $options
 
+onready var readytoRoll = true
 
 func _ready():
 	slot.connect("stopped", self, "_on_slot_machine_stopped")
@@ -132,7 +133,7 @@ func _process(delta):
 	numeros.text = str(currentPoints)
 
 func bigWin():
-	slotMachine.premioTocando = true
+	readytoRoll = false
 	lastCred = credits
 	currentPoints = 0
 	bigWinAnim.play("bigwin24")
@@ -143,10 +144,11 @@ func bigWin():
 		winsMP3.play()
 		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
 		winsMP3.stop()
-		premioTocando = false
+		readytoRoll = true
 		lightAnim.play("luz")
 
 func goodWin():
+	readytoRoll = false
 	premioTocando = true
 	lastCred = credits
 	currentPoints = 0
@@ -159,10 +161,12 @@ func goodWin():
 		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
 		winsMP3.stop()
 		premioTocando = false
+		readytoRoll = true
 		lightAnim.play("luz")
 
 func mediumWin():
 	premioTocando = true
+	readytoRoll = false
 	lastCred = credits
 	currentPoints = 0
 	winAnim.play("mediumwin")
@@ -174,10 +178,12 @@ func mediumWin():
 		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
 		winsMP3.stop()
 		premioTocando = false
+		readytoRoll = true
 		lightAnim.play("luz")
 
 func smallWin():
 	premioTocando = true
+	readytoRoll = false
 	lastCred = credits
 	currentPoints = 0
 	winAnim.play("smallwin")
@@ -190,16 +196,19 @@ func smallWin():
 		winsMP3.stop()
 		lightAnim.play("luz")
 		premioTocando = false
+		readytoRoll = true
 		print(premioTocando)
 
+
 func _on_Roll2_button_down():
-	if bet <= credits && bet != 0:
-		credits = credits - bet
-		if rolled == false:
-			slot.start()
-			rolled = true
-		else:
-			slot.stop()
+	if readytoRoll == true:
+		if bet <= credits && bet != 0:
+			credits = credits - bet
+			if rolled == false:
+				slot.start()
+				rolled = true
+			else:
+				slot.stop()
 
 func _on_slot_machine_stopped():
 	rolled = false

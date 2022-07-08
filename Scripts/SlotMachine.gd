@@ -224,6 +224,7 @@ func _add_tile(col :int, row :int) -> void:
 	tile.position = grid_pos[col][row]
 	tile.set_speed(speed_norm)
 	tile.animate_icon_idle(randomSymbol)
+	tile.modulate.a = 2
 	add_child(tile)
 
 func get_tile(col :int, row :int) -> SlotTile:
@@ -443,7 +444,7 @@ var prizeType
 func getPrizes(result_masks):
 	var prizeInfo = [];
 	for i in result_masks.size():
-#		modulate.a = 0.5
+
 		for c in  prizeMasks.size():
 			if (result_masks[i] & prizeMasks[c] == prizeMasks[c]):
 				prizeInfo.push_back([i, c]) # First position -> Synbol IDX; Second Position -> Prize IDX
@@ -468,6 +469,7 @@ func animPrizes():
 	var coluna
 	for p in prizesToAnim.size():
 		for i in cells:
+			modulate.a = 0.6
 			var prizeID = symbolName[prizesToAnim[p][0]];
 			if(prizeMasks[prizesToAnim[p][1]] & 1<<i):
 				var _pcell = reels * tiles_per_reel - 1 - i
@@ -476,7 +478,7 @@ func animPrizes():
 				linha = int(floor(_pcell / 5));
 				
 				winTile = get_tile(linha, coluna)
-				winTile.modulate.a = 1
+				winTile.modulate.a =2
 				winTile.animate_icon(prizeID)
 				givePoints(prizeID)
 
