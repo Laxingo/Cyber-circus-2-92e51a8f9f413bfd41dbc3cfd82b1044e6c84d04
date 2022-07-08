@@ -2,7 +2,6 @@ extends Node2D
 
 
 onready var slotMachine = load("res://Scripts/SlotMachine.gd").new()
-onready var bonus = load("res://Scripts/BonusLvl.gd").new()
 var rolled = false
 
 var popedup = false
@@ -72,18 +71,6 @@ func _process(delta):
 	var pointstGive = get_node("ViewportContainer/Viewport/SlotMachine").pointsToGive
 	var actualPoints
 	
-	var bonusT = get_node("Node2D").bonusTocando
-	if bonusT:
-		yield(get_tree().create_timer(0.5), "timeout")
-		playBtn.visible = false
-		options2Btn.visible = false
-		replayBtn.visible = false
-		optionsBtns.visible = false
-	else:
-		playBtn.visible = true
-		options2Btn.visible = true
-		replayBtn.visible = true
-		optionsBtns.visible = true
 	if gudwin == true:
 		goodWin()
 		get_node("ViewportContainer/Viewport/SlotMachine").goodWinToca = false
@@ -389,3 +376,12 @@ func _on_money_button_down():
 	optionsAudio.play()
 	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
 	get_tree().change_scene("res://scenes/symbolspayout.tscn")
+
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.scancode == KEY_B:
+			yield(get_tree().create_timer(0.5), "timeout")
+			playBtn.visible = false
+			options2Btn.visible = false
+			replayBtn.visible = false
+			optionsBtns.visible = false
