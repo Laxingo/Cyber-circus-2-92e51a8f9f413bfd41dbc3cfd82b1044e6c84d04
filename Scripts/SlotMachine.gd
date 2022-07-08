@@ -14,6 +14,11 @@ export(float,0,10) var runtime := 2
 export(float,0.1,10) var speed := 5.0
 export(float,0,2) var reel_delay := 0.2
 
+export(float,0,10) var runtime1 := 2
+export(float,0,10) var speed1 := 5.0
+export(float,0,10) var runtime2 := 1
+export(float,0,10) var speed2 := 10
+
 onready var size := get_viewport_rect().size
 onready var tile_size := size / Vector2(reels, tiles_per_reel)
 onready var speed_norm := speed * tiles_per_reel
@@ -42,15 +47,6 @@ var total_runs : int
 export(Array, String) var symbolName := ["bunny", "strongman", "elephant", "roulette", "clown", "Q", 
 "K","J", "A"];
 
-var bunny = 0
-var clown= 0
-var elephant= 0
-var j= 0
-var k= 0
-var lion= 0
-var malabare= 0
-var strongman= 0
-var q= 0
 
 var prizeNb = 3
 var prizeMasks = [];
@@ -75,6 +71,7 @@ onready var reelAudioPlayer5 = $ReelsAudio5
 onready var reelSpinning = preload("res://sound/reels spin/Reel_Spinning.mp3")
 onready var reelStopping = preload("res://sound/reels spin/Reel_Stopping.mp3")
 
+onready var tweenie = $Tween
 var reelsPlayers = [reelAudioPlayer1, reelAudioPlayer2, reelAudioPlayer3, reelAudioPlayer4, reelAudioPlayer5]
 
 
@@ -85,6 +82,8 @@ var bigWinToca = false
 var ola = false
 
 func _ready():
+	runtime = runtime1
+	speed = speed1
 	setPrizeMasks();
 	setPrizeMasks2()
 	for col in reels:
@@ -224,7 +223,6 @@ func _add_tile(col :int, row :int) -> void:
 	tile.position = grid_pos[col][row]
 	tile.set_speed(speed_norm)
 	tile.animate_icon_idle(randomSymbol)
-	tile.modulate.a = 2
 	add_child(tile)
 
 func get_tile(col :int, row :int) -> SlotTile:
@@ -285,9 +283,11 @@ func _spin_reel(reel :int) -> void:
    _move_tile(get_tile(reel, row))
 
 func _move_tile(tile :SlotTile) -> void:
-  tile.spin_up()
-  yield(tile.get_node("Animations"), "animation_finished")
-  tile.move_by(Vector2(0, tile_size.y))
+	tile.spin_up()
+	print(tile.modulate.a)
+	modulate.a = 1
+	yield(tile.get_node("Animations"), "animation_finished")
+	tile.move_by(Vector2(0, tile_size.y))
 
 
 func reelMelodyPlay():
@@ -373,6 +373,7 @@ func _on_tile_moved(tile: SlotTile, _nodePath, column) -> void:
 		var randomicon = _randomIcones()
 		tile.set_icon(randomicon)
 		tile.set_name(tile_name)
+#		tile.modulate.a = 1.0
 	if (state != State.OFF && reel_runs != total_runs):
 		tile.move_by(Vector2(0, tile_size.y))
 	else: 
@@ -469,6 +470,7 @@ func animPrizes():
 	var coluna
 	for p in prizesToAnim.size():
 		for i in cells:
+			print(modulate.a)
 			modulate.a = 0.6
 			var prizeID = symbolName[prizesToAnim[p][0]];
 			if(prizeMasks[prizesToAnim[p][1]] & 1<<i):
@@ -476,13 +478,10 @@ func animPrizes():
 				print("ANIMAÇÃO: ",prizeID, "  CÉLULAS: ", _pcell);
 				coluna = _pcell % 5;
 				linha = int(floor(_pcell / 5));
-				
 				winTile = get_tile(linha, coluna)
 				winTile.modulate.a =2
 				winTile.animate_icon(prizeID)
 				givePoints(prizeID)
-
-onready var totalPoints = 0
 
 var pointsToGive
 func givePoints(prizeID):
@@ -594,3 +593,21 @@ func _on_50_button_down():
 
 func _on_100_button_down():
 	hundredPressed = true
+
+var fastOn = false
+func _on_fast_button_down():
+	if fastOn:
+		speed = speed1
+		runtime = runtime1
+		speed_norm = speed * tiles_per_reel
+		expected_runs = int(runtime * speed_norm)
+
+		fastOn = false
+	else:
+		speed = speed2
+		runtime = runtime2
+		speed_norm = speed * tiles_per_reel
+		expected_runs = int(runtime * speed_norm)
+		
+		fastOn = true
+	pass # Replace with function body.

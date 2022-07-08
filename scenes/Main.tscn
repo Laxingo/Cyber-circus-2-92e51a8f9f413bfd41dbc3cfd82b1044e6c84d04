@@ -7225,6 +7225,8 @@ stream = ExtResource( 70 )
 [node name="reelSpin5" type="AudioStreamPlayer2D" parent="ViewportContainer/Viewport/SlotMachine"]
 stream = ExtResource( 70 )
 
+[node name="Tween" type="Tween" parent="ViewportContainer/Viewport/SlotMachine"]
+
 [node name="play" type="TextureButton" parent="."]
 light_mask = 2
 margin_left = 880.98
@@ -8536,6 +8538,7 @@ scale_amount = 0.02
 [connection signal="finished" from="ViewportContainer/Viewport/SlotMachine/ReelMelody" to="." method="_on_ReelMelody_finished"]
 [connection signal="button_down" from="play" to="." method="_on_Roll2_button_down"]
 [connection signal="mouse_entered" from="play" to="." method="_on_play_mouse_entered"]
+[connection signal="button_down" from="options/1/fast" to="ViewportContainer/Viewport/SlotMachine" method="_on_fast_button_down"]
 [connection signal="mouse_entered" from="options/1/fast" to="." method="_on_fast_mouse_entered"]
 [connection signal="button_down" from="options/1/historico" to="." method="_on_historico_button_down"]
 [connection signal="mouse_entered" from="options/1/historico" to="." method="_on_historico_mouse_entered"]
