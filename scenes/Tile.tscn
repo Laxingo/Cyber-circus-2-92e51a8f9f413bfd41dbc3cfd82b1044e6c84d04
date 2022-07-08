@@ -2630,7 +2630,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 109 )
 animation = "burn"
-frame = 1
+frame = 9
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="Sprite/Lion/Head"]
@@ -2648,7 +2648,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 110 )
 animation = "kwispy"
-frame = 5
+frame = 3
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite/Lion"]
@@ -2999,14 +2999,13 @@ texture = ExtResource( 25 )
 [node name="Clown" type="Sprite" parent="Sprite"]
 visible = false
 light_mask = 1024
-position = Vector2( 1437.74, 314.18 )
+position = Vector2( 1211.58, 323.411 )
 scale = Vector2( 4.48533, 2.29118 )
 z_index = -4
 
 [node name="Sprite3" type="Sprite" parent="Sprite/Clown"]
 light_mask = 1024
-position = Vector2( 25.9702, -32.9702 )
-rotation = 0.243875
+position = Vector2( -2, -11 )
 texture = ExtResource( 6 )
 region_enabled = true
 region_rect = Rect2( -6, 227, 193, 202 )
@@ -3014,7 +3013,7 @@ region_rect = Rect2( -6, 227, 193, 202 )
 [node name="Sprite2" type="Sprite" parent="Sprite/Clown"]
 light_mask = 1024
 position = Vector2( 1, 136.8 )
-scale = Vector2( 1.04335, 1.04335 )
+scale = Vector2( 1.04053, 1.04053 )
 z_index = 1
 texture = ExtResource( 6 )
 region_enabled = true
@@ -3084,8 +3083,8 @@ rest = Transform2D( 1, 0, 0, 1, 15.7695, 0.751621 )
 
 [node name="Sprite4" type="Sprite" parent="Sprite/Clown"]
 light_mask = 1024
-position = Vector2( -8, 72.3798 )
-scale = Vector2( 1.01605, 1.30151 )
+position = Vector2( -8, 86 )
+scale = Vector2( 0.874231, 0.874231 )
 z_index = 1
 texture = ExtResource( 6 )
 region_enabled = true
@@ -3093,7 +3092,7 @@ region_rect = Rect2( 194, 1, 283, 132 )
 
 [node name="Estrelas" type="Sprite" parent="Sprite/Clown"]
 position = Vector2( 2.30505, 81.4218 )
-rotation = -4.10979
+rotation = -0.0173562
 z_index = -1
 texture = ExtResource( 24 )
 
@@ -3103,7 +3102,7 @@ rotation = 0.0061071
 scale = Vector2( 0.515237, 0.7519 )
 texture = ExtResource( 8 )
 texture_scale = 1.69
-energy = 0.399989
+energy = 0.0
 shadow_color = Color( 0.215686, 1, 0.964706, 0 )
 
 [node name="Elephant" type="Sprite" parent="Sprite"]
