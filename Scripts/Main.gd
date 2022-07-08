@@ -50,6 +50,14 @@ var startPoints = false
 var currentPoints = 0
 var lastCred
 
+var premioTocando
+
+onready var playBtn = $play
+onready var options2Btn = $options2
+onready var replayBtn = $replay
+onready var optionsBtns = $options
+
+
 func _ready():
 	slot.connect("stopped", self, "_on_slot_machine_stopped")
 	lightAnim.play("luz")	
@@ -124,6 +132,7 @@ func _process(delta):
 	numeros.text = str(currentPoints)
 
 func bigWin():
+	slotMachine.premioTocando = true
 	lastCred = credits
 	currentPoints = 0
 	bigWinAnim.play("bigwin24")
@@ -134,9 +143,11 @@ func bigWin():
 		winsMP3.play()
 		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
 		winsMP3.stop()
+		premioTocando = false
 		lightAnim.play("luz")
 
 func goodWin():
+	premioTocando = true
 	lastCred = credits
 	currentPoints = 0
 	winAnim.play("goodwin")
@@ -147,9 +158,11 @@ func goodWin():
 		winsMP3.play()
 		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
 		winsMP3.stop()
+		premioTocando = false
 		lightAnim.play("luz")
 
 func mediumWin():
+	premioTocando = true
 	lastCred = credits
 	currentPoints = 0
 	winAnim.play("mediumwin")
@@ -160,9 +173,11 @@ func mediumWin():
 		winsMP3.play()
 		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
 		winsMP3.stop()
+		premioTocando = false
 		lightAnim.play("luz")
 
 func smallWin():
+	premioTocando = true
 	lastCred = credits
 	currentPoints = 0
 	winAnim.play("smallwin")
@@ -174,6 +189,8 @@ func smallWin():
 		yield(get_tree().create_timer(winsMP3.stream.get_length()), "timeout")
 		winsMP3.stop()
 		lightAnim.play("luz")
+		premioTocando = false
+		print(premioTocando)
 
 func _on_Roll2_button_down():
 	if bet <= credits && bet != 0:
@@ -350,3 +367,12 @@ func _on_money_button_down():
 	optionsAudio.play()
 	yield(get_tree().create_timer(optionsAudio.stream.get_length()), "timeout")
 	get_tree().change_scene("res://scenes/symbolspayout.tscn")
+
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.scancode == KEY_B:
+			yield(get_tree().create_timer(0.5), "timeout")
+			playBtn.visible = false
+			options2Btn.visible = false
+			replayBtn.visible = false
+			optionsBtns.visible = false

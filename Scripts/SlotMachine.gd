@@ -94,6 +94,59 @@ func _ready():
 			grid_pos[col].append(Vector2(col, row - 0.9 *extra_tiles) * tile_size) 
 			_add_tile(col, row)
 
+onready var tenPressed = false
+onready var twentyPressed = false
+onready var fiftyPressed = false
+onready var hundredPressed = false
+onready var playAgain = true
+
+var tenTimes = 0
+var twentyfiveTimes = 0
+var fiftyTimes = 0
+var hundredTimes = 0
+
+func _process(delta):
+	if tenPressed:
+		if tenTimes < 10:
+			if playAgain:
+				start()
+				playAgain = false
+				tenTimes += 1
+		else:
+			tenPressed = false
+			tenTimes = 0
+			playAgain = true
+	if twentyPressed:
+		if twentyfiveTimes < 25:
+			if playAgain:
+				start()
+				playAgain = false
+				twentyfiveTimes += 1
+		else:
+			twentyPressed = false
+			twentyfiveTimes = 0
+			playAgain = true
+	if fiftyPressed:
+		if fiftyTimes < 50:
+			if playAgain:
+				start()
+				playAgain = false
+				fiftyTimes += 1
+		else:
+			fiftyPressed = false
+			fiftyTimes = 0
+			playAgain = true
+	if hundredPressed:
+		if hundredTimes < 100:
+			if playAgain:
+				start()
+				playAgain = false
+				hundredTimes += 1
+		else:
+			hundredPressed = false
+			hundredTimes = 0
+			playAgain = true
+
 func setPrizeMasks():
 	prizeMasks.push_back(0b000000000011111);
 	prizeMasks.push_back(0b000001111100000);
@@ -214,7 +267,6 @@ func stop():
 	state = State.STOPPED
 	runs_stopped = current_runs()
 	total_runs = runs_stopped + tiles_per_reel + 1
-	
 
 func _stop() -> void:
 	for reel in reels:
@@ -224,7 +276,8 @@ func _stop() -> void:
 	if state == State.OFF:
 		buildResultMasks();
 		animPrizes();
-		
+		playAgain = true
+
 
 func _spin_reel(reel :int) -> void:
   for row in rows:
@@ -526,3 +579,16 @@ func _input(event):
 			symbolName = ["J"];
 		elif event.scancode == KEY_Q:
 			symbolName = ["Q"];
+
+
+func _on_10_button_down():
+	tenPressed = true
+
+func _on_25_button_down():
+	twentyPressed = true
+
+func _on_50_button_down():
+	fiftyPressed = true
+
+func _on_100_button_down():
+	hundredPressed = true

@@ -14,6 +14,7 @@ onready var glow = $faca/KnifeGlow
 onready var palhacoAnim = $amiguinhos/Clown/AnimationPlayer
 onready var coelhoAnim = $amiguinhos/Bunny/AnimationPlayer
 
+
 var facaPos = Vector2(639, 169)
 
 var prontaprarodar = false
