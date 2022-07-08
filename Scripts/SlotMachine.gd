@@ -39,7 +39,8 @@ var tiles_moved_per_reel := []
 var runs_stopped := 0
 var total_runs : int
 
-export(Array, String) var symbolName := ["bunny", "strongman", "elephant"];
+export(Array, String) var symbolName := ["bunny", "strongman", "elephant", "roulette", "clown", "Q", 
+"K","J", "A"];
 
 var bunny = 0
 var clown= 0
@@ -216,7 +217,6 @@ func stop():
 	
 
 func _stop() -> void:
-	print("SDFGHJKLOJHGF")
 	for reel in reels:
 		tiles_moved_per_reel[reel] = 0
 		state = State.OFF
@@ -375,14 +375,13 @@ func buildResultMasks():
 		for l in range(0, reels):
 			var tile = get_tile(l , r)
 			resultSymbols.push_back(tile.tileName);
-	
 	for p in symbolName.size():
 		var _tmpResultMask = 0b0;
 		for i in resultSymbols.size():
 			_tmpResultMask |= int(symbolName[p] == resultSymbols[i]) << resultSymbols.size() - 1 - i;
 		resultMasks.push_back(_tmpResultMask);
 	
-	print("Result Masks: ", resultMasks);
+#	print("Result Masks: ", resultMasks);
 	prizesToAnim = [];
 	prizesToAnim = getPrizes(resultMasks);
 
@@ -391,25 +390,23 @@ var prizeType
 func getPrizes(result_masks):
 	var prizeInfo = [];
 	for i in result_masks.size():
-		modulate.a = 0.5
+#		modulate.a = 0.5
+		for c in  prizeMasks.size():
+			if (result_masks[i] & prizeMasks[c] == prizeMasks[c]):
+				prizeInfo.push_back([i, c]) # First position -> Synbol IDX; Second Position -> Prize IDX
+				prizeType = "Good"
 		for p in  prizeMasks3.size():
 			if (result_masks[i] & prizeMasks3[p] == prizeMasks3[p]):
 				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
 				prizeType="Small"
-
-		for p in  prizeMasks2.size():
-			if (result_masks[i] & prizeMasks2[p] == prizeMasks2[p]):
-				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
+		for o in  prizeMasks2.size():
+			if (result_masks[i] & prizeMasks2[o] == prizeMasks2[o]):
+				prizeInfo.push_back([i, o]) # First position -> Synbol IDX; Second Position -> Prize IDX
 				prizeType = "Medium"
-		for p in  prizeMasks.size():
-			if (result_masks[i] & prizeMasks[p] == prizeMasks[p]):
-				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
-				prizeType = "Good"
-
-
-
-	print("Prize  Info: ", prizeInfo);
+		
+#	print("Prize  Info: ", prizeInfo);
 	return prizeInfo;
+
 
 func animPrizes():
 	var winTile = Sprite
@@ -426,7 +423,7 @@ func animPrizes():
 				linha = int(floor(_pcell / 5));
 				
 				winTile = get_tile(linha, coluna)
-				modulate.a = 1
+				winTile.modulate.a = 1
 				winTile.animate_icon(prizeID)
 				givePoints(prizeID)
 
