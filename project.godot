@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Tentativa"
+config/name="Cyber Circus"
 run/main_scene="res://scenes/Main.tscn"
 config/icon="res://icon.png"
 
