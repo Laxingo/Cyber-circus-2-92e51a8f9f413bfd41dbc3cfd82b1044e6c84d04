@@ -64,8 +64,10 @@ func _process(delta):
 			amiguinhPalhaco()
 			amiguinhoCoelho()
 
-
+func bonusTocando(yesorNo):
+	return
 func _entra():
+	bonusTocando = true
 	cortinaSound()
 	self.visible = true
 	animP.play("1bonusentrada")
@@ -109,8 +111,9 @@ func amiguinhPalhaco():
 	yield(get_tree().create_timer(palhacoAnim.get_animation("palhacocurioso").length), "timeout")
 	comecou = false
 
-
+var bonusTocando = false
 func _on_RodaBtn_pressed():
+	
 	glow.visible = false
 	random.randomize()
 	var num = random.randi_range(0, 2)
@@ -192,6 +195,7 @@ func _WinRosa():
 	animP.play("cortinasentrada")
 	yield(get_tree().create_timer(1), "timeout")
 	animP.play("tudobaza2")
+	bonusTocando = false
 	_jukebox()
 	
 
@@ -207,6 +211,7 @@ func _WinAmarelo():
 	animP.play("cortinasentrada")
 	yield(get_tree().create_timer(2), "timeout")
 	animP.play("tudobaza2")
+	bonusTocando = false
 	_jukebox()
 
 func _WinAzul():
@@ -221,6 +226,7 @@ func _WinAzul():
 	animP.play("cortinasentrada")
 	yield(get_tree().create_timer(1), "timeout")
 	animP.play("tudobaza2")
+	bonusTocando = false
 	_jukebox()
 
 func _WinAzul2():
@@ -236,6 +242,7 @@ func _WinAzul2():
 	animP.play("cortinasentrada")
 	yield(get_tree().create_timer(1), "timeout")
 	animP.play("tudobaza2")
+	bonusTocando = false
 	_jukebox()
 
 func winSoundFunc():
