@@ -2634,7 +2634,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 109 )
 animation = "burn"
-frame = 5
+frame = 9
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="Sprite/Lion/Head"]
@@ -2652,7 +2652,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 110 )
 animation = "kwispy"
-frame = 9
+frame = 3
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite/Lion"]
@@ -2755,7 +2755,7 @@ range_item_cull_mask = 65536
 visible = false
 light_mask = 2048
 position = Vector2( 1310.81, 533.418 )
-scale = Vector2( 3.798, 2.11894 )
+scale = Vector2( 3.52107, 2.11894 )
 z_index = -4
 
 [node name="Viewport" type="Viewport" parent="Sprite/Strongman"]
@@ -3111,6 +3111,7 @@ energy = 0.334587
 shadow_color = Color( 0.215686, 1, 0.964706, 0 )
 
 [node name="Elephant" type="Sprite" parent="Sprite"]
+visible = false
 light_mask = 256
 position = Vector2( 1195.42, 456.938 )
 scale = Vector2( 3.47664, 2.0889 )
@@ -3216,6 +3217,7 @@ region_enabled = true
 region_rect = Rect2( 360, 370, 150, 150 )
 
 [node name="Moldura" type="Sprite" parent="Sprite/Elephant"]
+self_modulate = Color( 0.988235, 1, 1, 1 )
 position = Vector2( 25.463, 24.4469 )
 z_index = -1
 texture = ExtResource( 26 )

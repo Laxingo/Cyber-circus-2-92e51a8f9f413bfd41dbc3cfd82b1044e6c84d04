@@ -7048,17 +7048,10 @@ position = Vector2( -401.953, -75.0992 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 189.103
-margin_top = 94.5514
-margin_right = 1744.1
-margin_bottom = 902.551
-color = Color( 0.156863, 0.0784314, 0.168627, 0.45098 )
-
 [node name="UICima" type="Sprite" parent="."]
 light_mask = 2
-position = Vector2( 967.504, 503.98 )
-z_index = -7
+position = Vector2( 967.504, 511.484 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 130.049, 136.753, 1656.71, 843.075 )
@@ -7071,6 +7064,17 @@ z_index = -7
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 760.208, 0.710886, 403.166, 128.742 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 184.6
+margin_top = 97.5531
+margin_right = 1739.6
+margin_bottom = 905.553
+rect_scale = Vector2( 1.00957, 1.00957 )
+color = Color( 0.156863, 0.0784314, 0.168627, 0.45098 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="UIBaixo" type="Sprite" parent="."]
 light_mask = 2
@@ -7170,6 +7174,9 @@ margin_bottom = 537.073
 rect_scale = Vector2( 2.18693, 2.18693 )
 text = "0"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 light_mask = 2
@@ -7227,18 +7234,23 @@ stream = ExtResource( 70 )
 
 [node name="Tween" type="Tween" parent="ViewportContainer/Viewport/SlotMachine"]
 
-[node name="play" type="TextureButton" parent="."]
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2( 880.98, 871.974 )
+z_index = 1
+
+[node name="play" type="TextureButton" parent="Node2D2"]
 light_mask = 2
-margin_left = 880.98
-margin_top = 846.46
-margin_right = 1073.98
-margin_bottom = 1007.46
+margin_right = 193.0
+margin_bottom = 161.0
 mouse_filter = 1
 texture_normal = ExtResource( 36 )
 texture_pressed = ExtResource( 6 )
 texture_hover = ExtResource( 30 )
 expand = true
 stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="options" type="Node2D" parent="."]
 light_mask = 2
@@ -8536,8 +8548,8 @@ scale_amount = 0.02
 [connection signal="button_down" from="UIBaixo/Level Sub Btn" to="." method="_on_Level_Sub_Btn_button_down"]
 [connection signal="button_down" from="UIBaixo/Level Plus Btn" to="." method="_on_Level_Plus_Btn_button_down"]
 [connection signal="finished" from="ViewportContainer/Viewport/SlotMachine/ReelMelody" to="." method="_on_ReelMelody_finished"]
-[connection signal="button_down" from="play" to="." method="_on_Roll2_button_down"]
-[connection signal="mouse_entered" from="play" to="." method="_on_play_mouse_entered"]
+[connection signal="button_down" from="Node2D2/play" to="." method="_on_Roll2_button_down"]
+[connection signal="mouse_entered" from="Node2D2/play" to="." method="_on_play_mouse_entered"]
 [connection signal="button_down" from="options/1/fast" to="ViewportContainer/Viewport/SlotMachine" method="_on_fast_button_down"]
 [connection signal="mouse_entered" from="options/1/fast" to="." method="_on_fast_mouse_entered"]
 [connection signal="button_down" from="options/1/historico" to="." method="_on_historico_button_down"]
