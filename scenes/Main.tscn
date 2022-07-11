@@ -1,4 +1,4 @@
-[gd_scene load_steps=168 format=2]
+[gd_scene load_steps=171 format=2]
 
 [ext_resource path="res://Scripts/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/UI/UIBaixo.png" type="Texture" id=2]
@@ -42,6 +42,7 @@
 [ext_resource path="res://Imagens/UI/historicohmini.png" type="Texture" id=40]
 [ext_resource path="res://Imagens/UI/moneyhmini.png" type="Texture" id=41]
 [ext_resource path="res://Imagens/UI/100hmini.png" type="Texture" id=42]
+[ext_resource path="res://Imagens/UI/CyberCircus_KnifeIcon.png" type="Texture" id=43]
 [ext_resource path="res://Imagens/UI/10hmini.png" type="Texture" id=44]
 [ext_resource path="res://Imagens/UI/infohmini.png" type="Texture" id=45]
 [ext_resource path="res://Imagens/UI/25hmini.png" type="Texture" id=46]
@@ -60,6 +61,7 @@
 [ext_resource path="res://sound/reels spin/Melody_1.mp3" type="AudioStream" id=59]
 [ext_resource path="res://Imagens/particulas/blue.png" type="Texture" id=60]
 [ext_resource path="res://sound/reels spin/Reel_Spinning.mp3" type="AudioStream" id=61]
+[ext_resource path="res://Fonts/Myriad Cn Bold.otf" type="DynamicFontData" id=62]
 [ext_resource path="res://Imagens/UI/-h.png" type="Texture" id=63]
 [ext_resource path="res://Imagens/UI/h.png" type="Texture" id=64]
 [ext_resource path="res://Imagens/UI/hmini.png" type="Texture" id=65]
@@ -8057,6 +8059,10 @@ tracks/9/keys = {
 
 [sub_resource type="CircleShape2D" id=48]
 
+[sub_resource type="DynamicFont" id=120]
+size = 1024
+font_data = ExtResource( 62 )
+
 [sub_resource type="Animation" id=73]
 resource_name = "bunnymaroto"
 length = 2.5
@@ -9323,7 +9329,6 @@ volume_db = 3.4
 [node name="Wins" type="AudioStreamPlayer2D" parent="Audios"]
 
 [node name="Node2D" type="Node2D" parent="."]
-visible = false
 position = Vector2( 959.022, 492.268 )
 z_index = 6
 script = ExtResource( 34 )
@@ -9422,7 +9427,7 @@ align = 1
 [node name="Roda" type="Sprite" parent="Node2D"]
 visible = false
 light_mask = 4
-position = Vector2( 2.95044, 10.3264 )
+position = Vector2( -10, 31.1199 )
 scale = Vector2( 0.843503, 0.841322 )
 z_index = -3
 texture = ExtResource( 48 )
@@ -9441,7 +9446,7 @@ z_index = 1
 texture = ExtResource( 49 )
 
 [node name="Luzamarela" type="Sprite" parent="Node2D/Roda/luzesentreaspas"]
-self_modulate = Color( 1, 0.941176, 0.0627451, 0.570038 )
+self_modulate = Color( 1, 0.941176, 0.0627451, 0.486275 )
 light_mask = 32
 position = Vector2( -185, 200 )
 scale = Vector2( -1.94892, -1.94892 )
@@ -9450,7 +9455,7 @@ texture = ExtResource( 50 )
 
 [node name="Luzazul" type="Sprite" parent="Node2D/Roda/luzesentreaspas"]
 modulate = Color( 0.0156863, 1, 0.984314, 1 )
-self_modulate = Color( 0.856133, 1, 0.987212, 0.655373 )
+self_modulate = Color( 1, 1, 1, 0.588235 )
 light_mask = 32
 position = Vector2( -178, 200 )
 scale = Vector2( 2.08477, 2.08477 )
@@ -9467,7 +9472,7 @@ texture = ExtResource( 57 )
 
 [node name="Luzrosa" type="Sprite" parent="Node2D/Roda/luzesentreaspas"]
 modulate = Color( 1, 0, 0.933333, 1 )
-self_modulate = Color( 1, 0.843984, 1, 0.71117 )
+self_modulate = Color( 1, 1, 1, 0.654902 )
 light_mask = 32
 position = Vector2( -187, 207 )
 scale = Vector2( -2.25945, -2.25945 )
@@ -9476,7 +9481,7 @@ texture = ExtResource( 58 )
 [node name="Luzrosa" type="Sprite" parent="Node2D/Roda/luzesentreaspas/Luzrosa"]
 visible = false
 modulate = Color( 1, 0, 0.933333, 1 )
-self_modulate = Color( 1, 0.83695, 0.993606, 0.602859 )
+self_modulate = Color( 1, 0, 0.960784, 1 )
 light_mask = 32
 position = Vector2( 0.576416, -2.41053 )
 scale = Vector2( -0.89981, -0.89981 )
@@ -9592,6 +9597,7 @@ z_index = 1
 texture = ExtResource( 54 )
 hframes = 6
 vframes = 4
+frame = 1
 
 [node name="CurtainRight" type="Sprite" parent="Node2D"]
 light_mask = 0
@@ -9602,6 +9608,7 @@ texture = ExtResource( 54 )
 flip_h = true
 hframes = 6
 vframes = 4
+frame = 1
 
 [node name="particulas" type="Node2D" parent="Node2D"]
 visible = false
@@ -9853,20 +9860,20 @@ __meta__ = {
 }
 
 [node name="faca2" type="Node2D" parent="Node2D"]
-visible = false
 
 [node name="KnifeGlow" type="Sprite" parent="Node2D/faca2"]
 modulate = Color( 0.968627, 0.713726, 0.898039, 1 )
 self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 706.622, 146.045 )
-rotation = 0.299364
-scale = Vector2( 0.527064, 0.527064 )
+rotation = 0.300399
+scale = Vector2( 0.692866, 0.692866 )
 z_index = -3
 texture = ExtResource( 73 )
 
 [node name="KnifeSpritesheet" type="Sprite" parent="Node2D/faca2"]
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 707, 145 )
-rotation = -0.0127988
+rotation = 0.299158
 scale = Vector2( 0.74994, 0.74994 )
 z_index = -2
 texture = ExtResource( 53 )
@@ -9906,20 +9913,20 @@ __meta__ = {
 }
 
 [node name="faca3" type="Node2D" parent="Node2D"]
-visible = false
 
 [node name="KnifeGlow" type="Sprite" parent="Node2D/faca3"]
 modulate = Color( 0.968627, 0.713726, 0.898039, 1 )
 self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 706.622, 146.045 )
-rotation = 0.299364
-scale = Vector2( 0.527064, 0.527064 )
+rotation = 0.300399
+scale = Vector2( 0.692866, 0.692866 )
 z_index = -3
 texture = ExtResource( 73 )
 
 [node name="KnifeSpritesheet" type="Sprite" parent="Node2D/faca3"]
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 707, 145 )
-rotation = -0.0127988
+rotation = 0.299158
 scale = Vector2( 0.74994, 0.74994 )
 z_index = -2
 texture = ExtResource( 53 )
@@ -9983,6 +9990,21 @@ position = Vector2( -14.752, 32.4548 )
 scale = Vector2( 1.03711, 1.03711 )
 z_index = -5
 texture = ExtResource( 74 )
+
+[node name="Sprite" type="Sprite" parent="Node2D/CyberCircusArenaBonus"]
+position = Vector2( -855.492, -462.534 )
+scale = Vector2( 0.411851, 0.411851 )
+texture = ExtResource( 43 )
+
+[node name="Label" type="Label" parent="Node2D/CyberCircusArenaBonus"]
+margin_left = -1181.09
+margin_top = -1021.12
+margin_right = -339.092
+margin_bottom = 90.8809
+rect_scale = Vector2( 0.0627231, 0.0461049 )
+rect_pivot_offset = Vector2( 394.606, 563.573 )
+custom_fonts/font = SubResource( 120 )
+text = "x3"
 
 [node name="amiguinhos" type="Node2D" parent="Node2D"]
 
@@ -10121,11 +10143,11 @@ __meta__ = {
 
 [node name="numeros so" type="Label" parent="Win"]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 220.514
-margin_top = 419.248
-margin_right = 610.508
-margin_bottom = 556.248
-rect_scale = Vector2( 4.43851, 3.95866 )
+margin_left = 470.974
+margin_top = 1881.17
+margin_right = 860.968
+margin_bottom = 2018.17
+rect_scale = Vector2( 6.27759, 5.59891 )
 rect_pivot_offset = Vector2( 257.053, 78.903 )
 custom_colors/font_color = Color( 0.92549, 0.890196, 0.654902, 1 )
 custom_colors/font_outline_modulate = Color( 0.917647, 0.85098, 0.286275, 1 )
@@ -10133,9 +10155,6 @@ custom_colors/font_color_shadow = Color( 0.94902, 0.886275, 0.180392, 1 )
 custom_fonts/font = SubResource( 79 )
 text = "1000000"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Win"]
 anims/goodwin = SubResource( 90 )

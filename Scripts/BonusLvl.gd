@@ -17,6 +17,8 @@ onready var facaHitbox = $FacaHitbox
 onready var hitboxes = $Roda/Hitboxes
 onready var winazulLBL = $winazul
 onready var glow = $faca/KnifeGlow
+onready var glow2 = $faca2/KnifeGlow
+onready var glow3 = $faca3/KnifeGlow
 onready var palhacoAnim = $amiguinhos/Clown/AnimationPlayer
 onready var coelhoAnim = $amiguinhos/Bunny/AnimationPlayer
 
@@ -42,6 +44,9 @@ onready  var knifeMP3 = $KnifeSoundMP3
 onready var musicMp3 = $MusicMP3
 onready var transitionMP3 = $TransMP3
 onready var winMP3 = $WinMP3
+onready var knivesLabel = $CyberCircusArenaBonus/Label
+
+onready var knives = 3
 
 var playsound = false
 var amiguinhos = false
@@ -60,9 +65,17 @@ func bonusSound():
 
 var comecou = false
 
+var faca1desaparece = false
+var faca2desaparece = false
+var faca3desaparece = false
+
+
 func _process(delta):
+	knivesLabel.text = str("x", knives)
 	if playsound:
 		bonusSound()
+	else:
+		musicMp3.stop()
 	if prontaprarodar:
 		roda.rotation_degrees = roda.rotation_degrees + 250 * delta
 	else:
@@ -73,6 +86,12 @@ func _process(delta):
 			comecou = true
 			amiguinhPalhaco()
 			amiguinhoCoelho()
+	if faca1desaparece && faca.modulate.a != 0:
+		faca.modulate.a = faca.modulate.a -0.01
+	if faca2desaparece && faca2.modulate.a != 0:
+		faca2.modulate.a = faca2.modulate.a -0.01
+	if faca3desaparece && faca3.modulate.a != 0:
+		faca3.modulate.a = faca3.modulate.a -0.01
 
 func bonusTocando(yesorNo):
 	return
@@ -122,15 +141,15 @@ func amiguinhPalhaco():
 	comecou = false
 
 var bonusTocando = false
+
 func _on_RodaBtn_pressed():
-	
 	glow.visible = false
 	random.randomize()
-	var num = random.randi_range(0, 3)
+	var num = random.randi_range(0, 7)
 	if prontopraclicar:
 		prontopraclicar = false
-	
 		if!faca1Thrown:
+			knives = 2
 			faca1Thrown = true
 			if num == 0:
 				facaAnim.play("1faca")
@@ -155,20 +174,284 @@ func _on_RodaBtn_pressed():
 				yield(get_tree().create_timer(0.6), "timeout")
 				facaHitbox.position = facaPos
 			elif num == 3:
+				facaAnim.play("facaf1")
+				atiraFacaSOM() #substituir
+				yield(get_tree().create_timer(0.5), "timeout")
+				faca1desaparece = true
+				yield(get_tree().create_timer(0.6), "timeout")
+				facaAnim2.play("facaentra")
+				animP.play("4rodaroda")
+				yield(get_tree().create_timer(0.7), "timeout")
+				prontaprarodar = true
+				yield(get_tree().create_timer(1), "timeout")
+				facaAnim2.play("click")
+				prontopraclicar = true
+				yield(get_tree().create_timer(facaAnim2.get_animation("click").length), "timeout")
+				if prontopraclicar:
+					facaAnim2.play("facaglow")
+			elif num == 4:
+				facaAnim.play("facaf2")
+				atiraFacaSOM() #substituir
+				yield(get_tree().create_timer(0.5), "timeout")
+				faca1desaparece = true
+				yield(get_tree().create_timer(0.6), "timeout")
+				facaAnim2.play("facaentra")
+				animP.play("4rodaroda")
+				yield(get_tree().create_timer(0.7), "timeout")
+				prontaprarodar = true
+				yield(get_tree().create_timer(1), "timeout")
+				facaAnim2.play("click")
+				prontopraclicar = true
+				yield(get_tree().create_timer(facaAnim2.get_animation("click").length), "timeout")
+				if prontopraclicar:
+					facaAnim2.play("facaglow")
+			elif num == 5:
 				facaAnim.play("facaf3")
 				atiraFacaSOM() #substituir
+				yield(get_tree().create_timer(0.5), "timeout")
+				faca1desaparece = true
+				yield(get_tree().create_timer(0.8), "timeout")
+				facaAnim2.play("facaentra")
+				animP.play("4rodaroda")
+				yield(get_tree().create_timer(0.7), "timeout")
+				prontaprarodar = true
+				yield(get_tree().create_timer(1), "timeout")
+				facaAnim2.play("click")
+				prontopraclicar = true
+				yield(get_tree().create_timer(facaAnim2.get_animation("click").length), "timeout")
+				if prontopraclicar:
+					facaAnim2.play("facaglow")
+			elif num == 6:
+				facaAnim.play("facaf4")
+				atiraFacaSOM() #substituir
+				yield(get_tree().create_timer(0.5), "timeout")
+				faca1desaparece = true
 				yield(get_tree().create_timer(0.6), "timeout")
+				facaAnim2.play("facaentra")
+				animP.play("4rodaroda")
+				yield(get_tree().create_timer(0.7), "timeout")
+				prontaprarodar = true
+				yield(get_tree().create_timer(1), "timeout")
+				facaAnim2.play("click")
+				prontopraclicar = true
+				yield(get_tree().create_timer(facaAnim2.get_animation("click").length), "timeout")
+				if prontopraclicar:
+					facaAnim2.play("facaglow")
+			elif num == 7:
+				facaAnim.play("facaf5")
+				atiraFacaSOM() #substituir
+				yield(get_tree().create_timer(0.5), "timeout")
+				faca1desaparece = true
+				yield(get_tree().create_timer(0.6), "timeout")
+				facaAnim2.play("facaentra")
+				animP.play("4rodaroda")
+				yield(get_tree().create_timer(0.7), "timeout")
+				prontaprarodar = true
+				yield(get_tree().create_timer(1), "timeout")
+				facaAnim2.play("click")
+				prontopraclicar = true
+				yield(get_tree().create_timer(facaAnim2.get_animation("click").length), "timeout")
+				if prontopraclicar:
+					facaAnim2.play("facaglow")
 				
 		elif!faca2Thrown:
-			faca2Thrown
+			knives = 1
+			faca2Thrown = true
+			glow2.visible = false
+			if num == 0:
+				facaAnim2.play("1faca")
+				atiraFacaSOM()
+				yield(get_tree().create_timer(0.6), "timeout")
+				prontaprarodar = false
+				_WinAmarelo()
+			elif num == 1:
+				facaAnim2.play("2faca")
+				atiraFacaSOM()
+				yield(get_tree().create_timer(0.6), "timeout")
+				prontaprarodar = false
+				facaHitbox.position = facaSprite2.position
+				yield(get_tree().create_timer(0.6), "timeout")
+				facaHitbox.position = facaPos
+			elif num == 2:
+				facaAnim2.play("3faca")
+				atiraFacaSOM()
+				yield(get_tree().create_timer(0.6), "timeout")
+				prontaprarodar = false
+				facaHitbox.position = facaSprite2.position 
+				yield(get_tree().create_timer(0.6), "timeout")
+				facaHitbox.position = facaPos
+			elif num == 3:
+				facaAnim2.play("facaf1")
+				atiraFacaSOM() #substituir
+				yield(get_tree().create_timer(0.5), "timeout")
+				faca2desaparece = true
+				yield(get_tree().create_timer(0.6), "timeout")
+				facaAnim3.play("facaentra")
+				animP.play("4rodaroda")
+				yield(get_tree().create_timer(0.7), "timeout")
+				prontaprarodar = true
+				yield(get_tree().create_timer(1), "timeout")
+				facaAnim3.play("click")
+				prontopraclicar = true
+				yield(get_tree().create_timer(facaAnim3.get_animation("click").length), "timeout")
+				if prontopraclicar:
+					facaAnim3.play("facaglow")
+			elif num == 4:
+				facaAnim2.play("facaf2")
+				atiraFacaSOM() #substituir
+				yield(get_tree().create_timer(0.5), "timeout")
+				faca2desaparece = true
+				yield(get_tree().create_timer(0.6), "timeout")
+				facaAnim3.play("facaentra")
+				animP.play("4rodaroda")
+				yield(get_tree().create_timer(0.7), "timeout")
+				prontaprarodar = true
+				yield(get_tree().create_timer(1), "timeout")
+				facaAnim3.play("click")
+				prontopraclicar = true
+				yield(get_tree().create_timer(facaAnim3.get_animation("click").length), "timeout")
+				if prontopraclicar:
+					facaAnim3.play("facaglow")
+			elif num == 5:
+				facaAnim2.play("facaf3")
+				atiraFacaSOM() #substituir
+				yield(get_tree().create_timer(0.5), "timeout")
+				faca2desaparece = true
+				yield(get_tree().create_timer(0.8), "timeout")
+				facaAnim3.play("facaentra")
+				animP.play("4rodaroda")
+				yield(get_tree().create_timer(0.7), "timeout")
+				prontaprarodar = true
+				yield(get_tree().create_timer(1), "timeout")
+				facaAnim3.play("click")
+				prontopraclicar = true
+				yield(get_tree().create_timer(facaAnim3.get_animation("click").length), "timeout")
+				if prontopraclicar:
+					facaAnim3.play("facaglow")
+			elif num == 6:
+				facaAnim2.play("facaf4")
+				atiraFacaSOM() #substituir
+				yield(get_tree().create_timer(0.5), "timeout")
+				faca2desaparece = true
+				yield(get_tree().create_timer(0.6), "timeout")
+				facaAnim3.play("facaentra")
+				animP.play("4rodaroda")
+				yield(get_tree().create_timer(0.7), "timeout")
+				prontaprarodar = true
+				yield(get_tree().create_timer(1), "timeout")
+				facaAnim3.play("click")
+				prontopraclicar = true
+				yield(get_tree().create_timer(facaAnim3.get_animation("click").length), "timeout")
+				if prontopraclicar:
+					facaAnim3.play("facaglow")
+			elif num == 7:
+				facaAnim2.play("facaf5")
+				atiraFacaSOM() #substituir
+				yield(get_tree().create_timer(0.5), "timeout")
+				faca2desaparece = true
+				yield(get_tree().create_timer(0.6), "timeout")
+				facaAnim3.play("facaentra")
+				animP.play("4rodaroda")
+				yield(get_tree().create_timer(0.7), "timeout")
+				prontaprarodar = true
+				yield(get_tree().create_timer(1), "timeout")
+				facaAnim3.play("click")
+				prontopraclicar = true
+				yield(get_tree().create_timer(facaAnim3.get_animation("click").length), "timeout")
+				if prontopraclicar:
+					facaAnim3.play("facaglow")
 		else:
-			faca3Thrown
-			
-			
-			
-			
-			
-			
+			knives = 0
+			faca3Thrown = true
+			glow3.visible = false
+			if num == 0:
+				facaAnim3.play("1faca")
+				atiraFacaSOM()
+				yield(get_tree().create_timer(0.6), "timeout")
+				prontaprarodar = false
+				_WinAmarelo()
+			elif num == 1:
+				facaAnim3.play("2faca")
+				atiraFacaSOM()
+				yield(get_tree().create_timer(0.6), "timeout")
+				prontaprarodar = false
+				facaHitbox.position = facaSprite3.position
+				yield(get_tree().create_timer(0.6), "timeout")
+				facaHitbox.position = facaPos
+			elif num == 2:
+				facaAnim3.play("3faca")
+				atiraFacaSOM()
+				yield(get_tree().create_timer(0.6), "timeout")
+				prontaprarodar = false
+				facaHitbox.position = facaSprite3.position 
+				yield(get_tree().create_timer(0.6), "timeout")
+				facaHitbox.position = facaPos
+			elif num == 3:
+				facaAnim3.play("facaf1")
+				atiraFacaSOM() #substituir
+				yield(get_tree().create_timer(0.5), "timeout")
+				faca3desaparece = true
+				amiguinhos= false
+				yield(get_tree().create_timer(2), "timeout")
+				animP.play("cortinasentrada")
+				yield(get_tree().create_timer(1), "timeout")
+				animP.play("tudobaza2")
+				bonusTocando = false
+				playsound = false
+				
+				_jukebox()
+				
+			elif num == 4:
+				facaAnim3.play("facaf2")
+				atiraFacaSOM() #substituir
+				yield(get_tree().create_timer(0.5), "timeout")
+				faca3desaparece = true
+				amiguinhos= false
+				animP.play("cortinasentrada")
+				yield(get_tree().create_timer(1), "timeout")
+				animP.play("tudobaza2")
+				bonusTocando = false
+				playsound = false
+				_jukebox()
+				
+			elif num == 5:
+				facaAnim3.play("facaf3")
+				atiraFacaSOM() #substituir
+				yield(get_tree().create_timer(0.5), "timeout")
+				faca3desaparece = true
+				amiguinhos= false
+				animP.play("cortinasentrada")
+				yield(get_tree().create_timer(1), "timeout")
+				animP.play("tudobaza2")
+				bonusTocando = false
+				playsound = false
+				_jukebox()
+				
+			elif num == 6:
+				facaAnim3.play("facaf4")
+				atiraFacaSOM() #substituir
+				yield(get_tree().create_timer(0.5), "timeout")
+				faca3desaparece = true
+				amiguinhos= false
+				animP.play("cortinasentrada")
+				yield(get_tree().create_timer(1), "timeout")
+				animP.play("tudobaza2")
+				bonusTocando = false
+				playsound = false
+				_jukebox()
+				
+			elif num == 7:
+				facaAnim3.play("facaf5")
+				atiraFacaSOM() #substituir
+				yield(get_tree().create_timer(0.5), "timeout")
+				faca3desaparece = true
+				amiguinhos= false
+				animP.play("cortinasentrada")
+				yield(get_tree().create_timer(1), "timeout")
+				animP.play("tudobaza2")
+				bonusTocando = false
+				playsound = false
+				_jukebox()
 
 func atiraFacaSOM():
 	knifeMP3.play()
@@ -221,21 +504,12 @@ func _WinRosa():
 	amiguinhos = false
 	yield(get_tree().create_timer(animP.get_animation("winrosa").length), "timeout")
 	animP.play("winrosabaza")
-#	yield(get_tree().create_timer(2), "timeout")
-#	animP.play("cortinasentrada")
-#	yield(get_tree().create_timer(1), "timeout")
-#	animP.play("tudobaza2")
-#	bonusTocando = false
-#	_jukebox()
-	if !faca1Thrown:
-		yield(get_tree().create_timer(2), "timeout")
-		facaAnim2.play("facaentra")
-		yield(get_tree().create_timer(1), "timeout")
-		facaAnim2.play("click")
-		prontopraclicar = true
-		yield(get_tree().create_timer(facaAnim2.get_animation("click").length), "timeout")
-		if prontopraclicar:
-			facaAnim2.play("facaglow")
+	yield(get_tree().create_timer(2), "timeout")
+	animP.play("cortinasentrada")
+	yield(get_tree().create_timer(1), "timeout")
+	animP.play("tudobaza2")
+	bonusTocando = false
+	_jukebox()
 		
 
 
@@ -247,12 +521,13 @@ func _WinAmarelo():
 	amiguinhos = false
 	yield(get_tree().create_timer(animP.get_animation("winamarelo").length), "timeout")
 	animP.play("winamarelobaza")
-#	yield(get_tree().create_timer(2), "timeout")
-#	animP.play("cortinasentrada")
-#	yield(get_tree().create_timer(2), "timeout")
-#	animP.play("tudobaza2")
-#	bonusTocando = false
-#	_jukebox()
+	yield(get_tree().create_timer(2), "timeout")
+	animP.play("cortinasentrada")
+	yield(get_tree().create_timer(2), "timeout")
+	animP.play("tudobaza2")
+	bonusTocando = false
+	_jukebox()
+
 
 func _WinAzul():
 	playsound = false
@@ -262,12 +537,12 @@ func _WinAzul():
 	amiguinhos = false
 	yield(get_tree().create_timer(animP.get_animation("winazul").length), "timeout")
 	animP.play("winazulbaza")
-#	yield(get_tree().create_timer(2), "timeout")
-#	animP.play("cortinasentrada")
-#	yield(get_tree().create_timer(1), "timeout")
-#	animP.play("tudobaza2")
-#	bonusTocando = false
-#	_jukebox()
+	yield(get_tree().create_timer(2), "timeout")
+	animP.play("cortinasentrada")
+	yield(get_tree().create_timer(1), "timeout")
+	animP.play("tudobaza2")
+	bonusTocando = false
+	_jukebox()
 
 
 func _WinAzul2():
@@ -279,12 +554,12 @@ func _WinAzul2():
 	amiguinhos = false
 	yield(get_tree().create_timer(animP.get_animation("winazul").length), "timeout")
 	animP.play("winazulbaza")
-#	yield(get_tree().create_timer(2), "timeout")
-#	animP.play("cortinasentrada")
-#	yield(get_tree().create_timer(1), "timeout")
-#	animP.play("tudobaza2")
-#	bonusTocando = false
-#	_jukebox()
+	yield(get_tree().create_timer(2), "timeout")
+	animP.play("cortinasentrada")
+	yield(get_tree().create_timer(1), "timeout")
+	animP.play("tudobaza2")
+	bonusTocando = false
+	_jukebox()
 
 
 func winSoundFunc():
@@ -300,12 +575,10 @@ func _input(event):
 			
 func _on_KnifeSoundMP3_finished():
 	knifeMP3.stop()
-	pass # Replace with function body.
 
 
 func _on_WinMP3_finished():
 	winMP3.stop()
-	pass # Replace with function body.
 
 
 
