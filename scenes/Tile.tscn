@@ -2842,7 +2842,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 109 )
 animation = "burn"
-frame = 7
+frame = 6
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="Sprite/Lion/Head"]
@@ -2860,7 +2860,6 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 110 )
 animation = "kwispy"
-frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite/Lion"]
@@ -2954,7 +2953,6 @@ texture = ExtResource( 5 )
 range_item_cull_mask = 65536
 
 [node name="Strongman" type="Sprite" parent="Sprite"]
-visible = false
 light_mask = 2048
 position = Vector2( 1310.81, 533.418 )
 scale = Vector2( 3.52107, 2.11894 )
@@ -2983,11 +2981,11 @@ position = Vector2( -295.651, -257.251 )
 [node name="Bone2D" type="Bone2D" parent="Sprite/Strongman/Skeleton2D"]
 position = Vector2( 289.753, 436.41 )
 rotation = -1.56617
-scale = Vector2( 5.45989, 0.998352 )
+scale = Vector2( 5.50432, 1.00647 )
 rest = Transform2D( 0.0252701, -5.46007, 0.999989, 0.00462812, 289.753, 436.41 )
 
 [node name="Bone2D" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D"]
-position = Vector2( 18.7522, 2.14788 )
+position = Vector2( 19.1115, 2.13879 )
 rest = Transform2D( 1, 0, 0, 1, 18.7519, 2.14789 )
 
 [node name="Bone2D" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D"]
@@ -2995,38 +2993,38 @@ position = Vector2( 26.3277, -2.61899 )
 rest = Transform2D( 1, 0, 0, 1, 22.934, -5.823 )
 
 [node name="Bone2D2" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D"]
-position = Vector2( 20.5118, 3.70224 )
-rotation = 1.49036
-scale = Vector2( 4.1389, 1.01128 )
+position = Vector2( 20.3948, 3.07857 )
+rotation = 1.50298
+scale = Vector2( 4.18967, 1.02369 )
 rest = Transform2D( 0.328865, 4.07948, -0.996766, 0.0803539, 17.5947, -1.07397 )
 
 [node name="Bone2D" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D/Bone2D2"]
 position = Vector2( 12.7972, 1.62114 )
-rotation = 0.511219
+rotation = 0.480292
 scale = Vector2( 1.69008, 3.73437 )
 rest = Transform2D( 1.474, 0.826855, -1.82701, 3.25693, 12.7972, 1.62114 )
 
 [node name="Bone2D" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D/Bone2D2/Bone2D"]
-position = Vector2( 17.4252, -1.04968 )
-rotation = -1.33258
+position = Vector2( 17.3344, -1.14409 )
+rotation = -1.31483
 scale = Vector2( 0.477406, 9.36885 )
 rest = Transform2D( 0.112654, -0.463924, 9.10427, 2.21078, 17.4252, -1.04968 )
 
 [node name="Bone2D3" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D"]
 position = Vector2( 20.1805, -1.93349 )
-rotation = -1.52714
-scale = Vector2( 3.3188, 1 )
+rotation = -1.5229
+scale = Vector2( 3.34533, 1.00799 )
 rest = Transform2D( 0.144854, -3.31564, 0.999047, 0.0436465, 17.7659, -7.5195 )
 
 [node name="Bone2D" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D/Bone2D3"]
 position = Vector2( 14.5924, -1.32954 )
-rotation = -0.14749
+rotation = -0.123903
 scale = Vector2( 1.69978, 3.4275 )
 rest = Transform2D( 1.68132, -0.249792, 0.503692, 3.39029, 14.5924, -1.32954 )
 
 [node name="Bone2D" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D/Bone2D3/Bone2D"]
 position = Vector2( 15.205, 0.140127 )
-rotation = 0.926983
+rotation = 0.929343
 scale = Vector2( 0.644125, -0.662084 )
 rest = Transform2D( 0.386636, 0.515179, 0.529543, -0.397416, 15.205, 0.140127 )
 
@@ -3036,8 +3034,8 @@ z_index = -1
 texture = ExtResource( 26 )
 
 [node name="Light2D3" type="Light2D" parent="Sprite/Strongman"]
-position = Vector2( -216.512, -177.786 )
-rotation = 0.00374775
+position = Vector2( -117.114, 252.436 )
+rotation = -0.282892
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 8 )
 texture_scale = 1.69

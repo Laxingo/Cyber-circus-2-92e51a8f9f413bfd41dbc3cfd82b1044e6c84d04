@@ -196,7 +196,7 @@ func animate_icon(symbol):
 			yield(get_tree().create_timer(3), "timeout")
 			playing = false
 		elif(symbol =="strongman"):
-			$Sprite/Strongman/Viewport/AnimationPlayer.play("b1")
+			$Sprite/Strongman/AnimationPlayer.play("b")
 			playing = true
 			var moldura = $Sprite/Strongman/Moldura
 			moldura.modulate = Color(1, 0.843, 0)
