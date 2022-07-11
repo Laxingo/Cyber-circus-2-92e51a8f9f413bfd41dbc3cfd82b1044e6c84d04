@@ -99,7 +99,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.9, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 416, 167 ), Vector2( 541, 378 ), Vector2( 416, 167 ) ]
+"values": [ Vector2( -92.1046, 335.737 ), Vector2( 35.6536, 531.831 ), Vector2( -92.1046, 335.737 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Light2D:rotation_degrees")
@@ -111,7 +111,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.9, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 50.1858, 36.7286, 50.1858 ]
+"values": [ 60.1667, 49.15, 60.1667 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Light2D2:position")
@@ -123,7 +123,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 2, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -364, 77.9999 ), Vector2( -507, 327 ), Vector2( -364, 77.9999 ) ]
+"values": [ Vector2( 60.9081, 568.97 ), Vector2( 249.574, 283.742 ), Vector2( 60.9081, 568.97 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Light2D2:rotation_degrees")
@@ -135,7 +135,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 2, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ -45.8966, -31.7056, -45.8966 ]
+"values": [ -45.8966, -63.2472, -45.8966 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -149,10 +149,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6, 1.1, 1.6, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.1, 1.4, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -364, 77.9999 ), Vector2( -228, -731 ), Vector2( -364, 77.9999 ), Vector2( -228, -731 ), Vector2( -364, 77.9999 ) ]
+"values": [ Vector2( 46.0526, 571.941 ), Vector2( 381.789, -166.382 ), Vector2( 187.181, -958.185 ), Vector2( 360.991, -1.48508 ), Vector2( 37.1392, 565.999 ), Vector2( 396.645, -340.193 ), Vector2( 185.695, -958.186 ), Vector2( 386.246, -166.382 ), Vector2( 46.0526, 571.941 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Light2D2:rotation_degrees")
@@ -161,10 +161,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.6, 1.1, 1.6, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.1, 1.4, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -45.8966, -123.065, -45.8966, -123.065, -45.8966 ]
+"values": [ -45.8966, -84.4808, -123.065, -76.764, -45.8966, -92.1976, -123.065, -84.4808, -45.8966 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Light2D:position")
@@ -173,10 +173,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.6, 1.1, 1.6, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.1, 1.4, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 416, 167 ), Vector2( 387, -624 ), Vector2( 416, 167 ), Vector2( 387, -624 ), Vector2( 416, 167 ) ]
+"values": [ Vector2( 26.7402, 514.004 ), Vector2( -268.886, -170.839 ), Vector2( -114.388, -903.22 ), Vector2( -246.603, -22.2829 ), Vector2( 32.6824, 511.033 ), Vector2( -270.372, -323.852 ), Vector2( -111.417, -909.162 ), Vector2( -252.545, -164.897 ), Vector2( 26.7402, 514.004 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Light2D:rotation_degrees")
@@ -185,10 +185,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.6, 1.1, 1.6, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.1, 1.4, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 50.1858, 120.099, 50.1858, 120.099, 50.1858 ]
+"values": [ 50.1858, 85.1424, 120.099, 78.1511, 50.1858, 92.1337, 120.099, 85.1424, 50.1858 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Light2D2:energy")
@@ -370,10 +370,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6, 1.1, 1.6, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.1, 1.4, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -364, 77.9999 ), Vector2( -228, -731 ), Vector2( -364, 77.9999 ), Vector2( -228, -731 ), Vector2( -364, 77.9999 ) ]
+"values": [ Vector2( 43.0814, 565.999 ), Vector2( 389.217, -163.411 ), Vector2( 188.666, -965.613 ), Vector2( 363.962, -7.42728 ), Vector2( 49.0237, 563.028 ), Vector2( 395.159, -337.222 ), Vector2( 194.609, -962.642 ), Vector2( 392.188, -164.897 ), Vector2( 43.0814, 565.999 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Light2D2:rotation_degrees")
@@ -382,10 +382,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.6, 1.1, 1.6, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.1, 1.4, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -45.8966, -123.065, -45.8966, -123.065, -45.8966 ]
+"values": [ -45.8966, -84.4808, -123.065, -76.764, -45.8966, -92.1976, -123.065, -84.4808, -45.8966 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Light2D:position")
@@ -394,10 +394,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.6, 1.1, 1.6, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.1, 1.4, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 416, 167 ), Vector2( 387, -624 ), Vector2( 416, 167 ), Vector2( 387, -624 ), Vector2( 416, 167 ) ]
+"values": [ Vector2( 38.6246, 508.062 ), Vector2( -249.574, -173.81 ), Vector2( -105.475, -909.162 ), Vector2( -236.204, -29.7107 ), Vector2( 32.6824, 511.033 ), Vector2( -276.314, -323.852 ), Vector2( -96.5613, -915.104 ), Vector2( -265.915, -164.897 ), Vector2( 38.6246, 508.062 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Light2D:rotation_degrees")
@@ -406,10 +406,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.6, 1.1, 1.6, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.1, 1.4, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 50.1858, 120.099, 50.1858, 120.099, 50.1858 ]
+"values": [ 50.1858, 85.1424, 120.099, 78.1511, 50.1858, 92.1337, 120.099, 85.1424, 50.1858 ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -8816,22 +8816,22 @@ z_index = -5
 
 [node name="Light2D" type="Light2D" parent="Luzes"]
 light_mask = 524289
-position = Vector2( 416, 167 )
-rotation = 0.875907
+position = Vector2( -120.633, -807.184 )
+rotation = 2.01123
 scale = Vector2( 2.21001, 4.92555 )
 texture = ExtResource( 9 )
 color = Color( 0.964706, 0.952941, 0.231373, 1 )
-energy = 0.84255
+energy = 0.866806
 range_height = -809.1
 
 [node name="Light2D2" type="Light2D" parent="Luzes"]
 light_mask = 524288
-position = Vector2( -364, 77.9999 )
-rotation = -0.801047
+position = Vector2( 208.993, -854.506 )
+rotation = -2.05418
 scale = Vector2( 2.21001, 4.92555 )
 texture = ExtResource( 9 )
 color = Color( 0.964706, 0.952941, 0.231373, 1 )
-energy = 0.84255
+energy = 0.866806
 range_height = -809.1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Luzes"]
@@ -8840,32 +8840,32 @@ anims/luzbigwin = SubResource( 3 )
 anims/luzwin = SubResource( 4 )
 
 [node name="Light2D3" type="Light2D" parent="Luzes"]
-position = Vector2( -717.855, 214.698 )
+position = Vector2( -717.556, 281.637 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="Light2D4" type="Light2D" parent="Luzes"]
-position = Vector2( 845, -73.1194 )
+position = Vector2( 845, -138.861 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="Light2D5" type="Light2D" parent="Luzes"]
-position = Vector2( 530.907, 220.868 )
+position = Vector2( 531.289, 288.097 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="Light2D6" type="Light2D" parent="Luzes"]
-position = Vector2( 222.047, -85.0992 )
+position = Vector2( 222.031, -151.548 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="Light2D7" type="Light2D" parent="Luzes"]
-position = Vector2( -83.093, 205.867 )
+position = Vector2( -82.7105, 273.097 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
 [node name="Light2D8" type="Light2D" parent="Luzes"]
-position = Vector2( -401.953, -75.0992 )
+position = Vector2( -401.969, -141.548 )
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 4 )
 
@@ -9004,9 +9004,6 @@ margin_right = 1850.0
 margin_bottom = 910.901
 rect_scale = Vector2( 0.932624, 0.992657 )
 stretch = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Viewport" type="Viewport" parent="ViewportContainer"]
 size = Vector2( 1662, 810 )
@@ -9211,6 +9208,7 @@ __meta__ = {
 }
 
 [node name="options2" type="TextureButton" parent="."]
+light_mask = 2
 margin_left = 760.914
 margin_top = 903.492
 margin_right = 883.914
@@ -9223,6 +9221,7 @@ expand = true
 stretch_mode = 5
 
 [node name="replay" type="TextureButton" parent="."]
+light_mask = 2
 margin_left = 1064.08
 margin_top = 904.992
 margin_right = 1187.08
@@ -9357,6 +9356,7 @@ volume_db = 3.4
 [node name="Wins" type="AudioStreamPlayer2D" parent="Audios"]
 
 [node name="Node2D" type="Node2D" parent="."]
+visible = false
 position = Vector2( 959.022, 492.268 )
 z_index = 6
 script = ExtResource( 34 )
