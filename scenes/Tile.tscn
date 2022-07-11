@@ -2657,6 +2657,7 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 109 )
 animation = "burn"
+frame = 7
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="Sprite/Lion/Head"]
@@ -2674,7 +2675,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 110 )
 animation = "kwispy"
-frame = 4
+frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite/Lion"]
@@ -2805,18 +2806,18 @@ position = Vector2( 18.7519, 2.14789 )
 rest = Transform2D( 1, 0, 0, 1, 18.7519, 2.14789 )
 
 [node name="Bone2D" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D"]
-position = Vector2( 26.4451, -2.63769 )
+position = Vector2( 26.3277, -2.61899 )
 rest = Transform2D( 1, 0, 0, 1, 22.934, -5.823 )
 
 [node name="Bone2D2" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D"]
-position = Vector2( 20.6046, 3.70347 )
+position = Vector2( 20.5118, 3.70224 )
 rotation = 1.49036
 scale = Vector2( 4.09271, 1 )
 rest = Transform2D( 0.328865, 4.07948, -0.996766, 0.0803539, 17.5947, -1.07397 )
 
 [node name="Bone2D" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D/Bone2D2"]
 position = Vector2( 12.7972, 1.62114 )
-rotation = 0.51122
+rotation = 0.511219
 scale = Vector2( 1.69008, 3.73437 )
 rest = Transform2D( 1.474, 0.826855, -1.82701, 3.25693, 12.7972, 1.62114 )
 
@@ -2827,7 +2828,7 @@ scale = Vector2( 0.477406, 9.36885 )
 rest = Transform2D( 0.112654, -0.463924, 9.10427, 2.21078, 17.4252, -1.04968 )
 
 [node name="Bone2D3" type="Bone2D" parent="Sprite/Strongman/Skeleton2D/Bone2D/Bone2D"]
-position = Vector2( 20.2969, -1.96147 )
+position = Vector2( 20.1805, -1.93349 )
 rotation = -1.52714
 scale = Vector2( 3.3188, 1 )
 rest = Transform2D( 0.144854, -3.31564, 0.999047, 0.0436465, 17.7659, -7.5195 )
@@ -2850,12 +2851,12 @@ z_index = -1
 texture = ExtResource( 26 )
 
 [node name="Light2D3" type="Light2D" parent="Sprite/Strongman"]
-position = Vector2( 208.513, -274.166 )
-rotation = 0.00834184
+position = Vector2( 211.263, -274.399 )
+rotation = 0.00837142
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 8 )
 texture_scale = 1.69
-energy = 0.0639801
+energy = 0.0
 shadow_color = Color( 0.215686, 1, 0.964706, 0 )
 
 [node name="A" type="Sprite" parent="Sprite"]

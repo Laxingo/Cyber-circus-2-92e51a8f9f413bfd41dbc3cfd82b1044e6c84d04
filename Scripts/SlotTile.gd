@@ -228,7 +228,7 @@ func animate_icon_idle(symbol):
 	elif(symbol =="lion"):
 		$Sprite/Lion/AnimationPlayer.play("lion_idle")
 	elif(symbol =="strongman"):
-		$Sprite/Strongman/Viewport/AnimationPlayer.play("bomba_idle")
+		$Sprite/Strongman/AnimationPlayer.play("bomba_idle")
 	elif(symbol =="Q"):
 		pass
 	elif(symbol =="roulette"):
