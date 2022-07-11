@@ -6995,8 +6995,8 @@ z_index = -5
 
 [node name="Light2D" type="Light2D" parent="Luzes"]
 light_mask = 524289
-position = Vector2( 510.333, 326.234 )
-rotation = 0.698658
+position = Vector2( 416, 167 )
+rotation = 0.875907
 scale = Vector2( 2.21001, 4.92555 )
 texture = ExtResource( 9 )
 color = Color( 0.964706, 0.952941, 0.231373, 1 )
@@ -7005,8 +7005,8 @@ range_height = -809.1
 
 [node name="Light2D2" type="Light2D" parent="Luzes"]
 light_mask = 524288
-position = Vector2( -465.187, 254.193 )
-rotation = -0.625788
+position = Vector2( -364, 77.9999 )
+rotation = -0.801047
 scale = Vector2( 2.21001, 4.92555 )
 texture = ExtResource( 9 )
 color = Color( 0.964706, 0.952941, 0.231373, 1 )
@@ -7183,6 +7183,9 @@ margin_right = 1850.0
 margin_bottom = 910.901
 rect_scale = Vector2( 0.932624, 0.992657 )
 stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Viewport" type="Viewport" parent="ViewportContainer"]
 size = Vector2( 1662, 810 )
