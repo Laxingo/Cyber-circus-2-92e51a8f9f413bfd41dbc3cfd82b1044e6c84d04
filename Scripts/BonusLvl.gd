@@ -5,8 +5,14 @@ onready var animP = $AnimationPlayer
 onready var tweenie = $Tween
 onready var roda = $Roda
 onready var facaAnim = $faca/AnimationPlayer
+onready var facaAnim2 = $faca2/AnimationPlayer
+onready var facaAnim3 = $faca3/AnimationPlayer
 onready var faca = $faca
+onready var faca2 = $faca2
+onready var faca3 = $faca3
 onready var facaSprite = $faca/KnifeSpritesheet
+onready var facaSprite2 = $faca2/KnifeSpritesheet
+onready var facaSprite3 = $faca3/KnifeSpritesheet
 onready var facaHitbox = $FacaHitbox
 onready var hitboxes = $Roda/Hitboxes
 onready var winazulLBL = $winazul
@@ -116,31 +122,48 @@ func _on_RodaBtn_pressed():
 	
 	glow.visible = false
 	random.randomize()
-	var num = random.randi_range(0, 2)
+	var num = random.randi_range(0, 7)
 	if prontopraclicar:
 		prontopraclicar = false
-		if num == 0:
-			facaAnim.play("1faca")
-			atiraFacaSOM()
-			yield(get_tree().create_timer(0.6), "timeout")
-			prontaprarodar = false
-			_WinAmarelo()
-		elif num == 1:
-			facaAnim.play("2faca")
-			atiraFacaSOM()
-			yield(get_tree().create_timer(0.6), "timeout")
-			prontaprarodar = false
-			facaHitbox.position = facaSprite.position
-			yield(get_tree().create_timer(0.6), "timeout")
-			facaHitbox.position = facaPos
-		elif num == 2:
-			facaAnim.play("3faca")
-			atiraFacaSOM()
-			yield(get_tree().create_timer(0.6), "timeout")
-			prontaprarodar = false
-			facaHitbox.position = facaSprite.position 
-			yield(get_tree().create_timer(0.6), "timeout")
-			facaHitbox.position = facaPos
+	
+		if!faca1:
+			faca1 = true
+			if num == 0:
+				facaAnim.play("1faca")
+				atiraFacaSOM()
+				yield(get_tree().create_timer(0.6), "timeout")
+				prontaprarodar = false
+				_WinAmarelo()
+			elif num == 1:
+				facaAnim.play("2faca")
+				atiraFacaSOM()
+				yield(get_tree().create_timer(0.6), "timeout")
+				prontaprarodar = false
+				facaHitbox.position = facaSprite.position
+				yield(get_tree().create_timer(0.6), "timeout")
+				facaHitbox.position = facaPos
+			elif num == 2:
+				facaAnim.play("3faca")
+				atiraFacaSOM()
+				yield(get_tree().create_timer(0.6), "timeout")
+				prontaprarodar = false
+				facaHitbox.position = facaSprite.position 
+				yield(get_tree().create_timer(0.6), "timeout")
+				facaHitbox.position = facaPos
+			elif num == 3:
+				facaAnim.play("facaf3")
+				atiraFacaSOM()
+				yield(get_tree().create_timer(0.6), "timeout")
+		elif!faca2:
+			faca2
+		else:
+			faca3
+			
+			
+			
+			
+			
+			
 
 func atiraFacaSOM():
 	knifeMP3.play()
@@ -183,6 +206,10 @@ func _on_Amarelo_4_area_entered(area):
 
 onready var creditsToGive
 
+var faca1 = false
+var faca2 = false
+var faca3= false
+
 func _WinRosa():
 	playsound = false
 	musicMp3.stop()
@@ -191,13 +218,16 @@ func _WinRosa():
 	amiguinhos = false
 	yield(get_tree().create_timer(animP.get_animation("winrosa").length), "timeout")
 	animP.play("winrosabaza")
-	yield(get_tree().create_timer(2), "timeout")
-	animP.play("cortinasentrada")
-	yield(get_tree().create_timer(1), "timeout")
-	animP.play("tudobaza2")
-	bonusTocando = false
-	_jukebox()
-	
+#	yield(get_tree().create_timer(2), "timeout")
+#	animP.play("cortinasentrada")
+#	yield(get_tree().create_timer(1), "timeout")
+#	animP.play("tudobaza2")
+#	bonusTocando = false
+#	_jukebox()
+	if !faca1:
+		yield(get_tree().create_timer(2), "timeout")
+		
+
 
 func _WinAmarelo():
 	playsound = false
@@ -207,12 +237,12 @@ func _WinAmarelo():
 	amiguinhos = false
 	yield(get_tree().create_timer(animP.get_animation("winamarelo").length), "timeout")
 	animP.play("winamarelobaza")
-	yield(get_tree().create_timer(2), "timeout")
-	animP.play("cortinasentrada")
-	yield(get_tree().create_timer(2), "timeout")
-	animP.play("tudobaza2")
-	bonusTocando = false
-	_jukebox()
+#	yield(get_tree().create_timer(2), "timeout")
+#	animP.play("cortinasentrada")
+#	yield(get_tree().create_timer(2), "timeout")
+#	animP.play("tudobaza2")
+#	bonusTocando = false
+#	_jukebox()
 
 func _WinAzul():
 	playsound = false
@@ -222,12 +252,13 @@ func _WinAzul():
 	amiguinhos = false
 	yield(get_tree().create_timer(animP.get_animation("winazul").length), "timeout")
 	animP.play("winazulbaza")
-	yield(get_tree().create_timer(2), "timeout")
-	animP.play("cortinasentrada")
-	yield(get_tree().create_timer(1), "timeout")
-	animP.play("tudobaza2")
-	bonusTocando = false
-	_jukebox()
+#	yield(get_tree().create_timer(2), "timeout")
+#	animP.play("cortinasentrada")
+#	yield(get_tree().create_timer(1), "timeout")
+#	animP.play("tudobaza2")
+#	bonusTocando = false
+#	_jukebox()
+
 
 func _WinAzul2():
 	playsound = false
@@ -238,12 +269,13 @@ func _WinAzul2():
 	amiguinhos = false
 	yield(get_tree().create_timer(animP.get_animation("winazul").length), "timeout")
 	animP.play("winazulbaza")
-	yield(get_tree().create_timer(2), "timeout")
-	animP.play("cortinasentrada")
-	yield(get_tree().create_timer(1), "timeout")
-	animP.play("tudobaza2")
-	bonusTocando = false
-	_jukebox()
+#	yield(get_tree().create_timer(2), "timeout")
+#	animP.play("cortinasentrada")
+#	yield(get_tree().create_timer(1), "timeout")
+#	animP.play("tudobaza2")
+#	bonusTocando = false
+#	_jukebox()
+
 
 func winSoundFunc():
 	winMP3.play()

@@ -53,7 +53,7 @@ var lastCred
 
 var premioTocando
 
-onready var playBtn = $Node2D2/play
+onready var playBtn = $PlayBtn/play
 onready var options2Btn = $options2
 onready var replayBtn = $replay
 onready var optionsBtns = $options
