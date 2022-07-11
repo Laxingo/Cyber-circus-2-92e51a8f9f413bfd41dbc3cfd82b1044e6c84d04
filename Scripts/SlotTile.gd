@@ -149,47 +149,64 @@ func animate_icon(symbol):
 		if (symbol =="A"):
 			$Sprite/A/AnimationPlayer.play("A_Sweep")
 			playing = true
+			var moldura = $Sprite/A/Quadrado
+			moldura.modulate = Color(1, 0.843, 0)
 			yield(get_tree().create_timer(3), "timeout")
 			playing = false
 		elif(symbol =="bunny"):
 			$Sprite/Bunny/AnimationPlayer.play("bunny")
 			playing = true
+			var moldura = $Sprite/Bunny/Moldura
+			moldura.modulate = Color(1, 0.843, 0)
 			yield(get_tree().create_timer(3), "timeout")
 			playing = false
 		elif(symbol =="clown"):
 			$Sprite/Clown/AnimationPlayer.play("palhaço")
 			playing = true
+			var moldura = $Sprite/Clown/Estrelas
+			moldura.modulate = Color(1, 0.843, 0)
 			yield(get_tree().create_timer(3), "timeout")
 			playing = false
 		elif(symbol =="elephant"):
 			$Sprite/Elephant/AnimationPlayer.play("ele_bola")
 			playing = true
+			var moldura = $Sprite/Elephant/Moldura
+			moldura.modulate = Color(1, 0.843, 0)
 			yield(get_tree().create_timer(3), "timeout")
 			playing = false
 		elif(symbol =="J"):
 			$Sprite/J/AnimationPlayer.play("J_Sweep")
 			playing = true
+			var moldura = $Sprite/J/Quadrado
+			moldura.modulate = Color(1, 0.843, 0)
 			yield(get_tree().create_timer(3), "timeout")
 			playing = false
 		elif(symbol =="K"):
 			$Sprite/K/AnimationPlayer.play("K_Sweep")
 			playing = true
+			var moldura = $Sprite/K/Quadrado
+			moldura.modulate = Color(1, 0.843, 0)
 			yield(get_tree().create_timer(3), "timeout")
 			playing = false
 		elif(symbol =="lion"):
-#			$Sprite/Lion/AnimationPlayer.play("lion_win")
-#			playing = true
-#			yield(get_tree().create_timer(3), "timeout")
-#			playing = false
-			pass
+			$Sprite/Lion/AnimationPlayer.play("lion_win")
+			playing = true
+			var moldura = $Sprite/Lion/Espirais
+			moldura.modulate = Color(1, 0.843, 0)
+			yield(get_tree().create_timer(3), "timeout")
+			playing = false
 		elif(symbol =="strongman"):
 			$Sprite/Strongman/Viewport/AnimationPlayer.play("b1")
 			playing = true
+			var moldura = $Sprite/Strongman/Moldura
+			moldura.modulate = Color(1, 0.843, 0)
 			yield(get_tree().create_timer(3), "timeout")
 			playing = false
 		elif(symbol =="Q"):
 			$Sprite/Q/AnimationPlayer.play("Q_Sweep")
 			playing = true
+			var moldura = $Sprite/Q/Quadrado
+			moldura.modulate = Color(1, 0.843, 0)
 			yield(get_tree().create_timer(3), "timeout")
 			playing = false
 		elif(symbol =="roulette"):
