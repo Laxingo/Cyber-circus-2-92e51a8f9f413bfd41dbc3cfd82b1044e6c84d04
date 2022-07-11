@@ -1,4 +1,4 @@
-[gd_scene load_steps=142 format=2]
+[gd_scene load_steps=169 format=2]
 
 [ext_resource path="res://Scripts/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/UI/UIBaixo.png" type="Texture" id=2]
@@ -2394,7 +2394,7 @@ tracks/16/enabled = true
 tracks/16/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
+"update": 0,
 "values": [ false ]
 }
 tracks/17/type = "value"
@@ -2590,7 +2590,7 @@ tracks/15/enabled = true
 tracks/15/keys = {
 "times": PoolRealArray( 3.5 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
+"update": 0,
 "values": [ false ]
 }
 tracks/16/type = "value"
@@ -3385,7 +3385,7 @@ tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
+"update": 0,
 "values": [ false ]
 }
 tracks/2/type = "value"
@@ -3545,7 +3545,7 @@ tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
+"update": 0,
 "values": [ false ]
 }
 tracks/2/type = "value"
@@ -5800,154 +5800,154 @@ colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
 [sub_resource type="Animation" id=66]
 resource_name = "1faca"
 tracks/0/type = "value"
-tracks/0/path = NodePath("KnifeSpritesheet:position")
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
 "times": PoolRealArray( 0, 0.21, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( 42.0228, 52.5284 ) ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("KnifeSpritesheet:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.168, 0.588 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 18.6146, -0.73332 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("KnifeSpritesheet:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.336, 0.42 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("KnifeSpritesheet:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-}
 
 [sub_resource type="Animation" id=67]
 resource_name = "2faca"
 tracks/0/type = "value"
-tracks/0/path = NodePath("KnifeSpritesheet:position")
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
 "times": PoolRealArray( 0, 0.21, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( 115.563, -150.082 ) ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("KnifeSpritesheet:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.168, 0.588 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 18.6146, -0.73332 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("KnifeSpritesheet:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.336, 0.42 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("KnifeSpritesheet:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-}
 
 [sub_resource type="Animation" id=68]
 resource_name = "3faca"
 tracks/0/type = "value"
-tracks/0/path = NodePath("KnifeSpritesheet:position")
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.21, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( -270, 20 ) ]
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.168, 0.588 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 18.6146, -0.73332 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("KnifeSpritesheet:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
 "times": PoolRealArray( 0, 0.336, 0.42 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
 tracks/3/type = "value"
-tracks/3/path = NodePath("KnifeSpritesheet:frame")
+tracks/3/path = NodePath("KnifeSpritesheet:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( -270, 20 ) ]
 }
 
 [sub_resource type="Animation" id=70]
@@ -5990,76 +5990,76 @@ tracks/2/keys = {
 resource_name = "facaentra"
 length = 3.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("KnifeSpritesheet:position")
+tracks/0/path = NodePath("KnifeSpritesheet:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ) ]
+"values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/1/path = NodePath("KnifeSpritesheet:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("KnifeSpritesheet:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.4, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("KnifeSpritesheet:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( -0.042 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
 "times": PoolRealArray( 0, 0.5, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( -0.042 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
 tracks/5/type = "value"
-tracks/5/path = NodePath("KnifeSpritesheet:visible")
+tracks/5/path = NodePath("KnifeSpritesheet:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("KnifeGlow:self_modulate")
@@ -6110,57 +6110,55 @@ tracks/9/keys = {
 "values": [ 17.2116, 17.2116 ]
 }
 
-[sub_resource type="Animation" id=72]
-resource_name = "facaglow"
-length = 1.7
-loop = true
+[sub_resource type="Animation" id=93]
+resource_name = "facaf1"
 tracks/0/type = "value"
-tracks/0/path = NodePath("KnifeSpritesheet:position")
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ) ]
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
+"times": PoolRealArray( 0, 0.336, 0.42, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [  ]
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ), Vector2( 0.235071, 0.235071 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("KnifeSpritesheet:scale")
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.4, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ) ]
+"values": [ 18.6146, -0.73332 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("KnifeSpritesheet:frame")
+tracks/3/path = NodePath("KnifeSpritesheet:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( -0.042 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 0 ]
+"times": PoolRealArray( 0, 0.21, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( 220.62, -445.743 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
@@ -6169,22 +6167,1845 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
+"times": PoolRealArray( 0, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=94]
+resource_name = "facaf2"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ), Vector2( 0.459591, 0.459591 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( -106.558, 429.233 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=95]
+resource_name = "facaf3"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ), Vector2( 0.299106, 0.299106 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( -622.839, 3.00146 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=96]
+resource_name = "facaf4"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ), Vector2( 0.31682, 0.31682 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( -453.247, -432.236 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=97]
+resource_name = "facaf5"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ), Vector2( 0.459591, 0.459591 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( 288.156, 396.215 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=72]
+resource_name = "facaglow"
+length = 1.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( -0.042 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
 tracks/5/type = "value"
-tracks/5/path = NodePath("KnifeSpritesheet:visible")
+tracks/5/path = NodePath("KnifeSpritesheet:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("KnifeGlow:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( -0.1, 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("KnifeGlow:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( -0.1, 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.692866, 0.692866 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("KnifeGlow:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
+"update": 0,
+"values": [ Vector2( 706.622, 146.045 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("KnifeGlow:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 17.1523 ]
+}
+
+[sub_resource type="Animation" id=98]
+resource_name = "1faca"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( 42.0228, 52.5284 ) ]
+}
+
+[sub_resource type="Animation" id=99]
+resource_name = "2faca"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( 115.563, -150.082 ) ]
+}
+
+[sub_resource type="Animation" id=100]
+resource_name = "3faca"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( -270, 20 ) ]
+}
+
+[sub_resource type="Animation" id=101]
+resource_name = "click"
+length = 3.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("click:rect_scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0.0530739, -0.25, 0, 0.25, 0, 0.73296, -0.25, 0, 0.25, 0, 0.626529, -0.25, 0, 0.25, 0, 1.26004, -0.25, 0, 0.25, 0, 1.26004, -0.25, 0, 0.25, 0, 1.14916, -0.25, 0, 0.25, 0, 1.26004, -0.25, 0, 0.25, 0, 0.0530739, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4, 0.7, 1.2, 1.6, 1.9, 2.3, 3 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("click:rect_scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.0530739, -0.25, 0, 0.25, 0, 0.73296, -0.25, 0, 0.25, 0, 0.626529, -0.25, 0, 0.25, 0, 1.26004, -0.25, 0, 0.25, 0, 1.26004, -0.25, 0, 0.25, 0, 1.14916, -0.25, 0, 0.25, 0, 1.26004, -0.25, 0, 0.25, 0, 0.0530739, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4, 0.7, 1.2, 1.6, 1.9, 2.3, 3 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("click:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 2.9, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=102]
+resource_name = "facaentra"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
 "values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( -0.042 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("KnifeSpritesheet:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("KnifeGlow:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1, 1.2, 1.325, 1.625, 1.9, 2.2, 2.5, 2.8, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("KnifeGlow:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1.2, 1.325, 1.625, 1.9, 2.2, 2.5, 2.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.692866, 0.692866 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("KnifeGlow:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 706.622, 146.045 ), Vector2( 706.622, 146.045 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("KnifeGlow:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 17.2116, 17.2116 ]
+}
+
+[sub_resource type="Animation" id=103]
+resource_name = "facaf1"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ), Vector2( 0.235071, 0.235071 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( 220.62, -445.743 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=104]
+resource_name = "facaf2"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ), Vector2( 0.459591, 0.459591 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( -106.558, 429.233 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=105]
+resource_name = "facaf3"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ), Vector2( 0.299106, 0.299106 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( -622.839, 3.00146 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=106]
+resource_name = "facaf4"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ), Vector2( 0.31682, 0.31682 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( -453.247, -432.236 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=107]
+resource_name = "facaf5"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ), Vector2( 0.459591, 0.459591 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( 288.156, 396.215 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=108]
+resource_name = "facaglow"
+length = 1.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( -0.042 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("KnifeSpritesheet:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("KnifeGlow:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( -0.1, 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("KnifeGlow:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( -0.1, 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.692866, 0.692866 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("KnifeGlow:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 706.622, 146.045 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("KnifeGlow:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 17.1523 ]
+}
+
+[sub_resource type="Animation" id=109]
+resource_name = "1faca"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( 42.0228, 52.5284 ) ]
+}
+
+[sub_resource type="Animation" id=110]
+resource_name = "2faca"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( 115.563, -150.082 ) ]
+}
+
+[sub_resource type="Animation" id=111]
+resource_name = "3faca"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( -270, 20 ) ]
+}
+
+[sub_resource type="Animation" id=112]
+resource_name = "click"
+length = 3.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("click:rect_scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0.0530739, -0.25, 0, 0.25, 0, 0.73296, -0.25, 0, 0.25, 0, 0.626529, -0.25, 0, 0.25, 0, 1.26004, -0.25, 0, 0.25, 0, 1.26004, -0.25, 0, 0.25, 0, 1.14916, -0.25, 0, 0.25, 0, 1.26004, -0.25, 0, 0.25, 0, 0.0530739, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4, 0.7, 1.2, 1.6, 1.9, 2.3, 3 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("click:rect_scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.0530739, -0.25, 0, 0.25, 0, 0.73296, -0.25, 0, 0.25, 0, 0.626529, -0.25, 0, 0.25, 0, 1.26004, -0.25, 0, 0.25, 0, 1.26004, -0.25, 0, 0.25, 0, 1.14916, -0.25, 0, 0.25, 0, 1.26004, -0.25, 0, 0.25, 0, 0.0530739, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4, 0.7, 1.2, 1.6, 1.9, 2.3, 3 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("click:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 2.9, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=113]
+resource_name = "facaentra"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( -0.042 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("KnifeSpritesheet:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("KnifeGlow:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1, 1.2, 1.325, 1.625, 1.9, 2.2, 2.5, 2.8, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.545098 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("KnifeGlow:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1.2, 1.325, 1.625, 1.9, 2.2, 2.5, 2.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.692866, 0.692866 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ), Vector2( 0.660191, 0.660191 ), Vector2( 0.858668, 0.858668 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("KnifeGlow:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 706.622, 146.045 ), Vector2( 706.622, 146.045 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("KnifeGlow:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 17.2116, 17.2116 ]
+}
+
+[sub_resource type="Animation" id=114]
+resource_name = "facaf1"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ), Vector2( 0.235071, 0.235071 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( 220.62, -445.743 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=115]
+resource_name = "facaf2"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ), Vector2( 0.459591, 0.459591 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( -106.558, 429.233 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=116]
+resource_name = "facaf3"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ), Vector2( 0.299106, 0.299106 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( -622.839, 3.00146 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=117]
+resource_name = "facaf4"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ), Vector2( 0.31682, 0.31682 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( -453.247, -432.236 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=118]
+resource_name = "facaf5"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.042, 0.21, 0.252, 0.294, 0.336, 0.378, 0.42, 0.462, 0.504, 0.546, 0.588 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.336, 0.42, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.523511, 0.523511 ), Vector2( 0.459591, 0.459591 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.168, 0.588 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 18.6146, -0.73332 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.21, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ), Vector2( 288.156, 396.215 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=119]
+resource_name = "facaglow"
+length = 1.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("KnifeSpritesheet:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KnifeSpritesheet:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KnifeSpritesheet:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( -0.042 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KnifeSpritesheet:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ), Vector2( 0.74994, 0.74994 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KnifeSpritesheet:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("KnifeSpritesheet:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 707, 145 ), Vector2( 707, 145 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("KnifeGlow:self_modulate")
@@ -7544,14 +9365,15 @@ script = ExtResource( 34 )
 z_index = 2
 
 [node name="bonus" type="Label" parent="Node2D/Node2D"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0 )
 light_mask = 32
 margin_left = -247.0
 margin_top = -83.0
 margin_right = 234.0
 margin_bottom = 142.001
-rect_rotation = -13.9058
-rect_scale = Vector2( -0.0157572, -0.0157572 )
+rect_rotation = 335.302
+rect_scale = Vector2( 0.16019, 0.16019 )
 rect_pivot_offset = Vector2( 232.421, 139.313 )
 custom_colors/font_color = Color( 0.956863, 0.905882, 0.752941, 1 )
 custom_fonts/font = SubResource( 51 )
@@ -7632,9 +9454,8 @@ text = "1000000"
 align = 1
 
 [node name="Roda" type="Sprite" parent="Node2D"]
-visible = false
 light_mask = 4
-position = Vector2( -10, 31.1199 )
+position = Vector2( 2.95044, 10.3264 )
 scale = Vector2( 0.843503, 0.841322 )
 z_index = -3
 texture = ExtResource( 48 )
@@ -7648,21 +9469,21 @@ position = Vector2( 175, -196 )
 self_modulate = Color( 1, 1, 1, 0.913725 )
 light_mask = 32
 position = Vector2( -181, 197 )
-scale = Vector2( 2.31373, 2.31373 )
-z_index = 3
+scale = Vector2( 2.51035, 2.51035 )
+z_index = 1
 texture = ExtResource( 49 )
 
 [node name="Luzamarela" type="Sprite" parent="Node2D/Roda/luzesentreaspas"]
-self_modulate = Color( 1, 0.941176, 0.0627451, 0.486275 )
+self_modulate = Color( 1, 0.941176, 0.0627451, 0.570038 )
 light_mask = 32
 position = Vector2( -185, 200 )
 scale = Vector2( -1.94892, -1.94892 )
-z_index = 2
+z_index = 1
 texture = ExtResource( 50 )
 
 [node name="Luzazul" type="Sprite" parent="Node2D/Roda/luzesentreaspas"]
 modulate = Color( 0.0156863, 1, 0.984314, 1 )
-self_modulate = Color( 1, 1, 1, 0.588235 )
+self_modulate = Color( 0.856133, 1, 0.987212, 0.655373 )
 light_mask = 32
 position = Vector2( -178, 200 )
 scale = Vector2( 2.08477, 2.08477 )
@@ -7679,7 +9500,7 @@ texture = ExtResource( 57 )
 
 [node name="Luzrosa" type="Sprite" parent="Node2D/Roda/luzesentreaspas"]
 modulate = Color( 1, 0, 0.933333, 1 )
-self_modulate = Color( 1, 1, 1, 0.654902 )
+self_modulate = Color( 1, 0.843984, 1, 0.71117 )
 light_mask = 32
 position = Vector2( -187, 207 )
 scale = Vector2( -2.25945, -2.25945 )
@@ -7688,7 +9509,7 @@ texture = ExtResource( 58 )
 [node name="Luzrosa" type="Sprite" parent="Node2D/Roda/luzesentreaspas/Luzrosa"]
 visible = false
 modulate = Color( 1, 0, 0.933333, 1 )
-self_modulate = Color( 1, 0, 0.960784, 1 )
+self_modulate = Color( 1, 0.83695, 0.993606, 0.602859 )
 light_mask = 32
 position = Vector2( 0.576416, -2.41053 )
 scale = Vector2( -0.89981, -0.89981 )
@@ -7804,7 +9625,6 @@ z_index = 1
 texture = ExtResource( 54 )
 hframes = 6
 vframes = 4
-frame = 1
 
 [node name="CurtainRight" type="Sprite" parent="Node2D"]
 light_mask = 0
@@ -7815,7 +9635,6 @@ texture = ExtResource( 54 )
 flip_h = true
 hframes = 6
 vframes = 4
-frame = 5
 
 [node name="particulas" type="Node2D" parent="Node2D"]
 visible = false
@@ -8013,20 +9832,20 @@ color_ramp = SubResource( 65 )
 hue_variation = 1.0
 
 [node name="faca" type="Node2D" parent="Node2D"]
+visible = false
 
 [node name="KnifeGlow" type="Sprite" parent="Node2D/faca"]
 modulate = Color( 0.968627, 0.713726, 0.898039, 1 )
 self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 706.622, 146.045 )
-rotation = 0.300399
-scale = Vector2( 0.70981, 0.70981 )
+rotation = 0.299364
+scale = Vector2( 0.527064, 0.527064 )
 z_index = -3
 texture = ExtResource( 73 )
 
 [node name="KnifeSpritesheet" type="Sprite" parent="Node2D/faca"]
-self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 707, 145 )
-rotation = 0.299158
+rotation = -0.0127988
 scale = Vector2( 0.74994, 0.74994 )
 z_index = -2
 texture = ExtResource( 53 )
@@ -8040,6 +9859,11 @@ anims/2faca = SubResource( 67 )
 anims/3faca = SubResource( 68 )
 anims/click = SubResource( 70 )
 anims/facaentra = SubResource( 71 )
+anims/facaf1 = SubResource( 93 )
+anims/facaf2 = SubResource( 94 )
+anims/facaf3 = SubResource( 95 )
+anims/facaf4 = SubResource( 96 )
+anims/facaf5 = SubResource( 97 )
 anims/facaglow = SubResource( 72 )
 
 [node name="click" type="Label" parent="Node2D/faca"]
@@ -8056,6 +9880,115 @@ custom_colors/font_outline_modulate = Color( 0.317647, 0, 0.341176, 1 )
 custom_colors/font_color_shadow = Color( 0.996078, 0.0313726, 0.792157, 1 )
 custom_fonts/font = SubResource( 51 )
 text = "Click on the Knife"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="faca2" type="Node2D" parent="Node2D"]
+visible = false
+
+[node name="KnifeGlow" type="Sprite" parent="Node2D/faca2"]
+modulate = Color( 0.968627, 0.713726, 0.898039, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 706.622, 146.045 )
+rotation = 0.299364
+scale = Vector2( 0.527064, 0.527064 )
+z_index = -3
+texture = ExtResource( 73 )
+
+[node name="KnifeSpritesheet" type="Sprite" parent="Node2D/faca2"]
+position = Vector2( 707, 145 )
+rotation = -0.0127988
+scale = Vector2( 0.74994, 0.74994 )
+z_index = -2
+texture = ExtResource( 53 )
+hframes = 5
+vframes = 2
+region_rect = Rect2( 2135.22, 87.611, 411.403, 395.878 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/faca2"]
+anims/1faca = SubResource( 98 )
+anims/2faca = SubResource( 99 )
+anims/3faca = SubResource( 100 )
+anims/click = SubResource( 101 )
+anims/facaentra = SubResource( 102 )
+anims/facaf1 = SubResource( 103 )
+anims/facaf2 = SubResource( 104 )
+anims/facaf3 = SubResource( 105 )
+anims/facaf4 = SubResource( 106 )
+anims/facaf5 = SubResource( 107 )
+anims/facaglow = SubResource( 108 )
+
+[node name="click" type="Label" parent="Node2D/faca2"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -656.465
+margin_top = 324.545
+margin_right = 637.535
+margin_bottom = 549.546
+rect_rotation = 359.597
+rect_scale = Vector2( 0.0530739, 0.0530739 )
+rect_pivot_offset = Vector2( 656.691, 102.094 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.317647, 0, 0.341176, 1 )
+custom_colors/font_color_shadow = Color( 0.996078, 0.0313726, 0.792157, 1 )
+custom_fonts/font = SubResource( 51 )
+text = "Click on the Knife"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="faca3" type="Node2D" parent="Node2D"]
+visible = false
+
+[node name="KnifeGlow" type="Sprite" parent="Node2D/faca3"]
+modulate = Color( 0.968627, 0.713726, 0.898039, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 706.622, 146.045 )
+rotation = 0.299364
+scale = Vector2( 0.527064, 0.527064 )
+z_index = -3
+texture = ExtResource( 73 )
+
+[node name="KnifeSpritesheet" type="Sprite" parent="Node2D/faca3"]
+position = Vector2( 707, 145 )
+rotation = -0.0127988
+scale = Vector2( 0.74994, 0.74994 )
+z_index = -2
+texture = ExtResource( 53 )
+hframes = 5
+vframes = 2
+region_rect = Rect2( 2135.22, 87.611, 411.403, 395.878 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/faca3"]
+anims/1faca = SubResource( 109 )
+anims/2faca = SubResource( 110 )
+anims/3faca = SubResource( 111 )
+anims/click = SubResource( 112 )
+anims/facaentra = SubResource( 113 )
+anims/facaf1 = SubResource( 114 )
+anims/facaf2 = SubResource( 115 )
+anims/facaf3 = SubResource( 116 )
+anims/facaf4 = SubResource( 117 )
+anims/facaf5 = SubResource( 118 )
+anims/facaglow = SubResource( 119 )
+
+[node name="click" type="Label" parent="Node2D/faca3"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -656.465
+margin_top = 324.545
+margin_right = 637.535
+margin_bottom = 549.546
+rect_rotation = 359.597
+rect_scale = Vector2( 0.0530739, 0.0530739 )
+rect_pivot_offset = Vector2( 656.691, 102.094 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.317647, 0, 0.341176, 1 )
+custom_colors/font_color_shadow = Color( 0.996078, 0.0313726, 0.792157, 1 )
+custom_fonts/font = SubResource( 51 )
+text = "Click on the Knife"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="RodaBtn" type="TextureButton" parent="Node2D"]
 modulate = Color( 1, 1, 1, 0 )
@@ -8076,7 +10009,6 @@ modulate = Color( 0.423529, 0.0352941, 0.988235, 1 )
 shape = SubResource( 48 )
 
 [node name="CyberCircusArenaBonus" type="Sprite" parent="Node2D"]
-visible = false
 light_mask = 64
 position = Vector2( -14.752, 32.4548 )
 scale = Vector2( 1.03711, 1.03711 )
