@@ -449,7 +449,7 @@ func getPrizes(result_masks):
 			if (result_masks[i] & prizeMasks[c] == prizeMasks[c]):
 				prizeInfo.push_back([i, c]) # First position -> Synbol IDX; Second Position -> Prize IDX
 				prizeType = "Good"
-				print(prizeInfo)
+#				print(prizeInfo)
 		for p in  prizeMasks3.size():
 			if (result_masks[i] & prizeMasks3[p] == prizeMasks3[p]):
 				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
@@ -464,17 +464,17 @@ func getPrizes(result_masks):
 
 
 func animPrizes():
-	var winTile = Sprite
-	
+	var winTile
 	var linha
 	var coluna
+	
 	for p in prizesToAnim.size():
 		for i in cells:
 			modulate.a = 0.6
 			var prizeID = symbolName[prizesToAnim[p][0]];
 			if(prizeMasks[prizesToAnim[p][1]] & 1<<i):
 				var _pcell = reels * tiles_per_reel - 1 - i
-				print("ANIMAÇÃO: ",prizeID, "  CÉLULAS: ", _pcell);
+#				print("ANIMAÇÃO: ",prizeID, "  CÉLULAS: ", _pcell);
 				coluna = _pcell % 5;
 				linha = int(floor(_pcell / 5));
 				winTile = get_tile(linha, coluna)

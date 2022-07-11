@@ -7072,9 +7072,6 @@ margin_right = 1739.6
 margin_bottom = 905.553
 rect_scale = Vector2( 1.00957, 1.00957 )
 color = Color( 0.156863, 0.0784314, 0.168627, 0.45098 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="UIBaixo" type="Sprite" parent="."]
 light_mask = 2
@@ -7537,7 +7534,7 @@ volume_db = 3.4
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 959.022, 492.268 )
-z_index = 5
+z_index = 6
 script = ExtResource( 34 )
 
 [node name="Node2D" type="Node2D" parent="Node2D"]
@@ -8056,9 +8053,6 @@ custom_colors/font_outline_modulate = Color( 0.317647, 0, 0.341176, 1 )
 custom_colors/font_color_shadow = Color( 0.996078, 0.0313726, 0.792157, 1 )
 custom_fonts/font = SubResource( 51 )
 text = "Click on the Knife"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="RodaBtn" type="TextureButton" parent="Node2D"]
 modulate = Color( 1, 1, 1, 0 )
