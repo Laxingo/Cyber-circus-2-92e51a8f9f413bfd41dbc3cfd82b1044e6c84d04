@@ -46,6 +46,10 @@ onready var winMP3 = $WinMP3
 var playsound = false
 var amiguinhos = false
 
+var faca1Thrown = false
+var faca2Thrown = false
+var faca3Thrown = false
+
 func _ready():
 	_jukebox()
 	pass
@@ -122,12 +126,12 @@ func _on_RodaBtn_pressed():
 	
 	glow.visible = false
 	random.randomize()
-	var num = random.randi_range(0, 7)
+	var num = random.randi_range(0, 3)
 	if prontopraclicar:
 		prontopraclicar = false
 	
-		if!faca1:
-			faca1 = true
+		if!faca1Thrown:
+			faca1Thrown = true
 			if num == 0:
 				facaAnim.play("1faca")
 				atiraFacaSOM()
@@ -152,12 +156,13 @@ func _on_RodaBtn_pressed():
 				facaHitbox.position = facaPos
 			elif num == 3:
 				facaAnim.play("facaf3")
-				atiraFacaSOM()
+				atiraFacaSOM() #substituir
 				yield(get_tree().create_timer(0.6), "timeout")
-		elif!faca2:
-			faca2
+				
+		elif!faca2Thrown:
+			faca2Thrown
 		else:
-			faca3
+			faca3Thrown
 			
 			
 			
@@ -206,9 +211,7 @@ func _on_Amarelo_4_area_entered(area):
 
 onready var creditsToGive
 
-var faca1 = false
-var faca2 = false
-var faca3= false
+
 
 func _WinRosa():
 	playsound = false
@@ -224,8 +227,15 @@ func _WinRosa():
 #	animP.play("tudobaza2")
 #	bonusTocando = false
 #	_jukebox()
-	if !faca1:
+	if !faca1Thrown:
 		yield(get_tree().create_timer(2), "timeout")
+		facaAnim2.play("facaentra")
+		yield(get_tree().create_timer(1), "timeout")
+		facaAnim2.play("click")
+		prontopraclicar = true
+		yield(get_tree().create_timer(facaAnim2.get_animation("click").length), "timeout")
+		if prontopraclicar:
+			facaAnim2.play("facaglow")
 		
 
 
