@@ -7534,7 +7534,7 @@ volume_db = 3.4
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 959.022, 492.268 )
-z_index = 5
+z_index = 6
 script = ExtResource( 34 )
 
 [node name="Node2D" type="Node2D" parent="Node2D"]
