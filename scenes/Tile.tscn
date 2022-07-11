@@ -2471,14 +2471,16 @@ region_rect = Rect2( -4.79358, 231.711, 399.81, 136.304 )
 
 [node name="cabeça" type="Sprite" parent="Sprite/Bunny/ViewportContainer"]
 light_mask = 128
-position = Vector2( 268.762, 430.93 )
+position = Vector2( 265.117, 324.336 )
+rotation = -0.0555815
 texture = ExtResource( 9 )
 region_enabled = true
 region_rect = Rect2( 304.535, -6.66034, 252.738, 250.542 )
 
 [node name="orelhas" type="Sprite" parent="Sprite/Bunny/ViewportContainer/cabeça"]
 light_mask = 128
-position = Vector2( -5.95296, -190.476 )
+position = Vector2( -27.1519, -182.454 )
+rotation = -0.124799
 z_index = -1
 texture = ExtResource( 9 )
 region_enabled = true
@@ -2497,8 +2499,8 @@ z_index = -2
 texture = ExtResource( 26 )
 
 [node name="Light2D3" type="Light2D" parent="Sprite/Bunny"]
-position = Vector2( 107.061, 176.785 )
-rotation = 0.00168395
+position = Vector2( 484.058, 546.047 )
+rotation = -1.35026
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 8 )
 texture_scale = 1.69
@@ -2542,7 +2544,7 @@ internal_vertex_count = 21
 visible = false
 
 [node name="CenterOfCombustion" type="Bone2D" parent="Sprite/Lion/ManeSkeleton"]
-position = Vector2( -5, -27 )
+position = Vector2( -10.1675, -27 )
 rest = Transform2D( 1, 0, 0, 1, -5, -27 )
 
 [node name="Bone2D" type="Bone2D" parent="Sprite/Lion/ManeSkeleton/CenterOfCombustion"]
@@ -2592,7 +2594,7 @@ __meta__ = {
 
 [node name="Head" type="Sprite" parent="Sprite/Lion"]
 light_mask = 2
-position = Vector2( -2, -11 )
+position = Vector2( -3.72249, -10.1388 )
 scale = Vector2( 0.73758, 0.73758 )
 z_index = 1
 texture = ExtResource( 12 )
@@ -2601,7 +2603,8 @@ vframes = 2
 region_rect = Rect2( 278, 39, 168, 159 )
 
 [node name="Mouth" type="Sprite" parent="Sprite/Lion/Head"]
-position = Vector2( 13.8064, 111.707 )
+position = Vector2( 10.6466, 107.424 )
+rotation = 0.0162499
 scale = Vector2( 1.56266, 1.59988 )
 z_index = 2
 texture = ExtResource( 10 )
@@ -2609,15 +2612,16 @@ region_enabled = true
 region_rect = Rect2( 315, 211, 109, 44 )
 
 [node name="Ears" type="Sprite" parent="Sprite/Lion/Head"]
-position = Vector2( -3.76539, -82.8386 )
-scale = Vector2( 1.19041, 1.19041 )
+position = Vector2( -1.06296, -84.4601 )
+rotation = 0.0207292
+scale = Vector2( 1.22104, 1.22104 )
 texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 41, 32, 204, 92 )
 
 [node name="LeftPaw" type="Sprite" parent="Sprite/Lion/Head"]
-position = Vector2( 100.328, 200.656 )
-rotation = -0.0138259
+position = Vector2( 115.507, 183.219 )
+rotation = -0.114776
 scale = Vector2( 1.30702, 1.11357 )
 z_index = 3
 texture = ExtResource( 10 )
@@ -2630,12 +2634,12 @@ rotation = 0.15369
 scale = Vector2( 0.910988, 0.815587 )
 frames = SubResource( 109 )
 animation = "burn"
-frame = 9
+frame = 5
 playing = true
 
 [node name="RightPaw" type="Sprite" parent="Sprite/Lion/Head"]
-position = Vector2( -81.3471, 216.926 )
-rotation = 0.537303
+position = Vector2( -100.377, 202.846 )
+rotation = 0.623474
 scale = Vector2( 1.16475, 1.16475 )
 z_index = 3
 texture = ExtResource( 10 )
@@ -2648,7 +2652,7 @@ rotation = -0.0349056
 scale = Vector2( 0.683358, 0.683087 )
 frames = SubResource( 110 )
 animation = "kwispy"
-frame = 3
+frame = 9
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite/Lion"]
@@ -3005,7 +3009,8 @@ z_index = -4
 
 [node name="Sprite3" type="Sprite" parent="Sprite/Clown"]
 light_mask = 1024
-position = Vector2( -2, -11 )
+position = Vector2( 27.9372, -34.9372 )
+rotation = 0.261245
 texture = ExtResource( 6 )
 region_enabled = true
 region_rect = Rect2( -6, 227, 193, 202 )
@@ -3013,7 +3018,7 @@ region_rect = Rect2( -6, 227, 193, 202 )
 [node name="Sprite2" type="Sprite" parent="Sprite/Clown"]
 light_mask = 1024
 position = Vector2( 1, 136.8 )
-scale = Vector2( 1.04053, 1.04053 )
+scale = Vector2( 1.04565, 1.04565 )
 z_index = 1
 texture = ExtResource( 6 )
 region_enabled = true
@@ -3083,8 +3088,8 @@ rest = Transform2D( 1, 0, 0, 1, 15.7695, 0.751621 )
 
 [node name="Sprite4" type="Sprite" parent="Sprite/Clown"]
 light_mask = 1024
-position = Vector2( -8, 86 )
-scale = Vector2( 0.874231, 0.874231 )
+position = Vector2( -8, 71.3069 )
+scale = Vector2( 1.05436, 1.43767 )
 z_index = 1
 texture = ExtResource( 6 )
 region_enabled = true
@@ -3092,7 +3097,7 @@ region_rect = Rect2( 194, 1, 283, 132 )
 
 [node name="Estrelas" type="Sprite" parent="Sprite/Clown"]
 position = Vector2( 2.30505, 81.4218 )
-rotation = -0.0173562
+rotation = -4.19195
 z_index = -1
 texture = ExtResource( 24 )
 
@@ -3102,11 +3107,10 @@ rotation = 0.0061071
 scale = Vector2( 0.515237, 0.7519 )
 texture = ExtResource( 8 )
 texture_scale = 1.69
-energy = 0.0
+energy = 0.334587
 shadow_color = Color( 0.215686, 1, 0.964706, 0 )
 
 [node name="Elephant" type="Sprite" parent="Sprite"]
-visible = false
 light_mask = 256
 position = Vector2( 1195.42, 456.938 )
 scale = Vector2( 3.47664, 2.0889 )
@@ -3152,23 +3156,28 @@ rest = Transform2D( 1, 0, 0, 1, 53, 56 )
 
 [node name="2" type="Bone2D" parent="Sprite/Elephant/Skeleton2D/1"]
 position = Vector2( 50, 31 )
+rotation = -0.104649
 rest = Transform2D( 1, 0, 0, 1, 50, 31 )
 
 [node name="3" type="Bone2D" parent="Sprite/Elephant/Skeleton2D/1/2"]
 position = Vector2( 44, 43 )
+rotation = -0.110586
 rest = Transform2D( 1, 0, 0, 1, 44, 43 )
 
 [node name="4" type="Bone2D" parent="Sprite/Elephant/Skeleton2D/1/2/3"]
-position = Vector2( 42, 14 )
+position = Vector2( 43.0529, 23.8143 )
+rotation = -0.0732047
 rest = Transform2D( 1, 0, 0, 1, 42, 14 )
 
 [node name="5" type="Bone2D" parent="Sprite/Elephant/Skeleton2D/1/2/3/4"]
 position = Vector2( 60, 3 )
+rotation = -0.1075
 rest = Transform2D( 1, 0, 0, 1, 59, 1 )
 
 [node name="cabeçaf" type="Sprite" parent="Sprite/Elephant"]
 light_mask = 256
 position = Vector2( 32, 33 )
+rotation = -0.0121633
 texture = ExtResource( 11 )
 region_enabled = true
 region_rect = Rect2( 0, 310, 290, 200 )
@@ -3185,7 +3194,7 @@ region_rect = Rect2( 290, 60, 230, 160 )
 light_mask = 256
 position = Vector2( -177.8, 6.32732 )
 rotation = -0.0110191
-scale = Vector2( 1.00605, 1.00605 )
+scale = Vector2( 1.0103, 1.0103 )
 texture = ExtResource( 11 )
 region_enabled = true
 region_rect = Rect2( 0, 20, 180, 230 )
@@ -3200,7 +3209,8 @@ region_rect = Rect2( 240, 20, 60, 190 )
 
 [node name="bola" type="Sprite" parent="Sprite/Elephant"]
 light_mask = 256
-position = Vector2( 242, 34 )
+position = Vector2( 223.543, 24.156 )
+rotation = -0.261453
 texture = ExtResource( 11 )
 region_enabled = true
 region_rect = Rect2( 360, 370, 150, 150 )
@@ -3211,12 +3221,12 @@ z_index = -1
 texture = ExtResource( 26 )
 
 [node name="Light2D3" type="Light2D" parent="Sprite/Elephant"]
-position = Vector2( 52.39, -203.305 )
-rotation = -0.230701
+position = Vector2( 228.361, -120.945 )
+rotation = -0.72912
 scale = Vector2( 0.0820399, 0.32204 )
 texture = ExtResource( 8 )
 texture_scale = 1.69
-energy = 0.0
+energy = 10.0
 shadow_color = Color( 0.215686, 1, 0.964706, 0 )
 
 [node name="ColorRect" type="ColorRect" parent="Sprite"]
