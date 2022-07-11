@@ -219,7 +219,7 @@ func _add_tile(col :int, row :int) -> void:
 	tile.get_node('Tween').connect("tween_completed", self, "_on_tile_moved", [col], CONNECT_DEFERRED)
 	tile.set_icon(randomSymbol)
 	tile.set_size(tile_size)
-	tile.set_name(tile_name)
+	tile.set_name(randomSymbol)
 	tile.position = grid_pos[col][row]
 	tile.set_speed(speed_norm)
 	tile.animate_icon_idle(randomSymbol)
@@ -284,7 +284,6 @@ func _spin_reel(reel :int) -> void:
 
 func _move_tile(tile :SlotTile) -> void:
 	tile.spin_up()
-	print(tile.modulate.a)
 	modulate.a = 1
 	yield(tile.get_node("Animations"), "animation_finished")
 	tile.move_by(Vector2(0, tile_size.y))
@@ -367,12 +366,12 @@ func _on_tile_moved(tile: SlotTile, _nodePath, column) -> void:
 		var result_icon = symbolName[result.tiles[column][0]] 
 		var randomicon = _randomIcones()
 		tile.set_icon(randomicon)
-		tile.set_name(tile_name)
+		tile.set_name(randomicon)
 		tile.animate_icon_idle(randomicon)
 	else:
 		var randomicon = _randomIcones()
 		tile.set_icon(randomicon)
-		tile.set_name(tile_name)
+		tile.set_name(randomicon)
 #		tile.modulate.a = 1.0
 	if (state != State.OFF && reel_runs != total_runs):
 		tile.move_by(Vector2(0, tile_size.y))
@@ -450,6 +449,7 @@ func getPrizes(result_masks):
 			if (result_masks[i] & prizeMasks[c] == prizeMasks[c]):
 				prizeInfo.push_back([i, c]) # First position -> Synbol IDX; Second Position -> Prize IDX
 				prizeType = "Good"
+				print(prizeInfo)
 		for p in  prizeMasks3.size():
 			if (result_masks[i] & prizeMasks3[p] == prizeMasks3[p]):
 				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
@@ -470,7 +470,6 @@ func animPrizes():
 	var coluna
 	for p in prizesToAnim.size():
 		for i in cells:
-			print(modulate.a)
 			modulate.a = 0.6
 			var prizeID = symbolName[prizesToAnim[p][0]];
 			if(prizeMasks[prizesToAnim[p][1]] & 1<<i):

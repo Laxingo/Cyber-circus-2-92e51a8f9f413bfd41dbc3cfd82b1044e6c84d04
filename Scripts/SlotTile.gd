@@ -143,27 +143,57 @@ func spin_up():
 func spin_down():
 	$Animations.play('SPIN_DOWN')
 
+var playing = false
 func animate_icon(symbol):
-	if (symbol =="A"):
-		$Sprite/A/AnimationPlayer.play("A_Sweep")
-	elif(symbol =="bunny"):
-		$Sprite/Bunny/AnimationPlayer.play("bunny")
-	elif(symbol =="clown"):
-		$Sprite/Clown/AnimationPlayer.play("palhaço")
-	elif(symbol =="elephant"):
-		$Sprite/Elephant/AnimationPlayer.play("ele_bola")
-	elif(symbol =="J"):
-		$Sprite/J/AnimationPlayer.play("J_Sweep")
-	elif(symbol =="K"):
-		$Sprite/K/AnimationPlayer.play("K_Sweep")
-	elif(symbol =="lion"):
-		$Sprite/Lion/AnimationPlayer.play("lion_win")
-	elif(symbol =="strongman"):
-		$Sprite/Strongman/Viewport/AnimationPlayer.play("b1")
-	elif(symbol =="Q"):
-		$Sprite/Q/AnimationPlayer.play("Q_Sweep")
-	elif(symbol =="roulette"):
-		$Sprite/Roulette/AnimationPlayer.play("Bonus")
+	if !playing:
+		if (symbol =="A"):
+			$Sprite/A/AnimationPlayer.play("A_Sweep")
+			playing = true
+			yield(get_tree().create_timer(3), "timeout")
+			playing = false
+		elif(symbol =="bunny"):
+			$Sprite/Bunny/AnimationPlayer.play("bunny")
+			playing = true
+			yield(get_tree().create_timer(3), "timeout")
+			playing = false
+		elif(symbol =="clown"):
+			$Sprite/Clown/AnimationPlayer.play("palhaço")
+			playing = true
+			yield(get_tree().create_timer(3), "timeout")
+			playing = false
+		elif(symbol =="elephant"):
+			$Sprite/Elephant/AnimationPlayer.play("ele_bola")
+			playing = true
+			yield(get_tree().create_timer(3), "timeout")
+			playing = false
+		elif(symbol =="J"):
+			$Sprite/J/AnimationPlayer.play("J_Sweep")
+			playing = true
+			yield(get_tree().create_timer(3), "timeout")
+			playing = false
+		elif(symbol =="K"):
+			$Sprite/K/AnimationPlayer.play("K_Sweep")
+			playing = true
+			yield(get_tree().create_timer(3), "timeout")
+			playing = false
+		elif(symbol =="lion"):
+#			$Sprite/Lion/AnimationPlayer.play("lion_win")
+#			playing = true
+#			yield(get_tree().create_timer(3), "timeout")
+#			playing = false
+			pass
+		elif(symbol =="strongman"):
+			$Sprite/Strongman/Viewport/AnimationPlayer.play("b1")
+			playing = true
+			yield(get_tree().create_timer(3), "timeout")
+			playing = false
+		elif(symbol =="Q"):
+			$Sprite/Q/AnimationPlayer.play("Q_Sweep")
+			playing = true
+			yield(get_tree().create_timer(3), "timeout")
+			playing = false
+		elif(symbol =="roulette"):
+			pass
 
 func animate_icon_idle(symbol):
 	if (symbol =="A"):
