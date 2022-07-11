@@ -7248,9 +7248,6 @@ texture_pressed = ExtResource( 6 )
 texture_hover = ExtResource( 30 )
 expand = true
 stretch_mode = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="options" type="Node2D" parent="."]
 light_mask = 2
