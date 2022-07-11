@@ -8965,15 +8965,18 @@ __meta__ = {
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 light_mask = 2
-margin_left = 187.079
-margin_top = 100.768
-margin_right = 1850.0
-margin_bottom = 910.901
+margin_left = 187.0
+margin_top = 101.0
+margin_right = 1868.0
+margin_bottom = 911.0
 rect_scale = Vector2( 0.932624, 0.992657 )
 stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Viewport" type="Viewport" parent="ViewportContainer"]
-size = Vector2( 1662, 810 )
+size = Vector2( 1681, 810 )
 transparent_bg = true
 handle_input_locally = false
 render_target_update_mode = 3
@@ -10121,11 +10124,11 @@ __meta__ = {
 
 [node name="numeros so" type="Label" parent="Win"]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 54.4478
-margin_top = 375.69
-margin_right = 444.442
-margin_bottom = 512.691
-rect_scale = Vector2( 4.43851, 3.95866 )
+margin_left = 8.16724
+margin_top = 2305.87
+margin_right = 398.161
+margin_bottom = 2442.87
+rect_scale = Vector2( 6.27759, 5.59891 )
 rect_pivot_offset = Vector2( 196.075, 75.4237 )
 custom_colors/font_color = Color( 0.92549, 0.890196, 0.654902, 1 )
 custom_colors/font_outline_modulate = Color( 0.917647, 0.85098, 0.286275, 1 )
