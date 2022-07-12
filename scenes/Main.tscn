@@ -9027,7 +9027,6 @@ stream = ExtResource( 70 )
 
 [node name="PlayBtn" type="Node2D" parent="."]
 position = Vector2( 880.98, 871.974 )
-z_index = 1
 
 [node name="play" type="TextureButton" parent="PlayBtn"]
 light_mask = 2
