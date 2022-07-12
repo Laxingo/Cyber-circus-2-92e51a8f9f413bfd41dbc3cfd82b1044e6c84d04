@@ -35,6 +35,7 @@ onready var random = RandomNumberGenerator.new()
 
 
 onready var knifeSound = preload("res://sound/bonus/Bonus_KnifeThrow.mp3")
+onready var knifeMissSound = preload("res://sound/bonus/Bonus_KnifeThrow_withoutImpact.mp3")
 onready var music = preload("res://sound/bonus/Bonus_Music.mp3")
 onready var transition1 = preload("res://sound/bonus/Bonus_Transition_In.mp3")
 onready var transition2 = preload("res://sound/bonus/Bonus_Transition_Out.mp3")
@@ -44,6 +45,8 @@ onready var jukebox = $Jukebox
 onready var musicAudio = preload("res://sound/music/Ambience.mp3")
 
 onready  var knifeMP3 = $KnifeSoundMP3
+onready  var knifeMissMP3 = $KnifeMiss
+
 onready var musicMp3 = $MusicMP3
 onready var transitionMP3 = $TransMP3
 onready var winMP3 = $WinMP3
@@ -183,7 +186,7 @@ func _on_RodaBtn_pressed():
 				facaHitbox.position = facaPos
 			elif num == 3:
 				facaAnim.play("facaf1")
-				atiraFacaSOM() #substituir
+				atiraFacaMissSOM()
 				yield(get_tree().create_timer(0.5), "timeout")
 				faca1desaparece = true
 				yield(get_tree().create_timer(0.6), "timeout")
@@ -199,7 +202,7 @@ func _on_RodaBtn_pressed():
 					facaAnim2.play("facaglow")
 			elif num == 4:
 				facaAnim.play("facaf2")
-				atiraFacaSOM() #substituir
+				atiraFacaMissSOM()
 				yield(get_tree().create_timer(0.5), "timeout")
 				faca1desaparece = true
 				yield(get_tree().create_timer(0.6), "timeout")
@@ -215,7 +218,7 @@ func _on_RodaBtn_pressed():
 					facaAnim2.play("facaglow")
 			elif num == 5:
 				facaAnim.play("facaf3")
-				atiraFacaSOM() #substituir
+				atiraFacaMissSOM()
 				yield(get_tree().create_timer(0.5), "timeout")
 				faca1desaparece = true
 				yield(get_tree().create_timer(0.8), "timeout")
@@ -231,7 +234,7 @@ func _on_RodaBtn_pressed():
 					facaAnim2.play("facaglow")
 			elif num == 6:
 				facaAnim.play("facaf4")
-				atiraFacaSOM() #substituir
+				atiraFacaMissSOM()
 				yield(get_tree().create_timer(0.5), "timeout")
 				faca1desaparece = true
 				yield(get_tree().create_timer(0.6), "timeout")
@@ -247,7 +250,7 @@ func _on_RodaBtn_pressed():
 					facaAnim2.play("facaglow")
 			elif num == 7:
 				facaAnim.play("facaf5")
-				atiraFacaSOM() #substituir
+				atiraFacaMissSOM()
 				yield(get_tree().create_timer(0.5), "timeout")
 				faca1desaparece = true
 				yield(get_tree().create_timer(0.6), "timeout")
@@ -291,7 +294,7 @@ func _on_RodaBtn_pressed():
 				facaHitbox.position = facaPos
 			elif num == 3:
 				facaAnim2.play("facaf1")
-				atiraFacaSOM() #substituir
+				atiraFacaMissSOM()
 				yield(get_tree().create_timer(0.5), "timeout")
 				faca2desaparece = true
 				yield(get_tree().create_timer(0.6), "timeout")
@@ -307,7 +310,7 @@ func _on_RodaBtn_pressed():
 					facaAnim3.play("facaglow")
 			elif num == 4:
 				facaAnim2.play("facaf2")
-				atiraFacaSOM() #substituir
+				atiraFacaMissSOM()
 				yield(get_tree().create_timer(0.5), "timeout")
 				faca2desaparece = true
 				yield(get_tree().create_timer(0.6), "timeout")
@@ -323,7 +326,7 @@ func _on_RodaBtn_pressed():
 					facaAnim3.play("facaglow")
 			elif num == 5:
 				facaAnim2.play("facaf3")
-				atiraFacaSOM() #substituir
+				atiraFacaMissSOM()
 				yield(get_tree().create_timer(0.5), "timeout")
 				faca2desaparece = true
 				yield(get_tree().create_timer(0.8), "timeout")
@@ -339,7 +342,7 @@ func _on_RodaBtn_pressed():
 					facaAnim3.play("facaglow")
 			elif num == 6:
 				facaAnim2.play("facaf4")
-				atiraFacaSOM() #substituir
+				atiraFacaMissSOM()
 				yield(get_tree().create_timer(0.5), "timeout")
 				faca2desaparece = true
 				yield(get_tree().create_timer(0.6), "timeout")
@@ -355,7 +358,7 @@ func _on_RodaBtn_pressed():
 					facaAnim3.play("facaglow")
 			elif num == 7:
 				facaAnim2.play("facaf5")
-				atiraFacaSOM() #substituir
+				atiraFacaMissSOM()
 				yield(get_tree().create_timer(0.5), "timeout")
 				faca2desaparece = true
 				yield(get_tree().create_timer(0.6), "timeout")
@@ -398,7 +401,7 @@ func _on_RodaBtn_pressed():
 				facaHitbox.position = facaPos
 			elif num == 3:
 				facaAnim3.play("facaf1")
-				atiraFacaSOM() #substituir
+				atiraFacaMissSOM()
 				yield(get_tree().create_timer(0.5), "timeout")
 				faca3desaparece = true
 				amiguinhos= false
@@ -413,7 +416,7 @@ func _on_RodaBtn_pressed():
 				
 			elif num == 4:
 				facaAnim3.play("facaf2")
-				atiraFacaSOM() #substituir
+				atiraFacaMissSOM()
 				yield(get_tree().create_timer(0.5), "timeout")
 				faca3desaparece = true
 				amiguinhos= false
@@ -426,7 +429,7 @@ func _on_RodaBtn_pressed():
 				
 			elif num == 5:
 				facaAnim3.play("facaf3")
-				atiraFacaSOM() #substituir
+				atiraFacaMissSOM()
 				yield(get_tree().create_timer(0.5), "timeout")
 				faca3desaparece = true
 				amiguinhos= false
@@ -439,7 +442,7 @@ func _on_RodaBtn_pressed():
 				
 			elif num == 6:
 				facaAnim3.play("facaf4")
-				atiraFacaSOM() #substituir
+				atiraFacaMissSOM()
 				yield(get_tree().create_timer(0.5), "timeout")
 				faca3desaparece = true
 				amiguinhos= false
@@ -452,7 +455,7 @@ func _on_RodaBtn_pressed():
 				
 			elif num == 7:
 				facaAnim3.play("facaf5")
-				atiraFacaSOM() #substituir
+				atiraFacaMissSOM()
 				yield(get_tree().create_timer(0.5), "timeout")
 				faca3desaparece = true
 				amiguinhos= false
@@ -467,6 +470,11 @@ func atiraFacaSOM():
 	knifeMP3.play()
 	yield(get_tree().create_timer(knifeMP3.stream.get_length()), "timeout")
 	knifeMP3.stop()
+
+func atiraFacaMissSOM():
+	knifeMissMP3.play()
+	yield(get_tree().create_timer(knifeMissMP3.stream.get_length()), "timeout")
+	knifeMissMP3.stop()
 
 func cortinaSound():
 	transitionMP3.play()
