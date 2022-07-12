@@ -9027,7 +9027,6 @@ stream = ExtResource( 70 )
 
 [node name="PlayBtn" type="Node2D" parent="."]
 position = Vector2( 880.98, 871.974 )
-z_index = 1
 
 [node name="play" type="TextureButton" parent="PlayBtn"]
 light_mask = 2
@@ -9039,6 +9038,9 @@ texture_pressed = ExtResource( 6 )
 texture_hover = ExtResource( 30 )
 expand = true
 stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="options" type="Node2D" parent="."]
 light_mask = 2
@@ -9962,6 +9964,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+<<<<<<< Updated upstream
+=======
+[node name="RodaBtn" type="TextureButton" parent="Node2D"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 613.834
+margin_top = -36.0197
+margin_right = 812.834
+margin_bottom = 328.98
+mouse_filter = 1
+texture_normal = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+>>>>>>> Stashed changes
 [node name="FacaHitbox" type="Area2D" parent="Node2D"]
 position = Vector2( 639, 169 )
 scale = Vector2( 0.949038, 0.949038 )
