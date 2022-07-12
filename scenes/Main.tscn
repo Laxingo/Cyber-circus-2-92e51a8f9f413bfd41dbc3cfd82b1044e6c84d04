@@ -9965,16 +9965,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RodaBtn" type="TextureButton" parent="Node2D"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 613.834
-margin_top = -36.0197
-margin_right = 812.834
-margin_bottom = 328.98
-mouse_filter = 1
-texture_normal = ExtResource( 7 )
-expand = true
-
 [node name="FacaHitbox" type="Area2D" parent="Node2D"]
 position = Vector2( 639, 169 )
 scale = Vector2( 0.949038, 0.949038 )
@@ -10111,6 +10101,16 @@ stream = ExtResource( 84 )
 [node name="Jukebox" type="AudioStreamPlayer2D" parent="Node2D"]
 position = Vector2( -959.022, -492.268 )
 stream = ExtResource( 86 )
+
+[node name="RodaBtn" type="TextureButton" parent="Node2D"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 613.834
+margin_top = -36.0197
+margin_right = 812.834
+margin_bottom = 328.98
+mouse_filter = 1
+texture_normal = ExtResource( 7 )
+expand = true
 
 [node name="Win" type="Node2D" parent="."]
 position = Vector2( 834.454, 205.612 )
@@ -10494,7 +10494,7 @@ B - Bonus"
 [connection signal="area_entered" from="Node2D/Roda/Hitboxes/Amarelo 2" to="Node2D" method="_on_Amarelo_2_area_entered"]
 [connection signal="area_entered" from="Node2D/Roda/Hitboxes/Amarelo 3" to="Node2D" method="_on_Amarelo_3_area_entered"]
 [connection signal="area_entered" from="Node2D/Roda/Hitboxes/Amarelo 4" to="Node2D" method="_on_Amarelo_4_area_entered"]
-[connection signal="pressed" from="Node2D/RodaBtn" to="Node2D" method="_on_RodaBtn_pressed"]
 [connection signal="finished" from="Node2D/KnifeSoundMP3" to="Node2D" method="_on_KnifeSoundMP3_finished"]
 [connection signal="finished" from="Node2D/WinMP3" to="Node2D" method="_on_WinMP3_finished"]
 [connection signal="finished" from="Node2D/Jukebox" to="." method="_on_AudioStreamPlayer2D_finished"]
+[connection signal="pressed" from="Node2D/RodaBtn" to="Node2D" method="_on_RodaBtn_pressed"]
