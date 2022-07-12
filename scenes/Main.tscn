@@ -10447,6 +10447,18 @@ angle = 720.0
 angle_random = 1.0
 scale_amount = 0.02
 
+[node name="Debug Instructions" type="Label" parent="."]
+margin_left = 22.5122
+margin_right = 220.512
+margin_bottom = 119.0
+rect_scale = Vector2( 1.79662, 1.79662 )
+text = "Debug:
+Q - Small Win
+J - Medium Win
+A - Good Win
+S - Big Win
+B - Bonus"
+
 [connection signal="button_down" from="UIBaixo/Denom Plus Btn" to="." method="_on_Denom_Plus_Btn_button_down"]
 [connection signal="button_down" from="UIBaixo/Denom Sub Btn" to="." method="_on_Denom_Sub_Btn_button_down"]
 [connection signal="button_down" from="UIBaixo/Level Sub Btn" to="." method="_on_Level_Sub_Btn_button_down"]
