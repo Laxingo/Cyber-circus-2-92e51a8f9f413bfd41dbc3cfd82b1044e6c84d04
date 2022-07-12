@@ -99,7 +99,6 @@ func _process(delta):
 	if bigwin == true:
 		bigWin()
 		get_node("ViewportContainer/Viewport/SlotMachine").bigWinToca = false
-		print("Big win anim")
 	
 	if startPointsBW == true:
 		actualPoints = pointstGive * bet
@@ -210,7 +209,6 @@ func smallWin():
 		lightAnim.play("luz")
 		premioTocando = false
 		readytoRoll = true
-		print(premioTocando)
 
 
 func _on_Roll2_button_down():

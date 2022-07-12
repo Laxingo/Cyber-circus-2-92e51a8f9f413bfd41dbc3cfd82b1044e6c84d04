@@ -21,6 +21,9 @@ onready var glow2 = $faca2/KnifeGlow
 onready var glow3 = $faca3/KnifeGlow
 onready var palhacoAnim = $amiguinhos/Clown/AnimationPlayer
 onready var coelhoAnim = $amiguinhos/Bunny/AnimationPlayer
+onready var click1 = $faca/click
+onready var click2 = $faca2/click
+onready var click3 = $faca3/click
 
 
 var facaPos = Vector2(639, 169)
@@ -96,6 +99,10 @@ func _process(delta):
 func bonusTocando(yesorNo):
 	return
 func _entra():
+	click1.visible = true
+	click2.visible = true
+	click3.visible = true
+	knives = 3
 	bonusTocando = true
 	cortinaSound()
 	self.visible = true
@@ -149,6 +156,7 @@ func _on_RodaBtn_pressed():
 	if prontopraclicar:
 		prontopraclicar = false
 		if!faca1Thrown:
+			click1.visible = false
 			knives = 2
 			faca1Thrown = true
 			if num == 0:
@@ -255,6 +263,7 @@ func _on_RodaBtn_pressed():
 					facaAnim2.play("facaglow")
 				
 		elif!faca2Thrown:
+			click2.visible = false
 			knives = 1
 			faca2Thrown = true
 			glow2.visible = false
@@ -361,6 +370,7 @@ func _on_RodaBtn_pressed():
 				if prontopraclicar:
 					facaAnim3.play("facaglow")
 		else:
+			click3.visible = false
 			knives = 0
 			faca3Thrown = true
 			glow3.visible = false
