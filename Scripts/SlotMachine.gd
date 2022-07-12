@@ -81,6 +81,18 @@ var goodWinToca = false
 var bigWinToca = false
 var ola = false
 
+onready var tenPressed = false
+onready var twentyPressed = false
+onready var fiftyPressed = false
+onready var hundredPressed = false
+onready var playAgain = true
+
+var tenTimes = 0
+var twentyfiveTimes = 0
+var fiftyTimes = 0
+var hundredTimes = 0
+
+
 func _ready():
 	runtime = runtime1
 	speed = speed1
@@ -92,17 +104,6 @@ func _ready():
 		for row in range(rows): 
 			grid_pos[col].append(Vector2(col, row - 0.9 *extra_tiles) * tile_size) 
 			_add_tile(col, row)
-
-onready var tenPressed = false
-onready var twentyPressed = false
-onready var fiftyPressed = false
-onready var hundredPressed = false
-onready var playAgain = true
-
-var tenTimes = 0
-var twentyfiveTimes = 0
-var fiftyTimes = 0
-var hundredTimes = 0
 
 func _process(delta):
 	if tenPressed:
@@ -147,6 +148,15 @@ func _process(delta):
 			playAgain = true
 
 func setPrizeMasks():
+	prizeMasks.push_back(0b110000000000000);
+	prizeMasks.push_back(0b000001100000000);
+	prizeMasks.push_back(0b000000000011000);
+
+	
+	
+	
+	
+	
 	prizeMasks.push_back(0b000000000011111);
 	prizeMasks.push_back(0b000001111100000);
 	prizeMasks.push_back(0b111110000000000);
@@ -209,8 +219,7 @@ func setPrizeMasks3():
 	prizeMasks.push_back(0b000000000001110);
 	prizeMasks.push_back(0b000101000100000);
 	prizeMasks.push_back(0b000001010100000);
-	
-	
+
 func _add_tile(col :int, row :int) -> void:
 	tiles.append(SlotTile.instance())
 	var tile := get_tile(col, row) 
@@ -235,9 +244,6 @@ func start() -> void:
 		_get_result()
 	for reel in reels:
 		_spin_reel(reel)
-		
-		
-		
 		
 		if reel == 0:
 			if !reelMelo.is_playing():
@@ -287,7 +293,6 @@ func _move_tile(tile :SlotTile) -> void:
 	modulate.a = 1
 	yield(tile.get_node("Animations"), "animation_finished")
 	tile.move_by(Vector2(0, tile_size.y))
-
 
 func reelMelodyPlay():
 	if melnumber == 1:
@@ -367,6 +372,7 @@ func _on_tile_moved(tile: SlotTile, _nodePath, column) -> void:
 		var randomicon = _randomIcones()
 		tile.set_icon(randomicon)
 		tile.set_name(randomicon)
+		print("TILENAME: ",tile.tileName);
 		tile.animate_icon_idle(randomicon)
 	else:
 		var randomicon = _randomIcones()
@@ -388,6 +394,7 @@ func _randomIcones() -> String:
 	var num = random.randi_range(0, symbolName.size()-1)
 	if num == 0:
 		tile_name = symbolName[0]
+		
 	elif num == 1:
 		tile_name = symbolName[1]
 	elif num == 2:
@@ -437,6 +444,7 @@ func buildResultMasks():
 	
 #	print("Result Masks: ", resultMasks);
 	prizesToAnim = [];
+	print(resultMasks)
 	prizesToAnim = getPrizes(resultMasks);
 
 var prizeType
@@ -450,14 +458,14 @@ func getPrizes(result_masks):
 				prizeInfo.push_back([i, c]) # First position -> Synbol IDX; Second Position -> Prize IDX
 				prizeType = "Good"
 #				print(prizeInfo)
-		for p in  prizeMasks3.size():
-			if (result_masks[i] & prizeMasks3[p] == prizeMasks3[p]):
-				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
-				prizeType="Small"
-		for o in  prizeMasks2.size():
-			if (result_masks[i] & prizeMasks2[o] == prizeMasks2[o]):
-				prizeInfo.push_back([i, o]) # First position -> Synbol IDX; Second Position -> Prize IDX
-				prizeType = "Medium"
+#		for p in  prizeMasks3.size():
+#			if (result_masks[i] & prizeMasks3[p] == prizeMasks3[p]):
+#				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
+#				prizeType="Small"
+#		for o in  prizeMasks2.size():
+#			if (result_masks[i] & prizeMasks2[o] == prizeMasks2[o]):
+#				prizeInfo.push_back([i, o]) # First position -> Synbol IDX; Second Position -> Prize IDX
+#				prizeType = "Medium"
 		
 #	print("Prize  Info: ", prizeInfo);
 	return prizeInfo;
@@ -470,17 +478,28 @@ func animPrizes():
 	
 	for p in prizesToAnim.size():
 		for i in cells:
+			var _pcell = reels * tiles_per_reel - 1 - i
+			coluna = _pcell % 5;
+			linha = int(floor(_pcell / 5));
+			winTile = get_tile(coluna, linha);
+			print(winTile.tileName)
 			modulate.a = 0.6
 			var prizeID = symbolName[prizesToAnim[p][0]];
 			if(prizeMasks[prizesToAnim[p][1]] & 1<<i):
-				var _pcell = reels * tiles_per_reel - 1 - i
+				
 #				print("ANIMAÇÃO: ",prizeID, "  CÉLULAS: ", _pcell);
-				coluna = _pcell % 5;
-				linha = int(floor(_pcell / 5));
-				winTile = get_tile(linha, coluna)
-				winTile.modulate.a =2
-				winTile.animate_icon(prizeID)
-				givePoints(prizeID)
+				
+				
+
+				
+				winTile.modulate.a = 2;
+				winTile.animate_icon(prizeID);
+				givePoints(prizeID);
+				
+#				print("_pcell: ", _pcell)
+#				print("i: ", i, " LINHA: ", linha, " COLUNA: ", coluna);
+#				print("TILE: ", winTile.tileName);
+				
 
 var pointsToGive
 func givePoints(prizeID):
@@ -581,7 +600,7 @@ func _input(event):
 			symbolName = ["Q"];
 
 
-func _on_10_button_down():
+func _on_10_button_down(): 
 	tenPressed = true
 
 func _on_25_button_down():

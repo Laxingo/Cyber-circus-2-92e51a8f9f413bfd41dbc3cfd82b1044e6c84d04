@@ -10445,6 +10445,7 @@ angle_random = 1.0
 scale_amount = 0.02
 
 [node name="Debug Instructions" type="Label" parent="."]
+visible = false
 margin_left = 22.5122
 margin_right = 220.512
 margin_bottom = 119.0
