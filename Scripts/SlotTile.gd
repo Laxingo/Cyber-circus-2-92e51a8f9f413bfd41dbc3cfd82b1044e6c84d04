@@ -123,7 +123,7 @@ func animate_icon(symbol):
 			pass
 
 func animate_icon_idle(symbol):
-	print("animate_icon_idle");
+#	print("animate_icon_idle");
 	if (symbol =="A"):
 		var moldura = $Sprite/A/Quadrado
 		moldura.modulate = Color( 1, 1, 1, 1 );
