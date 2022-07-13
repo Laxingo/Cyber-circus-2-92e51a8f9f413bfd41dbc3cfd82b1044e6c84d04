@@ -29,7 +29,7 @@ onready var cells = rows * reels
 
 onready var random = RandomNumberGenerator.new()
 
-var result_icon
+#var result_icon
 
 enum State {OFF, ON, STOPPED}
 var state = State.OFF
@@ -50,9 +50,11 @@ export(Array, String) var symbolName := ["bunny", "strongman", "elephant", "roul
 
 var prizeNb = 3
 var prizeMasks = [];
-var prizeMasks2 = [];
-var prizeMasks3 = [];
 var prizesToAnim = [];
+
+var prizeType;
+var mediumPrizeIdx = 3;
+var bigPrizeIdx = 5;
 
 onready var reelMelo1 = preload("res://sound/reels spin/Melody_1.mp3")
 onready var reelMelo2 = preload("res://sound/reels spin/Melody_2.mp3")
@@ -97,7 +99,7 @@ func _ready():
 	runtime = runtime1
 	speed = speed1
 	setPrizeMasks();
-	setPrizeMasks2()
+	#setPrizeMasks2()
 	for col in reels:
 		grid_pos.append([])
 		tiles_moved_per_reel.append(0)
@@ -105,7 +107,7 @@ func _ready():
 			grid_pos[col].append(Vector2(col, row - 0.9 *extra_tiles) * tile_size) 
 			_add_tile(col, row)
 
-func _process(delta):
+func _process(_delta):
 	if tenPressed:
 		if tenTimes < 10:
 			if playAgain:
@@ -151,12 +153,6 @@ func setPrizeMasks():
 	prizeMasks.push_back(0b110000000000000);
 	prizeMasks.push_back(0b000001100000000);
 	prizeMasks.push_back(0b000000000011000);
-
-	
-	
-	
-	
-	
 	prizeMasks.push_back(0b000000000011111);
 	prizeMasks.push_back(0b000001111100000);
 	prizeMasks.push_back(0b111110000000000);
@@ -167,65 +163,15 @@ func setPrizeMasks():
 	prizeMasks.push_back(0b000001000101110);
 	prizeMasks.push_back(0b011101000100000);
 	prizeMasks.push_back(0b010101010100000);
-func setPrizeMasks2():
-	prizeMasks.push_back(0b000000000011110);
-	prizeMasks.push_back(0b000001111000000);
-	prizeMasks.push_back(0b111100000000000);
-	prizeMasks.push_back(0b100010101000000);
-	prizeMasks.push_back(0b001000101010000);
-	prizeMasks.push_back(0b110110000000000);
-	prizeMasks.push_back(0b000000010011010);
-	prizeMasks.push_back(0b000001000101100);
-	prizeMasks.push_back(0b011101000000000);
-	prizeMasks.push_back(0b010101010000000);
-	prizeMasks.push_back(0b000000000001111);
-	prizeMasks.push_back(0b000000111100000);
-	prizeMasks.push_back(0b011110000000000);
-	prizeMasks.push_back(0b000010101000100);
-	prizeMasks.push_back(0b000000101010001);
-	prizeMasks.push_back(0b010110010000000);
-	prizeMasks.push_back(0b000000000011011);
-	prizeMasks.push_back(0b000000000101110);
-	prizeMasks.push_back(0b001101000100000);
-	prizeMasks.push_back(0b000101010100000);
-func setPrizeMasks3():
-	prizeMasks.push_back(0b000000000011100);
-	prizeMasks.push_back(0b000001110000000);
-	prizeMasks.push_back(0b111000000000000);
-	prizeMasks.push_back(0b100010100000000);
-	prizeMasks.push_back(0b001000101000000);
-	prizeMasks.push_back(0b110100000000000);
-	prizeMasks.push_back(0b000000010011000);
-	prizeMasks.push_back(0b000001000101000);
-	prizeMasks.push_back(0b011100000000000);
-	prizeMasks.push_back(0b010101000000000);
-	prizeMasks.push_back(0b000000000001110);
-	prizeMasks.push_back(0b000000111000000);
-	prizeMasks.push_back(0b011100000000000);
-	prizeMasks.push_back(0b000010101000000);
-	prizeMasks.push_back(0b000000101010000);
-	prizeMasks.push_back(0b010110000000000);
-	prizeMasks.push_back(0b000000000011010);
-	prizeMasks.push_back(0b000000000101100);
-	prizeMasks.push_back(0b001101000000000);
-	prizeMasks.push_back(0b000101010000000);
-	prizeMasks.push_back(0b000000000000111);
-	prizeMasks.push_back(0b000000011100000);
-	prizeMasks.push_back(0b001110000000000);
-	prizeMasks.push_back(0b000000101000100);
-	prizeMasks.push_back(0b000000001010001);
-	prizeMasks.push_back(0b000110010000000);
-	prizeMasks.push_back(0b000000000001011);
-	prizeMasks.push_back(0b000000000001110);
-	prizeMasks.push_back(0b000101000100000);
-	prizeMasks.push_back(0b000001010100000);
+	prizeMasks.push_back(0b1111111111111111);
+
 
 func _add_tile(col :int, row :int) -> void:
 	tiles.append(SlotTile.instance())
 	var tile := get_tile(col, row) 
 	var randomSymbol  = _randomIcones()
 	
-	tile.get_node('Tween').connect("tween_completed", self, "_on_tile_moved", [col], CONNECT_DEFERRED)
+	assert(tile.get_node('Tween').connect("tween_completed", self, "_on_tile_moved", [col], CONNECT_DEFERRED)==0);
 	tile.set_icon(randomSymbol)
 	tile.set_size(tile_size)
 	tile.set_name(randomSymbol)
@@ -278,10 +224,11 @@ func _stop() -> void:
 		tiles_moved_per_reel[reel] = 0
 		state = State.OFF
 		emit_signal("stopped")
-	if state == State.OFF:
-		buildResultMasks();
-		animPrizes();
-		playAgain = true
+
+		if reel == reels - 1:
+			buildResultMasks();
+			animPrizes();
+			playAgain = true
 
 
 func _spin_reel(reel :int) -> void:
@@ -362,58 +309,31 @@ func reelSpinPlay(reelnmbr):
 	
   
 func _on_tile_moved(tile: SlotTile, _nodePath, column) -> void:
-	tiles_moved_per_reel[column] += 1
-	var reel_runs := current_runs(column)
+	tiles_moved_per_reel[column] += 1;
+	var reel_runs := current_runs(column);
 	if (tile.position.y > grid_pos[0][grid_pos.size() - 1].y):
-		tile.position.y = grid_pos[0][0].y
-	var current_idx = total_runs - reel_runs
-	if (current_idx < tiles_per_reel):
-		var result_icon = symbolName[result.tiles[column][0]] 
-		var randomicon = _randomIcones()
-		tile.set_icon(randomicon)
-		tile.set_name(randomicon)
-		print("TILENAME: ",tile.tileName);
-		tile.animate_icon_idle(randomicon)
-	else:
-		var randomicon = _randomIcones()
-		tile.set_icon(randomicon)
-		tile.set_name(randomicon)
-#		tile.modulate.a = 1.0
+		tile.position.y = grid_pos[0][0].y;
+
+	var randomicon = _randomIcones();
+	tile.set_icon(randomicon);
+	tile.set_name(randomicon);
+	tile.animate_icon_idle(randomicon);
+
 	if (state != State.OFF && reel_runs != total_runs):
-		tile.move_by(Vector2(0, tile_size.y))
-	else: 
-		tile.spin_down()
+		tile.move_by(Vector2(0, tile_size.y));
+	else:
+		tile.spin_down();
 		if column == reels - 1:
-			_stop()
+			_stop();
 
 func current_runs(reel := 0) -> int:
   return int(ceil(float(tiles_moved_per_reel[reel]) / rows))
 
 func _randomIcones() -> String:
-	random.randomize()
-	var num = random.randi_range(0, symbolName.size()-1)
-	if num == 0:
-		tile_name = symbolName[0]
-		
-	elif num == 1:
-		tile_name = symbolName[1]
-	elif num == 2:
-		tile_name = symbolName[2]
-	elif num == 3:
-		tile_name = symbolName[3]
-	elif num == 4:
-		tile_name = symbolName[4]
-	elif num == 5:
-		tile_name = symbolName[5]
-	elif num == 6:
-		tile_name = symbolName[6]
-	elif num == 7:
-		tile_name = symbolName[7]
-	elif num == 8:
-		tile_name = symbolName[8] 
-	elif num == 9:
-		tile_name = symbolName[9] 
-	return symbolName[num  %symbolName.size()]
+	random.randomize();
+	var num = random.randi_range(0, symbolName.size()-1);
+	tile_name = symbolName[num];
+	return tile_name;
 
 func _get_result() -> void:
   result = {
@@ -428,7 +348,7 @@ func _get_result() -> void:
 func buildResultMasks():
 	var resultSymbols = [];
 	var resultMasks = [];
-	var tileAnim = SlotTile
+	#var tileAnim = SlotTile
 	
 	for r in range(0, rows):
 		if(r < rows - tiles_per_reel):
@@ -442,63 +362,48 @@ func buildResultMasks():
 			_tmpResultMask |= int(symbolName[p] == resultSymbols[i]) << resultSymbols.size() - 1 - i;
 		resultMasks.push_back(_tmpResultMask);
 	
-#	print("Result Masks: ", resultMasks);
 	prizesToAnim = [];
-	print(resultMasks)
 	prizesToAnim = getPrizes(resultMasks);
 
-var prizeType
 
 func getPrizes(result_masks):
 	var prizeInfo = [];
 	for i in result_masks.size():
 
-		for c in  prizeMasks.size():
+		for c in prizeMasks.size():
 			if (result_masks[i] & prizeMasks[c] == prizeMasks[c]):
 				prizeInfo.push_back([i, c]) # First position -> Synbol IDX; Second Position -> Prize IDX
-				prizeType = "Good"
-#				print(prizeInfo)
-#		for p in  prizeMasks3.size():
-#			if (result_masks[i] & prizeMasks3[p] == prizeMasks3[p]):
-#				prizeInfo.push_back([i, p]) # First position -> Synbol IDX; Second Position -> Prize IDX
-#				prizeType="Small"
-#		for o in  prizeMasks2.size():
-#			if (result_masks[i] & prizeMasks2[o] == prizeMasks2[o]):
-#				prizeInfo.push_back([i, o]) # First position -> Synbol IDX; Second Position -> Prize IDX
-#				prizeType = "Medium"
-		
-#	print("Prize  Info: ", prizeInfo);
+				
+				if(c >= bigPrizeIdx):
+					prizeType = "Good";
+				elif(c >= mediumPrizeIdx):
+					prizeType = "Medium";
+				else:
+					prizeType="Small";
+
 	return prizeInfo;
 
 
 func animPrizes():
-	var winTile
-	var linha
-	var coluna
-	
+	if(!prizesToAnim.size()):
+		return;
+
+	var winTile;
+	var line;
+	var column;
+
 	for p in prizesToAnim.size():
 		for i in cells:
-			var _pcell = reels * tiles_per_reel - 1 - i
-			coluna = _pcell % 5;
-			linha = int(floor(_pcell / 5));
-			winTile = get_tile(coluna, linha);
-			print(winTile.tileName)
-			modulate.a = 0.6
+			var _pcell = reels * tiles_per_reel - 1 - i;
+			modulate.a = 0.6;
 			var prizeID = symbolName[prizesToAnim[p][0]];
 			if(prizeMasks[prizesToAnim[p][1]] & 1<<i):
-				
-#				print("ANIMAÇÃO: ",prizeID, "  CÉLULAS: ", _pcell);
-				
-				
-
-				
+				column = _pcell % reels;
+				line = int(floor((extra_tiles * rows + _pcell) / rows));
+				winTile = get_tile(column, line);
 				winTile.modulate.a = 2;
 				winTile.animate_icon(prizeID);
 				givePoints(prizeID);
-				
-#				print("_pcell: ", _pcell)
-#				print("i: ", i, " LINHA: ", linha, " COLUNA: ", coluna);
-#				print("TILE: ", winTile.tileName);
 				
 
 var pointsToGive

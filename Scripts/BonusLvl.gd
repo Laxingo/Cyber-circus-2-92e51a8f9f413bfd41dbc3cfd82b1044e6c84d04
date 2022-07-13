@@ -58,6 +58,8 @@ var faca1Thrown = false
 var faca2Thrown = false
 var faca3Thrown = false
 
+var bonusTocando = false
+
 func _ready():
 	_jukebox()
 	pass
@@ -96,8 +98,9 @@ func _process(delta):
 	if faca3desaparece && faca3.modulate.a != 0:
 		faca3.modulate.a = faca3.modulate.a -0.01
 
-func bonusTocando(yesorNo):
-	return
+#func bonusTocando(yesorNo):
+#	return
+
 func _entra():
 	click1.visible = true
 	click2.visible = true
@@ -146,8 +149,6 @@ func amiguinhPalhaco():
 	palhacoAnim.play("palhacocurioso")
 	yield(get_tree().create_timer(palhacoAnim.get_animation("palhacocurioso").length), "timeout")
 	comecou = false
-
-var bonusTocando = false
 
 func _on_RodaBtn_pressed():
 	glow.visible = false
@@ -477,29 +478,28 @@ func cortinaSound():
 	transitionMP3.stream = transition1
 	
 
-func _on_Rosa1_area_entered(area):
+func _on_Rosa1_area_entered(_area):
 	_WinRosa()
 
-func _on_Rosa_2_area_entered(area):
+func _on_Rosa_2_area_entered(_area):
 	_WinRosa()
 
-func _on_Rosa_3_area_entered(area):
+func _on_Rosa_3_area_entered(_area):
 	_WinRosa()
 
-func _on_Rosa_4_area_entered(area):
+func _on_Rosa_4_area_entered(_area):
 	_WinRosa()
 
-
-func _on_Amarelo_1_area_entered(area):
+func _on_Amarelo_1_area_entered(_area):
 	_WinAzul()
 
-func _on_Amarelo_2_area_entered(area):
+func _on_Amarelo_2_area_entered(_area):
 	_WinAzul()
 
-func _on_Amarelo_3_area_entered(area):
+func _on_Amarelo_3_area_entered(_area):
 	_WinAzul2()
 
-func _on_Amarelo_4_area_entered(area):
+func _on_Amarelo_4_area_entered(_area):
 	_WinAzul2()
 
 onready var creditsToGive
