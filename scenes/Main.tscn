@@ -1,4 +1,4 @@
-[gd_scene load_steps=171 format=2]
+[gd_scene load_steps=172 format=2]
 
 [ext_resource path="res://Scripts/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/UI/UIBaixo.png" type="Texture" id=2]
@@ -68,6 +68,7 @@
 [ext_resource path="res://Imagens/UI/-hmini.png" type="Texture" id=66]
 [ext_resource path="res://Imagens/UI/-.png" type="Texture" id=67]
 [ext_resource path="res://Imagens/UI/8a9bb8d775ae49a8.png" type="Texture" id=68]
+[ext_resource path="res://sound/bonus/Bonus_KnifeThrow_withoutImpact.mp3" type="AudioStream" id=69]
 [ext_resource path="res://sound/reels spin/Reel_Stopping.mp3" type="AudioStream" id=70]
 [ext_resource path="res://Imagens/Simbolos/CyberCircus_Bunny.png" type="Texture" id=71]
 [ext_resource path="res://Imagens/Simbolos/CyberCircus_GeorgeCloony.png" type="Texture" id=72]
@@ -9027,7 +9028,6 @@ stream = ExtResource( 70 )
 
 [node name="PlayBtn" type="Node2D" parent="."]
 position = Vector2( 880.98, 871.974 )
-z_index = 1
 
 [node name="play" type="TextureButton" parent="PlayBtn"]
 light_mask = 2
@@ -9323,10 +9323,13 @@ texture = ExtResource( 4 )
 
 [node name="playBtnAudio" type="AudioStreamPlayer2D" parent="Audios"]
 volume_db = 3.4
+bus = "Sfx"
 
 [node name="optionsBtnAudio" type="AudioStreamPlayer2D" parent="Audios"]
+bus = "Sfx"
 
 [node name="Wins" type="AudioStreamPlayer2D" parent="Audios"]
+bus = "Wins"
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 959.022, 492.268 )
@@ -10085,19 +10088,27 @@ shadow_filter_smooth = 64.0
 
 [node name="KnifeSoundMP3" type="AudioStreamPlayer2D" parent="Node2D"]
 stream = ExtResource( 82 )
+bus = "Bonus"
+
+[node name="KnifeMiss" type="AudioStreamPlayer2D" parent="Node2D"]
+stream = ExtResource( 69 )
 
 [node name="MusicMP3" type="AudioStreamPlayer2D" parent="Node2D"]
 stream = ExtResource( 83 )
+bus = "Music"
 
 [node name="TransMP3" type="AudioStreamPlayer2D" parent="Node2D"]
 stream = ExtResource( 85 )
+bus = "Sfx"
 
 [node name="WinMP3" type="AudioStreamPlayer2D" parent="Node2D"]
 stream = ExtResource( 84 )
+bus = "Wins"
 
 [node name="Jukebox" type="AudioStreamPlayer2D" parent="Node2D"]
 position = Vector2( -959.022, -492.268 )
 stream = ExtResource( 86 )
+bus = "Music"
 
 [node name="RodaBtn" type="TextureButton" parent="Node2D"]
 modulate = Color( 1, 1, 1, 0 )
@@ -10493,6 +10504,7 @@ B - Bonus"
 [connection signal="area_entered" from="Node2D/Roda/Hitboxes/Amarelo 3" to="Node2D" method="_on_Amarelo_3_area_entered"]
 [connection signal="area_entered" from="Node2D/Roda/Hitboxes/Amarelo 4" to="Node2D" method="_on_Amarelo_4_area_entered"]
 [connection signal="finished" from="Node2D/KnifeSoundMP3" to="Node2D" method="_on_KnifeSoundMP3_finished"]
+[connection signal="finished" from="Node2D/KnifeMiss" to="Node2D" method="_on_KnifeSoundMP3_finished"]
 [connection signal="finished" from="Node2D/WinMP3" to="Node2D" method="_on_WinMP3_finished"]
 [connection signal="finished" from="Node2D/Jukebox" to="." method="_on_AudioStreamPlayer2D_finished"]
 [connection signal="pressed" from="Node2D/RodaBtn" to="Node2D" method="_on_RodaBtn_pressed"]
