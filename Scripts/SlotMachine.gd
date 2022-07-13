@@ -44,6 +44,7 @@ var tiles_moved_per_reel := []
 var runs_stopped := 0
 var total_runs : int
 
+var tocaBonus = false
 export(Array, String) var symbolName := ["bunny", "strongman", "elephant", "roulette", "clown", "Q", 
 "K","J", "A"];
 
@@ -163,7 +164,30 @@ func setPrizeMasks():
 	prizeMasks.push_back(0b000001000101110);
 	prizeMasks.push_back(0b011101000100000);
 	prizeMasks.push_back(0b010101010100000);
-	prizeMasks.push_back(0b1111111111111111);
+	prizeMasks.push_back(0b111111111111111);
+	prizeMasks.push_back(0b000001000101000);
+	prizeMasks.push_back(0b011100000000000);
+	prizeMasks.push_back(0b010101000000000);
+	prizeMasks.push_back(0b000000000001110);
+	prizeMasks.push_back(0b000000111000000);
+	prizeMasks.push_back(0b011100000000000);
+	prizeMasks.push_back(0b000010101000000);
+	prizeMasks.push_back(0b000000101010000);
+	prizeMasks.push_back(0b010110000000000);
+	prizeMasks.push_back(0b000000000011010);
+	prizeMasks.push_back(0b000000000101100);
+	prizeMasks.push_back(0b001101000000000);
+	prizeMasks.push_back(0b000101010000000);
+	prizeMasks.push_back(0b000000000000111);
+	prizeMasks.push_back(0b000000011100000);
+	prizeMasks.push_back(0b001110000000000);
+	prizeMasks.push_back(0b000000101000100);
+	prizeMasks.push_back(0b000000001010001);
+	prizeMasks.push_back(0b000110010000000);
+	prizeMasks.push_back(0b000000000001011);
+	prizeMasks.push_back(0b000000000001110);
+	prizeMasks.push_back(0b000101000100000);
+	prizeMasks.push_back(0b000001010100000);
 
 
 func _add_tile(col :int, row :int) -> void:
@@ -429,7 +453,7 @@ func givePoints(prizeID):
 			pointsToGive = 50
 			
 	elif prizeID == "roulette":
-		bonusLvl._entra()
+		tocaBonus = true
 		
 	elif prizeID == "A":
 		if prizeType == "Good":
@@ -473,15 +497,15 @@ func givePoints(prizeID):
 			pointsToGive = 75
 		elif prizeType == "Small":
 			pointsToGive = 25
-	
-	if pointsToGive > 250:
-		bigWinToca=true
-	elif pointsToGive >100:
-		goodWinToca = true
-	elif pointsToGive>30:
-		mediumWinToca = true
-	else:
-		smallWinToca = true
+	if pointsToGive != null:
+		if pointsToGive > 250:
+			bigWinToca=true
+		elif pointsToGive >100:
+			goodWinToca = true
+		elif pointsToGive>30:
+			mediumWinToca = true
+		elif pointsToGive < 30:
+			smallWinToca = true
 
 func _input(event):
 	if event is InputEventKey and event.pressed:
